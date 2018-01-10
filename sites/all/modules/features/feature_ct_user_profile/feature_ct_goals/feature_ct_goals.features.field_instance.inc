@@ -10,8 +10,8 @@
 function feature_ct_goals_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-goals-field_client_id'.
-  $field_instances['node-goals-field_client_id'] = array(
+  // Exported field_instance: 'node-goals-field_client_ref'.
+  $field_instances['node-goals-field_client_ref'] = array(
     'bundle' => 'goals',
     'default_value' => NULL,
     'deleted' => 0,
@@ -19,10 +19,13 @@ function feature_ct_goals_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'field_reference',
-        'settings' => array(),
-        'type' => 'field_reference_default',
-        'weight' => 2,
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -32,8 +35,8 @@ function feature_ct_goals_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_client_id',
-    'label' => 'Client id',
+    'field_name' => 'field_client_ref',
+    'label' => 'Client Ref',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -43,12 +46,12 @@ function feature_ct_goals_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => -2,
+      'weight' => 3,
     ),
   );
 
-  // Exported field_instance: 'node-goals-field_coach_id'.
-  $field_instances['node-goals-field_coach_id'] = array(
+  // Exported field_instance: 'node-goals-field_coach_ref'.
+  $field_instances['node-goals-field_coach_ref'] = array(
     'bundle' => 'goals',
     'default_value' => NULL,
     'deleted' => 0,
@@ -56,10 +59,13 @@ function feature_ct_goals_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'field_reference',
-        'settings' => array(),
-        'type' => 'field_reference_default',
-        'weight' => 1,
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -69,17 +75,18 @@ function feature_ct_goals_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_coach_id',
-    'label' => 'Coach id',
-    'required' => FALSE,
+    'field_name' => 'field_coach_ref',
+    'label' => 'Coach Ref',
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => -3,
+      'weight' => 2,
     ),
   );
 
@@ -270,8 +277,8 @@ function feature_ct_goals_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Client id');
-  t('Coach id');
+  t('Client Ref');
+  t('Coach Ref');
   t('Goal');
   t('Inspiration');
   t('Motivation');

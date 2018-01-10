@@ -10,108 +10,38 @@
 function feature_ct_goals_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_client_id'.
-  $field_bases['field_client_id'] = array(
+  // Exported field_base: 'field_coach_ref'.
+  $field_bases['field_coach_ref'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_client_id',
+    'field_name' => 'field_coach_ref',
     'indexes' => array(
-      'field_reference_delta' => array(
-        0 => 'delta',
-      ),
-      'field_reference_entity_id' => array(
-        0 => 'entity_id',
-      ),
-      'field_reference_entity_type' => array(
-        0 => 'entity_type',
-      ),
-      'field_reference_field_key' => array(
-        0 => 'field_key',
-      ),
-      'field_reference_language' => array(
-        0 => 'language',
-      ),
-      'field_reference_revision_id' => array(
-        0 => 'revision_id',
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'field_reference',
+    'module' => 'entityreference',
     'settings' => array(
-      'allow_general' => 0,
-      'append_id' => 0,
-      'fields' => array(
-        'node' => array(
-          'user_profile' => array(
-            'field_user_id' => 'field_user_id',
+      'handler' => 'views',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
           ),
         ),
-      ),
-      'granularity' => array(
-        'entity' => 1,
-        'language' => 0,
-        'revision' => 0,
-        'value' => 0,
-      ),
-      'hide_field_locator' => 0,
-      'show_value' => 0,
-    ),
-    'translatable' => 0,
-    'type' => 'field_reference',
-  );
-
-  // Exported field_base: 'field_coach_id'.
-  $field_bases['field_coach_id'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_coach_id',
-    'indexes' => array(
-      'field_reference_delta' => array(
-        0 => 'delta',
-      ),
-      'field_reference_entity_id' => array(
-        0 => 'entity_id',
-      ),
-      'field_reference_entity_type' => array(
-        0 => 'entity_type',
-      ),
-      'field_reference_field_key' => array(
-        0 => 'field_key',
-      ),
-      'field_reference_language' => array(
-        0 => 'language',
-      ),
-      'field_reference_revision_id' => array(
-        0 => 'revision_id',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'field_reference',
-    'settings' => array(
-      'allow_general' => 0,
-      'append_id' => 0,
-      'fields' => array(
-        'node' => array(
-          'user_profile' => array(
-            'field_user_id' => 'field_user_id',
-          ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_1',
+          'view_name' => 'get_coaches',
         ),
       ),
-      'granularity' => array(
-        'entity' => 1,
-        'language' => 0,
-        'revision' => 0,
-        'value' => 0,
-      ),
-      'hide_field_locator' => 0,
-      'show_value' => 0,
+      'target_type' => 'user',
     ),
     'translatable' => 0,
-    'type' => 'field_reference',
+    'type' => 'entityreference',
   );
 
   // Exported field_base: 'field_goal'.
