@@ -71,7 +71,7 @@ function feature_ct_user_fields_drupal_field_default_field_instances() {
     'label' => 'Contact No',
     'required' => 0,
     'settings' => array(
-      'max' => 10,
+      'max' => '',
       'min' => '',
       'prefix' => '',
       'suffix' => '',
