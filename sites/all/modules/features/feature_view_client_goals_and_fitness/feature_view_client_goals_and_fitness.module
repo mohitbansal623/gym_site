@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Client Goals and Fitness View feature.
+ */
+
+include_once 'feature_view_client_goals_and_fitness.features.inc';
