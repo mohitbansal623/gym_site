@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function coach_dashboard_menu() {
+  $items['coach/dashboard'] = array(
+    'title' => 'Coach Dashboard',
+    'page callback' => 'coach_dashboard_links',
+    'access callback' => TRUE,
+  );
+}
+
+
+function coach_dashboard_links() {
+  $output = "<H2>Add a New Goal for Client</H2>";
+  $output .= l("Click Here" , "/node/add/goals");
+  $output .= "<br>";
+  $output .= "<H2>Add a new Path to Fitness</H2>";
+  $output .= l("Click Here" , "/node/add/path-to-fitness");
+  $output .= "<br>";
+
+  return $output;
+}

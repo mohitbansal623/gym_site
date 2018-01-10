@@ -1,0 +1,13 @@
+<?php
+
+
+/**
+ * Implements hook user login
+ */
+function gym_module_user_login(&$edit, $account) {
+  watchdog('gym_module', print_r($edit, TRUE));
+  watchdog('gym_module', print_r($account, TRUE));
+  drupal_goto('node/add/goals');
+}
+
+
