@@ -131,31 +131,11 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['fields']['field_goal']['id'] = 'field_goal';
   $handler->display->display_options['fields']['field_goal']['table'] = 'field_data_field_goal';
   $handler->display->display_options['fields']['field_goal']['field'] = 'field_goal';
-  /* Field: Content: Coach Ref */
-  $handler->display->display_options['fields']['field_coach_ref']['id'] = 'field_coach_ref';
-  $handler->display->display_options['fields']['field_coach_ref']['table'] = 'field_data_field_coach_ref';
-  $handler->display->display_options['fields']['field_coach_ref']['field'] = 'field_coach_ref';
-  $handler->display->display_options['fields']['field_coach_ref']['settings'] = array(
-    'bypass_access' => 0,
-    'link' => 0,
-  );
-  /* Field: Content: Inspiration */
-  $handler->display->display_options['fields']['field_inspiration']['id'] = 'field_inspiration';
-  $handler->display->display_options['fields']['field_inspiration']['table'] = 'field_data_field_inspiration';
-  $handler->display->display_options['fields']['field_inspiration']['field'] = 'field_inspiration';
-  $handler->display->display_options['fields']['field_inspiration']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_inspiration']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
-  /* Field: Content: Motivation */
-  $handler->display->display_options['fields']['field_motivation']['id'] = 'field_motivation';
-  $handler->display->display_options['fields']['field_motivation']['table'] = 'field_data_field_motivation';
-  $handler->display->display_options['fields']['field_motivation']['field'] = 'field_motivation';
   /* Field: Content: Start Date */
   $handler->display->display_options['fields']['field_start_date']['id'] = 'field_start_date';
   $handler->display->display_options['fields']['field_start_date']['table'] = 'field_data_field_start_date';
   $handler->display->display_options['fields']['field_start_date']['field'] = 'field_start_date';
+  $handler->display->display_options['fields']['field_start_date']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_start_date']['settings'] = array(
     'format_type' => 'short',
     'custom_date_format' => '',
@@ -164,6 +144,36 @@ function feature_view_client_goals_and_fitness_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
     'show_remaining_days' => 0,
+  );
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php']['id'] = 'php';
+  $handler->display->display_options['fields']['php']['table'] = 'views';
+  $handler->display->display_options['fields']['php']['field'] = 'php';
+  $handler->display->display_options['fields']['php']['label'] = 'Days Remaining';
+  $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php']['php_output'] = '<?php echo $row->field_start_date; ?>';
+  $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+  /* Field: Content: Coach Ref */
+  $handler->display->display_options['fields']['field_coach_ref']['id'] = 'field_coach_ref';
+  $handler->display->display_options['fields']['field_coach_ref']['table'] = 'field_data_field_coach_ref';
+  $handler->display->display_options['fields']['field_coach_ref']['field'] = 'field_coach_ref';
+  $handler->display->display_options['fields']['field_coach_ref']['settings'] = array(
+    'bypass_access' => 0,
+    'link' => 0,
+  );
+  /* Field: Content: Motivation */
+  $handler->display->display_options['fields']['field_motivation']['id'] = 'field_motivation';
+  $handler->display->display_options['fields']['field_motivation']['table'] = 'field_data_field_motivation';
+  $handler->display->display_options['fields']['field_motivation']['field'] = 'field_motivation';
+  /* Field: Content: Inspiration */
+  $handler->display->display_options['fields']['field_inspiration']['id'] = 'field_inspiration';
+  $handler->display->display_options['fields']['field_inspiration']['table'] = 'field_data_field_inspiration';
+  $handler->display->display_options['fields']['field_inspiration']['field'] = 'field_inspiration';
+  $handler->display->display_options['fields']['field_inspiration']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_inspiration']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
   );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
