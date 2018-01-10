@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the feature_get_clients_coaches feature.
+ */
+
+include_once 'feature_get_clients_coaches.features.inc';
