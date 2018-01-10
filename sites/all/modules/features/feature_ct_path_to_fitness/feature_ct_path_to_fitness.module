@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the feature_ct_path_to_fitness feature.
+ */
+
+include_once 'feature_ct_path_to_fitness.features.inc';
