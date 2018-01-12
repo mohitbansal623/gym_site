@@ -1,0 +1,24 @@
+@import "variables";
+
+body {
+  color: $grey;
+  font: 400 15px/1.8 "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+%read-more-btn {
+  border: 2px solid $light-grey;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  border-radius: 24px;
+  color: $grey;
+  text-decoration: none;
+  outline: none;
+  &:hover {
+    background: $light-grey;
+  }
+}

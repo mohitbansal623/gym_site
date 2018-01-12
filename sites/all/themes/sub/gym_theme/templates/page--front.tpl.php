@@ -73,9 +73,189 @@
  * @ingroup templates
  */
 ?>
-<div id="fullpage">
-  <div class="section">Some section</div>
-  <div class="section">Some section</div>
-  <div class="section">Some section</div>
-  <div class="section">Some section</div>
+<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+  <div class="<?php print $container_class; ?>">
+    <div class="navbar-header">
+      <?php if ($logo): ?>
+        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+        </a>
+      <?php endif; ?>
+
+      <?php if (!empty($site_name)): ?>
+        <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+      <?php endif; ?>
+
+      <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      <?php endif; ?>
+    </div>
+
+    <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+      <div class="navbar-collapse collapse" id="navbar-collapse">
+        <nav role="navigation">
+          <?php if (!empty($primary_nav)): ?>
+            <?php print render($primary_nav); ?>
+          <?php endif; ?>
+          <?php if (!empty($secondary_nav)): ?>
+            <?php print render($secondary_nav); ?>
+          <?php endif; ?>
+          <?php if (!empty($page['navigation'])): ?>
+            <?php print render($page['navigation']); ?>
+          <?php endif; ?>
+        </nav>
+      </div>
+    <?php endif; ?>
+  </div>
+</header>
+
+<div id="homepage">
+  <div class="section intro-section">
+    <div class="description">
+      <p>REDEFINE</p>
+      <p>YOURSELF</p>
+    </div>
+  </div>
+  <div class="section about-section text-section">
+    <div class="section-heading">
+      <h3>ABOUT US</h3>
+    </div>
+    <div class="description">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam odio augue, consectetur sed tortor sed, auctor pellentesque felis. Morbi blandit nisl in vehicula malesuada. Nam quis ornare dolor, id convallis eros. Curabitur dignissim porttitor massa, nec venenatis dolor aliquam eu. Morbi sapien turpis, tincidunt vitae rutrum feugiat, efficitur id sapien. Pellentesque sollicitudin nibh ut posuere lobortis. Vivamus ligula erat, volutpat posuere nunc id, condimentum tristique purus. Integer elementum magna a mi sodales, a lobortis sem lacinia.</p>
+      <div class="read-more"><a class="read-more-btn" href="/about-us">KNOW MORE</a></div>
+    </div>
+  </div>
+  <div class="section services-section">
+    <div class="section-heading">
+      <h3>WE PROVIDE</h3>
+    </div>
+    <!-- <div class="service-heading">
+      <div class="service-heading-container">
+        <div>WHAT</div>
+        <div>WE</div>
+        <div>DO</div>
+      </div>
+    </div> -->
+    <div class="services-container">
+    <!--  -->
+      <div class="service service1">
+          <a href="">
+            <div class="overlay"></div>
+            <div class="square">
+              <div class="service-name">SERVICE NAME</div>
+            </div>
+          </a>
+      </div>
+      <!--  -->
+      <div class="service service2">
+          <a href="">
+            <div class="overlay"></div>
+            <div class="square">
+              <div class="service-name">SERVICE NAME</div>
+            </div>
+          </a>
+      </div>
+      <!--  -->
+      <div class="service service3">
+          <a href="">
+            <div class="overlay"></div>
+            <div class="square">
+              <div class="service-name">SERVICE NAME</div>
+            </div>
+          </a>
+      </div>
+      <!--  -->
+      <div class="service service4">
+          <a href="">
+            <div class="overlay"></div>
+            <div class="square">
+              <div class="service-name">SERVICE NAME</div>
+            </div>
+          </a>
+      </div>
+          <!--  -->
+      <div class="service service5">
+          <a href="">
+            <div class="overlay"></div>
+            <div class="square">
+              <div class="service-name">SERVICE NAME</div>
+            </div>
+          </a>
+      </div>
+      <!--  -->
+      <div class="service service6">
+          <a href="">
+            <div class="overlay"></div>
+            <div class="square">
+              <div class="service-name">SERVICE NAME</div>
+            </div>
+          </a>
+      </div>
+      <!--  -->
+      <div class="service service7">
+          <a href="">
+            <div class="overlay"></div>
+            <div class="square">
+              <div class="service-name">SERVICE NAME</div>
+            </div>
+          </a>
+      </div>
+      <!--  -->
+      <div class="service service8">
+          <a href="">
+            <div class="overlay"></div>
+            <div class="square">
+              <div class="service-name">SERVICE NAME</div>
+            </div>
+          </a>
+      </div>
+      <!--  -->
+    </div>
+  </div>
+
+  <div class="section text-section excellence-section">
+    <p>Join us on the pursuit of self-excellence.</p>
+  </div>
 </div>
+
+<?php if (!empty($page['footer'])): ?>
+  <div class="site-footer">
+    <footer class="footer <?php print $container_class; ?>">
+      <?php print render($page['footer']); ?>
+    </footer>
+  </div>
+<?php endif; ?>
+
+<!-- <div class="footer-inner row">
+  <div class="location col-sm-4 col-xs-6">
+    <div class="footer-title">LOCATION</div>
+    <div class="footer-block">
+      <p>12, Lorium Ipsum</p>
+      <p>Lorium Ipsum</p>
+      <p>Lorium Ipsum</p>
+    </div>
+  </div>
+  <div class="social  col-sm-4 col-xs-6">
+    <div class="footer-title">STAY CONNECTED</div>
+    <div class="footer-block">
+      <div class="social-icons">
+        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+      </div>
+      <div class="email">Email: xyz@gmail.com</div>
+      <div class="phone">Phone: 9876543210</div>
+    </div>
+  </div>
+  <div class="timings  col-sm-4 col-xs-6">
+    <div class="footer-title">HOURS</div>
+    <div class="footer-block">
+      <p>Lorium Ipsum</p>
+      <p>Lorium Ipsum</p>
+      <p>Lorium Ipsum</p>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,178 @@
+@import "includes";
+
+#homepage {
+  padding-top: 60px;
+  .section {
+    text-align: center;
+    .read-more {
+      text-align: center;
+      margin-top: 20px;
+      .read-more-btn {
+        @extend %read-more-btn;
+      }
+    }
+    .section-heading {
+      h3 {
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font: 3rem "Lato", sans-serif;
+        color: #111;
+        margin: 0 0 20px;
+        text-align: center;
+      }
+    }
+  }
+  .text-section {
+    padding: 50px 80px;
+  }
+  .intro-section {
+    height: 100vh;
+    display: table;
+    background-image: url("../images/home/weights.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    .description {
+      display: table-cell;
+      vertical-align: middle;
+      p {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 10rem;
+        color: #fff;
+        line-height: 1;
+      }
+    }
+  }
+  .about-section {
+    .description {
+      text-align: justify;
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .services-section {
+    padding-top: 50px;
+    // position: relative;
+    // .service-heading {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   z-index: 2;
+    //   .service-heading-container {
+    //     display: table;
+    //     width: 100%;
+    //     height: 100%;
+    //     text-aling: center;
+    //     div {
+    //       display: table-cell;
+    //       vertical-align: middle;
+    //       font-family: 'Roboto Mono', monospace;
+    //       font-size: 10rem;
+    //       color: #fff;
+    //       margin-bottom: 10px;
+    //     }
+    //   }
+    // }
+    .services-container {
+      font-size: 0;
+      .service {
+        font-size: 1.8rem;
+        display: inline-block;
+        vertical-align: top;
+        height: 22vw;
+        width: 25%;
+        &.service1 {
+          background: url(../images/home/fitness.jpg) no-repeat;
+          background-size: cover;
+        }
+        &.service2{
+          background: url(../images/home/index.jpeg) no-repeat;
+          background-size: cover;
+        }
+        &.service3 {
+          background: url(../images/home/two.jpeg) no-repeat;
+          background-size: cover;
+        }
+        &.service4 {
+          background: url(../images/home/workout.jpg) no-repeat;
+          background-size: cover;
+        }
+        &.service5 {
+          background: url(../images/home/two.jpeg) no-repeat;
+        }
+        &.service6 {
+          background: url(../images/home/workout.jpg) no-repeat;
+          background-size: cover;
+        }
+        &.service7 {
+          background: url(../images/home/fitness.jpg) no-repeat;
+          background-size: cover;
+        }
+        &.service8 {
+          background: url(../images/home/index.jpeg) no-repeat;
+          background-size: cover;
+        }
+        a {
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          text-align: center;
+          overflow: hidden;
+          text-decoration: none;
+          outline: none;
+          position: relative;
+          .square {
+            height: 100%;
+            display: table;
+            width: 100%;
+          }
+          .service-name {
+            display: none;
+            vertical-align: middle;
+            color: #fff;
+            z-index: 2;
+            position: relative;
+            font-weight: bold;
+            -webkit-transition: all 1s linear; /* Safari */
+            transition: all 1s linear;
+          }
+          .overlay {
+            -webkit-transition: all 1s linear; /* Safari */
+            transition: all 1s linear;
+          }
+          &:hover {
+            -webkit-transition: all 1s linear; /* Safari */
+            transition: all 1s linear;
+            .overlay {
+              width:100%;
+              height:100%;
+              position:absolute;
+              z-index: 1;
+              background-color:rgba(0,0,0,0.7);
+              -webkit-transition: all 1s linear; /* Safari */
+              transition: all 1s linear;
+            }
+            .service-name {
+              -webkit-transition: all 1s linear; /* Safari */
+              transition: all 1s linear;
+              display: table-cell;
+            }
+          }
+        }
+      }
+    }
+  }
+  .excellence-section {
+    p {
+      margin: 0;
+      font-size: 3rem;
+      color: #111;
+    }
+  }
+}

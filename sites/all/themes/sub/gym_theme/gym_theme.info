@@ -30,4 +30,3 @@ stylesheets[all][] = css/basic_layout.css
 ;; Javascript
 ;;;;;;;;;;;;;;;;;;;;;
 scripts[] = js/jquery.matchHeight.js
-scripts[] = js/general.js
