@@ -1,1 +1,89 @@
 @import "includes";
+
+#navbar {
+  background: #000;
+  color: #fff;
+  margin: 0 !important;
+  position: fixed;
+  margin: 0 !important;
+  position: fixed;
+  max-width: 100% !important;
+  width: 100% !important;
+  border: 0;
+  border-radius: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  z-index: 999;
+  &.navbar-default .navbar-brand {
+    color: #fff;
+    font-size: 2rem;
+  }
+  &.navbar-default .navbar-nav {
+    li a {
+      color: #fff;
+      &:hover {
+        color: $grey;
+      }
+    }
+    &>.active > a {
+      color: $grey;
+      background: transparent;
+    }
+    &>.active > a:hover {
+      color: $grey;
+      background: transparent;
+    }
+    &>.active > a:focus {
+      color: $grey;
+      background: transparent;
+    }
+  }
+}
+
+.site-footer {
+  background: #000;
+  .footer {
+    margin-top: 0;
+    border: 0;
+  }
+  a {
+    color: $grey;
+  }
+  .timings {
+    text-align: right;
+  }
+  .social {
+    text-align: center;
+    .social-icons {
+      margin-bottom: 30px;
+      a {
+        display: inline-block;
+        margin: 0 8px 0 0;
+        width: 31px;
+        height: 31px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        &:hover {
+          background: white;
+          i {
+            color: #000;
+          }
+        }
+        &:last-child {
+          margin: 0;
+        }
+        i {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .email {
+    margin-bottom: 10px;
+  }
+  .footer-title {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+}

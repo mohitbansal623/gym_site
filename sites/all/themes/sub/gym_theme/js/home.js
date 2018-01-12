@@ -1,8 +1,10 @@
 (function($) {
   $(document).ready(function(){
-    if ($('#fullpage').length) {
-      $('#fullpage').fullpage();
-    }
+    // if ($('#homepage').length) {
+    //   $('#homepage').fullpage({
+    //     parallax: true,
+    //   });
+    // }
   });
 
 })(jQuery);

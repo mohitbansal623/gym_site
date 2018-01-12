@@ -20,12 +20,6 @@ function gym_theme_preprocess_page(&$vars, $hook) {
     // drupal_add_js($slick_lib .'/slick/slick.min.js');
     // drupal_add_css($slick_lib .'/slick/slick.css');
     // drupal_add_css($slick_lib .'/slick/slick-theme.css');
-
-    drupal_add_css($fullpage_lib .'/jquery.fullPage.css');
-    drupal_add_js($fullpage_lib .'/jquery.fullpage.extensions.min.js');
-    drupal_add_js($fullpage_lib .'/jquery.fullpage.min.js');
-
-
     drupal_add_js($theme_path . '/js/home.js');
     drupal_add_css($theme_path . '/css/home.css');
   }
