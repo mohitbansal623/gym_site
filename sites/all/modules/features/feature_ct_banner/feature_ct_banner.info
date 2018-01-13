@@ -1,0 +1,17 @@
+name = feature_ct_banner
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = image
+dependencies[] = text
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[field_base][] = field_banner_image
+features[field_base][] = field_path
+features[field_instance][] = node-ct_banner-field_banner_image
+features[field_instance][] = node-ct_banner-field_path
+features[image][] = banner
+features[views_view][] = view_banner
+features_exclude[dependencies][ctools] = ctools

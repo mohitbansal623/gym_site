@@ -31,3 +31,4 @@ stylesheets[all][] = css/page_layout.css
 ;; Javascript
 ;;;;;;;;;;;;;;;;;;;;;
 scripts[] = js/jquery.matchHeight.js
+scripts[] = js/general.js

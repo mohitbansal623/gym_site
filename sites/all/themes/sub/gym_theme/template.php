@@ -14,12 +14,14 @@ function gym_theme_preprocess_page(&$vars, $hook) {
   $theme_path = drupal_get_path('theme', 'gym_theme');
 
   $slick_lib = libraries_get_path('slick');
-  $fullpage_lib = libraries_get_path('fullpage.js');
+  drupal_add_js($slick_lib .'/slick/slick.min.js');
+  drupal_add_css($slick_lib .'/slick/slick.css');
+  drupal_add_css($slick_lib .'/slick/slick-theme.css');
 
   if (drupal_is_front_page()) {
-    // drupal_add_js($slick_lib .'/slick/slick.min.js');
-    // drupal_add_css($slick_lib .'/slick/slick.css');
-    // drupal_add_css($slick_lib .'/slick/slick-theme.css');
+    drupal_add_js($theme_path . '/js/wow.min.js');
+    drupal_add_js("new WOW().init()", 'inline');
+    drupal_add_css($theme_path . '/css/animate.css');
     drupal_add_js($theme_path . '/js/home.js');
     drupal_add_css($theme_path . '/css/home.css');
   }
@@ -30,7 +32,6 @@ function gym_theme_preprocess_page(&$vars, $hook) {
  */
 function gym_theme_preprocess_node(&$variables) {
   $theme_path = drupal_get_path('theme', 'gym_theme');
-  kpr($variables);
   // if (drupal_get_path_alias("node/{$vars['#node']->nid}")) {
   //   drupal_add_css(drupal_get_path('theme', 'MYTHEME') . "/css/foo.css");
   // }
