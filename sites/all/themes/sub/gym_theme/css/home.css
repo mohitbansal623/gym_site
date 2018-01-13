@@ -126,7 +126,7 @@ a {
 }
 /* line 101, ../sass/home.scss */
 #homepage .services-section .services-container .service.service3 {
-  background: url(../images/home/two.jpeg) no-repeat;
+  background: url(../images/home/images.jpeg) no-repeat;
   background-size: cover;
 }
 /* line 105, ../sass/home.scss */
@@ -136,24 +136,25 @@ a {
 }
 /* line 109, ../sass/home.scss */
 #homepage .services-section .services-container .service.service5 {
-  background: url(../images/home/two.jpeg) no-repeat;
+  background: url(../images/home/home-gym.jpg) no-repeat;
+  background-size: cover;
 }
-/* line 112, ../sass/home.scss */
+/* line 113, ../sass/home.scss */
 #homepage .services-section .services-container .service.service6 {
-  background: url(../images/home/workout.jpg) no-repeat;
+  background: url(../images/home/exercises.jpg) no-repeat;
   background-size: cover;
 }
-/* line 116, ../sass/home.scss */
+/* line 117, ../sass/home.scss */
 #homepage .services-section .services-container .service.service7 {
-  background: url(../images/home/fitness.jpg) no-repeat;
+  background: url(../images/home/working-out5.jpg) no-repeat;
   background-size: cover;
 }
-/* line 120, ../sass/home.scss */
+/* line 121, ../sass/home.scss */
 #homepage .services-section .services-container .service.service8 {
-  background: url(../images/home/index.jpeg) no-repeat;
+  background: url(../images/home/two.jpeg) no-repeat;
   background-size: cover;
 }
-/* line 124, ../sass/home.scss */
+/* line 125, ../sass/home.scss */
 #homepage .services-section .services-container .service a {
   display: inline-block;
   height: 100%;
@@ -164,13 +165,13 @@ a {
   outline: none;
   position: relative;
 }
-/* line 133, ../sass/home.scss */
+/* line 134, ../sass/home.scss */
 #homepage .services-section .services-container .service a .square {
   height: 100%;
   display: table;
   width: 100%;
 }
-/* line 138, ../sass/home.scss */
+/* line 139, ../sass/home.scss */
 #homepage .services-section .services-container .service a .service-name {
   display: none;
   vertical-align: middle;
@@ -182,19 +183,19 @@ a {
   /* Safari */
   transition: all 1s linear;
 }
-/* line 148, ../sass/home.scss */
+/* line 149, ../sass/home.scss */
 #homepage .services-section .services-container .service a .overlay {
   -webkit-transition: all 1s linear;
   /* Safari */
   transition: all 1s linear;
 }
-/* line 152, ../sass/home.scss */
+/* line 153, ../sass/home.scss */
 #homepage .services-section .services-container .service a:hover {
   -webkit-transition: all 1s linear;
   /* Safari */
   transition: all 1s linear;
 }
-/* line 155, ../sass/home.scss */
+/* line 156, ../sass/home.scss */
 #homepage .services-section .services-container .service a:hover .overlay {
   width: 100%;
   height: 100%;
@@ -205,14 +206,14 @@ a {
   /* Safari */
   transition: all 1s linear;
 }
-/* line 164, ../sass/home.scss */
+/* line 165, ../sass/home.scss */
 #homepage .services-section .services-container .service a:hover .service-name {
   -webkit-transition: all 1s linear;
   /* Safari */
   transition: all 1s linear;
   display: table-cell;
 }
-/* line 175, ../sass/home.scss */
+/* line 176, ../sass/home.scss */
 #homepage .excellence-section p {
   margin: 0;
   font-size: 3rem;
