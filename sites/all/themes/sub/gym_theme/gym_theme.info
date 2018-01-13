@@ -24,6 +24,7 @@ regions[page_bottom]    = 'Page bottom'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 stylesheets[all][] = css/basic_layout.css
+stylesheets[all][] = css/page_layout.css
 
 
 ;;;;;;;;;;;;;;;;;;;;;

@@ -1,0 +1,39 @@
+@import "includes";
+
+.main-container {
+  padding: 90px 8% 60px;
+}
+
+.page-header {
+  font-family: $font-title;
+  // font-family: $font;
+  text-transform: uppercase;
+  color: $black;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+form {
+  .form-control {
+    border-radius: 0px;
+  }
+  .form-item {
+    .btn {
+      background: $black;
+      border-color: $black;
+    }
+  }
+  label {
+    font-weight: normal;
+    font-family: $font;
+  }
+  .btn {
+    &.btn-success {
+      margin-top: 30px;
+      @include flat-btn($black, #fff, $black);
+    }
+    &.btn-default {
+      display: none;
+    }
+  }
+}

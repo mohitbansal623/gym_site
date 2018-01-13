@@ -25,62 +25,63 @@ a {
   padding-top: 5px;
   padding-bottom: 5px;
   z-index: 999;
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.5);
 }
-/* line 17, ../sass/basic_layout.scss */
+/* line 18, ../sass/basic_layout.scss */
 #navbar.navbar-default .navbar-brand {
   color: #fff;
   font-size: 2rem;
 }
-/* line 22, ../sass/basic_layout.scss */
+/* line 23, ../sass/basic_layout.scss */
 #navbar.navbar-default .navbar-nav li a {
   color: #fff;
 }
-/* line 24, ../sass/basic_layout.scss */
+/* line 25, ../sass/basic_layout.scss */
 #navbar.navbar-default .navbar-nav li a:hover {
   color: #777;
 }
-/* line 28, ../sass/basic_layout.scss */
+/* line 29, ../sass/basic_layout.scss */
 #navbar.navbar-default .navbar-nav > .active > a {
   color: #777;
   background: transparent;
 }
-/* line 32, ../sass/basic_layout.scss */
+/* line 33, ../sass/basic_layout.scss */
 #navbar.navbar-default .navbar-nav > .active > a:hover {
   color: #777;
   background: transparent;
 }
-/* line 36, ../sass/basic_layout.scss */
+/* line 37, ../sass/basic_layout.scss */
 #navbar.navbar-default .navbar-nav > .active > a:focus {
   color: #777;
   background: transparent;
 }
 
-/* line 43, ../sass/basic_layout.scss */
+/* line 44, ../sass/basic_layout.scss */
 .site-footer {
   background: #000;
 }
-/* line 45, ../sass/basic_layout.scss */
+/* line 46, ../sass/basic_layout.scss */
 .site-footer .footer {
   margin-top: 0;
   border: 0;
 }
-/* line 49, ../sass/basic_layout.scss */
+/* line 50, ../sass/basic_layout.scss */
 .site-footer a {
   color: #777;
 }
-/* line 52, ../sass/basic_layout.scss */
+/* line 53, ../sass/basic_layout.scss */
 .site-footer .timings {
   text-align: right;
 }
-/* line 55, ../sass/basic_layout.scss */
+/* line 56, ../sass/basic_layout.scss */
 .site-footer .social {
   text-align: center;
 }
-/* line 57, ../sass/basic_layout.scss */
+/* line 58, ../sass/basic_layout.scss */
 .site-footer .social .social-icons {
   margin-bottom: 30px;
 }
-/* line 59, ../sass/basic_layout.scss */
+/* line 60, ../sass/basic_layout.scss */
 .site-footer .social .social-icons a {
   display: inline-block;
   margin: 0 8px 0 0;
@@ -89,27 +90,27 @@ a {
   border: 2px solid #fff;
   border-radius: 50%;
 }
-/* line 66, ../sass/basic_layout.scss */
+/* line 67, ../sass/basic_layout.scss */
 .site-footer .social .social-icons a:hover {
   background: white;
 }
-/* line 68, ../sass/basic_layout.scss */
+/* line 69, ../sass/basic_layout.scss */
 .site-footer .social .social-icons a:hover i {
   color: #000;
 }
-/* line 72, ../sass/basic_layout.scss */
+/* line 73, ../sass/basic_layout.scss */
 .site-footer .social .social-icons a:last-child {
   margin: 0;
 }
-/* line 75, ../sass/basic_layout.scss */
+/* line 76, ../sass/basic_layout.scss */
 .site-footer .social .social-icons a i {
   color: #fff;
 }
-/* line 81, ../sass/basic_layout.scss */
+/* line 82, ../sass/basic_layout.scss */
 .site-footer .email {
   margin-bottom: 10px;
 }
-/* line 84, ../sass/basic_layout.scss */
+/* line 85, ../sass/basic_layout.scss */
 .site-footer .footer-title {
   color: #fff;
   font-weight: bold;
