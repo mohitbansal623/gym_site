@@ -1,0 +1,113 @@
+<?php
+
+function user_profile_menu() {
+  $menu['register'] = array(
+    'title' => 'User Register ',
+    'description' => 'Signup Form',
+    'page callback' => 'register_form',
+    'access callback' => TRUE,
+  );
+
+  return $menu;
+}
+
+function register_form() {
+  $renderable_form = drupal_get_form('registration_form');
+
+  return $renderable_form;
+
+}
+
+function registration_form($form, &$form_state) {
+  $form['user_name'] = array(
+    '#title' => 'User Name',
+    '#description' => 'Enter your user name',
+    '#type' => 'textfield',
+    '#required' => TRUE,
+  );
+
+
+  $form['first_name'] = array(
+    '#title' => 'First Name',
+    '#description' => 'Enter your first name',
+    '#type' => 'textfield',
+    '#required' => TRUE,
+  );
+
+  $form['last_name'] = array(
+    '#title' => 'Last Name',
+    '#description' => 'Enter your last name',
+    '#type' => 'textfield',
+    '#required' => TRUE,
+  );
+
+  $form['mail'] = array(
+    '#title' => 'Email',
+    '#description' => 'Enter your valid email address',
+    '#type' => 'textfield',
+    '#required' => TRUE,
+  );
+
+  $form['pass'] = array(
+    '#type' => 'password',
+    '#title' => t('Password'),
+    '#maxlength' => 8,
+    '#size' => 15,
+    '#description' => "Enter your password",
+  );
+
+  $form['pass_confirm'] = array(
+    '#type' => 'password',
+    '#title' => t('Retype Password'),
+    '#maxlength' => 8,
+    '#size' => 15,
+    '#description' => "Retype your password",
+  );
+
+  $active = array('coach' => 'Coach', 'client' =>'Client');
+
+  $form['role'] = array(
+    '#title' => 'Role',
+    '#type' => 'radios',
+    '#options' => $active,
+    '#description' => "Select role",
+   );
+
+  $form['address'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Address'),
+    '#required' => TRUE,
+    '#description' => "Enter your address.",
+  );
+
+  $form['contact'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Contact',
+    '#maxlength' => 10,
+    '#required' => TRUE,
+    '#description' => "Enter your contact number.",
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save'),
+  );
+
+  return $form;
+}
+
+
+function registration_form_submit($form, &$form_state) {
+  $user_info = array();
+
+  $user_info['name'] = $form_state['values']['user_name'];
+  $user_info['mail'] = $form_state['values']['mail'];
+  $user_info['pass'] = $form_state['values']['pass'];
+  $user_info['field_address']['und'][0]['value'] = $form_state['values']['address'];
+  $user_info['field_contact_no']['und'][0]['value'] = $form_state['values']['contact'];
+  $user_info['field_role']['und'][0]['value'] = $form_state['values']['role'];
+  $user_info['field_first_name']['und'][0]['value'] = $form_state['values']['first_name'];
+  $user_info['field_last_name']['und'][0]['value'] = $form_state['values']['last_name'];
+
+  $new_account = user_save(NULL, $user_info);
+}
