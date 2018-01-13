@@ -231,7 +231,7 @@
   </div>
 <?php endif; ?>
 
-<!-- <div class="footer-inner row">
+<div class="footer-inner row">
   <div class="location col-sm-4 col-xs-6">
     <div class="footer-title">LOCATION</div>
     <div class="footer-block">
@@ -258,4 +258,4 @@
       <p>Lorium Ipsum</p>
     </div>
   </div>
-</div> -->
+</div>
