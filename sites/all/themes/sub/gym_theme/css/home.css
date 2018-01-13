@@ -12,17 +12,27 @@ a {
 
 /* line 13, ../sass/_mixin.scss */
 #homepage .section .read-more .read-more-btn {
-  border: 2px solid #e7e7e7;
+  border-radius: 300px;
+  border: 2px solid #272727;
+  background-color: transparent;
   text-transform: uppercase;
-  padding: 8px 15px;
-  border-radius: 24px;
-  color: #777;
+  letter-spacing: .1em;
+  font-weight: 600;
+  font-style: normal;
+  padding: 17px 34px;
+  -webkit-transition: 0.1s background-color linear, 0.1s color linear;
+  -moz-transition: 0.1s background-color linear, 0.1s color linear;
+  -o-transition: 0.1s background-color linear, 0.1s color linear;
+  transition: 0.1s background-color linear, 0.1s color linear;
+  color: #272727;
+  display: inline-block;
   text-decoration: none;
   outline: none;
 }
-/* line 21, ../sass/_mixin.scss */
+/* line 35, ../sass/_mixin.scss */
 #homepage .section .read-more .read-more-btn:hover {
-  background: #e7e7e7;
+  background-color: #272727;
+  color: #fff;
 }
 
 /* line 3, ../sass/home.scss */
@@ -36,9 +46,11 @@ a {
 /* line 7, ../sass/home.scss */
 #homepage .section .read-more {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #ccc;
 }
-/* line 15, ../sass/home.scss */
+/* line 17, ../sass/home.scss */
 #homepage .section .section-heading h3 {
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -47,13 +59,13 @@ a {
   margin: 0 0 20px;
   text-align: center;
 }
-/* line 25, ../sass/home.scss */
+/* line 27, ../sass/home.scss */
 #homepage .text-section {
   padding: 50px 80px;
 }
-/* line 28, ../sass/home.scss */
+/* line 30, ../sass/home.scss */
 #homepage .intro-section {
-  height: 100vh;
+  height: calc(100vh - 60px);
   display: table;
   background-image: url("../images/home/weights.jpeg");
   background-attachment: fixed;
@@ -62,35 +74,39 @@ a {
   background-size: cover;
   width: 100%;
 }
-/* line 37, ../sass/home.scss */
+/* line 39, ../sass/home.scss */
 #homepage .intro-section .description {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 40, ../sass/home.scss */
+/* line 42, ../sass/home.scss */
 #homepage .intro-section .description p {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Oswald", sans-serif, Helvetica;
   font-size: 10rem;
   color: #fff;
   line-height: 1;
 }
-/* line 49, ../sass/home.scss */
+/* line 50, ../sass/home.scss */
+#homepage .about-section {
+  padding-bottom: 0px;
+}
+/* line 52, ../sass/home.scss */
 #homepage .about-section .description {
   text-align: justify;
 }
-/* line 51, ../sass/home.scss */
+/* line 54, ../sass/home.scss */
 #homepage .about-section .description p {
   font-size: 2rem;
 }
-/* line 57, ../sass/home.scss */
+/* line 60, ../sass/home.scss */
 #homepage .services-section {
   padding-top: 50px;
 }
-/* line 82, ../sass/home.scss */
+/* line 85, ../sass/home.scss */
 #homepage .services-section .services-container {
   font-size: 0;
 }
-/* line 84, ../sass/home.scss */
+/* line 87, ../sass/home.scss */
 #homepage .services-section .services-container .service {
   font-size: 1.8rem;
   display: inline-block;
@@ -98,46 +114,46 @@ a {
   height: 22vw;
   width: 25%;
 }
-/* line 90, ../sass/home.scss */
+/* line 93, ../sass/home.scss */
 #homepage .services-section .services-container .service.service1 {
   background: url(../images/home/fitness.jpg) no-repeat;
   background-size: cover;
 }
-/* line 94, ../sass/home.scss */
+/* line 97, ../sass/home.scss */
 #homepage .services-section .services-container .service.service2 {
   background: url(../images/home/index.jpeg) no-repeat;
   background-size: cover;
 }
-/* line 98, ../sass/home.scss */
+/* line 101, ../sass/home.scss */
 #homepage .services-section .services-container .service.service3 {
   background: url(../images/home/two.jpeg) no-repeat;
   background-size: cover;
 }
-/* line 102, ../sass/home.scss */
+/* line 105, ../sass/home.scss */
 #homepage .services-section .services-container .service.service4 {
   background: url(../images/home/workout.jpg) no-repeat;
   background-size: cover;
 }
-/* line 106, ../sass/home.scss */
+/* line 109, ../sass/home.scss */
 #homepage .services-section .services-container .service.service5 {
   background: url(../images/home/two.jpeg) no-repeat;
 }
-/* line 109, ../sass/home.scss */
+/* line 112, ../sass/home.scss */
 #homepage .services-section .services-container .service.service6 {
   background: url(../images/home/workout.jpg) no-repeat;
   background-size: cover;
 }
-/* line 113, ../sass/home.scss */
+/* line 116, ../sass/home.scss */
 #homepage .services-section .services-container .service.service7 {
   background: url(../images/home/fitness.jpg) no-repeat;
   background-size: cover;
 }
-/* line 117, ../sass/home.scss */
+/* line 120, ../sass/home.scss */
 #homepage .services-section .services-container .service.service8 {
   background: url(../images/home/index.jpeg) no-repeat;
   background-size: cover;
 }
-/* line 121, ../sass/home.scss */
+/* line 124, ../sass/home.scss */
 #homepage .services-section .services-container .service a {
   display: inline-block;
   height: 100%;
@@ -148,13 +164,13 @@ a {
   outline: none;
   position: relative;
 }
-/* line 130, ../sass/home.scss */
+/* line 133, ../sass/home.scss */
 #homepage .services-section .services-container .service a .square {
   height: 100%;
   display: table;
   width: 100%;
 }
-/* line 135, ../sass/home.scss */
+/* line 138, ../sass/home.scss */
 #homepage .services-section .services-container .service a .service-name {
   display: none;
   vertical-align: middle;
@@ -166,19 +182,19 @@ a {
   /* Safari */
   transition: all 1s linear;
 }
-/* line 145, ../sass/home.scss */
+/* line 148, ../sass/home.scss */
 #homepage .services-section .services-container .service a .overlay {
   -webkit-transition: all 1s linear;
   /* Safari */
   transition: all 1s linear;
 }
-/* line 149, ../sass/home.scss */
+/* line 152, ../sass/home.scss */
 #homepage .services-section .services-container .service a:hover {
   -webkit-transition: all 1s linear;
   /* Safari */
   transition: all 1s linear;
 }
-/* line 152, ../sass/home.scss */
+/* line 155, ../sass/home.scss */
 #homepage .services-section .services-container .service a:hover .overlay {
   width: 100%;
   height: 100%;
@@ -189,14 +205,14 @@ a {
   /* Safari */
   transition: all 1s linear;
 }
-/* line 161, ../sass/home.scss */
+/* line 164, ../sass/home.scss */
 #homepage .services-section .services-container .service a:hover .service-name {
   -webkit-transition: all 1s linear;
   /* Safari */
   transition: all 1s linear;
   display: table-cell;
 }
-/* line 172, ../sass/home.scss */
+/* line 175, ../sass/home.scss */
 #homepage .excellence-section p {
   margin: 0;
   font-size: 3rem;

@@ -11,14 +11,67 @@ a {
 }
 
 %read-more-btn {
-  border: 2px solid $light-grey;
+  border-radius: 300px;
+  border: 2px solid #272727;
+  background-color: transparent;
   text-transform: uppercase;
-  padding: 8px 15px;
-  border-radius: 24px;
-  color: $grey;
+  letter-spacing: .1em;
+  font-weight: 600;
+  font-style: normal;
+  padding: 17px 34px;
+  -webkit-transition: 0.1s background-color linear, 0.1s color linear;
+  -moz-transition: 0.1s background-color linear, 0.1s color linear;
+  -o-transition: 0.1s background-color linear, 0.1s color linear;
+  transition: 0.1s background-color linear, 0.1s color linear;
+  color: #272727;
+  display: inline-block;
+  // border: 2px solid $light-grey;
+  // text-transform: uppercase;
+  // padding: 8px 15px;
+  // border-radius: 24px;
+  // color: $grey;
   text-decoration: none;
   outline: none;
   &:hover {
-    background: $light-grey;
+    background-color: #272727;
+    color: #fff;
+  }
+}
+
+@mixin flat-btn($background, $color, $border) {
+  background: $background;
+  color: $color;
+  text-transform: uppercase;
+  padding: 8px 30px;
+  border: 2px solid $border;
+  border-radius: 0;
+  font-weight: bold;
+  &:hover {
+    background: $color;
+    color: $background;
+    border-color: $border;
+  }
+}
+
+%slick-dots {
+  z-index: 150;
+  bottom: 0;
+  list-style-type: none;
+  li {
+    width: auto;
+    height: auto;
+    margin: 5px 7px;
+    button {
+      width: 16px;
+      height: 16px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      &:before {
+        content: none;
+      }
+    }
+    &.slick-active button {
+      background: #fff;
+    }
   }
 }

@@ -114,112 +114,59 @@
   </div>
 </header>
 
-<div id="homepage">
-  <div class="section intro-section">
-    <div class="description">
-      <p>REDEFINE</p>
-      <p>YOURSELF</p>
-    </div>
-  </div>
-  <div class="section about-section text-section">
-    <div class="section-heading">
-      <h3>ABOUT US</h3>
-    </div>
-    <div class="description">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam odio augue, consectetur sed tortor sed, auctor pellentesque felis. Morbi blandit nisl in vehicula malesuada. Nam quis ornare dolor, id convallis eros. Curabitur dignissim porttitor massa, nec venenatis dolor aliquam eu. Morbi sapien turpis, tincidunt vitae rutrum feugiat, efficitur id sapien. Pellentesque sollicitudin nibh ut posuere lobortis. Vivamus ligula erat, volutpat posuere nunc id, condimentum tristique purus. Integer elementum magna a mi sodales, a lobortis sem lacinia.</p>
-      <div class="read-more"><a class="read-more-btn" href="/about-us">KNOW MORE</a></div>
-    </div>
-  </div>
-  <div class="section services-section">
-    <div class="section-heading">
-      <h3>WE PROVIDE</h3>
-    </div>
-    <!-- <div class="service-heading">
-      <div class="service-heading-container">
-        <div>WHAT</div>
-        <div>WE</div>
-        <div>DO</div>
-      </div>
-    </div> -->
-    <div class="services-container">
-    <!--  -->
-      <div class="service service1 wow fadeInLeftBig" data-wow-delay="0.15s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
-      </div>
-      <!--  -->
-      <div class="service service2 wow fadeInUpBig" data-wow-delay="0.3s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
-      </div>
-      <!--  -->
-      <div class="service service3 wow fadeInDownBig" data-wow-delay="0.45s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
-      </div>
-      <!--  -->
-      <div class="service service4 wow fadeInRightBig" data-wow-delay="0.6s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
-      </div>
-          <!--  -->
-      <div class="service service5 wow fadeInLeftBig" data-wow-delay="0.75s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
-      </div>
-      <!--  -->
-      <div class="service service6 wow fadeInDownBig" data-wow-delay="0.9s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
-      </div>
-      <!--  -->
-      <div class="service service7 wow fadeInUpBig" data-wow-delay="1.05s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
-      </div>
-      <!--  -->
-      <div class="service service8 wow fadeInRightBig" data-wow-delay="1.2s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
-      </div>
-      <!--  -->
-    </div>
-  </div>
+<div class="page-container">
+  <?php if (!empty($page['highlighted'])): ?>
+    <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+    <div class="main-container main-container-banner <?php print $container_class; ?>">
 
-  <div class="section text-section excellence-section">
-    <p>Join us on the pursuit of self-excellence.</p>
+  <?php else: ?>
+    <div class="main-container <?php print $container_class; ?>">
+  <?php endif; ?>
+
+    <header role="banner" id="page-header">
+      <?php if (!empty($site_slogan)): ?>
+        <p class="lead"><?php print $site_slogan; ?></p>
+      <?php endif; ?>
+
+      <?php print render($page['header']); ?>
+    </header> <!-- /#page-header -->
+
+    <div class="row">
+
+      <?php if (!empty($page['sidebar_first'])): ?>
+        <aside class="col-sm-3" role="complementary">
+          <?php print render($page['sidebar_first']); ?>
+        </aside>  <!-- /#sidebar-first -->
+      <?php endif; ?>
+
+      <section<?php print $content_column_class; ?>>
+        <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+        <a id="main-content"></a>
+        <?php print render($title_prefix); ?>
+        <?php if (!empty($title)): ?>
+          <h1 class="page-header"><?php print $title; ?></h1>
+        <?php endif; ?>
+        <?php print render($title_suffix); ?>
+        <?php print $messages; ?>
+        <?php if (!empty($tabs)): ?>
+          <?php print render($tabs); ?>
+        <?php endif; ?>
+        <?php if (!empty($page['help'])): ?>
+          <?php print render($page['help']); ?>
+        <?php endif; ?>
+        <?php if (!empty($action_links)): ?>
+          <ul class="action-links"><?php print render($action_links); ?></ul>
+        <?php endif; ?>
+        <?php print render($page['content']); ?>
+      </section>
+
+      <?php if (!empty($page['sidebar_second'])): ?>
+        <aside class="col-sm-3" role="complementary">
+          <?php print render($page['sidebar_second']); ?>
+        </aside>  <!-- /#sidebar-second -->
+      <?php endif; ?>
+
+    </div>
   </div>
 </div>
 
@@ -230,32 +177,3 @@
     </footer>
   </div>
 <?php endif; ?>
-
-<!-- <div class="footer-inner row">
-  <div class="location col-sm-4 col-xs-6">
-    <div class="footer-title">LOCATION</div>
-    <div class="footer-block">
-      <p>12, Lorium Ipsum</p>
-      <p>Lorium Ipsum</p>
-      <p>Lorium Ipsum</p>
-    </div>
-  </div>
-  <div class="social  col-sm-4 col-xs-6">
-    <div class="footer-title">STAY CONNECTED</div>
-    <div class="footer-block">
-      <div class="social-icons">
-        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-      </div>
-      <div class="email">Email: xyz@gmail.com</div>
-      <div class="phone">Phone: 9876543210</div>
-    </div>
-  </div>
-  <div class="timings  col-sm-4 col-xs-6">
-    <div class="footer-title">HOURS</div>
-    <div class="footer-block">
-      <p>Lorium Ipsum</p>
-      <p>Lorium Ipsum</p>
-      <p>Lorium Ipsum</p>
-    </div>
-  </div>
-</div> -->
