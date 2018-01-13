@@ -4,6 +4,10 @@
   padding: 90px 8% 60px;
 }
 
+.main-container-banner {
+  padding-top: 50px;
+}
+
 .page-header {
   font-family: $font-title;
   // font-family: $font;
@@ -15,6 +19,7 @@
 
 form {
   .form-control {
+    background: #fff;
     border-radius: 0px;
   }
   .form-item {
@@ -27,13 +32,32 @@ form {
     font-weight: normal;
     font-family: $font;
   }
-  .btn {
-    &.btn-success {
-      margin-top: 30px;
-      @include flat-btn($black, #fff, $black);
-    }
+  div > .btn {
+    margin-top: 30px;
+    @include flat-btn($black, #fff, $black);
     &.btn-default {
       display: none;
     }
+  }
+}
+
+.highlighted.jumbotron {
+  padding: 60px 0 0;
+  margin: 0;
+  background: transparent;
+}
+
+#block-views-view-banner-block-1 {
+  .slick-slider {
+    margin-bottom: 0px;
+  }
+  .slick-dots {
+    @extend %slick-dots;
+  }
+}
+
+.breadcrumb {
+  a {
+    color: $black;
   }
 }

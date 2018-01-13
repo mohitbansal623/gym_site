@@ -143,7 +143,7 @@
     </div> -->
     <div class="services-container">
     <!--  -->
-      <div class="service service1">
+      <div class="service service1 wow fadeInLeftBig" data-wow-delay="0.15s">
           <a href="">
             <div class="overlay"></div>
             <div class="square">
@@ -152,7 +152,7 @@
           </a>
       </div>
       <!--  -->
-      <div class="service service2">
+      <div class="service service2 wow fadeInUpBig" data-wow-delay="0.3s">
           <a href="">
             <div class="overlay"></div>
             <div class="square">
@@ -161,7 +161,7 @@
           </a>
       </div>
       <!--  -->
-      <div class="service service3">
+      <div class="service service3 wow fadeInDownBig" data-wow-delay="0.45s">
           <a href="">
             <div class="overlay"></div>
             <div class="square">
@@ -170,7 +170,7 @@
           </a>
       </div>
       <!--  -->
-      <div class="service service4">
+      <div class="service service4 wow fadeInRightBig" data-wow-delay="0.6s">
           <a href="">
             <div class="overlay"></div>
             <div class="square">
@@ -179,7 +179,7 @@
           </a>
       </div>
           <!--  -->
-      <div class="service service5">
+      <div class="service service5 wow fadeInLeftBig" data-wow-delay="0.75s">
           <a href="">
             <div class="overlay"></div>
             <div class="square">
@@ -188,7 +188,7 @@
           </a>
       </div>
       <!--  -->
-      <div class="service service6">
+      <div class="service service6 wow fadeInDownBig" data-wow-delay="0.9s">
           <a href="">
             <div class="overlay"></div>
             <div class="square">
@@ -197,7 +197,7 @@
           </a>
       </div>
       <!--  -->
-      <div class="service service7">
+      <div class="service service7 wow fadeInUpBig" data-wow-delay="1.05s">
           <a href="">
             <div class="overlay"></div>
             <div class="square">
@@ -206,7 +206,7 @@
           </a>
       </div>
       <!--  -->
-      <div class="service service8">
+      <div class="service service8 wow fadeInRightBig" data-wow-delay="1.2s">
           <a href="">
             <div class="overlay"></div>
             <div class="square">
@@ -231,7 +231,7 @@
   </div>
 <?php endif; ?>
 
-<div class="footer-inner row">
+<!-- <div class="footer-inner row">
   <div class="location col-sm-4 col-xs-6">
     <div class="footer-title">LOCATION</div>
     <div class="footer-block">
@@ -258,4 +258,4 @@
       <p>Lorium Ipsum</p>
     </div>
   </div>
-</div>
+</div> -->
