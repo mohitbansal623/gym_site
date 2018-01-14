@@ -34,3 +34,21 @@ function feature_ct_banner_image_default_styles() {
 
   return $styles;
 }
+
+/**
+ * Implements hook_node_info().
+ */
+function feature_ct_banner_node_info() {
+  $items = array(
+    'ct_banner' => array(
+      'name' => t('Banner'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+  );
+  drupal_alter('node_info', $items);
+  return $items;
+}
