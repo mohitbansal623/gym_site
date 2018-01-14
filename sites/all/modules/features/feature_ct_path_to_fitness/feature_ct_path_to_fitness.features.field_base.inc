@@ -25,19 +25,18 @@ function feature_ct_path_to_fitness_field_default_field_bases() {
     'locked' => 0,
     'module' => 'entityreference',
     'settings' => array(
-      'handler' => 'base',
+      'handler' => 'views',
       'handler_settings' => array(
         'behaviors' => array(
           'views-select-list' => array(
             'status' => 0,
           ),
         ),
-        'sort' => array(
-          'direction' => 'ASC',
-          'field' => 'field_role:value',
-          'type' => 'field',
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_1',
+          'view_name' => 'get_clients',
         ),
-        'target_bundles' => array(),
       ),
       'target_type' => 'user',
     ),

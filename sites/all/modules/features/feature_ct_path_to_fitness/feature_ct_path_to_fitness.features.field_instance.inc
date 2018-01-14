@@ -10,6 +10,86 @@
 function feature_ct_path_to_fitness_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-path_to_fitness-field_client_ref'.
+  $field_instances['node-path_to_fitness-field_client_ref'] = array(
+    'bundle' => 'path_to_fitness',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_client_ref',
+    'label' => 'Client Ref',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-path_to_fitness-field_coach_ref'.
+  $field_instances['node-path_to_fitness-field_coach_ref'] = array(
+    'bundle' => 'path_to_fitness',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_coach_ref',
+    'label' => 'Coach Ref',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'node-path_to_fitness-field_daily_activity'.
   $field_instances['node-path_to_fitness-field_daily_activity'] = array(
     'bundle' => 'path_to_fitness',
@@ -236,6 +316,8 @@ function feature_ct_path_to_fitness_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Base activity includes general day to day activity and contributes to most of your fat metabolism.');
+  t('Client Ref');
+  t('Coach Ref');
   t('Daily Activity');
   t('For every 3 training sessions, 1 recovery session per week is recommended.');
   t('For kinesiology imbalances it is recommend one of your training sessions/week comes from rehab');
