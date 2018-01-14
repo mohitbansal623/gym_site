@@ -13,5 +13,6 @@ features[field_base][] = field_path
 features[field_instance][] = node-ct_banner-field_banner_image
 features[field_instance][] = node-ct_banner-field_path
 features[image][] = banner
+features[node][] = ct_banner
 features[views_view][] = view_banner
 features_exclude[dependencies][ctools] = ctools
