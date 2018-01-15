@@ -10,5 +10,15 @@
       pauseOnHover: true,
       pauseOnFocus: false
     });
+
+    $('#block-views-client-fitness-block-block .view-content .views-field').matchHeight({ byRow: false});
+
+    $('#block-views-client-fitness-block-block .view-content .views-row').slick({
+      arrows: true,
+      slidesToShow:3,
+      slidesToScroll: 1,
+      dots:false,
+      infinite: false,
+    });
   });
 })(jQuery);

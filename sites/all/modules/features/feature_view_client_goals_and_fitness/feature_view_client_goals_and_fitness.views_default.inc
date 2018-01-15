@@ -22,6 +22,7 @@ function feature_view_client_goals_and_fitness_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Your path to fitness';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -31,12 +32,6 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h3> Path to Fitness';
-  $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
@@ -46,28 +41,34 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['fields']['field_total_training_sessions']['table'] = 'field_data_field_total_training_sessions';
   $handler->display->display_options['fields']['field_total_training_sessions']['field'] = 'field_total_training_sessions';
   $handler->display->display_options['fields']['field_total_training_sessions']['label'] = 'Total training sessions / Month';
+  $handler->display->display_options['fields']['field_total_training_sessions']['element_label_colon'] = FALSE;
   /* Field: Content: Speciality Sessions (rehab/skill focus) */
   $handler->display->display_options['fields']['field_speciality_sessions']['id'] = 'field_speciality_sessions';
   $handler->display->display_options['fields']['field_speciality_sessions']['table'] = 'field_data_field_speciality_sessions';
   $handler->display->display_options['fields']['field_speciality_sessions']['field'] = 'field_speciality_sessions';
   $handler->display->display_options['fields']['field_speciality_sessions']['label'] = 'Speciality Sessions';
+  $handler->display->display_options['fields']['field_speciality_sessions']['element_label_colon'] = FALSE;
   /* Field: Content: Recovery */
   $handler->display->display_options['fields']['field_recovery']['id'] = 'field_recovery';
   $handler->display->display_options['fields']['field_recovery']['table'] = 'field_data_field_recovery';
   $handler->display->display_options['fields']['field_recovery']['field'] = 'field_recovery';
   $handler->display->display_options['fields']['field_recovery']['label'] = 'Recovery Sessions';
+  $handler->display->display_options['fields']['field_recovery']['element_label_colon'] = FALSE;
   /* Field: Content: Nutrition Protocol */
   $handler->display->display_options['fields']['field_nutrition_protocol']['id'] = 'field_nutrition_protocol';
   $handler->display->display_options['fields']['field_nutrition_protocol']['table'] = 'field_data_field_nutrition_protocol';
   $handler->display->display_options['fields']['field_nutrition_protocol']['field'] = 'field_nutrition_protocol';
+  $handler->display->display_options['fields']['field_nutrition_protocol']['element_label_colon'] = FALSE;
   /* Field: Content: Re-Feeds */
   $handler->display->display_options['fields']['field_re_feeds']['id'] = 'field_re_feeds';
   $handler->display->display_options['fields']['field_re_feeds']['table'] = 'field_data_field_re_feeds';
   $handler->display->display_options['fields']['field_re_feeds']['field'] = 'field_re_feeds';
+  $handler->display->display_options['fields']['field_re_feeds']['element_label_colon'] = FALSE;
   /* Field: Content: Daily Activity */
   $handler->display->display_options['fields']['field_daily_activity']['id'] = 'field_daily_activity';
   $handler->display->display_options['fields']['field_daily_activity']['table'] = 'field_data_field_daily_activity';
   $handler->display->display_options['fields']['field_daily_activity']['field'] = 'field_daily_activity';
+  $handler->display->display_options['fields']['field_daily_activity']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -111,6 +112,7 @@ function feature_view_client_goals_and_fitness_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'My dashboard';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';

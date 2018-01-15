@@ -25,6 +25,13 @@ function gym_theme_preprocess_page(&$vars, $hook) {
     drupal_add_js($theme_path . '/js/home.js');
     drupal_add_css($theme_path . '/css/home.css');
   }
+
+  $alias = drupal_get_path_alias();
+  switch ($alias) {
+    case 'client/dashboard':
+      drupal_add_css($theme_path . '/css/dashboard.css');
+      break;
+  }
 }
 
 /**
