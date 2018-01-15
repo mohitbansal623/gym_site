@@ -1,0 +1,102 @@
+@import "includes";
+
+#block-views-client-fitness-block-block {
+  background: #181818;
+  padding: 20px;
+  text-align: center;
+  .block-title {
+    margin-top: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .slick-slider {
+    margin:0 -15px;
+    padding: 0 20px;
+    .slick-arrow {
+
+    }
+    .slick-prev {
+      left: 4px;
+    }
+    .slick-next {
+      right: 5px;
+    }
+  }
+  .slick-slide {
+    margin-right:15px;
+    margin-left:15px;
+  }
+  .view-content {
+    .views-field {
+      padding: 15px 10px;
+      background: #222222;
+      color: #fff;
+      // width: 240px;
+      // display: inline-block;
+      // margin: 5px;
+      // vertical-align: top;
+      .views-label {
+        position: relative;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        &:before {
+          content: "\f004";
+          font-family: FontAwesome;
+          background: #525252;
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          display: block;
+          margin: auto;
+          font-size: 24px;
+          color: #232323;
+          margin-bottom: 5px;
+        }
+        &:after {
+          content: "";
+          height: 2px;
+          width: 70%;
+          background: #313131;
+          display: block;
+          margin-left: 15%;
+        }
+      }
+    }
+  }
+}
+
+
+.view-client-goal-block {
+  margin-top: 30px;
+  // background: #0BCBE2;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+  padding: 20px;
+  // color: #fff;
+  .views-field {
+    margin-bottom: 10px;
+    .views-label {
+      font-size: 1.7rem;
+      text-transform: uppercase;
+    }
+    .field-content {
+      display: inline-block;
+    }
+  }
+  .views-field-field-inspiration {
+    .field-content {
+      display: block;
+    }
+  }
+  .views-field-field-goal {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    .views-label {
+      font-size: 1.8rem;
+    }
+  }
+}
