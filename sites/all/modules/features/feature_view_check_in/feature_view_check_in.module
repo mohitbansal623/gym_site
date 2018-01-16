@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the feature_view_check_in feature.
+ */
+
+include_once 'feature_view_check_in.features.inc';
