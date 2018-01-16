@@ -13,10 +13,11 @@ a {
 /* line 3, ../sass/dashboard.scss */
 #block-views-client-fitness-block-block {
   background: #181818;
-  padding: 20px;
+  padding: 35px 20px;
   text-align: center;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/* line 7, ../sass/dashboard.scss */
+/* line 9, ../sass/dashboard.scss */
 #block-views-client-fitness-block-block .block-title {
   margin-top: 0;
   color: #fff;
@@ -25,38 +26,38 @@ a {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
-/* line 15, ../sass/dashboard.scss */
+/* line 17, ../sass/dashboard.scss */
 #block-views-client-fitness-block-block .slick-slider {
   margin: 0 -15px;
   padding: 0 20px;
 }
-/* line 21, ../sass/dashboard.scss */
+/* line 23, ../sass/dashboard.scss */
 #block-views-client-fitness-block-block .slick-slider .slick-prev {
   left: 4px;
 }
-/* line 24, ../sass/dashboard.scss */
+/* line 26, ../sass/dashboard.scss */
 #block-views-client-fitness-block-block .slick-slider .slick-next {
   right: 5px;
 }
-/* line 28, ../sass/dashboard.scss */
+/* line 30, ../sass/dashboard.scss */
 #block-views-client-fitness-block-block .slick-slide {
   margin-right: 15px;
   margin-left: 15px;
 }
-/* line 33, ../sass/dashboard.scss */
+/* line 35, ../sass/dashboard.scss */
 #block-views-client-fitness-block-block .view-content .views-field {
   padding: 15px 10px;
   background: #222222;
   color: #fff;
 }
-/* line 41, ../sass/dashboard.scss */
+/* line 43, ../sass/dashboard.scss */
 #block-views-client-fitness-block-block .view-content .views-field .views-label {
   position: relative;
   display: inline-block;
   text-transform: uppercase;
   font-size: 1.6rem;
 }
-/* line 46, ../sass/dashboard.scss */
+/* line 48, ../sass/dashboard.scss */
 #block-views-client-fitness-block-block .view-content .views-field .views-label:before {
   content: "\f004";
   font-family: FontAwesome;
@@ -70,7 +71,7 @@ a {
   color: #232323;
   margin-bottom: 5px;
 }
-/* line 59, ../sass/dashboard.scss */
+/* line 61, ../sass/dashboard.scss */
 #block-views-client-fitness-block-block .view-content .views-field .views-label:after {
   content: "";
   height: 2px;
@@ -80,36 +81,81 @@ a {
   margin-left: 15%;
 }
 
-/* line 73, ../sass/dashboard.scss */
+/* line 75, ../sass/dashboard.scss */
 .view-client-goal-block {
-  margin-top: 30px;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 20px;
+  margin-top: 40px;
+  padding: 0 20px 0 0;
+  width: 60%;
 }
-/* line 79, ../sass/dashboard.scss */
-.view-client-goal-block .views-field {
-  margin-bottom: 10px;
+/* line 84, ../sass/dashboard.scss */
+.view-client-goal-block .goal-box .images {
+  font-size: 0;
+  margin-top: 20px;
 }
-/* line 81, ../sass/dashboard.scss */
-.view-client-goal-block .views-field .views-label {
-  font-size: 1.7rem;
-  text-transform: uppercase;
+/* line 87, ../sass/dashboard.scss */
+.view-client-goal-block .goal-box .images img {
+  width: 100%;
+  height: auto;
 }
-/* line 85, ../sass/dashboard.scss */
-.view-client-goal-block .views-field .field-content {
+/* line 91, ../sass/dashboard.scss */
+.view-client-goal-block .goal-box .images .img-inner {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px;
+}
+/* line 95, ../sass/dashboard.scss */
+.view-client-goal-block .goal-box .images .current {
+  width: 50%;
   display: inline-block;
+  vertical-align: top;
+  padding-right: 10px;
 }
-/* line 90, ../sass/dashboard.scss */
-.view-client-goal-block .views-field-field-inspiration .field-content {
-  display: block;
+/* line 101, ../sass/dashboard.scss */
+.view-client-goal-block .goal-box .images .inspiration {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 10px;
 }
-/* line 94, ../sass/dashboard.scss */
-.view-client-goal-block .views-field-field-goal {
-  font-size: 1.8rem;
+/* line 107, ../sass/dashboard.scss */
+.view-client-goal-block .goal-box .images .image-text {
+  text-align: center;
+  padding: 2px 10px;
+  color: #111;
+  font-size: 1.5rem;
+}
+/* line 115, ../sass/dashboard.scss */
+.view-client-goal-block .goal-box .description > div {
+  padding: 15px 20px;
+  background: #643CC1;
+  display: inline-block;
+  vertical-align: top;
+  color: #fff;
+  text-align: center;
+  margin: 0 5px 5px 0;
+}
+/* line 123, ../sass/dashboard.scss */
+.view-client-goal-block .goal-box .description > div .title {
   text-transform: uppercase;
+  font-size: 1.6rem;
   font-weight: bold;
 }
-/* line 98, ../sass/dashboard.scss */
-.view-client-goal-block .views-field-field-goal .views-label {
+/* line 129, ../sass/dashboard.scss */
+.view-client-goal-block .goal-box .description .goal {
+  background: #00A638;
+}
+/* line 131, ../sass/dashboard.scss */
+.view-client-goal-block .goal-box .description .goal .title, .view-client-goal-block .goal-box .description .goal .content {
   font-size: 1.8rem;
+}
+/* line 135, ../sass/dashboard.scss */
+.view-client-goal-block .goal-box .description .days {
+  background: #FFA500;
+}
+/* line 138, ../sass/dashboard.scss */
+.view-client-goal-block .goal-box .description .coach {
+  background: #E87352;
+}
+/* line 141, ../sass/dashboard.scss */
+.view-client-goal-block .goal-box .description .motivation {
+  background: #377DE2;
 }
