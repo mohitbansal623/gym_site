@@ -81,49 +81,52 @@ a {
   margin-left: 15%;
 }
 
-/* line 75, ../sass/dashboard.scss */
-.view-client-goal-block {
-  margin-top: 40px;
-  padding: 0 20px 0 0;
+/* line 74, ../sass/dashboard.scss */
+#block-system-main {
   width: 60%;
+  padding: 0 20px 0 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 40px;
 }
-/* line 84, ../sass/dashboard.scss */
+
+/* line 87, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .images {
   font-size: 0;
   margin-top: 20px;
 }
-/* line 87, ../sass/dashboard.scss */
+/* line 90, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .images img {
   width: 100%;
   height: auto;
 }
-/* line 91, ../sass/dashboard.scss */
+/* line 94, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .images .img-inner {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 5px;
 }
-/* line 95, ../sass/dashboard.scss */
+/* line 98, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .images .current {
   width: 50%;
   display: inline-block;
   vertical-align: top;
   padding-right: 10px;
 }
-/* line 101, ../sass/dashboard.scss */
+/* line 104, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .images .inspiration {
   width: 50%;
   display: inline-block;
   vertical-align: top;
   padding-left: 10px;
 }
-/* line 107, ../sass/dashboard.scss */
+/* line 110, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .images .image-text {
   text-align: center;
   padding: 2px 10px;
   color: #111;
   font-size: 1.5rem;
 }
-/* line 115, ../sass/dashboard.scss */
+/* line 118, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .description > div {
   padding: 15px 20px;
   background: #643CC1;
@@ -133,29 +136,96 @@ a {
   text-align: center;
   margin: 0 5px 5px 0;
 }
-/* line 123, ../sass/dashboard.scss */
+/* line 126, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .description > div .title {
   text-transform: uppercase;
   font-size: 1.6rem;
   font-weight: bold;
 }
-/* line 129, ../sass/dashboard.scss */
+/* line 132, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .description .goal {
   background: #00A638;
 }
-/* line 131, ../sass/dashboard.scss */
+/* line 134, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .description .goal .title, .view-client-goal-block .goal-box .description .goal .content {
   font-size: 1.8rem;
 }
-/* line 135, ../sass/dashboard.scss */
+/* line 138, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .description .days {
   background: #FFA500;
 }
-/* line 138, ../sass/dashboard.scss */
+/* line 141, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .description .coach {
   background: #E87352;
 }
-/* line 141, ../sass/dashboard.scss */
+/* line 144, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .description .motivation {
   background: #377DE2;
+}
+
+/* line 151, ../sass/dashboard.scss */
+#block-views-check-in-block {
+  margin-top: 40px;
+  display: inline-block;
+  vertical-align: top;
+  width: 38%;
+}
+/* line 156, ../sass/dashboard.scss */
+#block-views-check-in-block .current-stats {
+  padding: 20px;
+  color: #fff;
+  background: #034079;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #034079 0%, #01427c 49%, #044683 80%, #04498c 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #034079 0%, #01427c 49%, #044683 80%, #04498c 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #034079 0%, #01427c 49%, #044683 80%, #04498c 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#034079', endColorstr='#04498c',GradientType=1 );
+  /* IE6-9 */
+}
+/* line 165, ../sass/dashboard.scss */
+#block-views-check-in-block .stats-content {
+  padding-bottom: 10px;
+}
+/* line 168, ../sass/dashboard.scss */
+#block-views-check-in-block .block-title {
+  margin-top: 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #1E5A8C;
+}
+/* line 178, ../sass/dashboard.scss */
+#block-views-check-in-block .view-content .views-row .panel-default, #block-views-check-in-block .view-content .views-row .panel-heading, #block-views-check-in-block .view-content .views-row .panel-heading + div {
+  border: 0;
+  background: transparent;
+}
+/* line 182, ../sass/dashboard.scss */
+#block-views-check-in-block .view-content .views-row .stats-content:not(.panel-group) {
+  padding-right: 7px;
+}
+/* line 185, ../sass/dashboard.scss */
+#block-views-check-in-block .view-content .views-row table {
+  width: 100%;
+}
+/* line 187, ../sass/dashboard.scss */
+#block-views-check-in-block .view-content .views-row table tr > td:first-child {
+  padding-right: 10px;
+}
+/* line 191, ../sass/dashboard.scss */
+#block-views-check-in-block .view-content .views-row .panel-heading {
+  padding: 0 0 5px 0;
+}
+/* line 193, ../sass/dashboard.scss */
+#block-views-check-in-block .view-content .views-row .panel-heading a {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
+/* line 199, ../sass/dashboard.scss */
+#block-views-check-in-block .view-content .views-row .panel-body {
+  border-top: 2px solid #1E5A8C;
 }
