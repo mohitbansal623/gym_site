@@ -2,8 +2,10 @@
 
 #block-views-client-fitness-block-block {
   background: #181818;
-  padding: 20px;
+  padding: 35px 20px;
   text-align: center;
+  // border-radius: 5px;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
   .block-title {
     margin-top: 0;
     color: #fff;
@@ -69,34 +71,135 @@
   }
 }
 
-
+#block-system-main {
+  width: 60%;
+  padding: 0 20px 0 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 40px;
+}
 .view-client-goal-block {
-  margin-top: 30px;
+  // border-radius: 5px;
   // background: #0BCBE2;
-  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
-  padding: 20px;
+  // box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
   // color: #fff;
-  .views-field {
-    margin-bottom: 10px;
-    .views-label {
-      font-size: 1.7rem;
-      text-transform: uppercase;
+  .goal-box {
+    .images {
+      font-size: 0;
+      margin-top: 20px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .img-inner {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        padding: 5px;
+      }
+      .current {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        padding-right: 10px;
+      }
+      .inspiration {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 10px;
+      }
+      .image-text {
+        text-align: center;
+        padding: 2px 10px;
+        color: $black;
+        font-size: 1.5rem;
+      }
     }
-    .field-content {
-      display: inline-block;
-    }
-  }
-  .views-field-field-inspiration {
-    .field-content {
-      display: block;
-    }
-  }
-  .views-field-field-goal {
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    .views-label {
-      font-size: 1.8rem;
+    .description {
+      &>div {
+        padding: 15px 20px;
+        background: #643CC1;
+        display: inline-block;
+        vertical-align: top;
+        color: #fff;
+        text-align: center;
+        margin: 0 5px 5px 0;
+        .title {
+          text-transform: uppercase;
+          font-size: 1.6rem;
+          font-weight: bold;
+        }
+      }
+      .goal {
+        background: #00A638;
+        .title, .content {
+          font-size: 1.8rem;
+        }
+      }
+      .days {
+        background: #FFA500;
+      }
+      .coach {
+        background: #E87352;
+      }
+      .motivation {
+        background: #377DE2;
+      }
     }
   }
 }
+
+#block-views-check-in-block {
+  margin-top: 40px;
+  display: inline-block;
+  vertical-align: top;
+  width: 38%;
+  .current-stats {
+    padding: 20px;
+    color: #fff;
+    background: rgb(3,64,121); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(3,64,121,1) 0%, rgba(1,66,124,1) 49%, rgba(4,70,131,1) 80%, rgba(4,73,140,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(3,64,121,1) 0%,rgba(1,66,124,1) 49%,rgba(4,70,131,1) 80%,rgba(4,73,140,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(3,64,121,1) 0%,rgba(1,66,124,1) 49%,rgba(4,70,131,1) 80%,rgba(4,73,140,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#034079', endColorstr='#04498c',GradientType=1 ); /* IE6-9 */
+  }
+  .stats-content {
+    padding-bottom: 10px;
+  }
+  .block-title {
+    margin-top: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #1E5A8C;
+  }
+  .view-content {
+    .views-row {
+      .panel-default, .panel-heading, .panel-heading + div {
+        border: 0;
+        background: transparent;
+      }
+      .stats-content:not(.panel-group) {
+        padding-right: 7px;
+      }
+      table {
+        width: 100%;
+        tr > td:first-child {
+          padding-right: 10px;
+        }
+      }
+      .panel-heading {
+        padding: 0 0 5px 0;
+        a {
+          color: #fff;
+          text-decoration: none;
+          outline: none;
+        }
+      }
+      .panel-body {
+        border-top: 2px solid #1E5A8C;
+      }
+    }
+  }
+}
+

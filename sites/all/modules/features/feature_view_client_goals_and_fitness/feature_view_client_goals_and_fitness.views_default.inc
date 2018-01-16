@@ -131,6 +131,9 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['fields']['field_goal']['id'] = 'field_goal';
   $handler->display->display_options['fields']['field_goal']['table'] = 'field_data_field_goal';
   $handler->display->display_options['fields']['field_goal']['field'] = 'field_goal';
+  $handler->display->display_options['fields']['field_goal']['label'] = '';
+  $handler->display->display_options['fields']['field_goal']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_goal']['element_label_colon'] = FALSE;
   /* Field: Content: Start Date */
   $handler->display->display_options['fields']['field_start_date']['id'] = 'field_start_date';
   $handler->display->display_options['fields']['field_start_date']['table'] = 'field_data_field_start_date';
@@ -149,7 +152,9 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['fields']['php']['id'] = 'php';
   $handler->display->display_options['fields']['php']['table'] = 'views';
   $handler->display->display_options['fields']['php']['field'] = 'php';
-  $handler->display->display_options['fields']['php']['label'] = 'Days Remaining';
+  $handler->display->display_options['fields']['php']['label'] = '';
+  $handler->display->display_options['fields']['php']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php']['php_output'] = '<?php echo $row->field_start_date; ?>';
   $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
@@ -158,6 +163,9 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['fields']['field_coach_ref']['id'] = 'field_coach_ref';
   $handler->display->display_options['fields']['field_coach_ref']['table'] = 'field_data_field_coach_ref';
   $handler->display->display_options['fields']['field_coach_ref']['field'] = 'field_coach_ref';
+  $handler->display->display_options['fields']['field_coach_ref']['label'] = '';
+  $handler->display->display_options['fields']['field_coach_ref']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_coach_ref']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_coach_ref']['settings'] = array(
     'bypass_access' => 0,
     'link' => 0,
@@ -166,15 +174,53 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['fields']['field_motivation']['id'] = 'field_motivation';
   $handler->display->display_options['fields']['field_motivation']['table'] = 'field_data_field_motivation';
   $handler->display->display_options['fields']['field_motivation']['field'] = 'field_motivation';
+  $handler->display->display_options['fields']['field_motivation']['label'] = '';
+  $handler->display->display_options['fields']['field_motivation']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_motivation']['element_label_colon'] = FALSE;
   /* Field: Content: Inspiration */
   $handler->display->display_options['fields']['field_inspiration']['id'] = 'field_inspiration';
   $handler->display->display_options['fields']['field_inspiration']['table'] = 'field_data_field_inspiration';
   $handler->display->display_options['fields']['field_inspiration']['field'] = 'field_inspiration';
+  $handler->display->display_options['fields']['field_inspiration']['label'] = '';
+  $handler->display->display_options['fields']['field_inspiration']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_inspiration']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_inspiration']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_inspiration']['settings'] = array(
     'image_style' => '',
     'image_link' => '',
   );
+  /* Field: Content: Current Progress Photo */
+  $handler->display->display_options['fields']['field_current_progress_photo']['id'] = 'field_current_progress_photo';
+  $handler->display->display_options['fields']['field_current_progress_photo']['table'] = 'field_data_field_current_progress_photo';
+  $handler->display->display_options['fields']['field_current_progress_photo']['field'] = 'field_current_progress_photo';
+  $handler->display->display_options['fields']['field_current_progress_photo']['label'] = '';
+  $handler->display->display_options['fields']['field_current_progress_photo']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_current_progress_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_current_progress_photo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_current_progress_photo']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="goal-box">
+  <div class="goal-box-inner">
+    <div class="description">
+      <div class="goal"><div class="title">Goal</div><div class="content">[field_goal]</div></div>
+      <div class="days"><div class="title">Days Remaining</div><div class="content">[php]</div></div>
+      <div class="coach"><div class="title">Coach Reference</div><div class="content">[field_coach_ref]</div></div>
+      <div class="motivation"><div class="title">Motivation</div><div class="content">[field_motivation]</div></div>
+    </div>
+    <div class="images">
+      <div class="current"><div class="img-inner">[field_current_progress_photo]<div class="image-text">Current Progress Pic</div></div></div>
+      <div class="inspiration"><div class="img-inner">[field_inspiration]<div class="image-text">Inspiration Pic</div></div></div>
+    </div>
+  </div>
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
