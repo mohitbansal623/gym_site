@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the feature_daily_log_client feature.
+ */
+
+include_once 'feature_daily_log_client.features.inc';
