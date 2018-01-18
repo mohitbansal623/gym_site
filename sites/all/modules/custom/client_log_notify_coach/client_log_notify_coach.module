@@ -1,0 +1,122 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function notifications_menu() {
+  $items['notifications'] = array(
+    'page callback' => '_notifications_populate',
+    'type' => MENU_CALLBACK,
+    'access arguments' => TRUE,
+  );
+
+  $items['clear-notification'] = array(
+    'page callback' => '_notifications_status_response',
+    'type' => MENU_CALLBACK,
+    'access arguments' => TRUE,
+  );
+  return $items;
+}
+
+function _notifications_populate() {
+  global $user;
+  $messages = get_notifications_for_coach($user->uid);
+  $messages['popup_messages'] = $messages;
+
+  if (count($messages) == 0) {
+    $messages = array(0 => array("message" => "No notification message is available", "id" => "nomsg"));
+  }
+
+  $output = theme('notification_popup', array('coach_messages' => $messages));
+
+  return $output;
+
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function notifications_theme() {
+  return array(
+    'notification_popup' => array(
+      'template' => 'notification_popup',
+      'variables' => array('coach_messages' => NULL,),
+      'path' => drupal_get_path('module', 'client_log_notify_coach') . '/templates',
+    ),
+  );
+}
+
+function client_log_notify_coach_node_presave($node) {
+  global $user;
+
+  if ($node->type == 'daily_log') {
+    $plan_value = isset($node->field_was_today_on_plan['und'][0]['value'])?$node->field_was_today_on_plan['und'][0]['value']: NULL;
+
+    // Get the coach id under which the client is trained
+    $query = db_select('field_data_field_client_ref', 'at')
+      -> fields('coach', array('field_coach_ref_target_id'));
+    $query->join('field_data_field_coach_ref', 'coach', "coach.entity_id = at.entity_id");
+    $query->condition('at.bundle', 'goals');
+    $query->condition('at.field_client_ref_target_id', $user->uid);
+    $coach_id = $query->execute()->fetchCol();
+    $coach_id = !empty($coach_id)? $coach_id[0] : NULL;
+
+    // Get Client Name from users table
+    $client_name = db_query("Select name from users where uid =" . $user->uid . "")->fetchCol();
+
+    $client_name = !empty($client_name)? $client_name[0]: NULL;
+    $message = $client_name . " has replied " . $plan_value;
+
+    // Insert in table to notify coach about this.
+    $nid = db_insert('notify_coach')
+        ->fields(array(
+          'client_id' => $user->uid,
+          'message' => $message,
+          'status' => 0,
+          'time_stamp' => REQUEST_TIME,
+          'coach_id' => $coach_id,
+        ))
+    ->execute();
+  }
+}
+
+function get_notifications_for_coach($uid) {
+  $query = db_select('coach_notify', 'at')
+        -> fields('at', array('message' , 'time_stamp', 'seq_id'))
+        -> condition('at.user_id', $uid)
+        -> condition('at.status', 0)
+        -> orderBy('at.time_stamp', 'DESC');
+
+  $messages = $query->execute()->fetchAll();
+
+  $message = array();
+  if (isset($messages)) {
+    foreach($messages as $key => $value) {
+      $message[$key]['message'] =  $value->message;
+      $message[$key]['id']  = $value->seq_id;
+      $message[$key]['time_stamp']  = $value->time_stamp;
+    }
+  }
+
+  return $message;
+}
+
+
+function _notifications_status_response() {
+  $id = $_POST['id'];
+  update_msg_status_co_op($id);
+}
+
+
+/**
+ * Update message status for co op
+ */
+function update_msg_status_co_op($id) {
+  $num_updated = db_update('notify_coach')
+  ->fields(array(
+    'status' => 1,
+  ))
+  ->condition('seq_id', $id, '=')
+  ->execute();
+}

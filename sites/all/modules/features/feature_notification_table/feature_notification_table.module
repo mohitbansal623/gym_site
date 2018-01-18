@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the feature_notification_table feature.
+ */
+
+include_once 'feature_notification_table.features.inc';
