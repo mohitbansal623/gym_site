@@ -32,6 +32,10 @@ function feature_view_check_in_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Content: Author */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   /* Field: Content: Bodyfat kg */
   $handler->display->display_options['fields']['field_bodyfat_kg']['id'] = 'field_bodyfat_kg';
   $handler->display->display_options['fields']['field_bodyfat_kg']['table'] = 'field_data_field_bodyfat_kg';
@@ -267,6 +271,12 @@ function feature_view_check_in_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'check_in' => 'check_in',
   );
+  /* Filter criterion: User: Current */
+  $handler->display->display_options['filters']['uid_current']['id'] = 'uid_current';
+  $handler->display->display_options['filters']['uid_current']['table'] = 'users';
+  $handler->display->display_options['filters']['uid_current']['field'] = 'uid_current';
+  $handler->display->display_options['filters']['uid_current']['relationship'] = 'uid';
+  $handler->display->display_options['filters']['uid_current']['value'] = '1';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
