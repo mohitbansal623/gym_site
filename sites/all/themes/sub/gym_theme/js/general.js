@@ -20,5 +20,26 @@
       dots:false,
       infinite: false,
     });
+
+    $(".coach-notifications").on("click", function () {
+      $("#notification-modal").load("/notifications");
+    });
+
+    $('body').on("click", '.modal-content .modal-body .user-notifications .btn', function () {
+      var id = $(this).parent().attr('id');
+      $(this).parent().remove();
+      $.ajax({
+        type: 'POST',
+        url: '/clear-notification',
+        data: {
+          id: id,
+        },
+        success: (function () {
+          $("#notification-modal").load("/notifications");
+          get_notification();
+        })
+      });
+    });
+
   });
 })(jQuery);
