@@ -199,33 +199,54 @@ a {
   border-bottom: 2px solid #1E5A8C;
 }
 /* line 178, ../sass/dashboard.scss */
+#block-views-check-in-block .view-content .views-row .blue-underline {
+  border-bottom: 2px solid #1E5A8C;
+}
+/* line 181, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row .panel-default, #block-views-check-in-block .view-content .views-row .panel-heading, #block-views-check-in-block .view-content .views-row .panel-heading + div {
   border: 0;
   background: transparent;
 }
-/* line 182, ../sass/dashboard.scss */
+/* line 185, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row .stats-content:not(.panel-group) {
   padding-right: 7px;
 }
-/* line 185, ../sass/dashboard.scss */
+/* line 188, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row table {
   width: 100%;
 }
-/* line 187, ../sass/dashboard.scss */
+/* line 190, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row table tr > td:first-child {
   padding-right: 10px;
 }
-/* line 191, ../sass/dashboard.scss */
+/* line 194, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row .panel-heading {
-  padding: 0 0 5px 0;
+  padding: 0;
 }
-/* line 193, ../sass/dashboard.scss */
+/* line 196, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row .panel-heading a {
   color: #fff;
   text-decoration: none;
   outline: none;
+  padding: 5px 22px 5px 0px;
+  display: inline-block;
+  width: 100%;
+  position: relative;
 }
-/* line 199, ../sass/dashboard.scss */
+/* line 204, ../sass/dashboard.scss */
+#block-views-check-in-block .view-content .views-row .panel-heading a:after {
+  content: "\f077";
+  position: absolute;
+  right: 6px;
+  top: 5px;
+  font-family: FontAwesome;
+  font-size: 14px;
+}
+/* line 212, ../sass/dashboard.scss */
+#block-views-check-in-block .view-content .views-row .panel-heading a.collapsed:after {
+  content: "\f078";
+}
+/* line 217, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row .panel-body {
   border-top: 2px solid #1E5A8C;
 }
