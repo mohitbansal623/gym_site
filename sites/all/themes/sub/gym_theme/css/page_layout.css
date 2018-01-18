@@ -89,10 +89,6 @@ form div > .btn:hover {
   color: #111;
   border-color: #111;
 }
-/* line 38, ../sass/page_layout.scss */
-form div > .btn.btn-default {
-  display: none;
-}
 
 /* line 44, ../sass/page_layout.scss */
 .highlighted.jumbotron {

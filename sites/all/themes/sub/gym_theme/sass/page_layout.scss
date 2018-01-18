@@ -36,7 +36,7 @@ form {
     margin-top: 30px;
     @include flat-btn($black, #fff, $black);
     &.btn-default {
-      display: none;
+      // display: none;
     }
   }
 }

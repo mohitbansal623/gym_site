@@ -24,7 +24,11 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Your path to fitness';
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    2 => '2',
+    6 => '6',
+  );
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -114,7 +118,11 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'My dashboard';
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    2 => '2',
+    6 => '6',
+  );
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -186,18 +194,6 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['fields']['field_inspiration']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_inspiration']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_inspiration']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
-  /* Field: Content: Current Progress Photo */
-  $handler->display->display_options['fields']['field_current_progress_photo']['id'] = 'field_current_progress_photo';
-  $handler->display->display_options['fields']['field_current_progress_photo']['table'] = 'field_data_field_current_progress_photo';
-  $handler->display->display_options['fields']['field_current_progress_photo']['field'] = 'field_current_progress_photo';
-  $handler->display->display_options['fields']['field_current_progress_photo']['label'] = '';
-  $handler->display->display_options['fields']['field_current_progress_photo']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_current_progress_photo']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_current_progress_photo']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_current_progress_photo']['settings'] = array(
     'image_style' => '',
     'image_link' => '',
   );
