@@ -36,10 +36,6 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Content: Author */
-  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
-  $handler->display->display_options['relationships']['uid']['table'] = 'node';
-  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   /* Field: Content: Total training sessions per Month */
   $handler->display->display_options['fields']['field_total_training_sessions']['id'] = 'field_total_training_sessions';
   $handler->display->display_options['fields']['field_total_training_sessions']['table'] = 'field_data_field_total_training_sessions';
@@ -73,6 +69,15 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['fields']['field_daily_activity']['table'] = 'field_data_field_daily_activity';
   $handler->display->display_options['fields']['field_daily_activity']['field'] = 'field_daily_activity';
   $handler->display->display_options['fields']['field_daily_activity']['element_label_colon'] = FALSE;
+  /* Field: Content: Client Ref */
+  $handler->display->display_options['fields']['field_client_ref']['id'] = 'field_client_ref';
+  $handler->display->display_options['fields']['field_client_ref']['table'] = 'field_data_field_client_ref';
+  $handler->display->display_options['fields']['field_client_ref']['field'] = 'field_client_ref';
+  $handler->display->display_options['fields']['field_client_ref']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_client_ref']['settings'] = array(
+    'bypass_access' => 0,
+    'link' => 0,
+  );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -92,12 +97,14 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'path_to_fitness' => 'path_to_fitness',
   );
-  /* Filter criterion: User: Current */
-  $handler->display->display_options['filters']['uid_current']['id'] = 'uid_current';
-  $handler->display->display_options['filters']['uid_current']['table'] = 'users';
-  $handler->display->display_options['filters']['uid_current']['field'] = 'uid_current';
-  $handler->display->display_options['filters']['uid_current']['relationship'] = 'uid';
-  $handler->display->display_options['filters']['uid_current']['value'] = '1';
+  /* Filter criterion: Global: PHP */
+  $handler->display->display_options['filters']['php']['id'] = 'php';
+  $handler->display->display_options['filters']['php']['table'] = 'views';
+  $handler->display->display_options['filters']['php']['field'] = 'php';
+  $handler->display->display_options['filters']['php']['use_php_setup'] = 0;
+  $handler->display->display_options['filters']['php']['php_filter'] = 'global $user;
+
+if ($user->uid == $row->field_client_ref) { return TRUE; } else { return FALSE; }';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -130,11 +137,6 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Content: Author */
-  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
-  $handler->display->display_options['relationships']['uid']['table'] = 'node';
-  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
-  $handler->display->display_options['relationships']['uid']['required'] = TRUE;
   /* Field: Content: Goal */
   $handler->display->display_options['fields']['field_goal']['id'] = 'field_goal';
   $handler->display->display_options['fields']['field_goal']['table'] = 'field_data_field_goal';
@@ -142,20 +144,6 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['fields']['field_goal']['label'] = '';
   $handler->display->display_options['fields']['field_goal']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_goal']['element_label_colon'] = FALSE;
-  /* Field: Content: Start Date */
-  $handler->display->display_options['fields']['field_start_date']['id'] = 'field_start_date';
-  $handler->display->display_options['fields']['field_start_date']['table'] = 'field_data_field_start_date';
-  $handler->display->display_options['fields']['field_start_date']['field'] = 'field_start_date';
-  $handler->display->display_options['fields']['field_start_date']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_start_date']['settings'] = array(
-    'format_type' => 'short',
-    'custom_date_format' => '',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_remaining_days' => 0,
-  );
   /* Field: Global: PHP */
   $handler->display->display_options['fields']['php']['id'] = 'php';
   $handler->display->display_options['fields']['php']['table'] = 'views';
@@ -217,6 +205,15 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   </div>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Content: Client Ref */
+  $handler->display->display_options['fields']['field_client_ref']['id'] = 'field_client_ref';
+  $handler->display->display_options['fields']['field_client_ref']['table'] = 'field_data_field_client_ref';
+  $handler->display->display_options['fields']['field_client_ref']['field'] = 'field_client_ref';
+  $handler->display->display_options['fields']['field_client_ref']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_client_ref']['settings'] = array(
+    'bypass_access' => 0,
+    'link' => 0,
+  );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -236,12 +233,14 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'goals' => 'goals',
   );
-  /* Filter criterion: User: Current */
-  $handler->display->display_options['filters']['uid_current']['id'] = 'uid_current';
-  $handler->display->display_options['filters']['uid_current']['table'] = 'users';
-  $handler->display->display_options['filters']['uid_current']['field'] = 'uid_current';
-  $handler->display->display_options['filters']['uid_current']['relationship'] = 'uid';
-  $handler->display->display_options['filters']['uid_current']['value'] = '1';
+  /* Filter criterion: Global: PHP */
+  $handler->display->display_options['filters']['php']['id'] = 'php';
+  $handler->display->display_options['filters']['php']['table'] = 'views';
+  $handler->display->display_options['filters']['php']['field'] = 'php';
+  $handler->display->display_options['filters']['php']['use_php_setup'] = 0;
+  $handler->display->display_options['filters']['php']['php_filter'] = 'global $user;
+
+if ($user->uid == $row->field_client_ref) { return TRUE; } else { return FALSE; }';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');

@@ -249,6 +249,46 @@ function feature_check_in_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-check_in-field_client_ref'.
+  $field_instances['node-check_in-field_client_ref'] = array(
+    'bundle' => 'check_in',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 19,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_client_ref',
+    'label' => 'Client Ref',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 16,
+    ),
+  );
+
   // Exported field_instance: 'node-check_in-field_hips_cm'.
   $field_instances['node-check_in-field_hips_cm'] = array(
     'bundle' => 'check_in',
@@ -853,6 +893,7 @@ function feature_check_in_field_default_field_instances() {
   t('Bodyfat kg');
   t('Bodyweight');
   t('Chest CM');
+  t('Client Ref');
   t('Hips CM');
   t('Left Arm CM');
   t('Left Calf CM');

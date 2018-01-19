@@ -60,6 +60,7 @@ function menu_links_roles_and_permissions_menu_default_menu_links() {
     'link_title' => 'Home',
     'options' => array(
       'identifier' => 'main-menu_home:<front>',
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -107,7 +108,6 @@ function menu_links_roles_and_permissions_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
     'customized' => 0,
-    'parent_identifier' => 'user-menu_my-account:user',
   );
 
   // Translatables
