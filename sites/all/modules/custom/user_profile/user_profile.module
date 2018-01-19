@@ -46,6 +46,7 @@ function registration_form($form, &$form_state) {
     '#description' => 'Enter your valid email address',
     '#type' => 'textfield',
     '#required' => TRUE,
+    '#element_validate' => array('user_profile_email_element_validate'),
   );
 
   $form['pass'] = array(
@@ -62,6 +63,7 @@ function registration_form($form, &$form_state) {
     '#maxlength' => 8,
     '#size' => 15,
     '#description' => "Retype your password",
+    '#element_validate' => array('user_profile_confirm_password_validate'),
   );
 
   $active = array('coach' => 'Coach', 'client' =>'Client');
@@ -86,6 +88,7 @@ function registration_form($form, &$form_state) {
     '#maxlength' => 10,
     '#required' => TRUE,
     '#description' => "Enter your contact number.",
+    '#element_validate' => array('user_profile_contact_element_validate'),
   );
 
   $form['submit'] = array(
@@ -117,4 +120,26 @@ function registration_form_submit($form, &$form_state) {
   }
 
   $new_account = user_save(NULL, $user_info);
+}
+
+/**
+ * Validations on a User Registration Form
+ */
+
+function user_profile_email_element_validate($element, &$form_state, $form) {
+   if (!valid_email_address($element['#value'])) {
+     form_error($element, t('Please enter a valid email address.'));
+   }
+}
+
+function user_profile_contact_element_validate($element, &$form_state, $form) {
+   if (!is_numeric($element['#value'])) {
+     form_error($element, t('Please enter a valid contact number.'));
+   }
+}
+
+function user_profile_confirm_password_validate($element, &$form_state, $form) {
+   if ($element['#value'] != $form_state['values']['pass']) {
+     form_error($element, t('Retype password does not match.'));
+   }
 }
