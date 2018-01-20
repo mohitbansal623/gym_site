@@ -167,4 +167,36 @@ function get_remaining_days($nid) {
 
 function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
   $form['title']['#access'] = FALSE;
+  $no_value = $form['field_client_ref']['und']['#options']['_none'];
+  $eligible_clients = array(0 => $no_value) + get_eligible_clients();
+  $form['field_client_ref']['und']['#options'] = $eligible_clients;
+}
+
+
+function get_eligible_clients() {
+  $role_id = db_query("Select rid from role where name = 'client'")->fetch();
+  $client_name = array();
+
+  if (!empty($role_id)) {
+    $rid = $role_id->rid;
+  }
+
+  $query = db_select('users', 'at')
+    ->distinct()
+    -> fields('at', array('uid'));
+  $query-> leftjoin('field_data_field_client_ref', 'client', "client.field_client_ref_target_id = at.uid and field_client_ref_target_id is NULL");
+  $query->join('users_roles', 'role', "role.uid = at.uid");
+  $query->condition('role.rid', $rid);
+  $query->condition('at.status', 1);
+  $client_id = $query->execute()->fetchCol();
+
+  if (!empty($client_id)) {
+    foreach($client_id as $key => $value) {
+      $client_name[$key] = db_query("Select name from users where uid=" . $value . "")->fetchCol();
+    }
+
+    return $client_name;
+  }
+
+  return array();
 }
