@@ -3,7 +3,7 @@
 /**
  * Implements hook_menu().
  */
-function notifications_menu() {
+function client_log_notify_coach_menu() {
   $items['notifications'] = array(
     'page callback' => '_notifications_populate',
     'type' => MENU_CALLBACK,
@@ -15,6 +15,13 @@ function notifications_menu() {
     'type' => MENU_CALLBACK,
     'access arguments' => TRUE,
   );
+
+  $items['coach-dashboard'] = array(
+    'page callback' => 'get_all_client_data_for_coach',
+    'type' => MENU_CALLBACK,
+    'access arguments' => TRUE,
+  );
+
   return $items;
 }
 
@@ -165,6 +172,9 @@ function get_remaining_days($nid) {
 }
 
 
+/**
+ * Implements hook_form_alter()
+ */
 function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
   $form['title']['#access'] = FALSE;
   if ($form_id == 'goals_node_form') {
@@ -184,7 +194,9 @@ function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
   }
 }
 
-
+/**
+ * Fetch eligible clients for "goal", "path to fitness" when creating a new goal or path to fitness.
+ */
 function get_eligible_clients($bundle) {
   $role_id = db_query("Select rid from role where name = 'client'")->fetch();
   $client_name = array();
@@ -210,6 +222,9 @@ function get_eligible_clients($bundle) {
   return array();
 }
 
+/**
+ *  Fetch clients for "check in" under a particular coach
+ */
 function get_related_clients() {
   global $user;
   $coach_id = $user->uid;
@@ -239,9 +254,12 @@ function get_related_clients() {
   return array();
 }
 
-function get_current_body_fat_client() {
+/**
+ *  Coach Dashboard
+ */
+function get_all_client_data_for_coach() {
   global $user;
-  $client_id = $user->uid;
+  $coach_id = $user->uid;
   $role_id = db_query("Select rid from role where name = 'client'")->fetch();
   $client_name = array();
 
@@ -249,18 +267,29 @@ function get_current_body_fat_client() {
     $rid = $role_id->rid;
   }
 
-  $query = db_select('users', 'at')
-    ->distinct()
-    -> fields('at', array('uid','name'));
-  $query-> leftjoin('field_data_field_client_ref', 'client', "client.field_client_ref_target_id = at.uid");
+  $query = db_select('node', 'n')
+    ->distinct();
+  $query->join('field_data_field_coach_ref', 'coach', "coach.entity_id = n.nid");
+  $query->join('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
+  $query->join('field_data_field_goal', 'goal', "goal.entity_id = n.nid");
+  $query->join('users', 'at', "client.field_client_ref_target_id = at.uid");
+  $query->join('field_data_field_first_name', 'fn', "fn.entity_id = at.uid");
+  $query->join('field_data_field_last_name', 'ln', "ln.entity_id = at.uid");
   $query->join('users_roles', 'role', "role.uid = at.uid");
   $query->condition('role.rid', $rid);
+  $query->condition('n.type', 'goals');
+  $query->condition('coach.field_coach_ref_target_id', $coach_id);
+  $query->fields('fn', array('field_first_name_value'));
+  $query->fields('ln', array('field_last_name_value'));
+  $query->fields('goal', array('field_goal_value'));
+  $query->fields('n', array('nid'));
   $query->condition('at.status', 1);
-  $query->condition('client.field_client_ref_target_id', NULL);
-  $client_id = $query->execute()->fetchAllKeyed(0);
+  $client_id = $query->execute()->fetchAll();
 
-  if (!empty($client_id)) {
-    return $client_id;
+  foreach ($client_id as $key => $value) {
+    $client_data[$key]['first_name'] = $value->field_first_name_value;
+    $client_data[$key]['last_name'] = $value->field_last_name_value;
+    $client_data[$key]['goal'] = $value->field_goal_value;
+    $client_data[$key]['remaining_days'] = get_remaining_days($value->nid);
   }
-  return array();
 }
