@@ -167,13 +167,25 @@ function get_remaining_days($nid) {
 
 function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
   $form['title']['#access'] = FALSE;
-  $no_value = $form['field_client_ref']['und']['#options']['_none'];
-  $eligible_clients = array(0 => $no_value) + get_eligible_clients();
-  $form['field_client_ref']['und']['#options'] = $eligible_clients;
+  if ($form_id == 'goals_node_form') {
+    $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
+    $eligible_clients = array(0 => $no_value) + get_eligible_clients('goals');
+    $form['field_client_ref']['und']['#options'] = $eligible_clients;
+  }
+  elseif ($form_id == 'path_to_fitness_node_form'){
+   $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
+    $eligible_clients = array(0 => $no_value) + get_eligible_clients('path_to_fitness');
+    $form['field_client_ref']['und']['#options'] = $eligible_clients;
+  }
+  elseif ($form_id == 'check_in_node_form') {
+    $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
+    $eligible_clients = array(0 => $no_value) + get_related_clients();
+    $form['field_client_ref']['und']['#options'] = $eligible_clients;
+  }
 }
 
 
-function get_eligible_clients() {
+function get_eligible_clients($bundle) {
   $role_id = db_query("Select rid from role where name = 'client'")->fetch();
   $client_name = array();
 
@@ -183,20 +195,72 @@ function get_eligible_clients() {
 
   $query = db_select('users', 'at')
     ->distinct()
-    -> fields('at', array('uid'));
-  $query-> leftjoin('field_data_field_client_ref', 'client', "client.field_client_ref_target_id = at.uid and field_client_ref_target_id is NULL");
+    -> fields('at', array('uid','name'));
+  $query-> leftjoin('field_data_field_client_ref', 'client', "client.field_client_ref_target_id = at.uid");
   $query->join('users_roles', 'role', "role.uid = at.uid");
   $query->condition('role.rid', $rid);
   $query->condition('at.status', 1);
-  $client_id = $query->execute()->fetchCol();
+  $query->condition('client.bundle', $bundle);
+  $query->condition('client.field_client_ref_target_id', NULL);
+  $client_id = $query->execute()->fetchAllKeyed(0);
 
   if (!empty($client_id)) {
-    foreach($client_id as $key => $value) {
-      $client_name[$key] = db_query("Select name from users where uid=" . $value . "")->fetchCol();
-    }
+    return $client_id;
+  }
+  return array();
+}
 
-    return $client_name;
+function get_related_clients() {
+  global $user;
+  $coach_id = $user->uid;
+  $role_id = db_query("Select rid from role where name = 'client'")->fetch();
+  $client_name = array();
+
+  if (!empty($role_id)) {
+    $rid = $role_id->rid;
   }
 
+  $query = db_select('node', 'n')
+    ->distinct();
+  $query->join('field_data_field_coach_ref', 'coach', "coach.entity_id = n.nid");
+  $query->join('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
+  $query->join('users', 'at', "client.field_client_ref_target_id = at.uid");
+  $query->join('users_roles', 'role', "role.uid = at.uid");
+  $query->condition('role.rid', $rid);
+  $query->condition('n.type', 'goals');
+  $query->condition('coach.field_coach_ref_target_id', $coach_id);
+  $query->fields('at', array('uid','name'));
+  $query->condition('at.status', 1);
+  $client_id = $query->execute()->fetchAllKeyed(0);
+
+  if (!empty($client_id)) {
+    return $client_id;
+  }
+  return array();
+}
+
+function get_current_body_fat_client() {
+  global $user;
+  $client_id = $user->uid;
+  $role_id = db_query("Select rid from role where name = 'client'")->fetch();
+  $client_name = array();
+
+  if (!empty($role_id)) {
+    $rid = $role_id->rid;
+  }
+
+  $query = db_select('users', 'at')
+    ->distinct()
+    -> fields('at', array('uid','name'));
+  $query-> leftjoin('field_data_field_client_ref', 'client', "client.field_client_ref_target_id = at.uid");
+  $query->join('users_roles', 'role', "role.uid = at.uid");
+  $query->condition('role.rid', $rid);
+  $query->condition('at.status', 1);
+  $query->condition('client.field_client_ref_target_id', NULL);
+  $client_id = $query->execute()->fetchAllKeyed(0);
+
+  if (!empty($client_id)) {
+    return $client_id;
+  }
   return array();
 }

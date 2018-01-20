@@ -23,11 +23,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 17,
+        'type' => 'number_decimal',
+        'weight' => 35,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -52,7 +52,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 13,
+      'weight' => 32,
     ),
   );
 
@@ -69,11 +69,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 3,
+        'type' => 'number_decimal',
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -98,7 +98,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => -1,
+      'weight' => 19,
     ),
   );
 
@@ -115,11 +115,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 1,
+        'type' => 'number_decimal',
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -144,7 +144,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => -3,
+      'weight' => 17,
     ),
   );
 
@@ -190,6 +190,7 @@ function feature_check_in_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
+        'flavour' => 'popup',
         'increment' => 15,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
@@ -198,7 +199,7 @@ function feature_check_in_field_default_field_instances() {
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_select',
+      'type' => 'date_popup',
       'weight' => -4,
     ),
   );
@@ -216,11 +217,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 6,
+        'type' => 'number_decimal',
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -245,7 +246,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 2,
+      'weight' => 21,
     ),
   );
 
@@ -302,11 +303,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 10,
+        'type' => 'number_decimal',
+        'weight' => 28,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -331,7 +332,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 6,
+      'weight' => 25,
     ),
   );
 
@@ -348,11 +349,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 8,
+        'type' => 'number_decimal',
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -377,7 +378,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 4,
+      'weight' => 23,
     ),
   );
 
@@ -394,11 +395,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 15,
+        'type' => 'number_decimal',
+        'weight' => 33,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -423,7 +424,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 11,
+      'weight' => 30,
     ),
   );
 
@@ -440,11 +441,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 13,
+        'type' => 'number_decimal',
+        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -469,7 +470,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 9,
+      'weight' => 28,
     ),
   );
 
@@ -486,11 +487,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 4,
+        'type' => 'number_decimal',
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -515,7 +516,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 0,
+      'weight' => 20,
     ),
   );
 
@@ -532,11 +533,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 11,
+        'type' => 'number_decimal',
+        'weight' => 29,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -561,7 +562,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 7,
+      'weight' => 26,
     ),
   );
 
@@ -578,11 +579,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 2,
+        'type' => 'number_decimal',
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -607,7 +608,203 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => -2,
+      'weight' => 18,
+    ),
+  );
+
+  // Exported field_instance: 'node-check_in-field_personal_records'.
+  $field_instances['node-check_in-field_personal_records'] = array(
+    'bundle' => 'check_in',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 40,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_personal_records',
+    'label' => 'Personal Records',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 37,
+    ),
+  );
+
+  // Exported field_instance: 'node-check_in-field_progress_picture_back'.
+  $field_instances['node-check_in-field_progress_picture_back'] = array(
+    'bundle' => 'check_in',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 43,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_progress_picture_back',
+    'label' => 'Progress Picture Back',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 40,
+    ),
+  );
+
+  // Exported field_instance: 'node-check_in-field_progress_picture_front'.
+  $field_instances['node-check_in-field_progress_picture_front'] = array(
+    'bundle' => 'check_in',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 42,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_progress_picture_front',
+    'label' => 'Progress Picture Front',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 39,
+    ),
+  );
+
+  // Exported field_instance: 'node-check_in-field_progress_picture_side'.
+  $field_instances['node-check_in-field_progress_picture_side'] = array(
+    'bundle' => 'check_in',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 44,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_progress_picture_side',
+    'label' => 'Progress Picture Side',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 41,
     ),
   );
 
@@ -624,11 +821,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 7,
+        'type' => 'number_decimal',
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -653,7 +850,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 3,
+      'weight' => 22,
     ),
   );
 
@@ -670,11 +867,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 14,
+        'type' => 'number_decimal',
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -699,7 +896,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 10,
+      'weight' => 29,
     ),
   );
 
@@ -716,11 +913,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 12,
+        'type' => 'number_decimal',
+        'weight' => 30,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -745,7 +942,53 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 8,
+      'weight' => 27,
+    ),
+  );
+
+  // Exported field_instance: 'node-check_in-field_suprailiac_mm'.
+  $field_instances['node-check_in-field_suprailiac_mm'] = array(
+    'bundle' => 'check_in',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 38,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_suprailiac_mm',
+    'label' => 'Suprailiac MM',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 35,
     ),
   );
 
@@ -762,11 +1005,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 18,
+        'type' => 'number_decimal',
+        'weight' => 36,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -791,7 +1034,53 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 14,
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance: 'node-check_in-field_total_calipers'.
+  $field_instances['node-check_in-field_total_calipers'] = array(
+    'bundle' => 'check_in',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 39,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_total_calipers',
+    'label' => 'Total Calipers',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 36,
     ),
   );
 
@@ -808,11 +1097,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 16,
+        'type' => 'number_decimal',
+        'weight' => 34,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -837,7 +1126,99 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 12,
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'node-check_in-field_training_sessions_complete'.
+  $field_instances['node-check_in-field_training_sessions_complete'] = array(
+    'bundle' => 'check_in',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 41,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_training_sessions_complete',
+    'label' => 'Training Sessions Completed',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 38,
+    ),
+  );
+
+  // Exported field_instance: 'node-check_in-field_tricep_mm'.
+  $field_instances['node-check_in-field_tricep_mm'] = array(
+    'bundle' => 'check_in',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 37,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tricep_mm',
+    'label' => 'Tricep MM',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 34,
     ),
   );
 
@@ -854,11 +1235,11 @@ function feature_check_in_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 9,
+        'type' => 'number_decimal',
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -883,7 +1264,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 5,
+      'weight' => 24,
     ),
   );
 
@@ -901,11 +1282,19 @@ function feature_check_in_field_default_field_instances() {
   t('Muscle Mass');
   t('Neck CM');
   t('Percent BodyFat');
+  t('Personal Records');
+  t('Progress Picture Back');
+  t('Progress Picture Front');
+  t('Progress Picture Side');
   t('Right Arm CM');
   t('Right Calf CM');
   t('Right Leg CM');
+  t('Suprailiac MM');
   t('Thigh MM');
   t('Total CM');
+  t('Total Calipers');
+  t('Training Sessions Completed');
+  t('Tricep MM');
   t('Waist CM');
   t('check in date');
 

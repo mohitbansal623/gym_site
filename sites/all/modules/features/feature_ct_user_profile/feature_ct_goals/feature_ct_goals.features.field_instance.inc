@@ -172,9 +172,10 @@ function feature_ct_goals_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
+        'flavour' => 'popup',
         'increment' => 15,
-        'input_format' => 'custom',
-        'input_format_custom' => 'Y/m/d',
+        'input_format' => 'site-wide',
+        'input_format_custom' => '',
         'label_position' => 'above',
         'no_fieldset' => 0,
         'text_parts' => array(
@@ -187,7 +188,7 @@ function feature_ct_goals_field_default_field_instances() {
         ),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_select',
+      'type' => 'date_popup',
       'weight' => 4,
     ),
   );
