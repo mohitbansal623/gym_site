@@ -44,11 +44,17 @@ function _notifications_populate() {
 /**
  * Implements hook_theme().
  */
-function notifications_theme() {
+function client_log_notify_coach_theme() {
   return array(
     'notification_popup' => array(
       'template' => 'notification_popup',
       'variables' => array('coach_messages' => NULL,),
+      'path' => drupal_get_path('module', 'client_log_notify_coach') . '/templates',
+    ),
+
+    'coach_dashboard' => array(
+      'template' => 'coach_dashboard',
+      'variables' => array('coach_dashboard' => NULL,),
       'path' => drupal_get_path('module', 'client_log_notify_coach') . '/templates',
     ),
   );
@@ -261,7 +267,7 @@ function get_all_client_data_for_coach() {
   global $user;
   $coach_id = $user->uid;
   $role_id = db_query("Select rid from role where name = 'client'")->fetch();
-  $client_name = array();
+  $client_name = $client_data = array();
 
   if (!empty($role_id)) {
     $rid = $role_id->rid;
@@ -285,11 +291,18 @@ function get_all_client_data_for_coach() {
   $query->fields('n', array('nid'));
   $query->condition('at.status', 1);
   $client_id = $query->execute()->fetchAll();
-
-  foreach ($client_id as $key => $value) {
-    $client_data[$key]['first_name'] = $value->field_first_name_value;
-    $client_data[$key]['last_name'] = $value->field_last_name_value;
-    $client_data[$key]['goal'] = $value->field_goal_value;
-    $client_data[$key]['remaining_days'] = get_remaining_days($value->nid);
+  if (!empty($client_id)) {
+    foreach ($client_id as $key => $value) {
+      $client_data[$key]['first_name'] = $value->field_first_name_value;
+      $client_data[$key]['last_name'] = $value->field_last_name_value;
+      $client_data[$key]['goal'] = $value->field_goal_value;
+      $client_data[$key]['remaining_days'] = get_remaining_days($value->nid);
+    }
   }
+
+  $variables = array();
+  $variables = $client_data;
+  $output = theme('coach_dashboard', array('coach_dashboard' => $variables));
+
+  return $output;
 }
