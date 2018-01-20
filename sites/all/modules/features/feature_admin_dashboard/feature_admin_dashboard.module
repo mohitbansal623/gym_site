@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the feature_admin_dashboard feature.
+ */
+
+include_once 'feature_admin_dashboard.features.inc';
