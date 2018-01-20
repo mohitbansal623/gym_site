@@ -1,0 +1,14 @@
+name = feature_admin_dashboard
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = menu_links_roles_and_permissions
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[menu_links][] = main-menu_admin-dashboard:admin-dashboard
+features[views_view][] = admin_dashboard
+features[views_view][] = client_info_for_coach
+features_exclude[dependencies][ctools] = ctools
+features_exclude[dependencies][features] = features
+features_exclude[dependencies][menu] = menu

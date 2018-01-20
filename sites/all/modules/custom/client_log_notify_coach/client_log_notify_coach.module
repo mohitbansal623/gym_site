@@ -120,3 +120,51 @@ function update_msg_status_co_op($id) {
   ->condition('seq_id', $id, '=')
   ->execute();
 }
+
+
+
+/**
+ * get total no of clients under particular coach
+ */
+function get_total_no_of_clients_under_each_coach($uid) {
+  $query = db_select('field_data_field_client_ref', 'at')
+      -> fields('at', array('field_client_ref_target_id'));
+  $query->join('field_data_field_coach_ref', 'coach', "coach.entity_id = at.entity_id");
+  $query->condition('at.bundle', 'goals');
+  $query->condition('coach.field_coach_ref_target_id', $uid);
+  $client_id = $query->execute()->rowCount();
+
+  return $client_id;
+}
+
+/**
+ * get end date and find remaining days
+ */
+function get_remaining_days($nid) {
+  $node = node_load($nid);
+
+  if (isset($node->field_goal_date['und'][0]['value2']) && !empty($node->field_goal_date['und'][0]['value2'])) {
+    $end_date = explode('-', $node->field_goal_date['und'][0]['value2']);
+    if (!empty($end_date)) {
+      $day = explode(' ', $end_date[2]);
+    }
+
+    $end_date = $end_date[0] . "/" . $end_date[1] . "/" . $day[0];
+    $end_date_timestamp = strtotime($end_date);
+
+    $current_date = time();
+
+    $days = ceil(($end_date_timestamp - $current_date) / (60 * 60 * 24));
+
+    if ($days == -0) {
+      $days = 0;
+    }
+
+    return $days;
+   }
+}
+
+
+function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
+  $form['title']['#access'] = FALSE;
+}
