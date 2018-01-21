@@ -291,6 +291,7 @@ function get_all_client_data_for_coach() {
   $query->fields('ln', array('field_last_name_value'));
   $query->fields('goal', array('field_goal_value'));
   $query->fields('n', array('nid'));
+  $query->fields('at', array('uid'));
   $query->condition('at.status', 1);
   $client_id = $query->execute()->fetchAll();
   if (!empty($client_id)) {
@@ -299,6 +300,10 @@ function get_all_client_data_for_coach() {
       $client_data[$key]['last_name'] = $value->field_last_name_value;
       $client_data[$key]['goal'] = $value->field_goal_value;
       $client_data[$key]['remaining_days'] = get_remaining_days($value->nid);
+      $client_data[$key]['bodyfat_lost'] = get_recent_body_fat_percentage($value->uid);
+      $client_data[$key]['diet_adherence'] = get_diet_adherence($value->uid);
+      $client_data[$key]['cm_loss'] = get_cm_loss($value->uid);
+      $client_data[$key]['mm_loss'] = get_mm_loss($value->uid);
     }
   }
 
