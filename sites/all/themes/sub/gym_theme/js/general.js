@@ -41,5 +41,37 @@
       });
     });
 
+    // For total CM
+    $(".page-node-add-check-in .group-circumference-measures input").focusout(function () {
+      var total = 0;
+      $(".page-node-add-check-in .group-circumference-measures input").each(function() {
+        var value = $(this).val();
+        if (value == '') {
+          value = 0;
+        }
+        total = parseFloat(total) + parseFloat(value);
+       });
+
+      $(".form-item-field-total-cm-und-0-value #edit-field-total-cm-und-0-value").val(total);
+    });
+
+    // For total MM
+    $(".page-node-add-check-in .group-skinfolds input").focusout(function () {
+      var total = 0;
+      $(".page-node-add-check-in .group-skinfolds input").each(function() {
+        var value = $(this).val();
+        if (value == '') {
+          value = 0;
+        }
+        total = parseFloat(total) + parseFloat(value);
+       });
+
+      $(".form-item-field-total-calipers-und-0-value #edit-field-total-calipers-und-0-value").val(total);
+    });
+
+    // Disabled Total CM and Total MM field
+    $('.form-item-field-total-cm-und-0-value #edit-field-total-cm-und-0-value').prop("disabled", true);
+
+    $('.form-item-field-total-calipers-und-0-value #edit-field-total-calipers-und-0-value').prop("disabled", true);
   });
 })(jQuery);
