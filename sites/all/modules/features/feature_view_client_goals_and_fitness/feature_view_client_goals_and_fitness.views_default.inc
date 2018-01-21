@@ -144,15 +144,20 @@ if ($user->uid == $row->field_client_ref) { return TRUE; } else { return FALSE; 
   $handler->display->display_options['fields']['field_goal']['label'] = '';
   $handler->display->display_options['fields']['field_goal']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_goal']['element_label_colon'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   /* Field: Global: PHP */
   $handler->display->display_options['fields']['php']['id'] = 'php';
   $handler->display->display_options['fields']['php']['table'] = 'views';
   $handler->display->display_options['fields']['php']['field'] = 'php';
-  $handler->display->display_options['fields']['php']['label'] = '';
   $handler->display->display_options['fields']['php']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
-  $handler->display->display_options['fields']['php']['php_output'] = '<?php echo $row->field_start_date; ?>';
+  $handler->display->display_options['fields']['php']['php_output'] = '<?php
+echo get_remaining_days($row->nid);
+?>';
   $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
   /* Field: Content: Coach Ref */
@@ -185,6 +190,73 @@ if ($user->uid == $row->field_client_ref) { return TRUE; } else { return FALSE; 
     'image_style' => '',
     'image_link' => '',
   );
+  /* Field: Content: Client Ref */
+  $handler->display->display_options['fields']['field_client_ref']['id'] = 'field_client_ref';
+  $handler->display->display_options['fields']['field_client_ref']['table'] = 'field_data_field_client_ref';
+  $handler->display->display_options['fields']['field_client_ref']['field'] = 'field_client_ref';
+  $handler->display->display_options['fields']['field_client_ref']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_client_ref']['settings'] = array(
+    'bypass_access' => 0,
+    'link' => 0,
+  );
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_1']['id'] = 'php_1';
+  $handler->display->display_options['fields']['php_1']['table'] = 'views';
+  $handler->display->display_options['fields']['php_1']['field'] = 'php';
+  $handler->display->display_options['fields']['php_1']['label'] = 'Bodyfat Loss %';
+  $handler->display->display_options['fields']['php_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php_1']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_1']['php_output'] = '<?php
+echo get_recent_body_fat_percentage($row->field_client_ref);
+?>';
+  $handler->display->display_options['fields']['php_1']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_1']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_2']['id'] = 'php_2';
+  $handler->display->display_options['fields']['php_2']['table'] = 'views';
+  $handler->display->display_options['fields']['php_2']['field'] = 'php';
+  $handler->display->display_options['fields']['php_2']['label'] = 'CM Loss';
+  $handler->display->display_options['fields']['php_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php_2']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_2']['php_output'] = '<?php
+  echo get_cm_loss($row->field_client_ref)
+?>';
+  $handler->display->display_options['fields']['php_2']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_2']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_3']['id'] = 'php_3';
+  $handler->display->display_options['fields']['php_3']['table'] = 'views';
+  $handler->display->display_options['fields']['php_3']['field'] = 'php';
+  $handler->display->display_options['fields']['php_3']['label'] = 'MM Loss';
+  $handler->display->display_options['fields']['php_3']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php_3']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_3']['php_output'] = '<?php
+ echo get_mm_loss($row->field_client_ref);
+?>';
+  $handler->display->display_options['fields']['php_3']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_3']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_4']['id'] = 'php_4';
+  $handler->display->display_options['fields']['php_4']['table'] = 'views';
+  $handler->display->display_options['fields']['php_4']['field'] = 'php';
+  $handler->display->display_options['fields']['php_4']['label'] = 'Diet Adherence';
+  $handler->display->display_options['fields']['php_4']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php_4']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_4']['php_output'] = '<?php
+echo get_diet_adherence($row->field_client_ref);
+?>';
+  $handler->display->display_options['fields']['php_4']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_4']['php_click_sortable'] = '';
+  /* Field: Content: Front */
+  $handler->display->display_options['fields']['field_progress_picture_front']['id'] = 'field_progress_picture_front';
+  $handler->display->display_options['fields']['field_progress_picture_front']['table'] = 'field_data_field_progress_picture_front';
+  $handler->display->display_options['fields']['field_progress_picture_front']['field'] = 'field_progress_picture_front';
+  $handler->display->display_options['fields']['field_progress_picture_front']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_progress_picture_front']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_progress_picture_front']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -199,21 +271,18 @@ if ($user->uid == $row->field_client_ref) { return TRUE; } else { return FALSE; 
       <div class="motivation"><div class="title">Motivation</div><div class="content">[field_motivation]</div></div>
     </div>
     <div class="images">
-      <div class="current"><div class="img-inner">[field_current_progress_photo]<div class="image-text">Current Progress Pic</div></div></div>
+      <div class="current"><div class="img-inner">[field_progress_picture_front]<div class="image-text">Current Progress Pic</div></div></div>
       <div class="inspiration"><div class="img-inner">[field_inspiration]<div class="image-text">Inspiration Pic</div></div></div>
+    <div class="description">
+     <div class="goal"><div class="title">BodyFat Loss %</div><div class="content">[php_1] </div></div>
+      <div class="days"><div class="title">CM Loss</div><div class="content">[php_2]</div></div>
+      <div class="coach"><div class="title">MM Loss</div><div class="content">[php_3]</div></div>
+      <div class="motivation"><div class="title">Diet Adherence</div><div class="content">[php_4]</div></div>
+</div>
     </div>
   </div>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Content: Client Ref */
-  $handler->display->display_options['fields']['field_client_ref']['id'] = 'field_client_ref';
-  $handler->display->display_options['fields']['field_client_ref']['table'] = 'field_data_field_client_ref';
-  $handler->display->display_options['fields']['field_client_ref']['field'] = 'field_client_ref';
-  $handler->display->display_options['fields']['field_client_ref']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_client_ref']['settings'] = array(
-    'bypass_access' => 0,
-    'link' => 0,
-  );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -231,6 +300,7 @@ if ($user->uid == $row->field_client_ref) { return TRUE; } else { return FALSE; 
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
+    'check_in' => 'check_in',
     'goals' => 'goals',
   );
   /* Filter criterion: Global: PHP */
