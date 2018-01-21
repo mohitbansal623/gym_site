@@ -162,15 +162,15 @@ function get_remaining_days($nid) {
       $day = explode(' ', $end_date[2]);
     }
 
-    $end_date = $end_date[0] . "/" . $end_date[1] . "/" . $day[0];
-    $end_date_timestamp = strtotime($end_date);
+    $end_date = date_create($end_date[0]);
 
-    $current_date = time();
+    $current_date = date_create(date('Y-m-d'));
 
-    $days = ceil(($end_date_timestamp - $current_date) / (60 * 60 * 24));
+    $diff = date_diff($current_date, $end_date);
 
-    if ($days == -0) {
-      $days = 0;
+    $days = 0;
+    if (!empty($diff) && $diff->days > 0) {
+      $days = $diff->days;
     }
 
     return $days;
@@ -231,9 +231,11 @@ function get_eligible_clients($bundle) {
 /**
  *  Fetch clients for "check in" under a particular coach
  */
-function get_related_clients() {
+function get_related_clients($coach_id = NULL) {
   global $user;
-  $coach_id = $user->uid;
+  if (!isset($coach_id)) {
+    $coach_id = $user->uid;
+  }
   $role_id = db_query("Select rid from role where name = 'client'")->fetch();
   $client_name = array();
 
@@ -305,4 +307,96 @@ function get_all_client_data_for_coach() {
   $output = theme('coach_dashboard', array('coach_dashboard' => $variables));
 
   return $output;
+}
+
+/*
+**  Body fat loss under of a client
+*/
+
+function get_recent_body_fat_percentage($client_id) {
+  $query = db_select('node', 'n')
+    ->distinct();
+  $query->join('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
+  $query->join('field_data_field_percent_bodyfat', 'fn', "fn.entity_id = n.nid");
+  $query->condition('n.type', 'check_in');
+  $query->condition('client.field_client_ref_target_id', $client_id);
+  $query->fields('n', array('nid'));
+  $query->fields('fn', array('field_percent_bodyfat_value'));
+  $result = $query->execute()->fetchAllKeyed(0);
+  if (!empty($result)) {
+    ksort($result);
+    $result = array_values($result);
+    $length = count($result);
+    $body_fat = $result[0] - $result[$length-1];
+  }
+  else {
+    $body_fat = 0;
+  }
+  return $body_fat;
+}
+
+
+/*
+** Total avg body fat loss under a coach
+*/
+
+function total_avg_body_fat_loss_under_coach($coach_id) {
+  $client_list = get_related_clients($coach_id);
+  $count = count($client_list);
+  $total_fat_loss = 0;
+  foreach ($client_list as $client_id => $value) {
+    $total_fat_loss += get_recent_body_fat_percentage($client_id);
+  }
+  $avg = $total_fat_loss / $count;
+  return $avg;
+}
+
+function get_cm_loss($client_id) {
+  $query = db_select('node', 'n')
+    ->distinct();
+  $query->join('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
+  $query->join('field_data_field_total_cm', 'fn', "fn.entity_id = n.nid");
+  $query->condition('n.type', 'check_in');
+  $query->condition('client.field_client_ref_target_id', $client_id);
+  $query->fields('n', array('nid'));
+  $query->fields('fn', array('field_total_cm_value'));
+  $result = $query->execute()->fetchAllKeyed(0);
+  if (!empty($result)) {
+    ksort($result);
+    $result = array_values($result);
+    $length = count($result);
+    $cm_loss = $result[0] - $result[$length-1];
+  }
+  else {
+    $cm_loss = 0;
+  }
+  return $cm_loss;
+}
+
+
+function get_mm_loss($client_id) {
+  $query = db_select('node', 'n')
+    ->distinct();
+  $query->join('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
+  $query->join('field_data_field_total_calipers', 'fn', "fn.entity_id = n.nid");
+  $query->condition('n.type', 'check_in');
+  $query->condition('client.field_client_ref_target_id', $client_id);
+  $query->fields('n', array('nid'));
+  $query->fields('fn', array('field_total_calipers_value'));
+  $result = $query->execute()->fetchAllKeyed(0);
+  if (!empty($result)) {
+    ksort($result);
+    $result = array_values($result);
+    $length = count($result);
+    $mm_loss = $result[0] - $result[$length-1];
+  }
+  else {
+    $mm_loss = 0;
+  }
+  return $mm_loss;
+}
+
+
+function get_diet_adherence($client_id) {
+  return 2;
 }
