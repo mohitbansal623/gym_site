@@ -283,11 +283,22 @@ echo get_diet_adherence($row->field_client_ref);
   </div>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['empty'] = 'No data display';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Client Ref (field_client_ref) */
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['id'] = 'field_client_ref_target_id';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['table'] = 'field_data_field_client_ref';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['field'] = 'field_client_ref_target_id';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -303,14 +314,6 @@ echo get_diet_adherence($row->field_client_ref);
     'check_in' => 'check_in',
     'goals' => 'goals',
   );
-  /* Filter criterion: Global: PHP */
-  $handler->display->display_options['filters']['php']['id'] = 'php';
-  $handler->display->display_options['filters']['php']['table'] = 'views';
-  $handler->display->display_options['filters']['php']['field'] = 'php';
-  $handler->display->display_options['filters']['php']['use_php_setup'] = 0;
-  $handler->display->display_options['filters']['php']['php_filter'] = 'global $user;
-
-if ($user->uid == $row->field_client_ref) { return TRUE; } else { return FALSE; }';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -318,7 +321,7 @@ if ($user->uid == $row->field_client_ref) { return TRUE; } else { return FALSE; 
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
-  $handler->display->display_options['path'] = 'client/dashboard';
+  $handler->display->display_options['path'] = 'client-dashboard/%';
   $export['client_goal_block'] = $view;
 
   return $export;
