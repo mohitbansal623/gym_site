@@ -67,20 +67,20 @@ function client_log_notify_coach_node_presave($node) {
     $plan_value = isset($node->field_was_today_on_plan['und'][0]['value'])?$node->field_was_today_on_plan['und'][0]['value']: NULL;
 
     // Get the coach id under which the client is trained
-    $query = db_select('field_data_field_client_ref', 'at')
+    $query = db_select('drup_field_data_field_client_ref', 'at')
       -> fields('coach', array('field_coach_ref_target_id'));
-    $query->join('field_data_field_coach_ref', 'coach', "coach.entity_id = at.entity_id");
+    $query->join('drup_field_data_field_coach_ref', 'coach', "coach.entity_id = at.entity_id");
     $query->condition('at.bundle', 'goals');
     $query->condition('at.field_client_ref_target_id', $user->uid);
     $coach_id = $query->execute()->fetchCol();
     $coach_id = !empty($coach_id)? $coach_id[0] : NULL;
 
     // Get Client Name from users table
-    $client_name = db_query("Select name from users where uid =" . $user->uid . "")->fetchCol();
+    $client_name = db_query("Select name from drup_users where uid =" . $user->uid . "")->fetchCol();
 
     $client_name = !empty($client_name)? $client_name[0]: NULL;
     $message = $client_name . " has replied " . $plan_value;
-
+    /* 
     // Insert in table to notify coach about this.
     $nid = db_insert('notify_coach')
         ->fields(array(
@@ -91,11 +91,12 @@ function client_log_notify_coach_node_presave($node) {
           'coach_id' => $coach_id,
         ))
     ->execute();
+    */
   }
 }
 
 function get_notifications_for_coach($uid) {
-  $query = db_select('coach_notify', 'at')
+  $query = db_select('notify_coach', 'at')
         -> fields('at', array('message' , 'time_stamp', 'seq_id'))
         -> condition('at.user_id', $uid)
         -> condition('at.status', 0)
@@ -157,10 +158,7 @@ function get_remaining_days($nid) {
   $node = node_load($nid);
 
   if (isset($node->field_goal_date['und'][0]['value2']) && !empty($node->field_goal_date['und'][0]['value2'])) {
-    $end_date = explode('-', $node->field_goal_date['und'][0]['value2']);
-    if (!empty($end_date)) {
-      $day = explode(' ', $end_date[2]);
-    }
+    $end_date = explode(' ', $node->field_goal_date['und'][0]['value2']);
 
     $end_date = date_create($end_date[0]);
 
@@ -182,15 +180,19 @@ function get_remaining_days($nid) {
  * Implements hook_form_alter()
  */
 function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
+  global $user;
   $form['title']['#access'] = FALSE;
   if ($form_id == 'goals_node_form') {
     $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
     $eligible_clients = array(0 => $no_value) + get_eligible_clients('goals');
+    
     $form['field_client_ref']['und']['#options'] = $eligible_clients;
+    $form['field_coach_ref']['und']['#options'] = array($user->uid => $user->name);
+    //$form['field_coach_ref']['#attributes']= array('disabled' => 'disabled');
   }
   elseif ($form_id == 'path_to_fitness_node_form'){
    $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
-    $eligible_clients = array(0 => $no_value) + get_eligible_clients('path_to_fitness');
+    $eligible_clients = array(0 => $no_value) + get_related_clients($user->uid);
     $form['field_client_ref']['und']['#options'] = $eligible_clients;
   }
   elseif ($form_id == 'check_in_node_form') {
@@ -204,7 +206,7 @@ function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
  * Fetch eligible clients for "goal", "path to fitness" when creating a new goal or path to fitness.
  */
 function get_eligible_clients($bundle) {
-  $role_id = db_query("Select rid from role where name = 'client'")->fetch();
+  $role_id = db_query("Select rid from drup_role where name = 'client'")->fetch();
   $client_name = array();
 
   if (!empty($role_id)) {
@@ -218,7 +220,7 @@ function get_eligible_clients($bundle) {
   $query->join('users_roles', 'role', "role.uid = at.uid");
   $query->condition('role.rid', $rid);
   $query->condition('at.status', 1);
-  $query->condition('client.bundle', $bundle);
+ 
   $query->condition('client.field_client_ref_target_id', NULL);
   $client_id = $query->execute()->fetchAllKeyed(0);
 
@@ -236,7 +238,7 @@ function get_related_clients($coach_id = NULL) {
   if (!isset($coach_id)) {
     $coach_id = $user->uid;
   }
-  $role_id = db_query("Select rid from role where name = 'client'")->fetch();
+  $role_id = db_query("Select rid from drup_role where name = 'client'")->fetch();
   $client_name = array();
 
   if (!empty($role_id)) {
@@ -268,7 +270,7 @@ function get_related_clients($coach_id = NULL) {
 function get_all_client_data_for_coach() {
   global $user;
   $coach_id = $user->uid;
-  $role_id = db_query("Select rid from role where name = 'client'")->fetch();
+  $role_id = db_query("Select rid from drup_role where name = 'client'")->fetch();
   $client_name = $client_data = array();
 
   if (!empty($role_id)) {
