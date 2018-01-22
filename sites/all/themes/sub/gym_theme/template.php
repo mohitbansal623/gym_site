@@ -27,9 +27,13 @@ function gym_theme_preprocess_page(&$vars, $hook) {
   }
 
   $alias = drupal_get_path_alias();
+  $pattern = 'client-dashboard/*';
+  if (drupal_match_path($path, $pattern)) {
+    drupal_add_css($theme_path . '/css/dashboard.css');
+  }
   switch ($alias) {
-    case 'client/dashboard':
-      drupal_add_css($theme_path . '/css/dashboard.css');
+    case 'admin-dashboard':
+
       break;
   }
 }

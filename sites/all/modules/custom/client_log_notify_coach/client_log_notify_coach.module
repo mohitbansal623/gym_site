@@ -285,13 +285,13 @@ function get_all_client_data_for_coach($coach_id) {
 
     $query = db_select('node', 'n')
       ->distinct();
-    $query->join('field_data_field_coach_ref', 'coach', "coach.entity_id = n.nid");
-    $query->join('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
-    $query->join('field_data_field_goal', 'goal', "goal.entity_id = n.nid");
-    $query->join('users', 'at', "client.field_client_ref_target_id = at.uid");
-    $query->join('field_data_field_first_name', 'fn', "fn.entity_id = at.uid");
-    $query->join('field_data_field_last_name', 'ln', "ln.entity_id = at.uid");
-    $query->join('users_roles', 'role', "role.uid = at.uid");
+    $query->leftjoin('field_data_field_coach_ref', 'coach', "coach.entity_id = n.nid");
+    $query->leftjoin('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
+    $query->leftjoin('field_data_field_goal', 'goal', "goal.entity_id = n.nid");
+    $query->leftjoin('users', 'at', "client.field_client_ref_target_id = at.uid");
+    $query->leftjoin('field_data_field_first_name', 'fn', "fn.entity_id = at.uid");
+    $query->leftjoin('field_data_field_last_name', 'ln', "ln.entity_id = at.uid");
+    $query->leftjoin('users_roles', 'role', "role.uid = at.uid");
     $query->condition('role.rid', $rid);
     $query->condition('n.type', 'goals');
     $query->condition('coach.field_coach_ref_target_id', $coach_id);
@@ -304,15 +304,15 @@ function get_all_client_data_for_coach($coach_id) {
     $client_id = $query->execute()->fetchAll();
     if (!empty($client_id)) {
       foreach ($client_id as $key => $value) {
-        $client_data[$key]['first_name'] = $value->field_first_name_value;
-        $client_data[$key]['last_name'] = $value->field_last_name_value;
+        $full_name = $value->field_first_name_value . ' ' . $value->field_last_name_value;
+        $client_data[$key]['full_name'] = l(t($full_name), "/client-dashboard/" . $value->uid);
         $client_data[$key]['goal'] = $value->field_goal_value;
         $client_data[$key]['remaining_days'] = get_remaining_days($value->nid);
         $client_data[$key]['bodyfat_lost'] = get_recent_body_fat_percentage($value->uid);
         $client_data[$key]['diet_adherence'] = get_diet_adherence($value->uid);
         $client_data[$key]['cm_loss'] = get_cm_loss($value->uid);
         $client_data[$key]['mm_loss'] = get_mm_loss($value->uid);
-        $client_data[$key]['uid'] = $value->uid;
+        // $client_data[$key]['uid'] = $value->uid;
       }
     }
 

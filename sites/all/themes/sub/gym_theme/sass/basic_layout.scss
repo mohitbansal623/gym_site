@@ -88,3 +88,21 @@
     margin-bottom: 15px;
   }
 }
+
+body.page-admin-dashboard {
+  .view-admin-dashboard {
+    table {
+      border-spacing: 0;
+      border-collapse: collapse;
+      thead {
+        tr {
+          background: $black;
+          color: #fff;
+        }
+      }
+    }
+    table, td, th {
+      border: 1px solid #ddd;
+    }
+  }
+}
