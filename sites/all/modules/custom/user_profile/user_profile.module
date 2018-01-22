@@ -55,6 +55,7 @@ function registration_form($form, &$form_state) {
     '#maxlength' => 8,
     '#size' => 15,
     '#description' => "Enter your password",
+    '#required' => TRUE,
   );
 
   $form['pass_confirm'] = array(
@@ -64,15 +65,24 @@ function registration_form($form, &$form_state) {
     '#size' => 15,
     '#description' => "Retype your password",
     '#element_validate' => array('user_profile_confirm_password_validate'),
+    '#required' => TRUE,
   );
 
-  $active = array('coach' => 'Coach', 'client' =>'Client');
+  $role_id = db_query("Select rid from role where name = 'coach'")->fetch();
+  $role_id = $role_id->rid;
+  if (user_has_role($role_id, NULL)) {
+    $active = array('client' =>'Client');
+  }
+  else {
+    $active = array('coach' => 'Coach', 'client' =>'Client');
+  }
 
   $form['role'] = array(
     '#title' => 'Role',
     '#type' => 'radios',
     '#options' => $active,
     '#description' => "Select role",
+    '#required' => TRUE,
    );
 
   $form['address'] = array(
@@ -85,7 +95,7 @@ function registration_form($form, &$form_state) {
   $form['contact'] = array(
     '#type' => 'textfield',
     '#title' => 'Contact',
-    '#maxlength' => 10,
+    '#maxlength' => 11,
     '#required' => TRUE,
     '#description' => "Enter your contact number.",
     '#element_validate' => array('user_profile_contact_element_validate'),

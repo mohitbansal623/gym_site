@@ -257,11 +257,74 @@ function feature_view_check_in_views_default_views() {
     'bypass_access' => 0,
     'link' => 0,
   );
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php']['id'] = 'php';
+  $handler->display->display_options['fields']['php']['table'] = 'views';
+  $handler->display->display_options['fields']['php']['field'] = 'php';
+  $handler->display->display_options['fields']['php']['label'] = 'Bodyfat Loss %';
+  $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php']['php_output'] = '<?php
+echo get_recent_body_fat_percentage($row->field_client_ref);
+?>';
+  $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_1']['id'] = 'php_1';
+  $handler->display->display_options['fields']['php_1']['table'] = 'views';
+  $handler->display->display_options['fields']['php_1']['field'] = 'php';
+  $handler->display->display_options['fields']['php_1']['label'] = 'CM Loss';
+  $handler->display->display_options['fields']['php_1']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_1']['php_output'] = '<?php
+  echo get_cm_loss($row->field_client_ref);
+?>';
+  $handler->display->display_options['fields']['php_1']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_1']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_2']['id'] = 'php_2';
+  $handler->display->display_options['fields']['php_2']['table'] = 'views';
+  $handler->display->display_options['fields']['php_2']['field'] = 'php';
+  $handler->display->display_options['fields']['php_2']['label'] = 'MM Loss';
+  $handler->display->display_options['fields']['php_2']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_2']['php_output'] = '<?php
+ echo get_mm_loss($row->field_client_ref);
+?>';
+  $handler->display->display_options['fields']['php_2']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_2']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_3']['id'] = 'php_3';
+  $handler->display->display_options['fields']['php_3']['table'] = 'views';
+  $handler->display->display_options['fields']['php_3']['field'] = 'php';
+  $handler->display->display_options['fields']['php_3']['label'] = 'Diet Adherence';
+  $handler->display->display_options['fields']['php_3']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_3']['php_output'] = '<?php
+echo get_diet_adherence($row->field_client_ref);
+?>';
+  $handler->display->display_options['fields']['php_3']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_3']['php_click_sortable'] = '';
+  /* Field: Content: Front */
+  $handler->display->display_options['fields']['field_progress_picture_front']['id'] = 'field_progress_picture_front';
+  $handler->display->display_options['fields']['field_progress_picture_front']['table'] = 'field_data_field_progress_picture_front';
+  $handler->display->display_options['fields']['field_progress_picture_front']['field'] = 'field_progress_picture_front';
+  $handler->display->display_options['fields']['field_progress_picture_front']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_progress_picture_front']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Client Ref (field_client_ref) */
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['id'] = 'field_client_ref_target_id';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['table'] = 'field_data_field_client_ref';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['field'] = 'field_client_ref_target_id';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -276,14 +339,6 @@ function feature_view_check_in_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'check_in' => 'check_in',
   );
-  /* Filter criterion: Global: PHP */
-  $handler->display->display_options['filters']['php']['id'] = 'php';
-  $handler->display->display_options['filters']['php']['table'] = 'views';
-  $handler->display->display_options['filters']['php']['field'] = 'php';
-  $handler->display->display_options['filters']['php']['use_php_setup'] = 0;
-  $handler->display->display_options['filters']['php']['php_filter'] = 'global $user;
-
-if ($user->uid == $row->field_client_ref) { return TRUE; } else { return FALSE; }';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
