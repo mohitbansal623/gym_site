@@ -7,19 +7,20 @@ function client_log_notify_coach_menu() {
   $items['notifications'] = array(
     'page callback' => '_notifications_populate',
     'type' => MENU_CALLBACK,
-    'access arguments' => TRUE,
+    'access callback' => TRUE,
   );
 
   $items['clear-notification'] = array(
     'page callback' => '_notifications_status_response',
     'type' => MENU_CALLBACK,
-    'access arguments' => TRUE,
+    'access callback' => TRUE,
   );
 
-  $items['coach-dashboard'] = array(
+  $items['coach-dashboard/%'] = array(
     'page callback' => 'get_all_client_data_for_coach',
+    'page arguments' => array(1),
     'type' => MENU_CALLBACK,
-    'access arguments' => TRUE,
+    'access callback' => TRUE,
   );
 
   return $items;
@@ -80,7 +81,7 @@ function client_log_notify_coach_node_presave($node) {
 
     $client_name = !empty($client_name)? $client_name[0]: NULL;
     $message = $client_name . " has replied " . $plan_value;
-    /* 
+    /*
     // Insert in table to notify coach about this.
     $nid = db_insert('notify_coach')
         ->fields(array(
@@ -182,23 +183,29 @@ function get_remaining_days($nid) {
 function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
   global $user;
   $form['title']['#access'] = FALSE;
-  if ($form_id == 'goals_node_form') {
-    $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
-    $eligible_clients = array(0 => $no_value) + get_eligible_clients('goals');
-    
-    $form['field_client_ref']['und']['#options'] = $eligible_clients;
-    $form['field_coach_ref']['und']['#options'] = array($user->uid => $user->name);
-    //$form['field_coach_ref']['#attributes']= array('disabled' => 'disabled');
+  $alias = drupal_get_path_alias();
+  if ($alias == 'node/add/goals') {
+    if ($form_id == 'goals_node_form') {
+      $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
+      $eligible_clients = array(0 => $no_value) + get_eligible_clients('goals');
+
+      $form['field_client_ref']['und']['#options'] = $eligible_clients;
+      $form['field_coach_ref']['und']['#options'] = array($user->uid => $user->name);
+    }
   }
-  elseif ($form_id == 'path_to_fitness_node_form'){
-   $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
-    $eligible_clients = array(0 => $no_value) + get_related_clients($user->uid);
-    $form['field_client_ref']['und']['#options'] = $eligible_clients;
+  else if ($alias == 'node/add/path-to-fitness') {
+    if ($form_id == 'path_to_fitness_node_form'){
+     $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
+      $eligible_clients = array(0 => $no_value) + get_related_clients($user->uid);
+      $form['field_client_ref']['und']['#options'] = $eligible_clients;
+    }
   }
-  elseif ($form_id == 'check_in_node_form') {
-    $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
-    $eligible_clients = array(0 => $no_value) + get_related_clients();
-    $form['field_client_ref']['und']['#options'] = $eligible_clients;
+  else if ($alias == 'node/add/check-in') {
+    if ($form_id == 'check_in_node_form') {
+      $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
+      $eligible_clients = array(0 => $no_value) + get_related_clients();
+      $form['field_client_ref']['und']['#options'] = $eligible_clients;
+    }
   }
 }
 
@@ -206,7 +213,7 @@ function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
  * Fetch eligible clients for "goal", "path to fitness" when creating a new goal or path to fitness.
  */
 function get_eligible_clients($bundle) {
-  $role_id = db_query("Select rid from drup_role where name = 'client'")->fetch();
+  $role_id = db_query("Select rid from role where name = 'client'")->fetch();
   $client_name = array();
 
   if (!empty($role_id)) {
@@ -220,7 +227,7 @@ function get_eligible_clients($bundle) {
   $query->join('users_roles', 'role', "role.uid = at.uid");
   $query->condition('role.rid', $rid);
   $query->condition('at.status', 1);
- 
+
   $query->condition('client.field_client_ref_target_id', NULL);
   $client_id = $query->execute()->fetchAllKeyed(0);
 
@@ -238,7 +245,7 @@ function get_related_clients($coach_id = NULL) {
   if (!isset($coach_id)) {
     $coach_id = $user->uid;
   }
-  $role_id = db_query("Select rid from drup_role where name = 'client'")->fetch();
+  $role_id = db_query("Select rid from role where name = 'client'")->fetch();
   $client_name = array();
 
   if (!empty($role_id)) {
@@ -267,53 +274,62 @@ function get_related_clients($coach_id = NULL) {
 /**
  *  Coach Dashboard
  */
-function get_all_client_data_for_coach() {
-  global $user;
-  $coach_id = $user->uid;
-  $role_id = db_query("Select rid from drup_role where name = 'client'")->fetch();
-  $client_name = $client_data = array();
+function get_all_client_data_for_coach($coach_id) {
+  if (is_numeric($coach_id)) {
+    $role_id = db_query("Select rid from role where name = 'client'")->fetch();
+    $client_name = $client_data = array();
 
-  if (!empty($role_id)) {
-    $rid = $role_id->rid;
-  }
-
-  $query = db_select('node', 'n')
-    ->distinct();
-  $query->join('field_data_field_coach_ref', 'coach', "coach.entity_id = n.nid");
-  $query->join('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
-  $query->join('field_data_field_goal', 'goal', "goal.entity_id = n.nid");
-  $query->join('users', 'at', "client.field_client_ref_target_id = at.uid");
-  $query->join('field_data_field_first_name', 'fn', "fn.entity_id = at.uid");
-  $query->join('field_data_field_last_name', 'ln', "ln.entity_id = at.uid");
-  $query->join('users_roles', 'role', "role.uid = at.uid");
-  $query->condition('role.rid', $rid);
-  $query->condition('n.type', 'goals');
-  $query->condition('coach.field_coach_ref_target_id', $coach_id);
-  $query->fields('fn', array('field_first_name_value'));
-  $query->fields('ln', array('field_last_name_value'));
-  $query->fields('goal', array('field_goal_value'));
-  $query->fields('n', array('nid'));
-  $query->fields('at', array('uid'));
-  $query->condition('at.status', 1);
-  $client_id = $query->execute()->fetchAll();
-  if (!empty($client_id)) {
-    foreach ($client_id as $key => $value) {
-      $client_data[$key]['first_name'] = $value->field_first_name_value;
-      $client_data[$key]['last_name'] = $value->field_last_name_value;
-      $client_data[$key]['goal'] = $value->field_goal_value;
-      $client_data[$key]['remaining_days'] = get_remaining_days($value->nid);
-      $client_data[$key]['bodyfat_lost'] = get_recent_body_fat_percentage($value->uid);
-      $client_data[$key]['diet_adherence'] = get_diet_adherence($value->uid);
-      $client_data[$key]['cm_loss'] = get_cm_loss($value->uid);
-      $client_data[$key]['mm_loss'] = get_mm_loss($value->uid);
+    if (!empty($role_id)) {
+      $rid = $role_id->rid;
     }
+
+    $query = db_select('node', 'n')
+      ->distinct();
+    $query->join('field_data_field_coach_ref', 'coach', "coach.entity_id = n.nid");
+    $query->join('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
+    $query->join('field_data_field_goal', 'goal', "goal.entity_id = n.nid");
+    $query->join('users', 'at', "client.field_client_ref_target_id = at.uid");
+    $query->join('field_data_field_first_name', 'fn', "fn.entity_id = at.uid");
+    $query->join('field_data_field_last_name', 'ln', "ln.entity_id = at.uid");
+    $query->join('users_roles', 'role', "role.uid = at.uid");
+    $query->condition('role.rid', $rid);
+    $query->condition('n.type', 'goals');
+    $query->condition('coach.field_coach_ref_target_id', $coach_id);
+    $query->fields('fn', array('field_first_name_value'));
+    $query->fields('ln', array('field_last_name_value'));
+    $query->fields('goal', array('field_goal_value'));
+    $query->fields('n', array('nid'));
+    $query->fields('at', array('uid'));
+    $query->condition('at.status', 1);
+    $client_id = $query->execute()->fetchAll();
+    if (!empty($client_id)) {
+      foreach ($client_id as $key => $value) {
+        $client_data[$key]['first_name'] = $value->field_first_name_value;
+        $client_data[$key]['last_name'] = $value->field_last_name_value;
+        $client_data[$key]['goal'] = $value->field_goal_value;
+        $client_data[$key]['remaining_days'] = get_remaining_days($value->nid);
+        $client_data[$key]['bodyfat_lost'] = get_recent_body_fat_percentage($value->uid);
+        $client_data[$key]['diet_adherence'] = get_diet_adherence($value->uid);
+        $client_data[$key]['cm_loss'] = get_cm_loss($value->uid);
+        $client_data[$key]['mm_loss'] = get_mm_loss($value->uid);
+        $client_data[$key]['uid'] = $value->uid;
+      }
+    }
+
+    if (!empty($client_data)) {
+      $variables = array();
+      $variables = $client_data;
+    }
+
+    else {
+      $variables['no-data'] = 'No data to display';
+    }
+
+    $output = theme('coach_dashboard', array('coach_dashboard' => $variables));
+    return $output;
   }
 
-  $variables = array();
-  $variables = $client_data;
-  $output = theme('coach_dashboard', array('coach_dashboard' => $variables));
-
-  return $output;
+  return FALSE;
 }
 
 /*
