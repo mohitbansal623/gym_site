@@ -301,14 +301,36 @@ echo get_diet_adherence($row->field_client_ref);
 ?>';
   $handler->display->display_options['fields']['php_3']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php_3']['php_click_sortable'] = '';
-  /* Field: Content: Front */
-  $handler->display->display_options['fields']['field_progress_picture_front']['id'] = 'field_progress_picture_front';
-  $handler->display->display_options['fields']['field_progress_picture_front']['table'] = 'field_data_field_progress_picture_front';
-  $handler->display->display_options['fields']['field_progress_picture_front']['field'] = 'field_progress_picture_front';
-  $handler->display->display_options['fields']['field_progress_picture_front']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_progress_picture_front']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_4']['id'] = 'php_4';
+  $handler->display->display_options['fields']['php_4']['table'] = 'views';
+  $handler->display->display_options['fields']['php_4']['field'] = 'php';
+  $handler->display->display_options['fields']['php_4']['label'] = 'Average Daily Activity';
+  $handler->display->display_options['fields']['php_4']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_4']['php_output'] = '<?php
+  echo get_avg_daily_activity($row->field_client_ref);
+?>';
+  $handler->display->display_options['fields']['php_4']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_4']['php_click_sortable'] = '';
+  /* Field: Content: Training Sessions Completed */
+  $handler->display->display_options['fields']['field_training_sessions_complete']['id'] = 'field_training_sessions_complete';
+  $handler->display->display_options['fields']['field_training_sessions_complete']['table'] = 'field_data_field_training_sessions_complete';
+  $handler->display->display_options['fields']['field_training_sessions_complete']['field'] = 'field_training_sessions_complete';
+  $handler->display->display_options['fields']['field_training_sessions_complete']['settings'] = array(
+    'thousand_separator' => '',
+    'decimal_separator' => '.',
+    'scale' => '2',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Content: Personal Records */
+  $handler->display->display_options['fields']['field_personal_records']['id'] = 'field_personal_records';
+  $handler->display->display_options['fields']['field_personal_records']['table'] = 'field_data_field_personal_records';
+  $handler->display->display_options['fields']['field_personal_records']['field'] = 'field_personal_records';
+  $handler->display->display_options['fields']['field_personal_records']['settings'] = array(
+    'thousand_separator' => '',
+    'decimal_separator' => '.',
+    'scale' => '2',
+    'prefix_suffix' => 1,
   );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
