@@ -201,6 +201,18 @@ echo get_remaining_days($row->nid);
     'bypass_access' => 0,
     'link' => 0,
   );
+  /* Field: Content: Front */
+  $handler->display->display_options['fields']['field_progress_picture_front']['id'] = 'field_progress_picture_front';
+  $handler->display->display_options['fields']['field_progress_picture_front']['table'] = 'field_data_field_progress_picture_front';
+  $handler->display->display_options['fields']['field_progress_picture_front']['field'] = 'field_progress_picture_front';
+  $handler->display->display_options['fields']['field_progress_picture_front']['label'] = '';
+  $handler->display->display_options['fields']['field_progress_picture_front']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_progress_picture_front']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_progress_picture_front']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_progress_picture_front']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -249,6 +261,7 @@ echo get_remaining_days($row->nid);
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
+    'check_in' => 'check_in',
     'goals' => 'goals',
   );
 

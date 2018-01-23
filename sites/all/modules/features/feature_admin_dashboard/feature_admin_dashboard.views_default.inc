@@ -91,6 +91,8 @@ function feature_admin_dashboard_views_default_views() {
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'coach-dashboard/[uid]';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
@@ -120,7 +122,7 @@ echo $total_clients;
   $handler->display->display_options['fields']['php_2']['label'] = 'Total average of diet adherence';
   $handler->display->display_options['fields']['php_2']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php_2']['php_output'] = '<?php
-echo get_diet_adherence($row->uid);
+echo total_avg_diet_adherence($row->uid) . "%";
 
 ?>';
   $handler->display->display_options['fields']['php_2']['use_php_click_sortable'] = '0';

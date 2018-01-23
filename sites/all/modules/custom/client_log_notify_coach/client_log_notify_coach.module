@@ -305,14 +305,15 @@ function get_all_client_data_for_coach($coach_id) {
     if (!empty($client_id)) {
       foreach ($client_id as $key => $value) {
         $full_name = $value->field_first_name_value . ' ' . $value->field_last_name_value;
-        $client_data[$key]['full_name'] = l(t($full_name), "/client-dashboard/" . $value->uid);
+        $client_data[$key]['full_name'] = l(t($full_name), "/client-daily-log/" . $value->uid);
         $client_data[$key]['goal'] = $value->field_goal_value;
         $client_data[$key]['remaining_days'] = get_remaining_days($value->nid);
         $client_data[$key]['bodyfat_lost'] = get_recent_body_fat_percentage($value->uid);
         $client_data[$key]['diet_adherence'] = get_diet_adherence($value->uid);
         $client_data[$key]['cm_loss'] = get_cm_loss($value->uid);
         $client_data[$key]['mm_loss'] = get_mm_loss($value->uid);
-        // $client_data[$key]['uid'] = $value->uid;
+        $client_data[$key]['avg_daily_activity'] = get_avg_daily_activity($value->uid);
+        $client_data[$key]['avg_training_sessions'] = get_avg_training_sessions($value->uid);
       }
     }
 
@@ -421,5 +422,88 @@ function get_mm_loss($client_id) {
 
 
 function get_diet_adherence($client_id) {
-  return 2;
+  $total_days_logged = db_query("SELECT count(*) as total FROM node where uid =" . $client_id . " and type= 'daily_log'")->fetch();
+
+  $total_days_logged = $total_days_logged->total;
+
+  $query = db_select('node', 'n')
+    ->fields('client', array('field_was_today_on_plan_value'));
+  $query->join('field_data_field_was_today_on_plan', 'client', "client.entity_id = n.nid");
+  $query->condition('n.type', 'daily_log');
+  $query->condition('client.field_was_today_on_plan_value', 'yes');
+  $query->condition('n.uid', $client_id);
+  $result = $query->execute()->rowCount();
+
+  if ($total_days_logged != 0) {
+    $diet_adherence = (($result / $total_days_logged)* 100) . "%";
+  }
+  else {
+    $diet_adherence = "0%";
+  }
+
+  return $diet_adherence;
+}
+
+
+function get_avg_daily_activity($client_id)  {
+  $query = db_select('node', 'n')
+    ->fields('client', array('field_daily_activity_level_value'));
+  $query->join('field_data_field_daily_activity_level', 'client', "client.entity_id = n.nid");
+  $query->condition('n.type', 'daily_log');
+  $query->condition('n.uid', $client_id);
+
+  $total_days = $query->execute()->rowCount();
+  $daily_activity_value = $query->execute()->fetchCol();
+
+
+  $sum = array_sum($daily_activity_value);
+
+  if ($total_days != 0) {
+    $avg_daily_activity_level = $sum / $total_days;
+  }
+  else {
+    $avg_daily_activity_level = 0;
+  }
+
+  return $avg_daily_activity_level;
+
+}
+
+
+function get_avg_training_sessions($client_id)  {
+  $query = db_select('node', 'n')
+    ->fields('client', array('field_training_sessions_complete_value'));
+  $query->join('field_data_field_training_sessions_complete', 'client', "client.entity_id = n.nid");
+  $query->condition('n.type', 'check_in');
+  $query->condition('n.uid', $client_id);
+
+  $total_days = $query->execute()->rowCount();
+  $daily_activity_value = $query->execute()->fetchCol();
+
+
+  $sum = array_sum($daily_activity_value);
+
+  if ($total_days != 0) {
+    $avg_training_sessions = $sum / $total_days;
+  }
+  else {
+    $avg_training_sessions = 0;
+  }
+
+  return $avg_training_sessions;
+
+}
+
+
+
+function total_avg_diet_adherence($coach_id) {
+  $client_list = get_related_clients($coach_id);
+  $count = count($client_list);
+  $total_fat_loss = 0;
+  foreach ($client_list as $client_id => $value) {
+    $total_diet_adherence += get_diet_adherence($client_id);
+  }
+  $avg = $total_diet_adherence / $count;
+
+  return $avg;
 }
