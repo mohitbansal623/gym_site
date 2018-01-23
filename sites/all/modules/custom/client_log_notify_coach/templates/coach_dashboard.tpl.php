@@ -8,42 +8,28 @@
 
 <?php else :?>
   <h1 class="page-header">Client Information</h1>
+  <div id="accordion" class="panel-group coach-accordion">
   <?php foreach ($client_info as $key => $value): ?>
-    <div>
-      <h3>Full Name</h3>
-      <h4><?php echo $value['full_name']; ?></h4>
-    </div>
-
-     <div>
-      <h3> Goal</h3>
-      <h4> <?php echo $value['goal']; ?></h4>
-    </div>
-
-     <div>
-      <h3> Remaining Days</h3>
-      <h4> <?php echo $value['remaining_days']; ?></h4>
-    </div>
-
-     <div>
-      <h3> Body fat Loss</h3>
-      <h4> <?php echo $value['bodyfat_lost']; ?></h4>
-    </div>
-
-     <div>
-      <h3> Diet Adherence</h3>
-      <h4> <?php echo $value['diet_adherence']; ?></h4>
-    </div>
-
-     <div>
-      <h3> CM Loss</h3>
-      <h4> <?php echo $value['cm_loss']; ?></h4>
-    </div>
-
-     <div>
-      <h3> MM Loss</h3>
-      <h4> <?php echo $value['mm_loss']; ?></h4>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#<?php echo $key; ?>"><?php echo $value['full_name']; ?></a>
+        </h4>
+      </div>
+      <div id="<?php echo $key; ?>" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p><strong>Goal:</strong> <?php echo $value['goal']; ?></p>
+          <p><strong>Remaining Days:</strong> <?php echo $value['remaining_days']; ?></p>
+          <p><strong>Body Fat Loss:</strong> <?php echo $value['bodyfat_lost']; ?></p>
+          <p><strong>Diet Adherence:</strong> <?php echo $value['diet_adherence']; ?></p>
+          <p><strong>CM Loss:</strong> <?php echo $value['cm_loss']; ?></p>
+          <p><strong>MM Loss:</strong> <?php echo $value['mm_loss']; ?></p>
+          <p><a href="<?php echo $value['link']; ?>">Click to see profile.</a></p>
+        </div>
+      </div>
     </div>
 
   <?php endforeach; ?>
+</div>
 
 <?php endif; ?>
