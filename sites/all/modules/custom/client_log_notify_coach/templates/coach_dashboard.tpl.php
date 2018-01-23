@@ -29,6 +29,16 @@
       </div>
     </div>
 
+    <div>
+      <h3> Average Daily Activity</h3>
+      <h4> <?php echo $value['avg_daily_activity']; ?></h4>
+    </div>
+
+    <div>
+      <h3> Average Training Sessions</h3>
+      <h4> <?php echo $value['avg_training_sessions']; ?></h4>
+    </div>
+
   <?php endforeach; ?>
 </div>
 
