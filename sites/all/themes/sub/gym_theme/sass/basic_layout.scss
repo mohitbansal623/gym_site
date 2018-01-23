@@ -106,3 +106,88 @@ body.page-admin-dashboard {
     }
   }
 }
+
+body.page-coach-dashboard {
+  .coach-accordion {
+    .panel.panel-default {
+      display: inline-block;
+      padding-right: 5px;
+      padding-bottom: 5px;
+      width: 32%;
+      border: 0;
+      border-radius: 0;
+      box-shadow: unset;
+      vertical-align: top;
+      margin: 0;
+      p {
+        line-height: 1.2;
+      }
+      &:nth-child(5n+1) {
+        .panel-heading {
+          background: #47D7B3;
+        }
+        .panel-collapse {
+          border: 1px solid #47D7B3;
+        }
+      }
+      &:nth-child(5n+2) {
+        .panel-heading {
+          background: #A26CC4;
+        }
+        .panel-collapse {
+          border: 1px solid #A26CC4;
+        }
+      }
+      &:nth-child(5n+3) {
+        .panel-heading {
+          background: #E87352;
+        }
+        .panel-collapse {
+          border: 1px solid #47D7B3;
+        }
+      }
+      &:nth-child(5n+4) {
+        .panel-heading {
+          background: #377DE2;
+        }
+        .panel-collapse {
+          border: 1px solid #47D7B3;
+        }
+      }
+      &:nth-child(5n+5) {
+        .panel-heading {
+          background: #00A638;
+        }
+        .panel-collapse {
+          border: 1px solid #47D7B3;
+        }
+      }
+    }
+    .panel-heading {
+      padding: 0;
+      border-radius: 0;
+      text-transform: uppercase;
+      a {
+        color: #fff;
+        text-decoration: none;
+        outline: none;
+        padding: 8px 22px 8px 8px;
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        font-size: 1.8rem;
+        &:after {
+          content: "\f077";
+          position: absolute;
+          right: 6px;
+          top: 11px;
+          font-family: FontAwesome;
+          font-size: 14px;
+        }
+        &.collapsed:after {
+          content: "\f078";
+        }
+      }
+    }
+  }
+}
