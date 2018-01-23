@@ -7,16 +7,11 @@
   <?php echo $client_info['no-data']; ?>
 
 <?php else :?>
-
+  <h1 class="page-header">Client Information</h1>
   <?php foreach ($client_info as $key => $value): ?>
     <div>
-      <h3> Client First Name</h3>
-      <h4><a href="/client-dashboard/<?php echo $value['uid']; ?>"><?php echo $value['first_name']; ?></a></h4>
-    </div>
-
-    <div>
-      <h3> Client Last Name</h3>
-      <h4> <?php echo $value['last_name']; ?></h4>
+      <h3>Full Name</h3>
+      <h4><?php echo $value['full_name']; ?></h4>
     </div>
 
      <div>

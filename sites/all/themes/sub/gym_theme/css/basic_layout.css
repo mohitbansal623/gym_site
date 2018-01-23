@@ -116,3 +116,18 @@ a {
   font-weight: bold;
   margin-bottom: 15px;
 }
+
+/* line 94, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+/* line 98, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard table thead tr {
+  background: #111;
+  color: #fff;
+}
+/* line 104, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard table, body.page-admin-dashboard .view-admin-dashboard td, body.page-admin-dashboard .view-admin-dashboard th {
+  border: 1px solid #ddd;
+}
