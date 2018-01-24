@@ -197,6 +197,97 @@ function feature_view_check_in_views_default_views() {
     'thousand_separator' => '',
     'prefix_suffix' => 1,
   );
+  /* Field: Content: Client Ref */
+  $handler->display->display_options['fields']['field_client_ref']['id'] = 'field_client_ref';
+  $handler->display->display_options['fields']['field_client_ref']['table'] = 'field_data_field_client_ref';
+  $handler->display->display_options['fields']['field_client_ref']['field'] = 'field_client_ref';
+  $handler->display->display_options['fields']['field_client_ref']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_client_ref']['settings'] = array(
+    'bypass_access' => 0,
+    'link' => 0,
+  );
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php']['id'] = 'php';
+  $handler->display->display_options['fields']['php']['table'] = 'views';
+  $handler->display->display_options['fields']['php']['field'] = 'php';
+  $handler->display->display_options['fields']['php']['label'] = 'Bodyfat Loss %';
+  $handler->display->display_options['fields']['php']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php']['php_output'] = '<?php
+echo get_recent_body_fat_percentage($row->field_client_ref);
+?>';
+  $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_1']['id'] = 'php_1';
+  $handler->display->display_options['fields']['php_1']['table'] = 'views';
+  $handler->display->display_options['fields']['php_1']['field'] = 'php';
+  $handler->display->display_options['fields']['php_1']['label'] = 'CM Loss';
+  $handler->display->display_options['fields']['php_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php_1']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_1']['php_output'] = '<?php
+  echo get_cm_loss($row->field_client_ref);
+?>';
+  $handler->display->display_options['fields']['php_1']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_1']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_2']['id'] = 'php_2';
+  $handler->display->display_options['fields']['php_2']['table'] = 'views';
+  $handler->display->display_options['fields']['php_2']['field'] = 'php';
+  $handler->display->display_options['fields']['php_2']['label'] = 'MM Loss';
+  $handler->display->display_options['fields']['php_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php_2']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_2']['php_output'] = '<?php
+ echo get_mm_loss($row->field_client_ref);
+?>';
+  $handler->display->display_options['fields']['php_2']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_2']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_3']['id'] = 'php_3';
+  $handler->display->display_options['fields']['php_3']['table'] = 'views';
+  $handler->display->display_options['fields']['php_3']['field'] = 'php';
+  $handler->display->display_options['fields']['php_3']['label'] = 'Diet Adherence';
+  $handler->display->display_options['fields']['php_3']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php_3']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_3']['php_output'] = '<?php
+echo get_diet_adherence($row->field_client_ref);
+?>';
+  $handler->display->display_options['fields']['php_3']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_3']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_4']['id'] = 'php_4';
+  $handler->display->display_options['fields']['php_4']['table'] = 'views';
+  $handler->display->display_options['fields']['php_4']['field'] = 'php';
+  $handler->display->display_options['fields']['php_4']['label'] = 'Average Daily Activity';
+  $handler->display->display_options['fields']['php_4']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php_4']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_4']['php_output'] = '<?php
+  echo get_avg_daily_activity($row->field_client_ref);
+?>';
+  $handler->display->display_options['fields']['php_4']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_4']['php_click_sortable'] = '';
+  /* Field: Content: Training Sessions Completed */
+  $handler->display->display_options['fields']['field_training_sessions_complete']['id'] = 'field_training_sessions_complete';
+  $handler->display->display_options['fields']['field_training_sessions_complete']['table'] = 'field_data_field_training_sessions_complete';
+  $handler->display->display_options['fields']['field_training_sessions_complete']['field'] = 'field_training_sessions_complete';
+  $handler->display->display_options['fields']['field_training_sessions_complete']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_training_sessions_complete']['settings'] = array(
+    'thousand_separator' => '',
+    'decimal_separator' => '.',
+    'scale' => '2',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Content: Personal Records */
+  $handler->display->display_options['fields']['field_personal_records']['id'] = 'field_personal_records';
+  $handler->display->display_options['fields']['field_personal_records']['table'] = 'field_data_field_personal_records';
+  $handler->display->display_options['fields']['field_personal_records']['field'] = 'field_personal_records';
+  $handler->display->display_options['fields']['field_personal_records']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_personal_records']['settings'] = array(
+    'thousand_separator' => '',
+    'decimal_separator' => '.',
+    'scale' => '2',
+    'prefix_suffix' => 1,
+  );
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -210,6 +301,40 @@ function feature_view_check_in_views_default_views() {
         <tr>
           <td>Bodyfat (in KG)</td>
           <td>[field_bodyfat_kg]</td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div class="stats-content">
+      <table>
+        <tr>
+          <td>Bodyfat Loss %</td>
+          <td>[php]%</td>
+        </tr>
+        <tr>
+          <td>CM Loss</td>
+          <td>[php_1]</td>
+        </tr>
+        <tr>
+          <td>MM Loss</td>
+          <td>[php_2]</td>
+        </tr>
+        <tr>
+          <td>Diet Adherence</td>
+          <td>[php_3]</td>
+        </tr>
+        <tr>
+          <td>Average Daily Activity</td>
+          <td>[php_4]</td>
+        </tr>
+         <tr>
+          <td>Training Sessions Completed</td>
+          <td>[field_training_sessions_complete]</td>
+        </tr>
+         <tr>
+          <td>Personal Records</td>
+          <td>[field_personal_records]</td>
         </tr>
       </table>
     </div>
@@ -246,92 +371,9 @@ function feature_view_check_in_views_default_views() {
     </div>
   </div>
 </div>
+</div>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Content: Client Ref */
-  $handler->display->display_options['fields']['field_client_ref']['id'] = 'field_client_ref';
-  $handler->display->display_options['fields']['field_client_ref']['table'] = 'field_data_field_client_ref';
-  $handler->display->display_options['fields']['field_client_ref']['field'] = 'field_client_ref';
-  $handler->display->display_options['fields']['field_client_ref']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_client_ref']['settings'] = array(
-    'bypass_access' => 0,
-    'link' => 0,
-  );
-  /* Field: Global: PHP */
-  $handler->display->display_options['fields']['php']['id'] = 'php';
-  $handler->display->display_options['fields']['php']['table'] = 'views';
-  $handler->display->display_options['fields']['php']['field'] = 'php';
-  $handler->display->display_options['fields']['php']['label'] = 'Bodyfat Loss %';
-  $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
-  $handler->display->display_options['fields']['php']['php_output'] = '<?php
-echo get_recent_body_fat_percentage($row->field_client_ref);
-?>';
-  $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
-  $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
-  /* Field: Global: PHP */
-  $handler->display->display_options['fields']['php_1']['id'] = 'php_1';
-  $handler->display->display_options['fields']['php_1']['table'] = 'views';
-  $handler->display->display_options['fields']['php_1']['field'] = 'php';
-  $handler->display->display_options['fields']['php_1']['label'] = 'CM Loss';
-  $handler->display->display_options['fields']['php_1']['use_php_setup'] = 0;
-  $handler->display->display_options['fields']['php_1']['php_output'] = '<?php
-  echo get_cm_loss($row->field_client_ref);
-?>';
-  $handler->display->display_options['fields']['php_1']['use_php_click_sortable'] = '0';
-  $handler->display->display_options['fields']['php_1']['php_click_sortable'] = '';
-  /* Field: Global: PHP */
-  $handler->display->display_options['fields']['php_2']['id'] = 'php_2';
-  $handler->display->display_options['fields']['php_2']['table'] = 'views';
-  $handler->display->display_options['fields']['php_2']['field'] = 'php';
-  $handler->display->display_options['fields']['php_2']['label'] = 'MM Loss';
-  $handler->display->display_options['fields']['php_2']['use_php_setup'] = 0;
-  $handler->display->display_options['fields']['php_2']['php_output'] = '<?php
- echo get_mm_loss($row->field_client_ref);
-?>';
-  $handler->display->display_options['fields']['php_2']['use_php_click_sortable'] = '0';
-  $handler->display->display_options['fields']['php_2']['php_click_sortable'] = '';
-  /* Field: Global: PHP */
-  $handler->display->display_options['fields']['php_3']['id'] = 'php_3';
-  $handler->display->display_options['fields']['php_3']['table'] = 'views';
-  $handler->display->display_options['fields']['php_3']['field'] = 'php';
-  $handler->display->display_options['fields']['php_3']['label'] = 'Diet Adherence';
-  $handler->display->display_options['fields']['php_3']['use_php_setup'] = 0;
-  $handler->display->display_options['fields']['php_3']['php_output'] = '<?php
-echo get_diet_adherence($row->field_client_ref);
-?>';
-  $handler->display->display_options['fields']['php_3']['use_php_click_sortable'] = '0';
-  $handler->display->display_options['fields']['php_3']['php_click_sortable'] = '';
-  /* Field: Global: PHP */
-  $handler->display->display_options['fields']['php_4']['id'] = 'php_4';
-  $handler->display->display_options['fields']['php_4']['table'] = 'views';
-  $handler->display->display_options['fields']['php_4']['field'] = 'php';
-  $handler->display->display_options['fields']['php_4']['label'] = 'Average Daily Activity';
-  $handler->display->display_options['fields']['php_4']['use_php_setup'] = 0;
-  $handler->display->display_options['fields']['php_4']['php_output'] = '<?php
-  echo get_avg_daily_activity($row->field_client_ref);
-?>';
-  $handler->display->display_options['fields']['php_4']['use_php_click_sortable'] = '0';
-  $handler->display->display_options['fields']['php_4']['php_click_sortable'] = '';
-  /* Field: Content: Training Sessions Completed */
-  $handler->display->display_options['fields']['field_training_sessions_complete']['id'] = 'field_training_sessions_complete';
-  $handler->display->display_options['fields']['field_training_sessions_complete']['table'] = 'field_data_field_training_sessions_complete';
-  $handler->display->display_options['fields']['field_training_sessions_complete']['field'] = 'field_training_sessions_complete';
-  $handler->display->display_options['fields']['field_training_sessions_complete']['settings'] = array(
-    'thousand_separator' => '',
-    'decimal_separator' => '.',
-    'scale' => '2',
-    'prefix_suffix' => 1,
-  );
-  /* Field: Content: Personal Records */
-  $handler->display->display_options['fields']['field_personal_records']['id'] = 'field_personal_records';
-  $handler->display->display_options['fields']['field_personal_records']['table'] = 'field_data_field_personal_records';
-  $handler->display->display_options['fields']['field_personal_records']['field'] = 'field_personal_records';
-  $handler->display->display_options['fields']['field_personal_records']['settings'] = array(
-    'thousand_separator' => '',
-    'decimal_separator' => '.',
-    'scale' => '2',
-    'prefix_suffix' => 1,
-  );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -342,8 +384,9 @@ echo get_diet_adherence($row->field_client_ref);
   $handler->display->display_options['arguments']['field_client_ref_target_id']['table'] = 'field_data_field_client_ref';
   $handler->display->display_options['arguments']['field_client_ref_target_id']['field'] = 'field_client_ref_target_id';
   $handler->display->display_options['arguments']['field_client_ref_target_id']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['field_client_ref_target_id']['default_argument_type'] = 'user';
-  $handler->display->display_options['arguments']['field_client_ref_target_id']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['field_client_ref_target_id']['default_argument_options']['use_alias'] = TRUE;
   $handler->display->display_options['arguments']['field_client_ref_target_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_client_ref_target_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_client_ref_target_id']['summary_options']['items_per_page'] = '25';

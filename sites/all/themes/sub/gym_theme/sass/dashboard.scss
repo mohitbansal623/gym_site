@@ -163,7 +163,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#034079', endColorstr='#04498c',GradientType=1 ); /* IE6-9 */
   }
   .stats-content {
-    padding-bottom: 10px;
+    margin-bottom: 0;
   }
   .block-title {
     margin-top: 0;
@@ -184,6 +184,14 @@
       }
       .stats-content:not(.panel-group) {
         padding-right: 7px;
+        table {
+          tr td {
+            padding-bottom: 10px;
+          }
+        }
+      }
+      .panel-group {
+        padding-bottom: 10px;
       }
       table {
         width: 100%;

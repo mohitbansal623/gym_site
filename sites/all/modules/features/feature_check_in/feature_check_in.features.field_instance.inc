@@ -43,7 +43,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_abdominal_mm',
     'label' => 'Abdominal MM',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -89,7 +89,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_bodyfat_kg',
     'label' => 'Bodyfat kg',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -135,7 +135,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_bodyweight',
     'label' => 'Bodyweight',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -181,8 +181,8 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_check_in_date',
-    'label' => 'check in date',
-    'required' => 0,
+    'label' => 'Check In',
+    'required' => 1,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'same',
@@ -241,7 +241,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_chest_cm',
     'label' => 'Chest CM',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -285,7 +285,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_client_ref',
     'label' => 'Client Ref',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -331,7 +331,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_hips_cm',
     'label' => 'Hips CM',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -381,7 +381,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_left_arm_cm',
     'label' => 'Left Arm CM',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -431,7 +431,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_left_calf_cm',
     'label' => 'Left Calf CM',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -481,7 +481,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_left_leg_cm',
     'label' => 'Left Leg CM',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -527,7 +527,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_muscle_mass',
     'label' => 'Muscle Mass',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -577,7 +577,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_neck_cm',
     'label' => 'Neck CM',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -623,7 +623,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_percent_bodyfat',
     'label' => 'Percent BodyFat',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -669,7 +669,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_personal_records',
     'label' => 'Personal Records',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -712,7 +712,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_progress_picture_back',
     'label' => 'Back',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -762,7 +762,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_progress_picture_front',
     'label' => 'Front',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -812,7 +812,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_progress_picture_side',
     'label' => 'Side',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -869,7 +869,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_right_arm_cm',
     'label' => 'Right Arm CM',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -919,7 +919,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_right_calf_cm',
     'label' => 'Right Calf CM',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -969,7 +969,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_right_leg_cm',
     'label' => 'Right Leg CM',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -1019,7 +1019,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_subscapular_mm',
     'label' => 'Subscapular MM',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -1069,7 +1069,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_suprailiac_mm',
     'label' => 'Suprailiac MM',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -1119,7 +1119,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_thigh_mm',
     'label' => 'Thigh MM',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -1265,7 +1265,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_training_sessions_complete',
     'label' => 'Training Sessions Completed',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -1315,7 +1315,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_tricep_mm',
     'label' => 'Tricep MM',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -1365,7 +1365,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_waist_cm',
     'label' => 'Waist CM',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -1388,6 +1388,7 @@ function feature_check_in_field_default_field_instances() {
   t('Back');
   t('Bodyfat kg');
   t('Bodyweight');
+  t('Check In');
   t('Chest CM');
   t('Client Ref');
   t('Front');
@@ -1411,7 +1412,6 @@ function feature_check_in_field_default_field_instances() {
   t('Training Sessions Completed');
   t('Tricep MM');
   t('Waist CM');
-  t('check in date');
 
   return $field_instances;
 }

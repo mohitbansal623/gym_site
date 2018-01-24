@@ -25,7 +25,7 @@ function feature_ct_goals_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -37,7 +37,7 @@ function feature_ct_goals_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_client_ref',
     'label' => 'Client Ref',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -65,7 +65,7 @@ function feature_ct_goals_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -114,7 +114,7 @@ function feature_ct_goals_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_goal',
     'label' => 'Goal',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -127,6 +127,69 @@ function feature_ct_goals_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => -4,
+    ),
+  );
+
+  // Exported field_instance: 'node-goals-field_goal_date'.
+  $field_instances['node-goals-field_goal_date'] = array(
+    'bundle' => 'goals',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+        ),
+        'type' => 'date_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_goal_date',
+    'label' => 'goal date',
+    'required' => 1,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'flavour' => 'popup',
+        'increment' => 15,
+        'input_format' => 'site-wide',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'text_parts' => array(
+          0 => 'year',
+          1 => 'month',
+          2 => 'day',
+          3 => 'hour',
+          4 => 'minute',
+          5 => 'second',
+        ),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 4,
     ),
   );
 
@@ -144,7 +207,7 @@ function feature_ct_goals_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -156,7 +219,7 @@ function feature_ct_goals_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_inspiration',
     'label' => 'Inspiration',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -192,7 +255,7 @@ function feature_ct_goals_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -204,7 +267,7 @@ function feature_ct_goals_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_motivation',
     'label' => 'Motivation',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -220,61 +283,6 @@ function feature_ct_goals_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-goals-field_start_date'.
-  $field_instances['node-goals-field_start_date'] = array(
-    'bundle' => 'goals',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_remaining_days' => FALSE,
-        ),
-        'type' => 'date_default',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_start_date',
-    'label' => 'Start Date',
-    'required' => 0,
-    'settings' => array(
-      'default_value' => 'now',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'date',
-      'settings' => array(
-        'increment' => 1,
-        'input_format' => 'm/d/Y - H:i:s',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'no_fieldset' => 0,
-        'text_parts' => array(),
-        'year_range' => '-3:+3',
-      ),
-      'type' => 'date_text',
-      'weight' => 1,
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('Client Ref');
@@ -282,7 +290,7 @@ function feature_ct_goals_field_default_field_instances() {
   t('Goal');
   t('Inspiration');
   t('Motivation');
-  t('Start Date');
+  t('goal date');
 
   return $field_instances;
 }
