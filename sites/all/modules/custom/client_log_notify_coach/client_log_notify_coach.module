@@ -305,7 +305,7 @@ function get_all_client_data_for_coach($coach_id) {
     if (!empty($client_id)) {
       foreach ($client_id as $key => $value) {
         $full_name = $value->field_first_name_value . ' ' . $value->field_last_name_value;
-        $client_data[$key]['full_name'] = l(t($full_name), "/client-daily-log/" . $value->uid);
+        $client_data[$key]['full_name'] = $full_name;
         $client_data[$key]['goal'] = $value->field_goal_value;
         $client_data[$key]['remaining_days'] = get_remaining_days($value->nid);
         $client_data[$key]['bodyfat_lost'] = get_recent_body_fat_percentage($value->uid);
@@ -314,6 +314,7 @@ function get_all_client_data_for_coach($coach_id) {
         $client_data[$key]['mm_loss'] = get_mm_loss($value->uid);
         $client_data[$key]['avg_daily_activity'] = get_avg_daily_activity($value->uid);
         $client_data[$key]['avg_training_sessions'] = get_avg_training_sessions($value->uid);
+        $client_data[$key]['link'] =  "/client-daily-log/" . $value->uid;
       }
     }
 

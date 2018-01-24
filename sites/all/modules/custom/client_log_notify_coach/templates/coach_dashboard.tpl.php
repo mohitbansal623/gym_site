@@ -24,21 +24,12 @@
           <p><strong>Diet Adherence:</strong> <?php echo $value['diet_adherence']; ?></p>
           <p><strong>CM Loss:</strong> <?php echo $value['cm_loss']; ?></p>
           <p><strong>MM Loss:</strong> <?php echo $value['mm_loss']; ?></p>
+          <p><strong>Average Daily Activity:</strong> <?php echo $value['avg_daily_activity']; ?></p>
+          <p><strong>Average Training Sessions:</strong> <?php echo $value['avg_training_sessions']; ?></p>
           <p><a href="<?php echo $value['link']; ?>">Click to see profile.</a></p>
         </div>
       </div>
     </div>
-
-    <div>
-      <h3> Average Daily Activity</h3>
-      <h4> <?php echo $value['avg_daily_activity']; ?></h4>
-    </div>
-
-    <div>
-      <h3> Average Training Sessions</h3>
-      <h4> <?php echo $value['avg_training_sessions']; ?></h4>
-    </div>
-
   <?php endforeach; ?>
 </div>
 
