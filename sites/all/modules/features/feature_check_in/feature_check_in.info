@@ -1,12 +1,15 @@
 name = Feature Check IN
 core = 7.x
 package = Features
+dependencies[] = ctools
 dependencies[] = date
+dependencies[] = entityreference
 dependencies[] = feature_ct_path_to_fitness
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = image
 dependencies[] = number
+dependencies[] = options
 features[ctools][] = field_group:field_group:1
 features[features_api][] = api:2
 features[field_base][] = field_abdominal_mm

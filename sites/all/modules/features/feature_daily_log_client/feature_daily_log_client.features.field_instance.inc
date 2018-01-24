@@ -40,7 +40,7 @@ function feature_daily_log_client_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_check_in_date',
     'label' => 'Log In',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'same',
@@ -52,6 +52,7 @@ function feature_daily_log_client_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
+        'flavour' => 'popup',
         'increment' => 15,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
@@ -78,11 +79,11 @@ function feature_daily_log_client_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 2,
+          'scale' => 0,
           'thousand_separator' => '',
         ),
-        'type' => 'number_decimal',
-        'weight' => 9,
+        'type' => 'number_integer',
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -94,7 +95,7 @@ function feature_daily_log_client_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_daily_activity_level',
     'label' => 'Daily Activity Level',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -137,7 +138,7 @@ function feature_daily_log_client_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_meal_1',
     'label' => 'Meal 1',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -185,7 +186,7 @@ function feature_daily_log_client_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_meal_1_diet',
     'label' => 'Meal 1 Diet',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -224,7 +225,7 @@ function feature_daily_log_client_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_meal_2',
     'label' => 'Meal 2',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -272,7 +273,7 @@ function feature_daily_log_client_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_meal_2_diet',
     'label' => 'Meal 2 Diet',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -311,7 +312,7 @@ function feature_daily_log_client_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_meal_3',
     'label' => 'Meal 3',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -359,7 +360,7 @@ function feature_daily_log_client_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_meal_3_diet',
     'label' => 'Meal 3 Diet',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -446,7 +447,7 @@ function feature_daily_log_client_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_snacks_diet',
     'label' => 'Snacks Diet',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -483,7 +484,7 @@ function feature_daily_log_client_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_was_today_on_plan',
     'label' => 'Was Today on Plan',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),

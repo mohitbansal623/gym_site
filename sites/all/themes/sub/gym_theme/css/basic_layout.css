@@ -118,21 +118,25 @@ a {
 }
 
 /* line 94, ../sass/basic_layout.scss */
-body.page-admin-dashboard .view-admin-dashboard table {
+body.page-admin-dashboard .view-admin-dashboard table, body.page-admin-dashboard .view-id-client_daily_log table, body.page-client-daily-log- .view-admin-dashboard table, body.page-client-daily-log- .view-id-client_daily_log table {
   border-spacing: 0;
   border-collapse: collapse;
 }
 /* line 98, ../sass/basic_layout.scss */
-body.page-admin-dashboard .view-admin-dashboard table thead tr {
+body.page-admin-dashboard .view-admin-dashboard table thead tr, body.page-admin-dashboard .view-id-client_daily_log table thead tr, body.page-client-daily-log- .view-admin-dashboard table thead tr, body.page-client-daily-log- .view-id-client_daily_log table thead tr {
   background: #111;
   color: #fff;
 }
 /* line 104, ../sass/basic_layout.scss */
-body.page-admin-dashboard .view-admin-dashboard table, body.page-admin-dashboard .view-admin-dashboard td, body.page-admin-dashboard .view-admin-dashboard th {
+body.page-admin-dashboard .view-admin-dashboard table, body.page-admin-dashboard .view-admin-dashboard td, body.page-admin-dashboard .view-admin-dashboard th, body.page-admin-dashboard .view-id-client_daily_log table, body.page-admin-dashboard .view-id-client_daily_log td, body.page-admin-dashboard .view-id-client_daily_log th, body.page-client-daily-log- .view-admin-dashboard table, body.page-client-daily-log- .view-admin-dashboard td, body.page-client-daily-log- .view-admin-dashboard th, body.page-client-daily-log- .view-id-client_daily_log table, body.page-client-daily-log- .view-id-client_daily_log td, body.page-client-daily-log- .view-id-client_daily_log th {
   border: 1px solid #ddd;
 }
+/* line 107, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard th, body.page-admin-dashboard .view-id-client_daily_log th, body.page-client-daily-log- .view-admin-dashboard th, body.page-client-daily-log- .view-id-client_daily_log th {
+  vertical-align: top;
+}
 
-/* line 112, ../sass/basic_layout.scss */
+/* line 115, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default {
   display: inline-block;
   padding-right: 5px;
@@ -144,57 +148,57 @@ body.page-coach-dashboard .coach-accordion .panel.panel-default {
   vertical-align: top;
   margin: 0;
 }
-/* line 122, ../sass/basic_layout.scss */
+/* line 125, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default p {
   line-height: 1.2;
 }
-/* line 126, ../sass/basic_layout.scss */
+/* line 129, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+1) .panel-heading {
   background: #47D7B3;
 }
-/* line 129, ../sass/basic_layout.scss */
+/* line 132, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+1) .panel-collapse {
   border: 1px solid #47D7B3;
 }
-/* line 134, ../sass/basic_layout.scss */
+/* line 137, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+2) .panel-heading {
   background: #A26CC4;
 }
-/* line 137, ../sass/basic_layout.scss */
+/* line 140, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+2) .panel-collapse {
   border: 1px solid #A26CC4;
 }
-/* line 142, ../sass/basic_layout.scss */
+/* line 145, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+3) .panel-heading {
   background: #E87352;
 }
-/* line 145, ../sass/basic_layout.scss */
+/* line 148, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+3) .panel-collapse {
   border: 1px solid #47D7B3;
 }
-/* line 150, ../sass/basic_layout.scss */
+/* line 153, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+4) .panel-heading {
   background: #377DE2;
 }
-/* line 153, ../sass/basic_layout.scss */
+/* line 156, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+4) .panel-collapse {
   border: 1px solid #47D7B3;
 }
-/* line 158, ../sass/basic_layout.scss */
+/* line 161, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+5) .panel-heading {
   background: #00A638;
 }
-/* line 161, ../sass/basic_layout.scss */
+/* line 164, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+5) .panel-collapse {
   border: 1px solid #47D7B3;
 }
-/* line 166, ../sass/basic_layout.scss */
+/* line 169, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel-heading {
   padding: 0;
   border-radius: 0;
   text-transform: uppercase;
 }
-/* line 170, ../sass/basic_layout.scss */
+/* line 173, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel-heading a {
   color: #fff;
   text-decoration: none;
@@ -205,7 +209,7 @@ body.page-coach-dashboard .coach-accordion .panel-heading a {
   position: relative;
   font-size: 1.8rem;
 }
-/* line 179, ../sass/basic_layout.scss */
+/* line 182, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel-heading a:after {
   content: "\f077";
   position: absolute;
@@ -214,7 +218,7 @@ body.page-coach-dashboard .coach-accordion .panel-heading a:after {
   font-family: FontAwesome;
   font-size: 14px;
 }
-/* line 187, ../sass/basic_layout.scss */
+/* line 190, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel-heading a.collapsed:after {
   content: "\f078";
 }
