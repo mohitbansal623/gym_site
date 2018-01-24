@@ -500,7 +500,7 @@ function get_avg_training_sessions($client_id)  {
 function total_avg_diet_adherence($coach_id) {
   $client_list = get_related_clients($coach_id);
   $count = count($client_list);
-  $total_fat_loss = 0;
+  $total_diet_adherence = 0;
   foreach ($client_list as $client_id => $value) {
     $total_diet_adherence += get_diet_adherence($client_id);
   }
