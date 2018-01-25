@@ -180,3 +180,28 @@
     }
   }
 }
+
+
+.page-notifications {
+  .modal-dialog {
+    z-index: 0;
+    width: 50%;
+  }
+
+  .modal-header {
+    background: lavender;
+  }
+
+  .modal-body {
+    .notification-message {
+      display: inline-block;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    a {
+      background: lavender;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+  }
+}
