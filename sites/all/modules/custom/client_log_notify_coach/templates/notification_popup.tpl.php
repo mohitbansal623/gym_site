@@ -1,6 +1,6 @@
     <div class="modal-dialog">
 
-      <!-- Modal content-->
+
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Notifications</h5>
