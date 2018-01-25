@@ -219,3 +219,25 @@ a {
   font-size: 3rem;
   color: #111;
 }
+
+/* line 186, ../sass/home.scss */
+.page-notifications .modal-dialog {
+  z-index: 0;
+  width: 50%;
+}
+/* line 191, ../sass/home.scss */
+.page-notifications .modal-header {
+  background: lavender;
+}
+/* line 196, ../sass/home.scss */
+.page-notifications .modal-body .notification-message {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+}
+/* line 201, ../sass/home.scss */
+.page-notifications .modal-body a {
+  background: lavender;
+  border-radius: 20px;
+  font-weight: bold;
+}

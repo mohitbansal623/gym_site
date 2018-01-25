@@ -75,23 +75,24 @@ function client_log_notify_coach_node_presave($node) {
     $coach_id = $query->execute()->fetchCol();
     $coach_id = !empty($coach_id)? $coach_id[0] : NULL;
 
-    // Get Client Name from users table
-    $client_name = db_query("Select name from users where uid =" . $user->uid . "")->fetchCol();
+    if ($plan_value == 'no') {
+      // Get Client Name from users table
+      $client_name = db_query("Select name from drup_users where uid =" . $user->uid . "")->fetchCol();
 
-    $client_name = !empty($client_name)? $client_name[0]: NULL;
-    $message = $client_name . " has replied " . $plan_value;
+      $client_name = !empty($client_name)? $client_name[0]: NULL;
+      $message = $client_name . " has replied " . $plan_value . " for " . date("Y-m-d");
 
-    // Insert in table to notify coach about this.
-    $nid = db_insert('notify_coach')
-        ->fields(array(
-          'client_id' => $user->uid,
-          'message' => $message,
-          'status' => 0,
-          'time_stamp' => REQUEST_TIME,
-          'coach_id' => $coach_id,
-        ))
-    ->execute();
-
+      // Insert in table to notify coach about this.
+      $nid = db_insert('notify_coach')
+          ->fields(array(
+            'client_id' => $user->uid,
+            'message' => $message,
+            'status' => 0,
+            'time_stamp' => REQUEST_TIME,
+            'coach_id' => $coach_id,
+          ))
+      ->execute();
+    }
   }
 }
 
