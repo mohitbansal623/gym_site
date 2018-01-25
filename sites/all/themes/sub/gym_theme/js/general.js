@@ -36,7 +36,7 @@
         },
         success: (function () {
           $("#notification-modal").load("/notifications");
-          get_notification();
+          // get_notification();
         })
       });
     });

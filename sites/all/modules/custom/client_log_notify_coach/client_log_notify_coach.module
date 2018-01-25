@@ -30,7 +30,6 @@ function _notifications_populate() {
   global $user;
   $messages = get_notifications_for_coach($user->uid);
   $messages['popup_messages'] = $messages;
-
   if (count($messages) == 0) {
     $messages = array(0 => array("message" => "No notification message is available", "id" => "nomsg"));
   }
@@ -81,7 +80,7 @@ function client_log_notify_coach_node_presave($node) {
 
     $client_name = !empty($client_name)? $client_name[0]: NULL;
     $message = $client_name . " has replied " . $plan_value;
-    /*
+
     // Insert in table to notify coach about this.
     $nid = db_insert('notify_coach')
         ->fields(array(
@@ -92,14 +91,14 @@ function client_log_notify_coach_node_presave($node) {
           'coach_id' => $coach_id,
         ))
     ->execute();
-    */
+
   }
 }
 
 function get_notifications_for_coach($uid) {
   $query = db_select('notify_coach', 'at')
         -> fields('at', array('message' , 'time_stamp', 'seq_id'))
-        -> condition('at.user_id', $uid)
+        -> condition('at.coach_id', $uid)
         -> condition('at.status', 0)
         -> orderBy('at.time_stamp', 'DESC');
 
@@ -507,4 +506,66 @@ function total_avg_diet_adherence($coach_id) {
   $avg = $total_diet_adherence / $count;
 
   return $avg;
+}
+
+
+/**
+ * Implements hook_token_info().
+ */
+  function client_log_notify_coach_token_info() {
+
+    // Define token value, body_trim is the token will be used as [node:body_trim]
+    $coach_uid['coach_id'] =  array(
+      'name' => t("Get Coach ID"),
+      'description' => t("Send Notifications"),
+    );
+
+    // Return associative array of tokens & token types
+    return array(
+      'tokens' => array(
+        'node' => $coach_uid,
+      ),
+    );
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function client_log_notify_coach_tokens($type, $tokens, array $data = array(), array $options = array()) {
+  global $user;
+  $replacements = array();
+
+  // Check if token type is user
+  if($type == 'node'){
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        // Check token is coach_id
+        case 'coach_id':
+          $coach_uid = get_coach_for_client($user->uid);
+
+          $replacements[$original] = $coach_uid;
+          break;
+      }
+    }
+  }
+  return $replacements;
+}
+
+
+function get_coach_id_for_notification ($client_id) {
+  $query = db_select('field_data_field_coach_ref', 'at')
+    ->distinct()
+    -> fields('at', array('field_coach_ref_target_id'));
+  $query-> join('field_data_field_client_ref', 'client', "client.entity_id = at.entity_id");
+
+  $query->condition('client.field_client_ref_target_id', $client_id);
+  $query->condition('at.bundle', 'goals');
+
+  $client_id = $query->execute()->fetchCol();
+
+  if (!empty($client_id)) {
+    return $client_id[0];
+  }
+
+  return NULL;
 }
