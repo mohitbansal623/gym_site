@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Franchise-Bold';
+  src: url("../fonts/Franchise-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /* line 3, ../sass/_mixin.scss */
 body {
   color: #777;
@@ -40,39 +46,51 @@ a {
 
 /* line 3, ../sass/page_layout.scss */
 .main-container {
-  padding: 101px 8% 60px;
+  padding: 68px 8% 60px;
+}
+@media (max-width: 992px) {
+  /* line 3, ../sass/page_layout.scss */
+  .main-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
-/* line 7, ../sass/page_layout.scss */
+/* line 11, ../sass/page_layout.scss */
 .main-container-banner {
   padding-top: 50px;
 }
 
-/* line 11, ../sass/page_layout.scss */
+/* line 14, ../sass/page_layout.scss */
+.breadcrumb {
+  margin-top: 20px;
+}
+
+/* line 17, ../sass/page_layout.scss */
 .page-header {
-  font-family: "Oswald", sans-serif, Helvetica;
+  font-family: Franchise-Bold;
   text-transform: uppercase;
   color: #111;
   margin-bottom: 30px;
   margin-top: 40px;
 }
 
-/* line 21, ../sass/page_layout.scss */
+/* line 26, ../sass/page_layout.scss */
 form .form-control {
   background: #fff;
   border-radius: 0px;
 }
-/* line 26, ../sass/page_layout.scss */
+/* line 31, ../sass/page_layout.scss */
 form .form-item .btn {
   background: #111;
   border-color: #111;
 }
-/* line 31, ../sass/page_layout.scss */
+/* line 36, ../sass/page_layout.scss */
 form label {
   font-weight: normal;
   font-family: "Gudea", sans-serif, Helvetica;
 }
-/* line 35, ../sass/page_layout.scss */
+/* line 40, ../sass/page_layout.scss */
 form div > .btn {
   margin-top: 30px;
   background: #111;
@@ -90,19 +108,19 @@ form div > .btn:hover {
   border-color: #111;
 }
 
-/* line 44, ../sass/page_layout.scss */
+/* line 49, ../sass/page_layout.scss */
 .highlighted.jumbotron {
-  padding: 101px 0 0;
+  padding: 68px 0 0;
   margin: 0;
   background: transparent;
 }
 
-/* line 51, ../sass/page_layout.scss */
+/* line 56, ../sass/page_layout.scss */
 #block-views-view-banner-block-1 .slick-slider {
   margin-bottom: 0px;
 }
 
-/* line 60, ../sass/page_layout.scss */
+/* line 65, ../sass/page_layout.scss */
 .breadcrumb a {
   color: #111;
 }

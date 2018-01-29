@@ -1,8 +1,8 @@
 @import "includes";
 
 #navbar {
-  background: #000;
-  color: #fff;
+  background: #fafafa;
+  // color: #fff;
   margin: 0 !important;
   position: fixed;
   margin: 0 !important;
@@ -14,41 +14,42 @@
   padding-top: 5px;
   padding-bottom: 5px;
   z-index: 999;
-  box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.5);
+  box-shadow: 0 0 22px -4px rgba(0, 0, 0, 0.17);
+  border-bottom: 2px solid #ebebeb;
   a.logo {
-    width: 75px;
-    height: 75px;
-    background: #fff;
-    padding: 0;
-    text-align: center;
-    margin-right: 10px;
-    border-radius: 50%;
-    padding-top: 4px;
+    margin: 0;
     img {
-      width: 60px;
+      width: 50px;
     }
   }
   &.navbar-default .navbar-brand {
-    color: #fff;
-    font-size: 2rem;
+    color: $black;
+    font-size: 3rem;
+    font-family: Franchise-Bold;
+    padding: 0;
+    line-height: 58px;
+    padding-left: 5px;
   }
   &.navbar-default .navbar-nav {
     li a {
-      color: #fff;
+      color: $black;
+      &.active {
+        color: $brown;
+      }
       &:hover {
-        color: $grey;
+        color: $brown;
       }
     }
     &>.active > a {
-      color: $grey;
+      color: $brown;
       background: transparent;
     }
     &>.active > a:hover {
-      color: $grey;
+      color: $brown;
       background: transparent;
     }
     &>.active > a:focus {
-      color: $grey;
+      color: $brown;
       background: transparent;
     }
   }
@@ -99,6 +100,25 @@
     color: #fff;
     font-weight: bold;
     margin-bottom: 15px;
+  }
+  .location, .social, .timings {
+    width: 33.33%;
+    @media (max-width: 600px) {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+      .footer-title {
+        line-height: 1.2;
+        margin-bottom: 5px;
+      }
+      .social-icons, .email, .phone {
+        margin-bottom: 5px;
+      }
+      p {
+        line-height: 1.2;
+        margin-bottom: 5px;
+      }
+    }
   }
 }
 
@@ -202,6 +222,37 @@ body.page-coach-dashboard {
         }
         &.collapsed:after {
           content: "\f078";
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .navbar-header {
+    width: 100%;
+    float: none;
+    padding-bottom: 5px;
+  }
+  .navbar-toggle {
+    display: block !important;
+  }
+  .navbar-collapse.collapse {
+    display: none !important;
+    &.in {
+      max-height: calc(70vh - 60px);
+      overflow-y: auto !important;
+      display: block !important;
+    }
+    ul {
+      float: none;
+      li {
+        width: 100%;
+        display: block;
+        a {
+          padding-top: 8px;
+          padding-bottom: 8px;
+          border-top: 1px solid #ccc;
         }
       }
     }

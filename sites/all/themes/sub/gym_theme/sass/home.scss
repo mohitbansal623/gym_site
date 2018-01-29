@@ -1,7 +1,7 @@
 @import "includes";
 
 #homepage {
-  padding-top: 101px;
+  padding-top: 68px;
   .section {
     text-align: center;
     .read-more {
@@ -17,7 +17,8 @@
       h3 {
         letter-spacing: 5px;
         text-transform: uppercase;
-        font: 3rem "Lato", sans-serif;
+        font-size: 3rem;
+        font-family: Franchise-Bold;
         color: $black;
         margin: 0 0 20px;
         text-align: center;
@@ -40,7 +41,7 @@
       display: table-cell;
       vertical-align: middle;
       p {
-        font-family: $font-title;
+        font-family: Franchise-Bold;
         font-size: 10rem;
         color: #fff;
         line-height: 1;
@@ -59,29 +60,6 @@
 
   .services-section {
     padding-top: 50px;
-    // position: relative;
-    // .service-heading {
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   z-index: 2;
-    //   .service-heading-container {
-    //     display: table;
-    //     width: 100%;
-    //     height: 100%;
-    //     text-aling: center;
-    //     div {
-    //       display: table-cell;
-    //       vertical-align: middle;
-    //       font-family: 'Roboto Mono', monospace;
-    //       font-size: 10rem;
-    //       color: #fff;
-    //       margin-bottom: 10px;
-    //     }
-    //   }
-    // }
     .services-container {
       font-size: 0;
       .service {
