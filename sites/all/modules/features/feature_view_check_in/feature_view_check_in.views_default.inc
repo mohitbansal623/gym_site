@@ -309,7 +309,7 @@ echo get_diet_adherence($row->field_client_ref);
     <div class="stats-content">
       <table>
         <tr>
-          <td>Bodyfat Loss %</td>
+          <td>Bodyfat in kg Loss</td>
           <td>[php]%</td>
         </tr>
         <tr>
@@ -338,39 +338,6 @@ echo get_diet_adherence($row->field_client_ref);
         </tr>
       </table>
     </div>
-
-<div id="accordion" class="panel-group stats-content">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#one" class="collapsed">Measurements</a>
-      </h4>
-    </div>
-    <div id="one" class="panel-collapse collapse">
-      <div class="panel-body">
-
-            <table>
-              <tr>
-                <td>Chest (in CM)</td>
-                <td>[field_chest_cm]</td>
-              </tr>
-              <tr>
-                <td>Right Arm (in CM)</td>
-                <td>[field_right_arm_cm]</td>
-              </tr>
-              <tr>
-                <td>Waist (in CM)</td>
-                <td>[field_waist_cm]</td>
-              </tr>
-              <tr>
-                <td>Hips (in CM)</td>
-                <td>[field_hips_cm]</td>
-              </tr>
-            </table>
-      </div>
-    </div>
-  </div>
-</div>
 </div>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
