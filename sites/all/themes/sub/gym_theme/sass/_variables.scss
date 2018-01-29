@@ -2,6 +2,16 @@ $grey: #777;
 $light-grey: #e7e7e7;
 $black: #111;
 $light-black: #333;
+$brown: #b82b1a;
 
 $font:  'Gudea', sans-serif, Helvetica;
 $font-title:  'Oswald', sans-serif, Helvetica;
+
+
+@font-face {
+    font-family: 'Franchise-Bold';
+    src: url('../fonts/Franchise-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}

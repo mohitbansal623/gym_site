@@ -1,16 +1,21 @@
 @import "includes";
 
 .main-container {
-  padding: 101px 8% 60px;
+  padding: 68px 8% 60px;
+  @media (max-width: 992px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .main-container-banner {
   padding-top: 50px;
 }
-
+.breadcrumb {
+  margin-top: 20px;
+}
 .page-header {
-  font-family: $font-title;
-  // font-family: $font;
+  font-family: Franchise-Bold;
   text-transform: uppercase;
   color: $black;
   margin-bottom: 30px;
@@ -42,7 +47,7 @@ form {
 }
 
 .highlighted.jumbotron {
-  padding: 101px 0 0;
+  padding: 68px 0 0;
   margin: 0;
   background: transparent;
 }

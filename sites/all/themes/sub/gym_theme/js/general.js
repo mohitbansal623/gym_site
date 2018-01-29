@@ -13,12 +13,27 @@
 
     $('#block-views-client-fitness-block-block .view-content .views-field').matchHeight({ byRow: false});
 
+    // Client dashboard, path to fitness section
     $('#block-views-client-fitness-block-block .view-content .views-row').slick({
       arrows: true,
       slidesToShow:3,
       slidesToScroll: 1,
       dots:false,
       infinite: false,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
     });
 
     $(".coach-notifications").on("click", function () {

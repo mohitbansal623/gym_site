@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Franchise-Bold';
+  src: url("../fonts/Franchise-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /* line 3, ../sass/_mixin.scss */
 body {
   color: #777;
@@ -83,50 +89,65 @@ a {
 
 /* line 74, ../sass/dashboard.scss */
 #block-system-main {
-  width: 60%;
-  padding: 0 20px 0 0;
-  display: inline-block;
   vertical-align: middle;
   margin-top: 40px;
 }
+@media (min-width: 993px) {
+  /* line 74, ../sass/dashboard.scss */
+  #block-system-main {
+    width: 60%;
+    padding: 0 20px 0 0;
+    display: inline-block;
+  }
+}
 
-/* line 87, ../sass/dashboard.scss */
+/* line 85, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .images {
   font-size: 0;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
-/* line 90, ../sass/dashboard.scss */
+/* line 89, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .images img {
   width: 100%;
   height: auto;
 }
-/* line 94, ../sass/dashboard.scss */
+/* line 93, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .images .img-inner {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 5px;
 }
-/* line 98, ../sass/dashboard.scss */
+/* line 97, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .images .current {
-  width: 50%;
-  display: inline-block;
-  vertical-align: top;
-  padding-right: 10px;
+  margin-bottom: 15px;
 }
-/* line 104, ../sass/dashboard.scss */
-.view-client-goal-block .goal-box .images .inspiration {
-  width: 50%;
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 10px;
+@media (min-width: 501px) {
+  /* line 97, ../sass/dashboard.scss */
+  .view-client-goal-block .goal-box .images .current {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 10px;
+    margin-bottom: 0px;
+  }
 }
-/* line 110, ../sass/dashboard.scss */
+@media (min-width: 501px) {
+  /* line 107, ../sass/dashboard.scss */
+  .view-client-goal-block .goal-box .images .inspiration {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 10px;
+  }
+}
+/* line 115, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .images .image-text {
   text-align: center;
   padding: 2px 10px;
   color: #111;
   font-size: 1.5rem;
 }
-/* line 118, ../sass/dashboard.scss */
+/* line 123, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .description > div {
   padding: 15px 20px;
   background: #643CC1;
@@ -136,41 +157,46 @@ a {
   text-align: center;
   margin: 0 5px 5px 0;
 }
-/* line 126, ../sass/dashboard.scss */
+/* line 131, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .description > div .title {
   text-transform: uppercase;
   font-size: 1.6rem;
   font-weight: bold;
 }
-/* line 132, ../sass/dashboard.scss */
+/* line 137, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .description .goal {
   background: #00A638;
 }
-/* line 134, ../sass/dashboard.scss */
+/* line 139, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .description .goal .title, .view-client-goal-block .goal-box .description .goal .content {
   font-size: 1.8rem;
 }
-/* line 138, ../sass/dashboard.scss */
+/* line 143, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .description .days {
   background: #FFA500;
 }
-/* line 141, ../sass/dashboard.scss */
+/* line 146, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .description .coach {
   background: #E87352;
 }
-/* line 144, ../sass/dashboard.scss */
+/* line 149, ../sass/dashboard.scss */
 .view-client-goal-block .goal-box .description .motivation {
   background: #377DE2;
 }
 
-/* line 151, ../sass/dashboard.scss */
+/* line 156, ../sass/dashboard.scss */
 #block-views-check-in-block {
   margin-top: 40px;
-  display: inline-block;
   vertical-align: top;
-  width: 38%;
 }
-/* line 156, ../sass/dashboard.scss */
+@media (min-width: 993px) {
+  /* line 156, ../sass/dashboard.scss */
+  #block-views-check-in-block {
+    display: inline-block;
+    width: 38%;
+  }
+}
+/* line 163, ../sass/dashboard.scss */
 #block-views-check-in-block .current-stats {
   padding: 20px;
   color: #fff;
@@ -185,11 +211,11 @@ a {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#034079', endColorstr='#04498c',GradientType=1 );
   /* IE6-9 */
 }
-/* line 165, ../sass/dashboard.scss */
+/* line 172, ../sass/dashboard.scss */
 #block-views-check-in-block .stats-content {
   margin-bottom: 0;
 }
-/* line 168, ../sass/dashboard.scss */
+/* line 175, ../sass/dashboard.scss */
 #block-views-check-in-block .block-title {
   margin-top: 0;
   font-size: 2rem;
@@ -198,40 +224,40 @@ a {
   padding-bottom: 5px;
   border-bottom: 2px solid #1E5A8C;
 }
-/* line 178, ../sass/dashboard.scss */
+/* line 185, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row .blue-underline {
   border-bottom: 2px solid #1E5A8C;
 }
-/* line 181, ../sass/dashboard.scss */
+/* line 188, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row .panel-default, #block-views-check-in-block .view-content .views-row .panel-heading, #block-views-check-in-block .view-content .views-row .panel-heading + div {
   border: 0;
   background: transparent;
 }
-/* line 185, ../sass/dashboard.scss */
+/* line 192, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row .stats-content:not(.panel-group) {
   padding-right: 7px;
 }
-/* line 188, ../sass/dashboard.scss */
+/* line 195, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row .stats-content:not(.panel-group) table tr td {
   padding-bottom: 10px;
 }
-/* line 193, ../sass/dashboard.scss */
+/* line 200, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row .panel-group {
   padding-bottom: 10px;
 }
-/* line 196, ../sass/dashboard.scss */
+/* line 203, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row table {
   width: 100%;
 }
-/* line 198, ../sass/dashboard.scss */
+/* line 205, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row table tr > td:first-child {
   padding-right: 10px;
 }
-/* line 202, ../sass/dashboard.scss */
+/* line 209, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row .panel-heading {
   padding: 0;
 }
-/* line 204, ../sass/dashboard.scss */
+/* line 211, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row .panel-heading a {
   color: #fff;
   text-decoration: none;
@@ -241,7 +267,7 @@ a {
   width: 100%;
   position: relative;
 }
-/* line 212, ../sass/dashboard.scss */
+/* line 219, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row .panel-heading a:after {
   content: "\f077";
   position: absolute;
@@ -250,11 +276,11 @@ a {
   font-family: FontAwesome;
   font-size: 14px;
 }
-/* line 220, ../sass/dashboard.scss */
+/* line 227, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row .panel-heading a.collapsed:after {
   content: "\f078";
 }
-/* line 225, ../sass/dashboard.scss */
+/* line 232, ../sass/dashboard.scss */
 #block-views-check-in-block .view-content .views-row .panel-body {
   border-top: 2px solid #1E5A8C;
 }
