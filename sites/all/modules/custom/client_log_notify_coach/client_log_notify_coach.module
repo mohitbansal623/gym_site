@@ -1,4 +1,18 @@
 <?php
+/**
+ * Implements hook_user_login().
+ */
+function client_log_notify_coach_user_login(&$edit, $account) {
+  if (user_has_role(5, $account)) {
+    drupal_goto('coach-dashboard/' . $account->uid);
+  }
+  elseif (user_has_role(6, $account)) {
+    drupal_goto('client-dashboard/' . $account->uid);
+  }
+  elseif (user_has_role(4, $account)) {
+    drupal_goto('admin-dashboard');
+  }
+}
 
 /**
  * Implements hook_menu().
