@@ -146,10 +146,10 @@ body.page-admin-dashboard, body.page-client-daily-log- {
 body.page-coach-dashboard {
   .coach-accordion {
     .panel.panel-default {
-      display: inline-block;
-      padding-right: 5px;
-      padding-bottom: 5px;
-      width: 32%;
+      // display: inline-block;
+      // padding-right: 5px;
+      padding-bottom: 20px;
+      // width: 32%;
       border: 0;
       border-radius: 0;
       box-shadow: unset;
@@ -163,7 +163,7 @@ body.page-coach-dashboard {
           background: #47D7B3;
         }
         .panel-collapse {
-          border: 1px solid #47D7B3;
+          border: 2px dashed #47D7B3;
         }
       }
       &:nth-child(5n+2) {
@@ -171,7 +171,7 @@ body.page-coach-dashboard {
           background: #A26CC4;
         }
         .panel-collapse {
-          border: 1px solid #A26CC4;
+          border: 2px dashed #A26CC4;
         }
       }
       &:nth-child(5n+3) {
@@ -179,7 +179,7 @@ body.page-coach-dashboard {
           background: #E87352;
         }
         .panel-collapse {
-          border: 1px solid #47D7B3;
+          border: 2px dashed #E87352;
         }
       }
       &:nth-child(5n+4) {
@@ -187,7 +187,7 @@ body.page-coach-dashboard {
           background: #377DE2;
         }
         .panel-collapse {
-          border: 1px solid #47D7B3;
+          border: 2px dashed #377DE2;
         }
       }
       &:nth-child(5n+5) {
@@ -195,7 +195,7 @@ body.page-coach-dashboard {
           background: #00A638;
         }
         .panel-collapse {
-          border: 1px solid #47D7B3;
+          border: 2px dashed #00A638;
         }
       }
     }
@@ -207,11 +207,12 @@ body.page-coach-dashboard {
         color: #fff;
         text-decoration: none;
         outline: none;
-        padding: 8px 22px 8px 8px;
+        padding: 10px 22px 10px 8px;
         display: inline-block;
         width: 100%;
         position: relative;
-        font-size: 1.8rem;
+        font-size: 1.9rem;
+        font-weight: bold;
         &:after {
           content: "\f077";
           position: absolute;
@@ -257,4 +258,8 @@ body.page-coach-dashboard {
       }
     }
   }
+}
+
+.views-exposed-form {
+  margin-bottom: 30px;
 }
