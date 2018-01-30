@@ -10,6 +10,32 @@
 function feature_ct_path_to_fitness_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_check_in_sessions'.
+  $field_bases['field_check_in_sessions'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_check_in_sessions',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        '1-4w' => ' 1 Every 4 Weeks',
+        '1-6w ' => ' 1 Every 6 Weeks',
+        '1-8w ' => ' 1 Every 8 Weeks',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_client_ref'.
   $field_bases['field_client_ref'] = array(
     'active' => 1,
@@ -139,9 +165,10 @@ function feature_ct_path_to_fitness_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        1 => 1,
-        2 => 2,
-        3 => 3,
+        '2w ' => '2/ Week',
+        '1w' => ' 1/ Week',
+        '1f ' => '1/ Fortnight',
+        '1m' => '1/ month',
       ),
       'allowed_values_function' => '',
     ),
@@ -165,10 +192,10 @@ function feature_ct_path_to_fitness_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        '3pw' => ' 3 Sessions per week',
-        '2pw' => ' 2 Sessions per week',
-        '1pw' => ' 1 Session per week',
-        '1fn' => ' 1 Session/ Fnight',
+        '3pw' => ' 3 x /Week',
+        '4pw' => ' 4 x /Week',
+        '5pw' => ' 5 x /Week',
+        '6pw' => ' 6 x /Week',
       ),
       'allowed_values_function' => '',
     ),
@@ -192,10 +219,10 @@ function feature_ct_path_to_fitness_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'beginner' => ' Beginner - 8 Sessions',
-        'intermediate' => ' Intermediate - 12 Sessions',
-        'advanced' => ' Advanced - 16 Sessions',
-        'competitor' => ' Competitor - 20 Sessions',
+        'beginner' => ' 3 x /Week Beginner',
+        'intermediate' => ' 4 x /Week Intermediate',
+        'advanced' => ' 5 x/Week RxD Athlete',
+        'competitor' => ' 6x /Week Competitor',
       ),
       'allowed_values_function' => '',
     ),
