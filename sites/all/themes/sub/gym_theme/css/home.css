@@ -70,7 +70,13 @@ a {
 #homepage .text-section {
   padding: 50px 80px;
 }
-/* line 31, ../sass/home.scss */
+@media (max-width: 767px) {
+  /* line 28, ../sass/home.scss */
+  #homepage .text-section {
+    padding: 50px 20px;
+  }
+}
+/* line 34, ../sass/home.scss */
 #homepage .intro-section {
   height: calc(100vh - 60px);
   display: table;
@@ -81,39 +87,45 @@ a {
   background-size: cover;
   width: 100%;
 }
-/* line 40, ../sass/home.scss */
+/* line 43, ../sass/home.scss */
 #homepage .intro-section .description {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 43, ../sass/home.scss */
+/* line 46, ../sass/home.scss */
 #homepage .intro-section .description p {
   font-family: Franchise-Bold;
   font-size: 10rem;
   color: #fff;
   line-height: 1;
 }
-/* line 51, ../sass/home.scss */
+/* line 54, ../sass/home.scss */
 #homepage .about-section {
   padding-bottom: 0px;
 }
-/* line 53, ../sass/home.scss */
+/* line 56, ../sass/home.scss */
 #homepage .about-section .description {
   text-align: justify;
 }
-/* line 55, ../sass/home.scss */
+/* line 58, ../sass/home.scss */
 #homepage .about-section .description p {
   font-size: 2rem;
 }
-/* line 61, ../sass/home.scss */
+@media (max-width: 767px) {
+  /* line 58, ../sass/home.scss */
+  #homepage .about-section .description p {
+    font-size: 1.5rem;
+  }
+}
+/* line 67, ../sass/home.scss */
 #homepage .services-section {
   padding-top: 50px;
 }
-/* line 63, ../sass/home.scss */
+/* line 69, ../sass/home.scss */
 #homepage .services-section .services-container {
   font-size: 0;
 }
-/* line 65, ../sass/home.scss */
+/* line 71, ../sass/home.scss */
 #homepage .services-section .services-container .service {
   font-size: 1.8rem;
   display: inline-block;
@@ -121,47 +133,47 @@ a {
   height: 22vw;
   width: 25%;
 }
-/* line 71, ../sass/home.scss */
+/* line 77, ../sass/home.scss */
 #homepage .services-section .services-container .service.service1 {
   background: url(../images/home/fitness.jpg) no-repeat;
   background-size: cover;
 }
-/* line 75, ../sass/home.scss */
+/* line 81, ../sass/home.scss */
 #homepage .services-section .services-container .service.service2 {
   background: url(../images/home/index.jpeg) no-repeat;
   background-size: cover;
 }
-/* line 79, ../sass/home.scss */
+/* line 85, ../sass/home.scss */
 #homepage .services-section .services-container .service.service3 {
   background: url(../images/home/images.jpeg) no-repeat;
   background-size: cover;
 }
-/* line 83, ../sass/home.scss */
+/* line 89, ../sass/home.scss */
 #homepage .services-section .services-container .service.service4 {
   background: url(../images/home/workout.jpg) no-repeat;
   background-size: cover;
 }
-/* line 87, ../sass/home.scss */
+/* line 93, ../sass/home.scss */
 #homepage .services-section .services-container .service.service5 {
   background: url(../images/home/home-gym.jpg) no-repeat;
   background-size: cover;
 }
-/* line 91, ../sass/home.scss */
+/* line 97, ../sass/home.scss */
 #homepage .services-section .services-container .service.service6 {
   background: url(../images/home/exercises.jpg) no-repeat;
   background-size: cover;
 }
-/* line 95, ../sass/home.scss */
+/* line 101, ../sass/home.scss */
 #homepage .services-section .services-container .service.service7 {
   background: url(../images/home/working-out5.jpg) no-repeat;
   background-size: cover;
 }
-/* line 99, ../sass/home.scss */
+/* line 105, ../sass/home.scss */
 #homepage .services-section .services-container .service.service8 {
   background: url(../images/home/two.jpeg) no-repeat;
   background-size: cover;
 }
-/* line 103, ../sass/home.scss */
+/* line 109, ../sass/home.scss */
 #homepage .services-section .services-container .service a {
   display: inline-block;
   height: 100%;
@@ -172,13 +184,13 @@ a {
   outline: none;
   position: relative;
 }
-/* line 112, ../sass/home.scss */
+/* line 118, ../sass/home.scss */
 #homepage .services-section .services-container .service a .square {
   height: 100%;
   display: table;
   width: 100%;
 }
-/* line 117, ../sass/home.scss */
+/* line 123, ../sass/home.scss */
 #homepage .services-section .services-container .service a .service-name {
   display: none;
   vertical-align: middle;
@@ -190,19 +202,19 @@ a {
   /* Safari */
   transition: all 1s linear;
 }
-/* line 127, ../sass/home.scss */
+/* line 133, ../sass/home.scss */
 #homepage .services-section .services-container .service a .overlay {
   -webkit-transition: all 1s linear;
   /* Safari */
   transition: all 1s linear;
 }
-/* line 131, ../sass/home.scss */
+/* line 137, ../sass/home.scss */
 #homepage .services-section .services-container .service a:hover {
   -webkit-transition: all 1s linear;
   /* Safari */
   transition: all 1s linear;
 }
-/* line 134, ../sass/home.scss */
+/* line 140, ../sass/home.scss */
 #homepage .services-section .services-container .service a:hover .overlay {
   width: 100%;
   height: 100%;
@@ -213,36 +225,43 @@ a {
   /* Safari */
   transition: all 1s linear;
 }
-/* line 143, ../sass/home.scss */
+/* line 149, ../sass/home.scss */
 #homepage .services-section .services-container .service a:hover .service-name {
   -webkit-transition: all 1s linear;
   /* Safari */
   transition: all 1s linear;
   display: table-cell;
 }
-/* line 154, ../sass/home.scss */
+/* line 160, ../sass/home.scss */
 #homepage .excellence-section p {
   margin: 0;
+  font-family: Franchise-Bold;
   font-size: 3rem;
   color: #111;
 }
+@media (max-width: 767px) {
+  /* line 160, ../sass/home.scss */
+  #homepage .excellence-section p {
+    font-size: 4rem;
+  }
+}
 
-/* line 186, ../sass/home.scss */
+/* line 174, ../sass/home.scss */
 .page-notifications .modal-dialog {
   z-index: 0;
   width: 50%;
 }
-/* line 191, ../sass/home.scss */
+/* line 179, ../sass/home.scss */
 .page-notifications .modal-header {
   background: lavender;
 }
-/* line 196, ../sass/home.scss */
+/* line 184, ../sass/home.scss */
 .page-notifications .modal-body .notification-message {
   display: inline-block;
   margin-right: 10px;
   font-weight: bold;
 }
-/* line 201, ../sass/home.scss */
+/* line 189, ../sass/home.scss */
 .page-notifications .modal-body a {
   background: lavender;
   border-radius: 20px;

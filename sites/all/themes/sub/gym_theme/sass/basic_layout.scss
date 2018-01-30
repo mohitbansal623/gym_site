@@ -18,6 +18,9 @@
   border-bottom: 2px solid #ebebeb;
   a.logo {
     margin: 0;
+    @media (max-width: 767px) {
+      padding-right: 0px;
+    }
     img {
       width: 50px;
     }
@@ -233,7 +236,7 @@ body.page-coach-dashboard {
   .navbar-header {
     width: 100%;
     float: none;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
   }
   .navbar-toggle {
     display: block !important;
@@ -262,4 +265,27 @@ body.page-coach-dashboard {
 
 .views-exposed-form {
   margin-bottom: 30px;
+}
+
+header .notification {
+  float: right;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.notification-box {
+  display: none;
+  position: fixed;
+  height: 200px;
+  background: black;
+  width: 300px;
+  z-index: 999;
+  top: 50px;
+  right: 10px;
+  max-width: calc(100% - 20px);
+  overflow-x: auto;
+}
+
+#navbar-collapse {
+  border: 0;
 }

@@ -27,6 +27,9 @@
   }
   .text-section {
     padding: 50px 80px;
+    @media (max-width: 767px) {
+      padding: 50px 20px;
+    }
   }
   .intro-section {
     height: calc(100vh - 60px);
@@ -54,6 +57,9 @@
       text-align: justify;
       p {
         font-size: 2rem;
+        @media (max-width: 767px) {
+          font-size: 1.5rem;
+        }
       }
     }
   }
@@ -153,8 +159,12 @@
   .excellence-section {
     p {
       margin: 0;
+      font-family: Franchise-Bold;
       font-size: 3rem;
       color: $black;
+      @media (max-width: 767px) {
+        font-size: 4rem;
+      }
     }
   }
 }

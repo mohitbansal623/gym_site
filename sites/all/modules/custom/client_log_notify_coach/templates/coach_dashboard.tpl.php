@@ -3,11 +3,10 @@
   $client_info = $coach_dashboard;
 ?>
 
-<?php if (isset($client_info['no-data'])) :?>
-  <?php echo $client_info['no-data']; ?>
-
-<?php else :?>
   <h1 class="page-header">Client Information</h1>
+  <?php if (isset($client_info['no-data'])) :?>
+    <?php echo $client_info['no-data']; ?>
+  <?php else :?>
   <div class="row">
     <div id="accordion" class="panel-group coach-accordion">
       <?php foreach ($client_info as $key => $value): ?>

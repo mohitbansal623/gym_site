@@ -72,9 +72,19 @@
  *
  * @ingroup templates
  */
+global $user;
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
+    <?php if ($user->uid != 0): ?>
+      <div class="notification"><i class="fa fa-bell-o" aria-hidden="true"></i></div>
+      <div class="notification-box">
+        <div class="heading"><h2>NOTIFICATIONS</h2><a class="close" href="#" >&times;</a></div>
+        <div class="content">
+
+        </div>
+      </div>
+    <?php endif; ?>
     <div class="navbar-header">
       <?php if ($logo): ?>
         <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
@@ -95,7 +105,6 @@
         </button>
       <?php endif; ?>
     </div>
-
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
       <div class="navbar-collapse collapse" id="navbar-collapse">
         <nav role="navigation">
@@ -112,7 +121,6 @@
       </div>
     <?php endif; ?>
   </div>
-  <!-- <div class="notification"><i class="fa fa-bell-o" aria-hidden="true"></i></div> -->
 </header>
 
 <div class="page-container">
