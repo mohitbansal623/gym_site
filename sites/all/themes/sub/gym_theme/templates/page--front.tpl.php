@@ -130,19 +130,11 @@
       <div class="read-more"><a class="read-more-btn" href="/about-us">KNOW MORE</a></div>
     </div>
   </div>
-  <div class="section services-section">
+<!--   <div class="section services-section">
     <div class="section-heading">
       <h3>WE PROVIDE</h3>
     </div>
-    <!-- <div class="service-heading">
-      <div class="service-heading-container">
-        <div>WHAT</div>
-        <div>WE</div>
-        <div>DO</div>
-      </div>
-    </div> -->
     <div class="services-container">
-    <!--  -->
       <div class="service service1 wow fadeInLeftBig" data-wow-delay="0.15s">
           <a href="">
             <div class="overlay"></div>
@@ -151,7 +143,6 @@
             </div>
           </a>
       </div>
-      <!--  -->
       <div class="service service2 wow fadeInUpBig" data-wow-delay="0.3s">
           <a href="">
             <div class="overlay"></div>
@@ -160,7 +151,6 @@
             </div>
           </a>
       </div>
-      <!--  -->
       <div class="service service3 wow fadeInDownBig" data-wow-delay="0.45s">
           <a href="">
             <div class="overlay"></div>
@@ -169,7 +159,6 @@
             </div>
           </a>
       </div>
-      <!--  -->
       <div class="service service4 wow fadeInRightBig" data-wow-delay="0.6s">
           <a href="">
             <div class="overlay"></div>
@@ -178,7 +167,6 @@
             </div>
           </a>
       </div>
-          <!--  -->
       <div class="service service5 wow fadeInLeftBig" data-wow-delay="0.75s">
           <a href="">
             <div class="overlay"></div>
@@ -187,7 +175,6 @@
             </div>
           </a>
       </div>
-      <!--  -->
       <div class="service service6 wow fadeInDownBig" data-wow-delay="0.9s">
           <a href="">
             <div class="overlay"></div>
@@ -196,7 +183,6 @@
             </div>
           </a>
       </div>
-      <!--  -->
       <div class="service service7 wow fadeInUpBig" data-wow-delay="1.05s">
           <a href="">
             <div class="overlay"></div>
@@ -205,7 +191,6 @@
             </div>
           </a>
       </div>
-      <!--  -->
       <div class="service service8 wow fadeInRightBig" data-wow-delay="1.2s">
           <a href="">
             <div class="overlay"></div>
@@ -214,9 +199,8 @@
             </div>
           </a>
       </div>
-      <!--  -->
     </div>
-  </div>
+  </div> -->
 
   <div class="section text-section excellence-section">
     <p>Join us on the pursuit of self-excellence.</p>

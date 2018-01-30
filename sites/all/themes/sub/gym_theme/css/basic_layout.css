@@ -186,10 +186,7 @@ body.page-admin-dashboard .view-admin-dashboard th, body.page-admin-dashboard .v
 
 /* line 148, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default {
-  display: inline-block;
-  padding-right: 5px;
-  padding-bottom: 5px;
-  width: 32%;
+  padding-bottom: 20px;
   border: 0;
   border-radius: 0;
   box-shadow: unset;
@@ -206,7 +203,7 @@ body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+1) 
 }
 /* line 165, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+1) .panel-collapse {
-  border: 1px solid #47D7B3;
+  border: 2px dashed #47D7B3;
 }
 /* line 170, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+2) .panel-heading {
@@ -214,7 +211,7 @@ body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+2) 
 }
 /* line 173, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+2) .panel-collapse {
-  border: 1px solid #A26CC4;
+  border: 2px dashed #A26CC4;
 }
 /* line 178, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+3) .panel-heading {
@@ -222,7 +219,7 @@ body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+3) 
 }
 /* line 181, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+3) .panel-collapse {
-  border: 1px solid #47D7B3;
+  border: 2px dashed #E87352;
 }
 /* line 186, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+4) .panel-heading {
@@ -230,7 +227,7 @@ body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+4) 
 }
 /* line 189, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+4) .panel-collapse {
-  border: 1px solid #47D7B3;
+  border: 2px dashed #377DE2;
 }
 /* line 194, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+5) .panel-heading {
@@ -238,7 +235,7 @@ body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+5) 
 }
 /* line 197, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+5) .panel-collapse {
-  border: 1px solid #47D7B3;
+  border: 2px dashed #00A638;
 }
 /* line 202, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel-heading {
@@ -251,13 +248,14 @@ body.page-coach-dashboard .coach-accordion .panel-heading a {
   color: #fff;
   text-decoration: none;
   outline: none;
-  padding: 8px 22px 8px 8px;
+  padding: 10px 22px 10px 8px;
   display: inline-block;
   width: 100%;
   position: relative;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
+  font-weight: bold;
 }
-/* line 215, ../sass/basic_layout.scss */
+/* line 216, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel-heading a:after {
   content: "\f077";
   position: absolute;
@@ -266,47 +264,51 @@ body.page-coach-dashboard .coach-accordion .panel-heading a:after {
   font-family: FontAwesome;
   font-size: 14px;
 }
-/* line 223, ../sass/basic_layout.scss */
+/* line 224, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel-heading a.collapsed:after {
   content: "\f078";
 }
 
 @media (max-width: 1080px) {
-  /* line 232, ../sass/basic_layout.scss */
+  /* line 233, ../sass/basic_layout.scss */
   .navbar-header {
     width: 100%;
     float: none;
     padding-bottom: 5px;
   }
 
-  /* line 237, ../sass/basic_layout.scss */
+  /* line 238, ../sass/basic_layout.scss */
   .navbar-toggle {
     display: block !important;
   }
 
-  /* line 240, ../sass/basic_layout.scss */
+  /* line 241, ../sass/basic_layout.scss */
   .navbar-collapse.collapse {
     display: none !important;
   }
-  /* line 242, ../sass/basic_layout.scss */
+  /* line 243, ../sass/basic_layout.scss */
   .navbar-collapse.collapse.in {
     max-height: calc(70vh - 60px);
     overflow-y: auto !important;
     display: block !important;
   }
-  /* line 247, ../sass/basic_layout.scss */
+  /* line 248, ../sass/basic_layout.scss */
   .navbar-collapse.collapse ul {
     float: none;
   }
-  /* line 249, ../sass/basic_layout.scss */
+  /* line 250, ../sass/basic_layout.scss */
   .navbar-collapse.collapse ul li {
     width: 100%;
     display: block;
   }
-  /* line 252, ../sass/basic_layout.scss */
+  /* line 253, ../sass/basic_layout.scss */
   .navbar-collapse.collapse ul li a {
     padding-top: 8px;
     padding-bottom: 8px;
     border-top: 1px solid #ccc;
   }
+}
+/* line 263, ../sass/basic_layout.scss */
+.views-exposed-form {
+  margin-bottom: 30px;
 }

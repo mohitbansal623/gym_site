@@ -112,6 +112,7 @@
       </div>
     <?php endif; ?>
   </div>
+  <!-- <div class="notification"><i class="fa fa-bell-o" aria-hidden="true"></i></div> -->
 </header>
 
 <div class="page-container">
