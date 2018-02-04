@@ -14,6 +14,7 @@
           <div class="panel-heading">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#<?php echo $key; ?>"><?php echo $value['full_name']; ?></a>
+              <p class="diet-adherence"><strong>Diet Adherence:</strong> <?php echo $value['diet_adherence']; ?></p>
             </h4>
           </div>
           <div id="<?php echo $key; ?>" class="panel-collapse collapse">

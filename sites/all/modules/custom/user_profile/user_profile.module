@@ -24,6 +24,8 @@ function registration_form($form, &$form_state) {
     '#description' => 'Enter your user name',
     '#type' => 'textfield',
     '#required' => TRUE,
+    '#element_validate' => array('user_name_validate'),
+
   );
 
 
@@ -95,7 +97,7 @@ function registration_form($form, &$form_state) {
   $form['contact'] = array(
     '#type' => 'textfield',
     '#title' => 'Contact',
-    '#maxlength' => 11,
+    // '#maxlength' => 11,
     '#required' => TRUE,
     '#description' => "Enter your contact number.",
     '#element_validate' => array('user_profile_contact_element_validate'),
@@ -130,6 +132,9 @@ function registration_form_submit($form, &$form_state) {
   }
 
   $new_account = user_save(NULL, $user_info);
+  $new_account->status = 1;
+  user_save($new_account);
+  drupal_set_message($user_info['name'] . " account has been created.", 'status');
 }
 
 /**
@@ -146,10 +151,28 @@ function user_profile_contact_element_validate($element, &$form_state, $form) {
    if (!is_numeric($element['#value'])) {
      form_error($element, t('Please enter a valid contact number.'));
    }
+   elseif (strlen($element['#value']) > 10) {
+    form_error($element, t('Contact number limit exceeds 10'));
+   }
 }
 
 function user_profile_confirm_password_validate($element, &$form_state, $form) {
    if ($element['#value'] != $form_state['values']['pass']) {
      form_error($element, t('Retype password does not match.'));
    }
+}
+
+function user_name_validate($element, &$form_state, $form) {
+  $username = $form_state['values']['user_name'];
+
+  // check if this username exists or not.
+  $query = db_select('users', 'u')
+    ->fields('u', array('name'))
+    ->condition('u.name', $username);
+
+  $results = $query->execute()->rowCount();
+
+  if ($results != 0 ) {
+    form_error($element, t('User name already exists'));
+  }
 }
