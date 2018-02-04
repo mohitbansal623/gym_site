@@ -274,59 +274,64 @@ body.page-coach-dashboard .coach-accordion .panel-heading a:after {
 body.page-coach-dashboard .coach-accordion .panel-heading a.collapsed:after {
   content: "\f078";
 }
+/* line 232, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel-heading .diet-adherence {
+  padding: 10px 22px 10px 8px;
+  color: white;
+}
 
 @media (max-width: 1080px) {
-  /* line 236, ../sass/basic_layout.scss */
+  /* line 241, ../sass/basic_layout.scss */
   .navbar-header {
     width: 100%;
     float: none;
     padding-bottom: 0px;
   }
 
-  /* line 241, ../sass/basic_layout.scss */
+  /* line 246, ../sass/basic_layout.scss */
   .navbar-toggle {
     display: block !important;
   }
 
-  /* line 244, ../sass/basic_layout.scss */
+  /* line 249, ../sass/basic_layout.scss */
   .navbar-collapse.collapse {
     display: none !important;
   }
-  /* line 246, ../sass/basic_layout.scss */
+  /* line 251, ../sass/basic_layout.scss */
   .navbar-collapse.collapse.in {
     max-height: calc(70vh - 60px);
     overflow-y: auto !important;
     display: block !important;
   }
-  /* line 251, ../sass/basic_layout.scss */
+  /* line 256, ../sass/basic_layout.scss */
   .navbar-collapse.collapse ul {
     float: none;
   }
-  /* line 253, ../sass/basic_layout.scss */
+  /* line 258, ../sass/basic_layout.scss */
   .navbar-collapse.collapse ul li {
     width: 100%;
     display: block;
   }
-  /* line 256, ../sass/basic_layout.scss */
+  /* line 261, ../sass/basic_layout.scss */
   .navbar-collapse.collapse ul li a {
     padding-top: 8px;
     padding-bottom: 8px;
     border-top: 1px solid #ccc;
   }
 }
-/* line 266, ../sass/basic_layout.scss */
+/* line 271, ../sass/basic_layout.scss */
 .views-exposed-form {
   margin-bottom: 30px;
 }
 
-/* line 270, ../sass/basic_layout.scss */
+/* line 275, ../sass/basic_layout.scss */
 header .notification {
   float: right;
   padding-top: 10px;
   cursor: pointer;
 }
 
-/* line 276, ../sass/basic_layout.scss */
+/* line 281, ../sass/basic_layout.scss */
 .notification-box {
   display: none;
   position: fixed;
@@ -340,7 +345,7 @@ header .notification {
   overflow-x: auto;
 }
 
-/* line 289, ../sass/basic_layout.scss */
+/* line 294, ../sass/basic_layout.scss */
 #navbar-collapse {
   border: 0;
 }
