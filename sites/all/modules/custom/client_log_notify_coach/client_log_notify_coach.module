@@ -108,6 +108,15 @@ function client_log_notify_coach_node_presave($node) {
       ->execute();
     }
   }
+
+  elseif ($node->type == 'check_in') {
+    $coach_id = $node->uid;
+    $client_id = isset($node->field_client_ref[$node->language][0]['target_id']) ? $node->field_client_ref[$node->language][0]['target_id']: NULL;
+    $fid = isset($node->field_progress_picture_front[$node->language][0]['fid'])? $node->field_progress_picture_front[$node->language][0]['fid']: NULL;
+
+    set_current_progress_pic($coach_id, $client_id, $fid, $node->language);
+
+  }
 }
 
 function get_notifications_for_coach($uid) {
@@ -200,6 +209,7 @@ function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
   $alias = drupal_get_path_alias();
   if ($alias == 'node/add/goals') {
     if ($form_id == 'goals_node_form') {
+      $form['field_current_progress_pic']['#access'] = FALSE;
       $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
       $eligible_clients = array(0 => $no_value) + get_eligible_clients('goals');
 
@@ -583,4 +593,23 @@ function get_coach_id_for_notification ($client_id) {
   }
 
   return NULL;
+}
+
+
+function set_current_progress_pic($coach_id, $client_id, $fid, $language) {
+  $query = db_select('node', 'n')
+      ->distinct();
+  $query->leftjoin('field_data_field_coach_ref', 'coach', "coach.entity_id = n.nid");
+  $query->leftjoin('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
+
+  $query->condition('coach.field_coach_ref_target_id', $coach_id);
+  $query->condition('client.field_client_ref_target_id', $client_id);
+
+  $query->fields('n', array('nid'));
+  $query->condition('n.status', 1);
+  $nid = $query->execute()->fetch();
+
+  $node = node_load($nid->nid);
+  $node->field_current_progress_pic[$language][0]['fid'] = $fid;
+  node_save($node);
 }
