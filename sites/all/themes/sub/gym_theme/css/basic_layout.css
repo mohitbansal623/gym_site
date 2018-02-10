@@ -349,3 +349,8 @@ header .notification {
 #navbar-collapse {
   border: 0;
 }
+
+/* line 299, ../sass/basic_layout.scss */
+.page-user-login .tabs--primary.nav-tabs {
+  display: none;
+}

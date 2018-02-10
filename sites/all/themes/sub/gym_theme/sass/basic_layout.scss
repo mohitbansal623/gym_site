@@ -294,3 +294,9 @@ header .notification {
 #navbar-collapse {
   border: 0;
 }
+
+.page-user-login {
+  .tabs--primary.nav-tabs {
+    display: none;
+  }
+}
