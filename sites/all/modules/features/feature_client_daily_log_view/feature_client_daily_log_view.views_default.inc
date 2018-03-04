@@ -123,7 +123,7 @@ function feature_client_daily_log_view_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'No Daily log for this day.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
-  /* Field: Content: Log In */
+  /* Field: Content: Check In */
   $handler->display->display_options['fields']['field_check_in_date']['id'] = 'field_check_in_date';
   $handler->display->display_options['fields']['field_check_in_date']['table'] = 'field_data_field_check_in_date';
   $handler->display->display_options['fields']['field_check_in_date']['field'] = 'field_check_in_date';
@@ -192,6 +192,12 @@ function feature_client_daily_log_view_views_default_views() {
   $handler->display->display_options['fields']['field_was_today_on_plan']['id'] = 'field_was_today_on_plan';
   $handler->display->display_options['fields']['field_was_today_on_plan']['table'] = 'field_data_field_was_today_on_plan';
   $handler->display->display_options['fields']['field_was_today_on_plan']['field'] = 'field_was_today_on_plan';
+  /* Field: Content: Delete link */
+  $handler->display->display_options['fields']['delete_node']['id'] = 'delete_node';
+  $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
+  $handler->display->display_options['fields']['delete_node']['label'] = 'Delete';
+  $handler->display->display_options['fields']['delete_node']['text'] = 'Delete';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -247,6 +253,38 @@ function feature_client_daily_log_view_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'client-daily-log/%';
+  $translatables['client_daily_log'] = array(
+    t('Master'),
+    t('Client Daily Log'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('No Daily log for this day.'),
+    t('Check In'),
+    t('Meal 1 Diet'),
+    t('Meal 1'),
+    t('Meal 2 Diet'),
+    t('Meal 2'),
+    t('Meal 3 Diet'),
+    t('Meal 3'),
+    t('Snacks Diet'),
+    t('Snacks'),
+    t('Was Today on Plan'),
+    t('Delete'),
+    t('All'),
+    t('Date'),
+    t('Page'),
+  );
   $export['client_daily_log'] = $view;
 
   return $export;

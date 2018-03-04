@@ -37,7 +37,69 @@ function client_log_notify_coach_menu() {
     'access callback' => TRUE,
   );
 
+  $items['unpublish-goal/%'] = array(
+    'page callback' => 'set_unpublish_goal',
+    'page arguments' => array(1),
+    'type' => MENU_CALLBACK,
+    'access callback' => TRUE,
+  );
+
+  $items['complete-goal/%'] = array(
+    'page callback' => 'set_complete_goal',
+    'page arguments' => array(1),
+    'type' => MENU_CALLBACK,
+    'access callback' => TRUE,
+  );
+
+   $items['publish-goal/%'] = array(
+    'page callback' => 'set_publish_goal',
+    'page arguments' => array(1),
+    'type' => MENU_CALLBACK,
+    'access callback' => TRUE,
+  );
+
   return $items;
+}
+
+
+function set_unpublish_goal($nid) {
+  global $user;
+  $num_updated = db_update('node')
+    ->fields(array(
+      'status' => 0,
+    ))
+    ->condition('nid', $nid, '=')
+    ->execute();
+
+  drupal_goto('edit-goal/' . $user->uid);
+}
+
+function set_publish_goal($nid) {
+  global $user;
+  $num_updated = db_update('node')
+    ->fields(array(
+      'status' => 1,
+    ))
+    ->condition('nid', $nid, '=')
+    ->execute();
+
+  $uid = $user->uid;
+  update_published_value_goals($uid, $nid);
+
+  drupal_goto('edit-goal/' . $user->uid);
+}
+
+
+function set_complete_goal($nid) {
+  $node = node_load($nid);
+
+  if (isset($node->field_goal_complete['und'][0]['value'])) {
+    $node->field_goal_complete['und'][0]['value'] = 1;
+
+    node_save($node);
+
+    drupal_goto('edit-goal/' . $node->uid);
+  }
 }
 
 function _notifications_populate() {
@@ -109,15 +171,62 @@ function client_log_notify_coach_node_presave($node) {
     }
   }
 
-  elseif ($node->type == 'check_in') {
-    $coach_id = $node->uid;
-    $client_id = isset($node->field_client_ref[$node->language][0]['target_id']) ? $node->field_client_ref[$node->language][0]['target_id']: NULL;
-    $fid = isset($node->field_progress_picture_front[$node->language][0]['fid'])? $node->field_progress_picture_front[$node->language][0]['fid']: NULL;
+  // elseif ($node->type == 'check_in') {
+  //   $coach_id = $node->uid;
+  //   $client_id = isset($node->field_client_ref[$node->language][0]['target_id']) ? $node->field_client_ref[$node->language][0]['target_id']: NULL;
+  //   $fid = isset($node->field_progress_picture_front[$node->language][0]['fid'])? $node->field_progress_picture_front[$node->language][0]['fid']: NULL;
 
-    set_current_progress_pic($coach_id, $client_id, $fid, $node->language);
+  //   set_current_progress_pic($coach_id, $client_id, $fid, $node->language);
 
+  // }
+
+  elseif ($node->type == 'goals') {
+    $goal_value = isset($node->field_goal['und'][0]['value'])? $node->field_goal['und'][0]['value']: NULL;
+
+    $node->title = $node->field_goal['und'][0]['value'];
+
+    update_published_value_goals($node->uid, $node->nid);
   }
 }
+
+function update_published_value_goals($uid, $nid) {
+  $query = db_select('node', 'n')
+        ->fields('n', array('nid'))
+        ->condition('n.type', 'goals')
+        ->condition('n.uid', $uid);
+
+  $result = $query->execute()->fetchCol();
+
+  if (!empty($result)) {
+    foreach ($result as $key) {
+      if ($nid != $key) {
+        $num_updated = db_update('node')
+          ->fields(array(
+            'status' => 0,
+          ))
+          ->condition('nid', $key, '=')
+          ->execute();
+      }
+    }
+  }
+}
+
+
+function get_completion_value($nid) {
+  $query = db_select('node', 'at')
+      -> fields('c', array('field_goal_complete_value'));
+  $query->join('field_data_field_goal_complete', 'c', "c.entity_id = at.nid");
+  $query->condition('c.bundle', 'goals');
+  $query->condition('at.nid', $nid);
+  $complete = $query->execute()->fetch();
+
+  if (!empty($complete)) {
+    return $complete->field_goal_complete_value;
+  }
+
+  return 0;
+}
+
 
 function get_notifications_for_coach($uid) {
   $query = db_select('notify_coach', 'at')
@@ -209,27 +318,56 @@ function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
   $alias = drupal_get_path_alias();
   if ($alias == 'node/add/goals') {
     if ($form_id == 'goals_node_form') {
-      $form['field_current_progress_pic']['#access'] = FALSE;
-      $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
-      $eligible_clients = array(0 => $no_value) + get_eligible_clients('goals');
+      $form['field_goal_complete']['#access'] = FALSE;
+      // $form['field_current_progress_pic']['#access'] = FALSE;
+      // $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
+      // $eligible_clients = array(0 => $no_value) + get_eligible_clients('goals');
 
-      $form['field_client_ref']['und']['#options'] = $eligible_clients;
-      $form['field_coach_ref']['und']['#options'] = array($user->uid => $user->name);
+      // $form['field_client_ref']['und']['#options'] = $eligible_clients;
+      // $form['field_coach_ref']['und']['#options'] = array($user->uid => $user->name);
     }
   }
-  else if ($alias == 'node/add/path-to-fitness') {
-    if ($form_id == 'path_to_fitness_node_form'){
-     $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
-      $eligible_clients = array(0 => $no_value) + get_related_clients($user->uid);
-      $form['field_client_ref']['und']['#options'] = $eligible_clients;
-    }
-  }
+  // else if ($alias == 'node/add/path-to-fitness') {
+  //   if ($form_id == 'path_to_fitness_node_form'){
+  //    $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
+  //     $eligible_clients = array(0 => $no_value) + get_related_clients($user->uid);
+  //     $form['field_client_ref']['und']['#options'] = $eligible_clients;
+  //   }
+  // }
   else if ($alias == 'node/add/check-in') {
     if ($form_id == 'check_in_node_form') {
-      $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
-      $eligible_clients = array(0 => $no_value) + get_related_clients();
-      $form['field_client_ref']['und']['#options'] = $eligible_clients;
+  //     $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
+      // $eligible_clients = array(0 => $no_value) + get_related_clients();
+      $data = get_goal_and_coach();
+      $coach = isset($data) ? $data->field_coach_ref_target_id: NULL;
+      if (!empty($coach)) {
+        $query = db_select('users', 'u')
+          ->fields('u', array('name'))
+          ->condition('u.uid', $coach);
+
+        $coach = $query->execute()->fetch();
+        $coach = $coach->name;
+      }
+
+      $no_value = isset($form['field_coach_ref']['und']['#options']['_none'])?$form['field_coach_ref']['und']['#options']['_none']: NULL;
+      $form['field_coach_ref']['und']['#options'] = array(0 => $no_value, 1 => $coach);
+      $form['field_goal']['und'][0]['value']['#default_value'] = $data->title;
     }
+  }
+}
+
+
+function get_goal_and_coach() {
+  $query = db_select('node', 'at')
+      -> fields('at', array('title'))
+      -> fields('c', array('field_coach_ref_target_id'));
+  $query->join('field_data_field_coach_ref', 'c', "c.entity_id = at.nid");
+  $query->condition('c.bundle', 'goals');
+  $query->condition('at.status', 1);
+  $complete = $query->execute()->fetch();
+
+  if (!empty($complete)) {
+    return $complete;
   }
 }
 

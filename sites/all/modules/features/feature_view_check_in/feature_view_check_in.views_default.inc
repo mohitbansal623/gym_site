@@ -29,9 +29,14 @@ function feature_view_check_in_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Content: Author */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   /* Field: Content: Bodyfat kg */
   $handler->display->display_options['fields']['field_bodyfat_kg']['id'] = 'field_bodyfat_kg';
   $handler->display->display_options['fields']['field_bodyfat_kg']['table'] = 'field_data_field_bodyfat_kg';
@@ -207,6 +212,19 @@ function feature_view_check_in_views_default_views() {
     'link' => 0,
   );
   /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_5']['id'] = 'php_5';
+  $handler->display->display_options['fields']['php_5']['table'] = 'views';
+  $handler->display->display_options['fields']['php_5']['field'] = 'php';
+  $handler->display->display_options['fields']['php_5']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php_5']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_5']['php_output'] = '<?php global $user;
+
+echo $user->uid;
+
+?>';
+  $handler->display->display_options['fields']['php_5']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_5']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
   $handler->display->display_options['fields']['php']['id'] = 'php';
   $handler->display->display_options['fields']['php']['table'] = 'views';
   $handler->display->display_options['fields']['php']['field'] = 'php';
@@ -214,7 +232,8 @@ function feature_view_check_in_views_default_views() {
   $handler->display->display_options['fields']['php']['exclude'] = TRUE;
   $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php']['php_output'] = '<?php
-echo get_recent_body_fat_percentage($row->field_client_ref);
+global $user;
+echo get_recent_body_fat_percentage($user->uid);
 ?>';
   $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
@@ -226,7 +245,8 @@ echo get_recent_body_fat_percentage($row->field_client_ref);
   $handler->display->display_options['fields']['php_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['php_1']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php_1']['php_output'] = '<?php
-  echo get_cm_loss($row->field_client_ref);
+global $user;
+  echo get_cm_loss($user->uid);
 ?>';
   $handler->display->display_options['fields']['php_1']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php_1']['php_click_sortable'] = '';
@@ -238,7 +258,8 @@ echo get_recent_body_fat_percentage($row->field_client_ref);
   $handler->display->display_options['fields']['php_2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['php_2']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php_2']['php_output'] = '<?php
- echo get_mm_loss($row->field_client_ref);
+global $user;
+ echo get_mm_loss($user->uid);
 ?>';
   $handler->display->display_options['fields']['php_2']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php_2']['php_click_sortable'] = '';
@@ -250,7 +271,8 @@ echo get_recent_body_fat_percentage($row->field_client_ref);
   $handler->display->display_options['fields']['php_3']['exclude'] = TRUE;
   $handler->display->display_options['fields']['php_3']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php_3']['php_output'] = '<?php
-echo get_diet_adherence($row->field_client_ref);
+global $user;
+echo get_diet_adherence($user->uid);
 ?>';
   $handler->display->display_options['fields']['php_3']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php_3']['php_click_sortable'] = '';
@@ -262,7 +284,8 @@ echo get_diet_adherence($row->field_client_ref);
   $handler->display->display_options['fields']['php_4']['exclude'] = TRUE;
   $handler->display->display_options['fields']['php_4']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php_4']['php_output'] = '<?php
-  echo get_avg_daily_activity($row->field_client_ref);
+global $user;
+  echo get_avg_daily_activity($user->uid);
 ?>';
   $handler->display->display_options['fields']['php_4']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php_4']['php_click_sortable'] = '';
@@ -297,19 +320,11 @@ echo get_diet_adherence($row->field_client_ref);
   <h2 class="block-title">Current Stats</h2>
   <div class="stats">
     <div class="stats-content">
-      <table>
-        <tr>
-          <td>Bodyfat (in KG)</td>
-          <td>[field_bodyfat_kg]</td>
-        </tr>
-      </table>
-    </div>
-
-
+    </div> 
     <div class="stats-content">
       <table>
         <tr>
-          <td>Bodyfat in kg Loss</td>
+          <td>Percent Bodyfat Lost</td>
           <td>[php]%</td>
         </tr>
         <tr>
@@ -375,6 +390,68 @@ echo get_diet_adherence($row->field_client_ref);
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['block_description'] = 'Check IN';
+  $translatables['check_in'] = array(
+    t('Master'),
+    t('<none>'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('author'),
+    t('Client Ref'),
+    t('PHP'),
+    t('Bodyfat Loss %'),
+    t('CM Loss'),
+    t('MM Loss'),
+    t('Diet Adherence'),
+    t('Average Daily Activity'),
+    t('Training Sessions Completed'),
+    t('Personal Records'),
+    t('<div class="current-stats">
+  <h2 class="block-title">Current Stats</h2>
+  <div class="stats">
+    <div class="stats-content">
+    </div> 
+    <div class="stats-content">
+      <table>
+        <tr>
+          <td>Percent Bodyfat Lost</td>
+          <td>[php]%</td>
+        </tr>
+        <tr>
+          <td>CM Loss</td>
+          <td>[php_1]</td>
+        </tr>
+        <tr>
+          <td>MM Loss</td>
+          <td>[php_2]</td>
+        </tr>
+        <tr>
+          <td>Diet Adherence</td>
+          <td>[php_3]</td>
+        </tr>
+        <tr>
+          <td>Average Daily Activity</td>
+          <td>[php_4]</td>
+        </tr>
+         <tr>
+          <td>Training Sessions Completed</td>
+          <td>[field_training_sessions_complete]</td>
+        </tr>
+         <tr>
+          <td>Personal Records</td>
+          <td>[field_personal_records]</td>
+        </tr>
+      </table>
+    </div>
+</div>
+</div>'),
+    t('All'),
+    t('Block'),
+    t('Check IN'),
+  );
   $export['check_in'] = $view;
 
   return $export;

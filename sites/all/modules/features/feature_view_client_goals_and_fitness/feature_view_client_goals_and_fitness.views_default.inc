@@ -42,18 +42,17 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['fields']['field_total_training_sessions']['field'] = 'field_total_training_sessions';
   $handler->display->display_options['fields']['field_total_training_sessions']['label'] = 'Total training sessions / Month';
   $handler->display->display_options['fields']['field_total_training_sessions']['element_label_colon'] = FALSE;
-  /* Field: Content: Speciality Sessions (rehab/skill focus) */
-  $handler->display->display_options['fields']['field_speciality_sessions']['id'] = 'field_speciality_sessions';
-  $handler->display->display_options['fields']['field_speciality_sessions']['table'] = 'field_data_field_speciality_sessions';
-  $handler->display->display_options['fields']['field_speciality_sessions']['field'] = 'field_speciality_sessions';
-  $handler->display->display_options['fields']['field_speciality_sessions']['label'] = 'Speciality Sessions';
-  $handler->display->display_options['fields']['field_speciality_sessions']['element_label_colon'] = FALSE;
-  /* Field: Content: Recovery */
+  /* Field: Content: Personal Training Sessions */
   $handler->display->display_options['fields']['field_recovery']['id'] = 'field_recovery';
   $handler->display->display_options['fields']['field_recovery']['table'] = 'field_data_field_recovery';
   $handler->display->display_options['fields']['field_recovery']['field'] = 'field_recovery';
-  $handler->display->display_options['fields']['field_recovery']['label'] = 'Recovery Sessions';
   $handler->display->display_options['fields']['field_recovery']['element_label_colon'] = FALSE;
+  /* Field: Content: IronFit Sessions */
+  $handler->display->display_options['fields']['field_speciality_sessions']['id'] = 'field_speciality_sessions';
+  $handler->display->display_options['fields']['field_speciality_sessions']['table'] = 'field_data_field_speciality_sessions';
+  $handler->display->display_options['fields']['field_speciality_sessions']['field'] = 'field_speciality_sessions';
+  $handler->display->display_options['fields']['field_speciality_sessions']['label'] = 'Group Sessions';
+  $handler->display->display_options['fields']['field_speciality_sessions']['element_label_colon'] = FALSE;
   /* Field: Content: Nutrition Protocol */
   $handler->display->display_options['fields']['field_nutrition_protocol']['id'] = 'field_nutrition_protocol';
   $handler->display->display_options['fields']['field_nutrition_protocol']['table'] = 'field_data_field_nutrition_protocol';
@@ -112,6 +111,26 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['block_description'] = 'client_fitness';
+  $translatables['client_fitness_block'] = array(
+    t('Master'),
+    t('Your path to fitness'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Total training sessions / Month'),
+    t('Personal Training Sessions'),
+    t('Group Sessions'),
+    t('Nutrition Protocol'),
+    t('Re-Feeds'),
+    t('Daily Activity'),
+    t('Client Ref'),
+    t('All'),
+    t('Block'),
+    t('client_fitness'),
+  );
   $export['client_fitness_block'] = $view;
 
   $view = new view();
@@ -130,7 +149,9 @@ function feature_view_client_goals_and_fitness_views_default_views() {
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
+    3 => '3',
     2 => '2',
+    5 => '5',
     6 => '6',
   );
   $handler->display->display_options['cache']['type'] = 'none';
@@ -202,18 +223,42 @@ echo get_remaining_days($row->nid);
     'bypass_access' => 0,
     'link' => 0,
   );
-  /* Field: Content: Front */
-  $handler->display->display_options['fields']['field_progress_picture_front']['id'] = 'field_progress_picture_front';
-  $handler->display->display_options['fields']['field_progress_picture_front']['table'] = 'field_data_field_progress_picture_front';
-  $handler->display->display_options['fields']['field_progress_picture_front']['field'] = 'field_progress_picture_front';
-  $handler->display->display_options['fields']['field_progress_picture_front']['label'] = '';
-  $handler->display->display_options['fields']['field_progress_picture_front']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_progress_picture_front']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_progress_picture_front']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_progress_picture_front']['settings'] = array(
+  /* Field: Content: Current Progress Pic */
+  $handler->display->display_options['fields']['field_current_progress_pic']['id'] = 'field_current_progress_pic';
+  $handler->display->display_options['fields']['field_current_progress_pic']['table'] = 'field_data_field_current_progress_pic';
+  $handler->display->display_options['fields']['field_current_progress_pic']['field'] = 'field_current_progress_pic';
+  $handler->display->display_options['fields']['field_current_progress_pic']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_current_progress_pic']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_current_progress_pic']['settings'] = array(
     'image_style' => '',
     'image_link' => '',
   );
+  /* Field: Content: Author uid */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'node';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_1']['id'] = 'php_1';
+  $handler->display->display_options['fields']['php_1']['table'] = 'views';
+  $handler->display->display_options['fields']['php_1']['field'] = 'php';
+  $handler->display->display_options['fields']['php_1']['label'] = 'coach name';
+  $handler->display->display_options['fields']['php_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php_1']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_1']['php_output'] = '<?php
+
+$query = db_select(\'users\', \'u\')
+  ->fields(\'u\', array(\'name\'))
+  ->condition(\'uid\', $row->uid)
+  ->execute();
+
+$query= $query->fetch();
+$name = $query->name;
+echo $name;
+?>';
+  $handler->display->display_options['fields']['php_1']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_1']['php_click_sortable'] = '';
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -224,11 +269,11 @@ echo get_remaining_days($row->nid);
     <div class="description">
       <div class="goal"><div class="title">Goal</div><div class="content">[field_goal]</div></div>
       <div class="days"><div class="title">Days Remaining</div><div class="content">[php]</div></div>
-      <div class="coach"><div class="title">Coach Reference</div><div class="content">[field_coach_ref]</div></div>
+      <div class="coach"><div class="title">Coach Reference</div><div class="content">[php_1]</div></div>
       <div class="motivation"><div class="title">Motivation</div><div class="content">[field_motivation]</div></div>
     </div>
     <div class="images">
-      <div class="current"><div class="img-inner">[field_progress_picture_front]<div class="image-text">Current Progress Pic</div></div></div>
+      <div class="current"><div class="img-inner">[field_current_progress_pic]<div class="image-text">Current Progress Pic</div></div></div>
       <div class="inspiration"><div class="img-inner">[field_inspiration]<div class="image-text">Inspiration Pic</div></div></div>
     </div>
   </div>
@@ -263,7 +308,6 @@ echo get_remaining_days($row->nid);
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'check_in' => 'check_in',
     'goals' => 'goals',
   );
 
@@ -274,6 +318,41 @@ echo get_remaining_days($row->nid);
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
   $handler->display->display_options['path'] = 'client-dashboard/%';
+  $translatables['client_goal_block'] = array(
+    t('Master'),
+    t('My dashboard'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Nid'),
+    t('PHP'),
+    t('Client Ref'),
+    t('Current Progress Pic'),
+    t('Author uid'),
+    t('coach name'),
+    t('<div class="goal-box">
+  <div class="goal-box-inner">
+    <div class="description">
+      <div class="goal"><div class="title">Goal</div><div class="content">[field_goal]</div></div>
+      <div class="days"><div class="title">Days Remaining</div><div class="content">[php]</div></div>
+      <div class="coach"><div class="title">Coach Reference</div><div class="content">[php_1]</div></div>
+      <div class="motivation"><div class="title">Motivation</div><div class="content">[field_motivation]</div></div>
+    </div>
+    <div class="images">
+      <div class="current"><div class="img-inner">[field_current_progress_pic]<div class="image-text">Current Progress Pic</div></div></div>
+      <div class="inspiration"><div class="img-inner">[field_inspiration]<div class="image-text">Inspiration Pic</div></div></div>
+    </div>
+  </div>
+</div>'),
+    t('No data display'),
+    t('All'),
+    t('Block'),
+    t('client_goal'),
+    t('Page'),
+  );
   $export['client_goal_block'] = $view;
 
   return $export;

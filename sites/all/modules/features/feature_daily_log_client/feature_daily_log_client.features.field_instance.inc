@@ -138,7 +138,7 @@ function feature_daily_log_client_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_meal_1',
     'label' => 'Meal 1',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -225,7 +225,7 @@ function feature_daily_log_client_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_meal_2',
     'label' => 'Meal 2',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -312,7 +312,7 @@ function feature_daily_log_client_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_meal_3',
     'label' => 'Meal 3',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,

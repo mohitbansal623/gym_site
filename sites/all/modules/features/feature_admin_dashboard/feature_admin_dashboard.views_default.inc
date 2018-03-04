@@ -155,12 +155,36 @@ echo total_avg_body_fat_loss_under_coach($row->uid);
   $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
   $handler->display->display_options['filters']['rid']['field'] = 'rid';
   $handler->display->display_options['filters']['rid']['value'] = array(
-    5 => '5',
+    6 => '6',
   );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'admin-dashboard';
+  $translatables['admin_dashboard'] = array(
+    t('Master'),
+    t('Admin Dashboard'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Uid'),
+    t('Name'),
+    t('E-mail'),
+    t('Total Clients Assigned'),
+    t('Total average of diet adherence'),
+    t('Total Average bodyfat loss'),
+    t('Page'),
+  );
   $export['admin_dashboard'] = $view;
 
   $view = new view();
@@ -199,11 +223,11 @@ echo total_avg_body_fat_loss_under_coach($row->uid);
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
-  /* Field: Field: First Name */
+  /* Field: User: First Name */
   $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
   $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
-  /* Field: Field: Last Name */
+  /* Field: User: Last Name */
   $handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
   $handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
   $handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
@@ -235,6 +259,27 @@ echo total_avg_body_fat_loss_under_coach($row->uid);
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'client-info-for-coach';
+  $translatables['client_info_for_coach'] = array(
+    t('Master'),
+    t('Client Info for coach'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('First Name'),
+    t('Last Name'),
+    t('E-mail'),
+    t('Page'),
+  );
   $export['client_info_for_coach'] = $view;
 
   return $export;
