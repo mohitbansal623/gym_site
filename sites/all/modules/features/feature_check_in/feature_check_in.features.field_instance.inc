@@ -258,8 +258,8 @@ function feature_check_in_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-check_in-field_client_ref'.
-  $field_instances['node-check_in-field_client_ref'] = array(
+  // Exported field_instance: 'node-check_in-field_coach_ref'.
+  $field_instances['node-check_in-field_coach_ref'] = array(
     'bundle' => 'check_in',
     'default_value' => NULL,
     'deleted' => 0,
@@ -273,7 +273,7 @@ function feature_check_in_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 19,
+        'weight' => 46,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -283,9 +283,9 @@ function feature_check_in_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_client_ref',
-    'label' => 'Client Ref',
-    'required' => 1,
+    'field_name' => 'field_coach_ref',
+    'label' => 'Coach Ref',
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -294,7 +294,46 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance: 'node-check_in-field_goal'.
+  $field_instances['node-check_in-field_goal'] = array(
+    'bundle' => 'check_in',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 47,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_goal',
+    'label' => 'Goal',
+    'required' => FALSE,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 34,
     ),
   );
 
@@ -1390,8 +1429,9 @@ function feature_check_in_field_default_field_instances() {
   t('Bodyweight');
   t('Check In');
   t('Chest CM');
-  t('Client Ref');
+  t('Coach Ref');
   t('Front');
+  t('Goal');
   t('Hips CM');
   t('Left Arm CM');
   t('Left Calf CM');

@@ -10,8 +10,8 @@
 function feature_ct_goals_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-goals-field_client_ref'.
-  $field_instances['node-goals-field_client_ref'] = array(
+  // Exported field_instance: 'node-goals-field_bodyfat_kg'.
+  $field_instances['node-goals-field_bodyfat_kg'] = array(
     'bundle' => 'goals',
     'default_value' => NULL,
     'deleted' => 0,
@@ -19,13 +19,15 @@ function feature_ct_goals_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
+        'module' => 'number',
         'settings' => array(
-          'bypass_access' => FALSE,
-          'link' => FALSE,
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
         ),
-        'type' => 'entityreference_label',
-        'weight' => 5,
+        'type' => 'number_decimal',
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -35,18 +37,68 @@ function feature_ct_goals_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_client_ref',
-    'label' => 'Client Ref',
+    'field_name' => 'field_bodyfat_kg',
+    'label' => 'Bodyfat kg',
     'required' => 0,
     'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'options',
+      'active' => 0,
+      'module' => 'number',
       'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 3,
+      'type' => 'number',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-goals-field_bodyweight'.
+  $field_instances['node-goals-field_bodyweight'] = array(
+    'bundle' => 'goals',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_bodyweight',
+    'label' => 'Bodyweight',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 4,
     ),
   );
 
@@ -86,7 +138,7 @@ function feature_ct_goals_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -126,7 +178,51 @@ function feature_ct_goals_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -4,
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-goals-field_goal_complete'.
+  $field_instances['node-goals-field_goal_complete'] = array(
+    'bundle' => 'goals',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_goal_complete',
+    'label' => 'goal complete',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 8,
     ),
   );
 
@@ -189,57 +285,7 @@ function feature_ct_goals_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 4,
-    ),
-  );
-
-  // Exported field_instance: 'node-goals-field_inspiration'.
-  $field_instances['node-goals-field_inspiration'] = array(
-    'bundle' => 'goals',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_inspiration',
-    'label' => 'Inspiration',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 0,
+      'weight' => 6,
     ),
   );
 
@@ -279,17 +325,18 @@ function feature_ct_goals_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -1,
+      'weight' => 2,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Client Ref');
+  t('Bodyfat kg');
+  t('Bodyweight');
   t('Coach Ref');
   t('Goal');
-  t('Inspiration');
   t('Motivation');
+  t('goal complete');
   t('goal date');
 
   return $field_instances;

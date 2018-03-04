@@ -54,7 +54,7 @@ function registration_form($form, &$form_state) {
   $form['pass'] = array(
     '#type' => 'password',
     '#title' => t('Password'),
-    '#maxlength' => 8,
+    '#maxlength' => 10,
     '#size' => 15,
     '#description' => "Enter your password",
     '#required' => TRUE,
@@ -63,7 +63,7 @@ function registration_form($form, &$form_state) {
   $form['pass_confirm'] = array(
     '#type' => 'password',
     '#title' => t('Retype Password'),
-    '#maxlength' => 8,
+    '#maxlength' => 10,
     '#size' => 15,
     '#description' => "Retype your password",
     '#element_validate' => array('user_profile_confirm_password_validate'),
@@ -87,21 +87,21 @@ function registration_form($form, &$form_state) {
     '#required' => TRUE,
    );
 
-  $form['address'] = array(
-    '#type' => 'textarea',
-    '#title' => t('Address'),
-    '#required' => TRUE,
-    '#description' => "Enter your address.",
-  );
+  // $form['address'] = array(
+  //   '#type' => 'textarea',
+  //   '#title' => t('Address'),
+  //   '#required' => TRUE,
+  //   '#description' => "Enter your address.",
+  // );
 
-  $form['contact'] = array(
-    '#type' => 'textfield',
-    '#title' => 'Contact',
-    // '#maxlength' => 11,
-    '#required' => TRUE,
-    '#description' => "Enter your contact number.",
-    '#element_validate' => array('user_profile_contact_element_validate'),
-  );
+  // $form['contact'] = array(
+  //   '#type' => 'textfield',
+  //   '#title' => 'Contact',
+  //   // '#maxlength' => 11,
+  //   '#required' => TRUE,
+  //   '#description' => "Enter your contact number.",
+  //   '#element_validate' => array('user_profile_contact_element_validate'),
+  // );
 
   $form['submit'] = array(
     '#type' => 'submit',
@@ -118,8 +118,8 @@ function registration_form_submit($form, &$form_state) {
   $user_info['name'] = $form_state['values']['user_name'];
   $user_info['mail'] = $form_state['values']['mail'];
   $user_info['pass'] = $form_state['values']['pass'];
-  $user_info['field_address']['und'][0]['value'] = $form_state['values']['address'];
-  $user_info['field_contact_no']['und'][0]['value'] = $form_state['values']['contact'];
+  // $user_info['field_address']['und'][0]['value'] = $form_state['values']['address'];
+  // $user_info['field_contact_no']['und'][0]['value'] = $form_state['values']['contact'];
   $user_info['field_role']['und'][0]['value'] = $form_state['values']['role'];
   $user_info['field_first_name']['und'][0]['value'] = $form_state['values']['first_name'];
   $user_info['field_last_name']['und'][0]['value'] = $form_state['values']['last_name'];
@@ -147,6 +147,7 @@ function user_profile_email_element_validate($element, &$form_state, $form) {
    }
 }
 
+/*
 function user_profile_contact_element_validate($element, &$form_state, $form) {
    if (!is_numeric($element['#value'])) {
      form_error($element, t('Please enter a valid contact number.'));
@@ -155,6 +156,7 @@ function user_profile_contact_element_validate($element, &$form_state, $form) {
     form_error($element, t('Contact number limit exceeds 10'));
    }
 }
+*/
 
 function user_profile_confirm_password_validate($element, &$form_state, $form) {
    if ($element['#value'] != $form_state['values']['pass']) {
