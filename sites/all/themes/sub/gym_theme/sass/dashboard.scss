@@ -404,3 +404,128 @@
     }
   }
 }
+
+.page-mass-lost-leaderboard {
+  .view-display-id-mass_lost_lp {
+    line-height: 1.4;
+    .view-display-id-mass_lost_attach {
+      .view-content {
+        display: flex;
+        justify-content: center;
+        .views-row {
+          padding: 0 20px;
+          .views-field-nothing {
+            .top-3-client {
+              text-align: center;
+              .client-pic {
+                width: 70px;
+                margin: 0px auto 15px;
+                img {
+                  border-radius: 50%;
+                }
+              }
+              .client-desc {
+                .coach {
+                  font-size: 1.3rem;
+                  span {
+                    color: #fff;
+                  }
+                }
+                .client-name {
+                  font-size: 1.7rem;
+                  color: $font-red;
+                  font-weight: bold;
+                }
+                .client-username {
+                  font-size: 1.3rem;
+                }
+                .bodyfat-percent {
+                  font-size: 1.9rem;
+                  color: #fff;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &>.view-content {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .views-row {
+        vertical-align: top;
+        font-size: 1.3rem;
+        width: 350px;
+        margin-bottom: 15px;
+        padding: 0 5px;
+        @media (max-width: 640px) {
+          margin-bottom: 5px;
+          padding: 0;
+          font-size: 1.1rem;
+        }
+        @media (max-width: 480px) {
+          width: 100%;
+        }
+        .views-field-nothing {
+          background: #181818;
+          padding: 15px;
+          box-shadow: 0px 1px 1px 0px #020202;
+          line-height: 1.4;
+          .field-content {
+            display: table;
+            width: 100%;
+            &>div {
+              display: table-cell;
+              vertical-align: middle;
+            }
+          }
+          .user-pic {
+            width: 70px;
+            img {
+              border-radius: 50%;
+            }
+          }
+          .user-info {
+            padding: 0 10px 0 20px;
+            .name {
+              font-size: 1.7rem;
+              font-weight: bold;
+              color: $font-red;
+            }
+            .user-name {
+              padding-bottom: 10px;
+            }
+            .coach {
+              span {
+                color: #fff;
+              }
+            }
+          }
+          .body-fat {
+            font-size: 1.7rem;
+            color: #fff;
+            font-weight: bold;
+            text-align: right;
+          }
+          .rank-box {
+            padding-right: 10px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: bold;
+            width: 30px;
+            .rank {
+              width: 20px;
+              height: 20px;
+              background: #fff;
+              border-radius: 50%;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
