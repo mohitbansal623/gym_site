@@ -354,3 +354,34 @@ header .notification {
 .page-user-login .tabs--primary.nav-tabs {
   display: none;
 }
+
+/* line 305, ../sass/basic_layout.scss */
+.page-node-add-check-in .page-container, .page-node-add-check-in .breadcrumb, .page-node-add-goals .page-container, .page-node-add-goals .breadcrumb, .page-register .page-container, .page-register .breadcrumb, .page-user-login .page-container, .page-user-login .breadcrumb, .page-node-add-daily-log .page-container, .page-node-add-daily-log .breadcrumb {
+  background: #111111;
+}
+/* line 309, ../sass/basic_layout.scss */
+.page-node-add-check-in .page-header, .page-node-add-goals .page-header, .page-register .page-header, .page-user-login .page-header, .page-node-add-daily-log .page-header {
+  color: white;
+}
+/* line 313, ../sass/basic_layout.scss */
+.page-node-add-check-in .panel, .page-node-add-goals .panel, .page-register .panel, .page-user-login .panel, .page-node-add-daily-log .panel {
+  border: none;
+}
+/* line 318, ../sass/basic_layout.scss */
+.page-node-add-check-in .breadcrumb a, .page-node-add-check-in .breadcrumb li, .page-node-add-goals .breadcrumb a, .page-node-add-goals .breadcrumb li, .page-register .breadcrumb a, .page-register .breadcrumb li, .page-user-login .breadcrumb a, .page-user-login .breadcrumb li, .page-node-add-daily-log .breadcrumb a, .page-node-add-daily-log .breadcrumb li {
+  color: white;
+  font-weight: bold;
+}
+/* line 325, ../sass/basic_layout.scss */
+.page-node-add-check-in .fieldset-legend, .page-node-add-check-in .panel-heading, .page-node-add-goals .fieldset-legend, .page-node-add-goals .panel-heading, .page-register .fieldset-legend, .page-register .panel-heading, .page-user-login .fieldset-legend, .page-user-login .panel-heading, .page-node-add-daily-log .fieldset-legend, .page-node-add-daily-log .panel-heading {
+  background: #ed1b24;
+  color: white !important;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 332, ../sass/basic_layout.scss */
+.page-node-add-check-in label.control-label, .page-node-add-goals label.control-label, .page-register label.control-label, .page-user-login label.control-label, .page-node-add-daily-log label.control-label {
+  color: #979797;
+  font-size: 18px;
+  font-weight: bold;
+}

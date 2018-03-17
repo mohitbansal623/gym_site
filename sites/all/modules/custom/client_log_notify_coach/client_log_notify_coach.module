@@ -496,31 +496,31 @@ function get_all_client_data_for_coach($coach_id) {
   return FALSE;
 }
 
-/*
-**  Body fat loss under of a client
-*/
+// /*
+// **  Body fat loss under of a client
+// */
 
-function get_recent_body_fat_percentage($client_id) {
-  $query = db_select('node', 'n')
-    ->distinct();
-  $query->join('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
-  $query->join('field_data_field_percent_bodyfat', 'fn', "fn.entity_id = n.nid");
-  $query->condition('n.type', 'check_in');
-  $query->condition('client.field_client_ref_target_id', $client_id);
-  $query->fields('n', array('nid'));
-  $query->fields('fn', array('field_percent_bodyfat_value'));
-  $result = $query->execute()->fetchAllKeyed(0);
-  if (!empty($result)) {
-    ksort($result);
-    $result = array_values($result);
-    $length = count($result);
-    $body_fat = $result[0] - $result[$length-1];
-  }
-  else {
-    $body_fat = 0;
-  }
-  return $body_fat;
-}
+// function get_recent_body_fat_percentage($client_id) {
+//   $query = db_select('node', 'n')
+//     ->distinct();
+//   $query->join('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
+//   $query->join('field_data_field_percent_bodyfat', 'fn', "fn.entity_id = n.nid");
+//   $query->condition('n.type', 'check_in');
+//   $query->condition('client.field_client_ref_target_id', $client_id);
+//   $query->fields('n', array('nid'));
+//   $query->fields('fn', array('field_percent_bodyfat_value'));
+//   $result = $query->execute()->fetchAllKeyed(0);
+//   if (!empty($result)) {
+//     ksort($result);
+//     $result = array_values($result);
+//     $length = count($result);
+//     $body_fat = $result[0] - $result[$length-1];
+//   }
+//   else {
+//     $body_fat = 0;
+//   }
+//   return $body_fat;
+// }
 
 
 /*
@@ -750,4 +750,97 @@ function set_current_progress_pic($coach_id, $client_id, $fid, $language) {
   $node = node_load($nid->nid);
   $node->field_current_progress_pic[$language][0]['fid'] = $fid;
   node_save($node);
+}
+
+
+function get_coach_name_for_client($client_id) {
+  $query = db_select('field_data_field_coach_ref', 'at')
+    ->distinct()
+    -> fields('at', array('field_coach_ref_target_id'));
+  $query-> join('node', 'n', "n.nid = at.entity_id");
+
+  $query->condition('n.uid', $client_id);
+  $query->condition('at.bundle', 'goals');
+  $query->condition('n.status', 1);
+
+  $coach_id = $query->execute()->fetchCol();
+
+  if (!empty($coach_id)) {
+    $uid = $coach_id[0];
+    $user = user_load($uid);
+
+    $coach_data = array();
+
+    $coach_data['first_name'] = isset($user->field_first_name['und'][0]['value'])? $user->field_first_name['und'][0]['value']: NULL;
+    $coach_data['last_name'] = isset($user->field_last_name['und'][0]['value'])? $user->field_last_name['und'][0]['value']: NULL;
+
+    return $coach_data;
+
+  }
+
+  return NULL;
+
+}
+
+
+function get_days_on_plan($client_id, $plan_value) {
+  $query = db_select('node', 'n')
+    ->fields('client', array('field_was_today_on_plan_value'));
+  $query->join('field_data_field_was_today_on_plan', 'client', "client.entity_id = n.nid");
+  $query->condition('n.type', 'daily_log');
+  $query->condition('client.field_was_today_on_plan_value', $plan_value);
+  $query->condition('n.uid', $client_id);
+  $result = $query->execute()->rowCount();
+
+  return $result;
+}
+
+
+function get_avg_daily_activity_level($client_id) {
+  $query = db_select('node', 'n')
+    ->fields('daily', array('field_avg_daily_activity_level_value'));
+  $query->join('field_data_field_avg_daily_activity_level', 'daily', "daily.entity_id = n.nid");
+  $query->condition('n.type', 'goals');
+  $query->condition('n.uid', $client_id);
+  $result = $query->execute()->fetchCol();
+
+  $total = $query->execute()->rowCount();
+  if (!empty($result)) {
+    $avg = array_sum($result) / $total;
+  }
+  else {
+    $avg = 0;
+  }
+
+  return $avg;
+}
+
+
+/*
+**  Body fat loss under of a client
+*/
+
+function get_recent_body_fat_percentage($client_id) {
+  $query = db_select('node', 'n')
+    ->distinct();
+  $query->join('field_data_field_percent_bodyfat', 'fn', "fn.entity_id = n.nid");
+  $query->condition('n.uid', $client_id);
+  $query->condition('fn.bundle', 'check_in');
+  $query->fields('n', array('nid'));
+  $query->fields('fn', array('field_percent_bodyfat_value'));
+  $result = $query->execute()->fetchAllKeyed(0);
+  if (!empty($result) && count($result) > 1) {
+    ksort($result);
+    $result = array_values($result);
+    $length = count($result);
+    $body_fat = $result[0] - $result[$length-1];
+  }
+  elseif (!empty($result) && count($result) == 1) {
+    $result = array_values($result);
+    $body_fat = $result[0];
+  }
+  else {
+    $body_fat = 0;
+  }
+  return $body_fat;
 }
