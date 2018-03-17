@@ -825,7 +825,7 @@ function get_recent_body_fat_percentage($client_id) {
     ->distinct();
   $query->join('field_data_field_percent_bodyfat', 'fn', "fn.entity_id = n.nid");
   $query->condition('n.uid', $client_id);
-  $query->condition('fn.bundle', 'check_in');
+  $query->condition('n.type', 'goals');
   $query->fields('n', array('nid'));
   $query->fields('fn', array('field_percent_bodyfat_value'));
   $result = $query->execute()->fetchAllKeyed(0);

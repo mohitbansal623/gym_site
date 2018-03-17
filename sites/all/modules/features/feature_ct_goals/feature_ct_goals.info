@@ -27,4 +27,5 @@ features[field_instance][] = node-goals-field_goal
 features[field_instance][] = node-goals-field_goal_complete
 features[field_instance][] = node-goals-field_goal_date
 features[field_instance][] = node-goals-field_motivation
+features[field_instance][] = node-goals-field_percent_bodyfat
 features[node][] = goals

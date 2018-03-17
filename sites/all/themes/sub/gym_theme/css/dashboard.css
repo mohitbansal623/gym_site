@@ -16,271 +16,120 @@ a {
   outline: none;
 }
 
-/* line 3, ../sass/dashboard.scss */
-#block-views-client-fitness-block-block {
-  background: #181818;
-  padding: 35px 20px;
+/* line 239, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard, .page-mass-lost-leaderboard, .page-dashboard {
+  background: #0e0e0e;
+}
+/* line 242, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .page-header, .page-mass-lost-leaderboard .page-header, .page-dashboard .page-header {
+  color: white;
+  border: none;
   text-align: center;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/* line 9, ../sass/dashboard.scss */
-#block-views-client-fitness-block-block .block-title {
-  margin-top: 0;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-/* line 17, ../sass/dashboard.scss */
-#block-views-client-fitness-block-block .slick-slider {
-  margin: 0 -15px;
-  padding: 0 20px;
-}
-/* line 23, ../sass/dashboard.scss */
-#block-views-client-fitness-block-block .slick-slider .slick-prev {
-  left: 4px;
-}
-/* line 26, ../sass/dashboard.scss */
-#block-views-client-fitness-block-block .slick-slider .slick-next {
-  right: 5px;
-}
-/* line 30, ../sass/dashboard.scss */
-#block-views-client-fitness-block-block .slick-slide {
-  margin-right: 15px;
-  margin-left: 15px;
-}
-/* line 35, ../sass/dashboard.scss */
-#block-views-client-fitness-block-block .view-content .views-field {
-  padding: 15px 10px;
-  background: #222222;
-  color: #fff;
-}
-/* line 43, ../sass/dashboard.scss */
-#block-views-client-fitness-block-block .view-content .views-field .views-label {
-  position: relative;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-}
-/* line 48, ../sass/dashboard.scss */
-#block-views-client-fitness-block-block .view-content .views-field .views-label:before {
-  content: "\f004";
-  font-family: FontAwesome;
-  background: #525252;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  display: block;
-  margin: auto;
-  font-size: 24px;
-  color: #232323;
-  margin-bottom: 5px;
-}
-/* line 61, ../sass/dashboard.scss */
-#block-views-client-fitness-block-block .view-content .views-field .views-label:after {
-  content: "";
-  height: 2px;
-  width: 70%;
-  background: #313131;
-  display: block;
-  margin-left: 15%;
-}
-
-/* line 74, ../sass/dashboard.scss */
-#block-system-main {
-  vertical-align: middle;
-  margin-top: 40px;
-}
-@media (min-width: 993px) {
-  /* line 74, ../sass/dashboard.scss */
-  #block-system-main {
-    width: 60%;
-    padding: 0 20px 0 0;
-    display: inline-block;
+@media (max-width: 767px) {
+  /* line 242, ../sass/dashboard.scss */
+  .page-days-on-plan-leaderboard .page-header, .page-mass-lost-leaderboard .page-header, .page-dashboard .page-header {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
   }
 }
 
-/* line 85, ../sass/dashboard.scss */
-.view-client-goal-block .goal-box .images {
-  font-size: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
+/* line 257, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-page .view-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-/* line 89, ../sass/dashboard.scss */
-.view-client-goal-block .goal-box .images img {
-  width: 100%;
-  height: auto;
-}
-/* line 93, ../sass/dashboard.scss */
-.view-client-goal-block .goal-box .images .img-inner {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 5px;
-}
-/* line 97, ../sass/dashboard.scss */
-.view-client-goal-block .goal-box .images .current {
+/* line 261, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row {
+  vertical-align: top;
+  font-size: 1.3rem;
+  width: 350px;
   margin-bottom: 15px;
+  padding: 0 5px;
 }
-@media (min-width: 501px) {
-  /* line 97, ../sass/dashboard.scss */
-  .view-client-goal-block .goal-box .images .current {
-    width: 50%;
-    display: inline-block;
-    vertical-align: top;
-    padding-right: 10px;
-    margin-bottom: 0px;
+@media (max-width: 640px) {
+  /* line 261, ../sass/dashboard.scss */
+  .page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row {
+    margin-bottom: 5px;
+    padding: 0;
+    font-size: 1.1rem;
   }
 }
-@media (min-width: 501px) {
-  /* line 107, ../sass/dashboard.scss */
-  .view-client-goal-block .goal-box .images .inspiration {
-    width: 50%;
-    display: inline-block;
-    vertical-align: top;
-    padding-left: 10px;
+@media (max-width: 480px) {
+  /* line 261, ../sass/dashboard.scss */
+  .page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row {
+    width: 100%;
   }
 }
-/* line 115, ../sass/dashboard.scss */
-.view-client-goal-block .goal-box .images .image-text {
-  text-align: center;
-  padding: 2px 10px;
-  color: #111;
-  font-size: 1.5rem;
+/* line 275, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing {
+  background: #181818;
+  padding: 15px 25px;
+  box-shadow: 0px 1px 1px 0px #020202;
+  line-height: 1.4;
 }
-/* line 123, ../sass/dashboard.scss */
-.view-client-goal-block .goal-box .description > div {
-  padding: 15px 20px;
-  background: #643CC1;
-  display: inline-block;
-  vertical-align: top;
+@media (max-width: 480px) {
+  /* line 275, ../sass/dashboard.scss */
+  .page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing {
+    padding: 15px 10px;
+  }
+}
+/* line 283, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .field-content {
+  display: table;
+  width: 100%;
+}
+/* line 286, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .field-content > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 291, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .user-info, .page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .coach-info {
+  padding-right: 5px;
+}
+/* line 294, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .coach-title {
   color: #fff;
+}
+/* line 297, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .coach-name {
+  color: #b10029;
+}
+/* line 300, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .coach-photo {
+  float: left;
+  width: 30px;
+  margin-right: 5px;
+}
+/* line 304, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .coach-photo img {
+  border-radius: 50%;
+}
+/* line 308, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .days-on-plan {
+  width: 40px;
+}
+/* line 310, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .days-on-plan .total-on {
+  display: inline-block;
+  background: #ed1b24;
+  color: #fff;
+  border-radius: 50px;
   text-align: center;
-  margin: 0 5px 5px 0;
+  width: 40px;
+  padding: 5px 0;
 }
-/* line 131, ../sass/dashboard.scss */
-.view-client-goal-block .goal-box .description > div .title {
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  font-weight: bold;
-}
-/* line 137, ../sass/dashboard.scss */
-.view-client-goal-block .goal-box .description .goal {
-  background: #00A638;
-}
-/* line 139, ../sass/dashboard.scss */
-.view-client-goal-block .goal-box .description .goal .title, .view-client-goal-block .goal-box .description .goal .content {
+/* line 320, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .name {
+  color: #fff;
   font-size: 1.8rem;
-}
-/* line 143, ../sass/dashboard.scss */
-.view-client-goal-block .goal-box .description .days {
-  background: #FFA500;
-}
-/* line 146, ../sass/dashboard.scss */
-.view-client-goal-block .goal-box .description .coach {
-  background: #E87352;
-}
-/* line 149, ../sass/dashboard.scss */
-.view-client-goal-block .goal-box .description .motivation {
-  background: #377DE2;
-}
-
-/* line 156, ../sass/dashboard.scss */
-#block-views-check-in-block {
-  margin-top: 40px;
-  vertical-align: top;
-}
-@media (min-width: 993px) {
-  /* line 156, ../sass/dashboard.scss */
-  #block-views-check-in-block {
-    display: inline-block;
-    width: 38%;
-  }
-}
-/* line 163, ../sass/dashboard.scss */
-#block-views-check-in-block .current-stats {
-  padding: 20px;
-  color: #fff;
-  background: #034079;
-  /* Old browsers */
-  background: -moz-linear-gradient(left, #034079 0%, #01427c 49%, #044683 80%, #04498c 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #034079 0%, #01427c 49%, #044683 80%, #04498c 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #034079 0%, #01427c 49%, #044683 80%, #04498c 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#034079', endColorstr='#04498c',GradientType=1 );
-  /* IE6-9 */
-}
-/* line 172, ../sass/dashboard.scss */
-#block-views-check-in-block .stats-content {
-  margin-bottom: 0;
-}
-/* line 175, ../sass/dashboard.scss */
-#block-views-check-in-block .block-title {
-  margin-top: 0;
-  font-size: 2rem;
-  text-transform: uppercase;
   font-weight: bold;
-  padding-bottom: 5px;
-  border-bottom: 2px solid #1E5A8C;
 }
-/* line 185, ../sass/dashboard.scss */
-#block-views-check-in-block .view-content .views-row .blue-underline {
-  border-bottom: 2px solid #1E5A8C;
-}
-/* line 188, ../sass/dashboard.scss */
-#block-views-check-in-block .view-content .views-row .panel-default, #block-views-check-in-block .view-content .views-row .panel-heading, #block-views-check-in-block .view-content .views-row .panel-heading + div {
-  border: 0;
-  background: transparent;
-}
-/* line 192, ../sass/dashboard.scss */
-#block-views-check-in-block .view-content .views-row .stats-content:not(.panel-group) {
-  padding-right: 7px;
-}
-/* line 195, ../sass/dashboard.scss */
-#block-views-check-in-block .view-content .views-row .stats-content:not(.panel-group) table tr td {
-  padding-bottom: 10px;
-}
-/* line 200, ../sass/dashboard.scss */
-#block-views-check-in-block .view-content .views-row .panel-group {
-  padding-bottom: 10px;
-}
-/* line 203, ../sass/dashboard.scss */
-#block-views-check-in-block .view-content .views-row table {
-  width: 100%;
-}
-/* line 205, ../sass/dashboard.scss */
-#block-views-check-in-block .view-content .views-row table tr > td:first-child {
-  padding-right: 10px;
-}
-/* line 209, ../sass/dashboard.scss */
-#block-views-check-in-block .view-content .views-row .panel-heading {
-  padding: 0;
-}
-/* line 211, ../sass/dashboard.scss */
-#block-views-check-in-block .view-content .views-row .panel-heading a {
-  color: #fff;
-  text-decoration: none;
-  outline: none;
-  padding: 5px 22px 5px 0px;
-  display: inline-block;
-  width: 100%;
-  position: relative;
-}
-/* line 219, ../sass/dashboard.scss */
-#block-views-check-in-block .view-content .views-row .panel-heading a:after {
-  content: "\f077";
-  position: absolute;
-  right: 6px;
-  top: 5px;
-  font-family: FontAwesome;
-  font-size: 14px;
-}
-/* line 227, ../sass/dashboard.scss */
-#block-views-check-in-block .view-content .views-row .panel-heading a.collapsed:after {
-  content: "\f078";
-}
-/* line 232, ../sass/dashboard.scss */
-#block-views-check-in-block .view-content .views-row .panel-body {
-  border-top: 2px solid #1E5A8C;
+@media (max-width: 480px) {
+  /* line 320, ../sass/dashboard.scss */
+  .page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .name {
+    font-size: 1.5rem;
+  }
 }
