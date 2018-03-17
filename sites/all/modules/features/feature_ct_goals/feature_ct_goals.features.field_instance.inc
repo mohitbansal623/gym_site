@@ -369,6 +369,52 @@ function feature_ct_goals_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-goals-field_percent_bodyfat'.
+  $field_instances['node-goals-field_percent_bodyfat'] = array(
+    'bundle' => 'goals',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_integer',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_percent_bodyfat',
+    'label' => 'Percent BodyFat',
+    'required' => 1,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 11,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Avg Daily Activity Level');
@@ -377,6 +423,7 @@ function feature_ct_goals_field_default_field_instances() {
   t('Coach Ref');
   t('Goal');
   t('Motivation');
+  t('Percent BodyFat');
   t('goal complete');
   t('goal date');
 

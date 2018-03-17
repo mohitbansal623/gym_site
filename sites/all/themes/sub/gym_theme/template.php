@@ -27,13 +27,14 @@ function gym_theme_preprocess_page(&$vars, $hook) {
   }
 
   $alias = drupal_get_path_alias();
-  $pattern = 'client-dashboard/*';
-  if (drupal_match_path($path, $pattern) || $alias == 'days-on-plan') {
+  $pattern = 'dashboard/*';
+  if (drupal_match_path($path, $pattern)) {
     drupal_add_css($theme_path . '/css/dashboard.css');
   }
   switch ($alias) {
-    case 'admin-dashboard':
-
+    case 'days-on-plan-leaderboard':
+    case 'mass-lost-leaderboard':
+      drupal_add_css($theme_path . '/css/dashboard.css');
       break;
   }
 }

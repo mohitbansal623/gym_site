@@ -124,3 +124,8 @@ form div > .btn:hover {
 .breadcrumb a {
   color: #111;
 }
+
+/* line 70, ../sass/page_layout.scss */
+img {
+  max-width: 100%;
+}
