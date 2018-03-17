@@ -279,17 +279,15 @@ echo $mass_lost;
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '  <div class="user-info">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="rank-box"><div class="rank"></div></div>
+<div class="user-pic"><img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png" /></div>  
+<div class="user-info">
      <div class="name"> [field_first_name] &nbsp;[field_last_name]</div>
      <div class="user-name"> [name] </div>
+<div class="coach">Coach: <span>[php]</span></div>
    </div>
 
-   <div class="coach-info">
-     <div class="coach-title"> Coach: </div>
-     <div class="coach-name">[php]</div>
-   </div>
-
-   <div class="days-on-plan"><div class="total-on">[php_1]</div></div>
+   <div class="body-fat">[php_1]%</div>
 
   ';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
@@ -471,8 +469,8 @@ echo $coach_name[\'first_name\'] . " " . $coach_name[\'last_name\'];
   $handler->display->display_options['fields']['php_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['php_1']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php_1']['php_output'] = '<?php
-$days_on_plan = get_days_on_plan($row->uid);
-echo $days_on_plan;
+$mass_lost = get_recent_body_fat_percentage($row->uid);
+echo $mass_lost;
 ?>';
   $handler->display->display_options['fields']['php_1']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php_1']['php_click_sortable'] = '';
@@ -483,22 +481,23 @@ echo $days_on_plan;
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="top-3-client">
   <div class="client-pic">
+<img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png" />
     <div class="rank"></div>
   </div>
   <div class="client-desc">
     <div class="client-name">[field_first_name] [field_last_name]</div>
     <div class="client-username">[name]</div>
-    <div class="bodyfat-percent">[php_1]</div>
-    <div class="coach">[php]</div>
+    <div class="bodyfat-percent">[php_1]%</div>
+    <div class="coach">Coach: <span>[php]</span></div>
   </div>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['displays'] = array(
-    'page_1' => 'page_1',
+    'mass_lost_lp' => 'mass_lost_lp',
     'default' => 0,
-    'page' => 0,
-    'page_2' => 0,
+    'plan_days_lp' => 0,
+    'client_dashboard' => 0,
   );
   $export['days_on_plan'] = $view;
 
