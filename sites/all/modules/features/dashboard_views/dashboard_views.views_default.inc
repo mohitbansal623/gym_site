@@ -129,7 +129,7 @@ echo $days_on_plan;
   );
 
   /* Display: Days On Plan LP */
-  $handler = $view->new_display('page', 'Days On Plan LP', 'page');
+  $handler = $view->new_display('page', 'Days On Plan LP', 'plan_days_lp');
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
@@ -194,7 +194,7 @@ echo $days_on_plan;
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '  <div class="user-info">
-     <div class="name"> [field_first_name] &nbsp;[field_last_name]</div>
+     <div class="name"> [field_first_name] [field_last_name]</div>
      <div class="user-name"> [name] </div>
    </div>
 
@@ -214,7 +214,7 @@ echo $days_on_plan;
   $handler->display->display_options['path'] = 'days-on-plan-leaderboard';
 
   /* Display: Mass Lost LP */
-  $handler = $view->new_display('page', 'Mass Lost LP', 'page_1');
+  $handler = $view->new_display('page', 'Mass Lost LP', 'mass_lost_lp');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Mass Lost Leaderboard';
   $handler->display->display_options['defaults']['fields'] = FALSE;
@@ -296,9 +296,13 @@ echo $mass_lost;
   $handler->display->display_options['path'] = 'mass-lost-leaderboard';
 
   /* Display: Client Dashboard */
-  $handler = $view->new_display('page', 'Client Dashboard', 'page_2');
+  $handler = $view->new_display('page', 'Client Dashboard', 'client_dashboard');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Client Dashboard';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Field: First Name */
   $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
@@ -332,27 +336,12 @@ echo $coach_name[\'first_name\'] . " " . $coach_name[\'last_name\'];
 ?>';
   $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '  <div class="user-info">
-     <div class="name"> [field_first_name] &nbsp;[field_last_name]</div>
-   </div>
-
-   <div class="coach-info">
-     <div class="coach-title"> Coach: </div>
-     <div class="coach-name">[php]</div>
-   </div>
-
-  ';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Global: PHP */
   $handler->display->display_options['fields']['php_1']['id'] = 'php_1';
   $handler->display->display_options['fields']['php_1']['table'] = 'views';
   $handler->display->display_options['fields']['php_1']['field'] = 'php';
   $handler->display->display_options['fields']['php_1']['label'] = 'Total Days On Plan';
+  $handler->display->display_options['fields']['php_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['php_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['php_1']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php_1']['php_output'] = '<?php
@@ -367,6 +356,7 @@ echo $days_on_plan;
   $handler->display->display_options['fields']['php_2']['table'] = 'views';
   $handler->display->display_options['fields']['php_2']['field'] = 'php';
   $handler->display->display_options['fields']['php_2']['label'] = 'Total Days Off Plan';
+  $handler->display->display_options['fields']['php_2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['php_2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['php_2']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php_2']['php_output'] = '<?php
@@ -381,6 +371,7 @@ echo get_days_on_plan($row->uid, $plan_value);
   $handler->display->display_options['fields']['php_3']['table'] = 'views';
   $handler->display->display_options['fields']['php_3']['field'] = 'php';
   $handler->display->display_options['fields']['php_3']['label'] = 'Average Steps of Days';
+  $handler->display->display_options['fields']['php_3']['exclude'] = TRUE;
   $handler->display->display_options['fields']['php_3']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['php_3']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php_3']['php_output'] = '<?php
@@ -388,6 +379,26 @@ echo get_avg_daily_activity_level($row->uid);
 ?>';
   $handler->display->display_options['fields']['php_3']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php_3']['php_click_sortable'] = '';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="client-info-bar">
+  <div class="client-pic"><img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png" /></div>
+  <div class="client-info">
+    <div class="client-name">[field_first_name] [field_last_name]</div>
+    <div class="coach">Coach: <span>[php]</span></div>
+  </div>
+</div>
+<div class="client-activity">
+  <div class="activity-days">
+    <div class="on-plan plan-days"><div class="value">[php_1]</div><div class="activity-label">Total Days On Plan</div></div>
+    <div class="off-plan plan-days"><div class="value">[php_2]</div><div class="activity-label">Total Days Off Plan</div></div>
+  </div>
+  <div class="activity-steps"><div class="value">[php_3]</div><div class="activity-label">Average Steps Of Days</div></div>
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: User: Uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
@@ -402,7 +413,7 @@ echo get_avg_daily_activity_level($row->uid);
   $handler->display->display_options['path'] = 'dashboard/%';
 
   /* Display: Mass Lost Top3 */
-  $handler = $view->new_display('attachment', 'Mass Lost Top3', 'attachment_1');
+  $handler = $view->new_display('attachment', 'Mass Lost Top3', 'mass_lost_attach');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = '<none>';
   $handler->display->display_options['pager']['type'] = 'some';
