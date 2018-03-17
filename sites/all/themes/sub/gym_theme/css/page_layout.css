@@ -69,10 +69,10 @@ a {
 /* line 17, ../sass/page_layout.scss */
 .page-header {
   font-family: Franchise-Bold;
-  text-transform: uppercase;
   color: #111;
   margin-bottom: 30px;
   margin-top: 40px;
+  letter-spacing: 2px;
 }
 
 /* line 26, ../sass/page_layout.scss */

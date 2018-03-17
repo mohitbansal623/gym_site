@@ -30,18 +30,17 @@ a {
   /* line 242, ../sass/dashboard.scss */
   .page-days-on-plan-leaderboard .page-header, .page-mass-lost-leaderboard .page-header, .page-dashboard .page-header {
     font-size: 2.5rem;
-    letter-spacing: 2px;
   }
 }
 
-/* line 257, ../sass/dashboard.scss */
-.page-days-on-plan-leaderboard .view-display-id-page .view-content {
+/* line 256, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-/* line 261, ../sass/dashboard.scss */
-.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row {
+/* line 260, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row {
   vertical-align: top;
   font-size: 1.3rem;
   width: 350px;
@@ -49,70 +48,70 @@ a {
   padding: 0 5px;
 }
 @media (max-width: 640px) {
-  /* line 261, ../sass/dashboard.scss */
-  .page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row {
+  /* line 260, ../sass/dashboard.scss */
+  .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row {
     margin-bottom: 5px;
     padding: 0;
     font-size: 1.1rem;
   }
 }
 @media (max-width: 480px) {
-  /* line 261, ../sass/dashboard.scss */
-  .page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row {
+  /* line 260, ../sass/dashboard.scss */
+  .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row {
     width: 100%;
   }
 }
-/* line 275, ../sass/dashboard.scss */
-.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing {
+/* line 274, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing {
   background: #181818;
   padding: 15px 25px;
   box-shadow: 0px 1px 1px 0px #020202;
   line-height: 1.4;
 }
 @media (max-width: 480px) {
-  /* line 275, ../sass/dashboard.scss */
-  .page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing {
+  /* line 274, ../sass/dashboard.scss */
+  .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing {
     padding: 15px 10px;
   }
 }
-/* line 283, ../sass/dashboard.scss */
-.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .field-content {
+/* line 282, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .field-content {
   display: table;
   width: 100%;
 }
-/* line 286, ../sass/dashboard.scss */
-.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .field-content > div {
+/* line 285, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .field-content > div {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 291, ../sass/dashboard.scss */
-.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .user-info, .page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .coach-info {
+/* line 290, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .user-info, .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-info {
   padding-right: 5px;
 }
-/* line 294, ../sass/dashboard.scss */
-.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .coach-title {
+/* line 293, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-title {
   color: #fff;
 }
-/* line 297, ../sass/dashboard.scss */
-.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .coach-name {
+/* line 296, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-name {
   color: #b10029;
 }
-/* line 300, ../sass/dashboard.scss */
-.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .coach-photo {
+/* line 299, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-photo {
   float: left;
   width: 30px;
   margin-right: 5px;
 }
-/* line 304, ../sass/dashboard.scss */
-.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .coach-photo img {
+/* line 303, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-photo img {
   border-radius: 50%;
 }
-/* line 308, ../sass/dashboard.scss */
-.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .days-on-plan {
+/* line 307, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .days-on-plan {
   width: 40px;
 }
-/* line 310, ../sass/dashboard.scss */
-.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .days-on-plan .total-on {
+/* line 309, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .days-on-plan .total-on {
   display: inline-block;
   background: #ed1b24;
   color: #fff;
@@ -121,15 +120,104 @@ a {
   width: 40px;
   padding: 5px 0;
 }
-/* line 320, ../sass/dashboard.scss */
-.page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .name {
+/* line 319, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .name {
   color: #fff;
   font-size: 1.8rem;
   font-weight: bold;
 }
 @media (max-width: 480px) {
-  /* line 320, ../sass/dashboard.scss */
-  .page-days-on-plan-leaderboard .view-display-id-page .view-content .views-row .views-field-nothing .name {
+  /* line 319, ../sass/dashboard.scss */
+  .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .name {
     font-size: 1.5rem;
   }
+}
+
+/* line 333, ../sass/dashboard.scss */
+.page-dashboard {
+  background: #181818;
+}
+/* line 337, ../sass/dashboard.scss */
+.page-dashboard .view-display-id-client_dashboard .view-content .views-row {
+  max-width: 600px;
+  margin: auto;
+}
+/* line 340, ../sass/dashboard.scss */
+.page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar {
+  display: table;
+}
+/* line 342, ../sass/dashboard.scss */
+.page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 346, ../sass/dashboard.scss */
+.page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-info {
+  line-height: 1.4;
+}
+/* line 348, ../sass/dashboard.scss */
+.page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-info .client-name {
+  color: #b10029;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+/* line 354, ../sass/dashboard.scss */
+.page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-pic {
+  width: 70px;
+  padding-right: 20px;
+}
+/* line 357, ../sass/dashboard.scss */
+.page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-pic img {
+  border-radius: 50%;
+}
+/* line 362, ../sass/dashboard.scss */
+.page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .coach span {
+  color: #fff;
+}
+/* line 367, ../sass/dashboard.scss */
+.page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity {
+  padding-top: 25px;
+}
+/* line 369, ../sass/dashboard.scss */
+.page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps {
+  color: #fff;
+  font-weight: bold;
+  background: #000;
+  text-align: center;
+  padding: 25px 10px;
+  box-shadow: 5px 10px 6px -6px #111;
+}
+/* line 376, ../sass/dashboard.scss */
+.page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days .value, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps .value {
+  font-size: 4rem;
+}
+@media (max-width: 480px) {
+  /* line 376, ../sass/dashboard.scss */
+  .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days .value, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps .value {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 480px) {
+  /* line 382, ../sass/dashboard.scss */
+  .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days .activity-label, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps .activity-label {
+    font-size: 1.3rem;
+  }
+}
+/* line 388, ../sass/dashboard.scss */
+.page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days {
+  display: flex;
+}
+/* line 390, ../sass/dashboard.scss */
+.page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days .plan-days {
+  width: calc(50% - 10px);
+}
+/* line 393, ../sass/dashboard.scss */
+.page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days .on-plan {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+/* line 397, ../sass/dashboard.scss */
+.page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days .off-plan {
+  margin-left: 10px;
+  margin-bottom: 20px;
 }
