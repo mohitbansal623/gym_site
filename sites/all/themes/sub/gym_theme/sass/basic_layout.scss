@@ -295,13 +295,8 @@ header .notification {
   border: 0;
 }
 
-.page-user-login {
-  .tabs--primary.nav-tabs {
-    display: none;
-  }
-}
 
-.page-node-add-check-in, .page-node-add-goals, .page-register, .page-user-login, .page-node-add-daily-log {
+.page-node-add-check-in, .page-node-add-goals, .page-register, .page-user-login, .page-node-add-daily-log, .page-user-register, .page-user {
   .page-container, .breadcrumb {
     background: #111111;
   }
