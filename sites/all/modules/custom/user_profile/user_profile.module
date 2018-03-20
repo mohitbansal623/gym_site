@@ -5,7 +5,7 @@ function user_profile_menu() {
     'title' => 'User Register ',
     'description' => 'Signup Form',
     'page callback' => 'register_form',
-    'access callback' => TRUE,
+    'access callback' => FALSE,
   );
 
   return $menu;
