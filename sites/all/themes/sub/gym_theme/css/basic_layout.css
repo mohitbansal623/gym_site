@@ -351,32 +351,37 @@ header .notification {
 }
 
 /* line 300, ../sass/basic_layout.scss */
-.page-node-add-check-in .page-container, .page-node-add-check-in .breadcrumb, .page-node-add-goals .page-container, .page-node-add-goals .breadcrumb, .page-register .page-container, .page-register .breadcrumb, .page-user-login .page-container, .page-user-login .breadcrumb, .page-node-add-daily-log .page-container, .page-node-add-daily-log .breadcrumb, .page-user-register .page-container, .page-user-register .breadcrumb, .page-user .page-container, .page-user .breadcrumb {
+body .page-container, body .breadcrumb, .page-node-add-check-in .page-container, .page-node-add-check-in .breadcrumb, .page-node-add-goals .page-container, .page-node-add-goals .breadcrumb, .page-register .page-container, .page-register .breadcrumb, .page-user-login .page-container, .page-user-login .breadcrumb, .page-node-add-daily-log .page-container, .page-node-add-daily-log .breadcrumb, .page-user-register .page-container, .page-user-register .breadcrumb, .page-user .page-container, .page-user .breadcrumb {
   background: #111111;
 }
 /* line 304, ../sass/basic_layout.scss */
-.page-node-add-check-in .page-header, .page-node-add-goals .page-header, .page-register .page-header, .page-user-login .page-header, .page-node-add-daily-log .page-header, .page-user-register .page-header, .page-user .page-header {
+body .page-header, .page-node-add-check-in .page-header, .page-node-add-goals .page-header, .page-register .page-header, .page-user-login .page-header, .page-node-add-daily-log .page-header, .page-user-register .page-header, .page-user .page-header {
   color: white;
 }
 /* line 308, ../sass/basic_layout.scss */
-.page-node-add-check-in .panel, .page-node-add-goals .panel, .page-register .panel, .page-user-login .panel, .page-node-add-daily-log .panel, .page-user-register .panel, .page-user .panel {
+body .panel, .page-node-add-check-in .panel, .page-node-add-goals .panel, .page-register .panel, .page-user-login .panel, .page-node-add-daily-log .panel, .page-user-register .panel, .page-user .panel {
   border: none;
 }
 /* line 313, ../sass/basic_layout.scss */
-.page-node-add-check-in .breadcrumb a, .page-node-add-check-in .breadcrumb li, .page-node-add-goals .breadcrumb a, .page-node-add-goals .breadcrumb li, .page-register .breadcrumb a, .page-register .breadcrumb li, .page-user-login .breadcrumb a, .page-user-login .breadcrumb li, .page-node-add-daily-log .breadcrumb a, .page-node-add-daily-log .breadcrumb li, .page-user-register .breadcrumb a, .page-user-register .breadcrumb li, .page-user .breadcrumb a, .page-user .breadcrumb li {
+body .breadcrumb a, body .breadcrumb li, .page-node-add-check-in .breadcrumb a, .page-node-add-check-in .breadcrumb li, .page-node-add-goals .breadcrumb a, .page-node-add-goals .breadcrumb li, .page-register .breadcrumb a, .page-register .breadcrumb li, .page-user-login .breadcrumb a, .page-user-login .breadcrumb li, .page-node-add-daily-log .breadcrumb a, .page-node-add-daily-log .breadcrumb li, .page-user-register .breadcrumb a, .page-user-register .breadcrumb li, .page-user .breadcrumb a, .page-user .breadcrumb li {
   color: white;
   font-weight: bold;
 }
 /* line 320, ../sass/basic_layout.scss */
-.page-node-add-check-in .fieldset-legend, .page-node-add-check-in .panel-heading, .page-node-add-goals .fieldset-legend, .page-node-add-goals .panel-heading, .page-register .fieldset-legend, .page-register .panel-heading, .page-user-login .fieldset-legend, .page-user-login .panel-heading, .page-node-add-daily-log .fieldset-legend, .page-node-add-daily-log .panel-heading, .page-user-register .fieldset-legend, .page-user-register .panel-heading, .page-user .fieldset-legend, .page-user .panel-heading {
+body .fieldset-legend, body .panel-heading, .page-node-add-check-in .fieldset-legend, .page-node-add-check-in .panel-heading, .page-node-add-goals .fieldset-legend, .page-node-add-goals .panel-heading, .page-register .fieldset-legend, .page-register .panel-heading, .page-user-login .fieldset-legend, .page-user-login .panel-heading, .page-node-add-daily-log .fieldset-legend, .page-node-add-daily-log .panel-heading, .page-user-register .fieldset-legend, .page-user-register .panel-heading, .page-user .fieldset-legend, .page-user .panel-heading {
   background: #ed1b24;
   color: white !important;
   font-weight: bold;
   text-transform: uppercase;
 }
 /* line 327, ../sass/basic_layout.scss */
-.page-node-add-check-in label.control-label, .page-node-add-goals label.control-label, .page-register label.control-label, .page-user-login label.control-label, .page-node-add-daily-log label.control-label, .page-user-register label.control-label, .page-user label.control-label {
+body label.control-label, body .field-label, .page-node-add-check-in label.control-label, .page-node-add-check-in .field-label, .page-node-add-goals label.control-label, .page-node-add-goals .field-label, .page-register label.control-label, .page-register .field-label, .page-user-login label.control-label, .page-user-login .field-label, .page-node-add-daily-log label.control-label, .page-node-add-daily-log .field-label, .page-user-register label.control-label, .page-user-register .field-label, .page-user label.control-label, .page-user .field-label {
   color: #979797;
   font-size: 18px;
   font-weight: bold;
+}
+/* line 333, ../sass/basic_layout.scss */
+body .field-item, .page-node-add-check-in .field-item, .page-node-add-goals .field-item, .page-register .field-item, .page-user-login .field-item, .page-node-add-daily-log .field-item, .page-user-register .field-item, .page-user .field-item {
+  color: white;
+  font-size: 16px;
 }
