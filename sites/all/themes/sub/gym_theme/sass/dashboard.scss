@@ -552,6 +552,10 @@
       display: inline-block;
       width: 50%;
       padding-bottom: 20px;
+
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
     }
 
     .views-field-field-percent-bodyfat, .views-field-field-avg-daily-activity-level {
@@ -559,6 +563,10 @@
       vertical-align: top;
       width: 45%;
       padding-bottom: 20px;
+
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
     }
 
     .field-content {
