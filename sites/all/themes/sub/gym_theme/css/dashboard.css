@@ -389,14 +389,26 @@ a {
   width: 50%;
   padding-bottom: 20px;
 }
-/* line 557, ../sass/dashboard.scss */
+@media screen and (max-width: 480px) {
+  /* line 551, ../sass/dashboard.scss */
+  .page-dashboard-check-in .view-client-check-in-dashboard .views-field-field-bodyweight, .page-dashboard-check-in .view-client-check-in-dashboard .views-field-php {
+    width: 100%;
+  }
+}
+/* line 561, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .views-field-field-percent-bodyfat, .page-dashboard-check-in .view-client-check-in-dashboard .views-field-field-avg-daily-activity-level {
   display: inline-block;
   vertical-align: top;
   width: 45%;
   padding-bottom: 20px;
 }
-/* line 564, ../sass/dashboard.scss */
+@media screen and (max-width: 480px) {
+  /* line 561, ../sass/dashboard.scss */
+  .page-dashboard-check-in .view-client-check-in-dashboard .views-field-field-percent-bodyfat, .page-dashboard-check-in .view-client-check-in-dashboard .views-field-field-avg-daily-activity-level {
+    width: 100%;
+  }
+}
+/* line 572, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .field-content {
   color: #b10029;
   font-size: 16px;
