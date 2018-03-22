@@ -172,25 +172,107 @@ a {
 }
 
 /* line 130, ../sass/basic_layout.scss */
-body.page-admin-dashboard .view-admin-dashboard table, body.page-admin-dashboard .view-id-client_daily_log table, body.page-client-daily-log- .view-admin-dashboard table, body.page-client-daily-log- .view-id-client_daily_log table {
-  border-spacing: 0;
+body.page-admin-dashboard .view-admin-dashboard table, body.page-admin-dashboard .view-id-client_daily_log table, body.page-admin-dashboard .view-display-id-page table, body.page-client-daily-log- .view-admin-dashboard table, body.page-client-daily-log- .view-id-client_daily_log table, body.page-client-daily-log- .view-display-id-page table, body.page-edit-goal .view-admin-dashboard table, body.page-edit-goal .view-id-client_daily_log table, body.page-edit-goal .view-display-id-page table {
+  background: white;
+  border-radius: 3px;
   border-collapse: collapse;
-}
-/* line 134, ../sass/basic_layout.scss */
-body.page-admin-dashboard .view-admin-dashboard table thead tr, body.page-admin-dashboard .view-id-client_daily_log table thead tr, body.page-client-daily-log- .view-admin-dashboard table thead tr, body.page-client-daily-log- .view-id-client_daily_log table thead tr {
-  background: #111;
-  color: #fff;
+  margin: auto;
+  padding: 5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
 }
 /* line 140, ../sass/basic_layout.scss */
-body.page-admin-dashboard .view-admin-dashboard table, body.page-admin-dashboard .view-admin-dashboard td, body.page-admin-dashboard .view-admin-dashboard th, body.page-admin-dashboard .view-id-client_daily_log table, body.page-admin-dashboard .view-id-client_daily_log td, body.page-admin-dashboard .view-id-client_daily_log th, body.page-client-daily-log- .view-admin-dashboard table, body.page-client-daily-log- .view-admin-dashboard td, body.page-client-daily-log- .view-admin-dashboard th, body.page-client-daily-log- .view-id-client_daily_log table, body.page-client-daily-log- .view-id-client_daily_log td, body.page-client-daily-log- .view-id-client_daily_log th {
-  border: 1px solid #ddd;
+body.page-admin-dashboard .view-admin-dashboard table thead th, body.page-admin-dashboard .view-id-client_daily_log table thead th, body.page-admin-dashboard .view-display-id-page table thead th, body.page-client-daily-log- .view-admin-dashboard table thead th, body.page-client-daily-log- .view-id-client_daily_log table thead th, body.page-client-daily-log- .view-display-id-page table thead th, body.page-edit-goal .view-admin-dashboard table thead th, body.page-edit-goal .view-id-client_daily_log table thead th, body.page-edit-goal .view-display-id-page table thead th {
+  color: #D5DDE5;
+  background: #1b1e24;
+  border-bottom: 4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size: 1.7rem;
+  font-weight: 100;
+  padding: 10px;
+  text-align: left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align: top;
 }
-/* line 143, ../sass/basic_layout.scss */
-body.page-admin-dashboard .view-admin-dashboard th, body.page-admin-dashboard .view-id-client_daily_log th, body.page-client-daily-log- .view-admin-dashboard th, body.page-client-daily-log- .view-id-client_daily_log th {
+/* line 153, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard table thead th:first-child, body.page-admin-dashboard .view-id-client_daily_log table thead th:first-child, body.page-admin-dashboard .view-display-id-page table thead th:first-child, body.page-client-daily-log- .view-admin-dashboard table thead th:first-child, body.page-client-daily-log- .view-id-client_daily_log table thead th:first-child, body.page-client-daily-log- .view-display-id-page table thead th:first-child, body.page-edit-goal .view-admin-dashboard table thead th:first-child, body.page-edit-goal .view-id-client_daily_log table thead th:first-child, body.page-edit-goal .view-display-id-page table thead th:first-child {
+  border-top-left-radius: 3px;
+}
+/* line 157, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard table thead th:last-child, body.page-admin-dashboard .view-id-client_daily_log table thead th:last-child, body.page-admin-dashboard .view-display-id-page table thead th:last-child, body.page-client-daily-log- .view-admin-dashboard table thead th:last-child, body.page-client-daily-log- .view-id-client_daily_log table thead th:last-child, body.page-client-daily-log- .view-display-id-page table thead th:last-child, body.page-edit-goal .view-admin-dashboard table thead th:last-child, body.page-edit-goal .view-id-client_daily_log table thead th:last-child, body.page-edit-goal .view-display-id-page table thead th:last-child {
+  border-top-right-radius: 3px;
+  border-right: none;
+}
+/* line 163, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr, body.page-admin-dashboard .view-id-client_daily_log tr, body.page-admin-dashboard .view-display-id-page tr, body.page-client-daily-log- .view-admin-dashboard tr, body.page-client-daily-log- .view-id-client_daily_log tr, body.page-client-daily-log- .view-display-id-page tr, body.page-edit-goal .view-admin-dashboard tr, body.page-edit-goal .view-id-client_daily_log tr, body.page-edit-goal .view-display-id-page tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color: #666B85;
+  font-size: 16px;
+  font-weight: normal;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+/* line 172, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:hover td, body.page-admin-dashboard .view-id-client_daily_log tr:hover td, body.page-admin-dashboard .view-display-id-page tr:hover td, body.page-client-daily-log- .view-admin-dashboard tr:hover td, body.page-client-daily-log- .view-id-client_daily_log tr:hover td, body.page-client-daily-log- .view-display-id-page tr:hover td, body.page-edit-goal .view-admin-dashboard tr:hover td, body.page-edit-goal .view-id-client_daily_log tr:hover td, body.page-edit-goal .view-display-id-page tr:hover td {
+  background: #ed1b24;
+  color: #FFFFFF;
+  border-top: 1px solid #22262e;
+}
+/* line 176, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:hover td a, body.page-admin-dashboard .view-id-client_daily_log tr:hover td a, body.page-admin-dashboard .view-display-id-page tr:hover td a, body.page-client-daily-log- .view-admin-dashboard tr:hover td a, body.page-client-daily-log- .view-id-client_daily_log tr:hover td a, body.page-client-daily-log- .view-display-id-page tr:hover td a, body.page-edit-goal .view-admin-dashboard tr:hover td a, body.page-edit-goal .view-id-client_daily_log tr:hover td a, body.page-edit-goal .view-display-id-page tr:hover td a {
+  color: #fff;
+  text-decoration: underline;
+}
+/* line 182, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:first-child, body.page-admin-dashboard .view-id-client_daily_log tr:first-child, body.page-admin-dashboard .view-display-id-page tr:first-child, body.page-client-daily-log- .view-admin-dashboard tr:first-child, body.page-client-daily-log- .view-id-client_daily_log tr:first-child, body.page-client-daily-log- .view-display-id-page tr:first-child, body.page-edit-goal .view-admin-dashboard tr:first-child, body.page-edit-goal .view-id-client_daily_log tr:first-child, body.page-edit-goal .view-display-id-page tr:first-child {
+  border-top: none;
+}
+/* line 186, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:last-child, body.page-admin-dashboard .view-id-client_daily_log tr:last-child, body.page-admin-dashboard .view-display-id-page tr:last-child, body.page-client-daily-log- .view-admin-dashboard tr:last-child, body.page-client-daily-log- .view-id-client_daily_log tr:last-child, body.page-client-daily-log- .view-display-id-page tr:last-child, body.page-edit-goal .view-admin-dashboard tr:last-child, body.page-edit-goal .view-id-client_daily_log tr:last-child, body.page-edit-goal .view-display-id-page tr:last-child {
+  border-bottom: none;
+}
+/* line 190, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:nth-child(odd) td, body.page-admin-dashboard .view-id-client_daily_log tr:nth-child(odd) td, body.page-admin-dashboard .view-display-id-page tr:nth-child(odd) td, body.page-client-daily-log- .view-admin-dashboard tr:nth-child(odd) td, body.page-client-daily-log- .view-id-client_daily_log tr:nth-child(odd) td, body.page-client-daily-log- .view-display-id-page tr:nth-child(odd) td, body.page-edit-goal .view-admin-dashboard tr:nth-child(odd) td, body.page-edit-goal .view-id-client_daily_log tr:nth-child(odd) td, body.page-edit-goal .view-display-id-page tr:nth-child(odd) td {
+  background: #EBEBEB;
+}
+/* line 194, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:nth-child(odd):hover td, body.page-admin-dashboard .view-id-client_daily_log tr:nth-child(odd):hover td, body.page-admin-dashboard .view-display-id-page tr:nth-child(odd):hover td, body.page-client-daily-log- .view-admin-dashboard tr:nth-child(odd):hover td, body.page-client-daily-log- .view-id-client_daily_log tr:nth-child(odd):hover td, body.page-client-daily-log- .view-display-id-page tr:nth-child(odd):hover td, body.page-edit-goal .view-admin-dashboard tr:nth-child(odd):hover td, body.page-edit-goal .view-id-client_daily_log tr:nth-child(odd):hover td, body.page-edit-goal .view-display-id-page tr:nth-child(odd):hover td {
+  background: #ed1b24;
+}
+/* line 196, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:nth-child(odd):hover td a, body.page-admin-dashboard .view-id-client_daily_log tr:nth-child(odd):hover td a, body.page-admin-dashboard .view-display-id-page tr:nth-child(odd):hover td a, body.page-client-daily-log- .view-admin-dashboard tr:nth-child(odd):hover td a, body.page-client-daily-log- .view-id-client_daily_log tr:nth-child(odd):hover td a, body.page-client-daily-log- .view-display-id-page tr:nth-child(odd):hover td a, body.page-edit-goal .view-admin-dashboard tr:nth-child(odd):hover td a, body.page-edit-goal .view-id-client_daily_log tr:nth-child(odd):hover td a, body.page-edit-goal .view-display-id-page tr:nth-child(odd):hover td a {
+  color: #fff;
+  text-decoration: underline;
+}
+/* line 202, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:last-child td:first-child, body.page-admin-dashboard .view-id-client_daily_log tr:last-child td:first-child, body.page-admin-dashboard .view-display-id-page tr:last-child td:first-child, body.page-client-daily-log- .view-admin-dashboard tr:last-child td:first-child, body.page-client-daily-log- .view-id-client_daily_log tr:last-child td:first-child, body.page-client-daily-log- .view-display-id-page tr:last-child td:first-child, body.page-edit-goal .view-admin-dashboard tr:last-child td:first-child, body.page-edit-goal .view-id-client_daily_log tr:last-child td:first-child, body.page-edit-goal .view-display-id-page tr:last-child td:first-child {
+  border-bottom-left-radius: 3px;
+}
+/* line 206, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:last-child td:last-child, body.page-admin-dashboard .view-id-client_daily_log tr:last-child td:last-child, body.page-admin-dashboard .view-display-id-page tr:last-child td:last-child, body.page-client-daily-log- .view-admin-dashboard tr:last-child td:last-child, body.page-client-daily-log- .view-id-client_daily_log tr:last-child td:last-child, body.page-client-daily-log- .view-display-id-page tr:last-child td:last-child, body.page-edit-goal .view-admin-dashboard tr:last-child td:last-child, body.page-edit-goal .view-id-client_daily_log tr:last-child td:last-child, body.page-edit-goal .view-display-id-page tr:last-child td:last-child {
+  border-bottom-right-radius: 3px;
+}
+/* line 210, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard td, body.page-admin-dashboard .view-id-client_daily_log td, body.page-admin-dashboard .view-display-id-page td, body.page-client-daily-log- .view-admin-dashboard td, body.page-client-daily-log- .view-id-client_daily_log td, body.page-client-daily-log- .view-display-id-page td, body.page-edit-goal .view-admin-dashboard td, body.page-edit-goal .view-id-client_daily_log td, body.page-edit-goal .view-display-id-page td {
+  background: #FFFFFF;
+  padding: 10px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 300;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+/* line 220, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard td:last-child, body.page-admin-dashboard .view-id-client_daily_log td:last-child, body.page-admin-dashboard .view-display-id-page td:last-child, body.page-client-daily-log- .view-admin-dashboard td:last-child, body.page-client-daily-log- .view-id-client_daily_log td:last-child, body.page-client-daily-log- .view-display-id-page td:last-child, body.page-edit-goal .view-admin-dashboard td:last-child, body.page-edit-goal .view-id-client_daily_log td:last-child, body.page-edit-goal .view-display-id-page td:last-child {
+  border-right: 0px;
+}
+/* line 226, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard th, body.page-admin-dashboard .view-id-client_daily_log th, body.page-admin-dashboard .view-display-id-page th, body.page-client-daily-log- .view-admin-dashboard th, body.page-client-daily-log- .view-id-client_daily_log th, body.page-client-daily-log- .view-display-id-page th, body.page-edit-goal .view-admin-dashboard th, body.page-edit-goal .view-id-client_daily_log th, body.page-edit-goal .view-display-id-page th {
   vertical-align: top;
 }
 
-/* line 151, ../sass/basic_layout.scss */
+/* line 234, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default {
   padding-bottom: 20px;
   border: 0;
@@ -199,57 +281,57 @@ body.page-coach-dashboard .coach-accordion .panel.panel-default {
   vertical-align: top;
   margin: 0;
 }
-/* line 161, ../sass/basic_layout.scss */
+/* line 244, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default p {
   line-height: 1.2;
 }
-/* line 165, ../sass/basic_layout.scss */
+/* line 248, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+1) .panel-heading {
   background: #47D7B3;
 }
-/* line 168, ../sass/basic_layout.scss */
+/* line 251, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+1) .panel-collapse {
   border: 2px dashed #47D7B3;
 }
-/* line 173, ../sass/basic_layout.scss */
+/* line 256, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+2) .panel-heading {
   background: #A26CC4;
 }
-/* line 176, ../sass/basic_layout.scss */
+/* line 259, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+2) .panel-collapse {
   border: 2px dashed #A26CC4;
 }
-/* line 181, ../sass/basic_layout.scss */
+/* line 264, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+3) .panel-heading {
   background: #E87352;
 }
-/* line 184, ../sass/basic_layout.scss */
+/* line 267, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+3) .panel-collapse {
   border: 2px dashed #E87352;
 }
-/* line 189, ../sass/basic_layout.scss */
+/* line 272, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+4) .panel-heading {
   background: #377DE2;
 }
-/* line 192, ../sass/basic_layout.scss */
+/* line 275, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+4) .panel-collapse {
   border: 2px dashed #377DE2;
 }
-/* line 197, ../sass/basic_layout.scss */
+/* line 280, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+5) .panel-heading {
   background: #00A638;
 }
-/* line 200, ../sass/basic_layout.scss */
+/* line 283, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+5) .panel-collapse {
   border: 2px dashed #00A638;
 }
-/* line 205, ../sass/basic_layout.scss */
+/* line 288, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel-heading {
   padding: 0;
   border-radius: 0;
   text-transform: uppercase;
 }
-/* line 209, ../sass/basic_layout.scss */
+/* line 292, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel-heading a {
   color: #fff;
   text-decoration: none;
@@ -261,7 +343,7 @@ body.page-coach-dashboard .coach-accordion .panel-heading a {
   font-size: 1.9rem;
   font-weight: bold;
 }
-/* line 219, ../sass/basic_layout.scss */
+/* line 302, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel-heading a:after {
   content: "\f077";
   position: absolute;
@@ -270,68 +352,68 @@ body.page-coach-dashboard .coach-accordion .panel-heading a:after {
   font-family: FontAwesome;
   font-size: 14px;
 }
-/* line 227, ../sass/basic_layout.scss */
+/* line 310, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel-heading a.collapsed:after {
   content: "\f078";
 }
-/* line 232, ../sass/basic_layout.scss */
+/* line 315, ../sass/basic_layout.scss */
 body.page-coach-dashboard .coach-accordion .panel-heading .diet-adherence {
   padding: 10px 22px 10px 8px;
   color: white;
 }
 
 @media (max-width: 1080px) {
-  /* line 241, ../sass/basic_layout.scss */
+  /* line 324, ../sass/basic_layout.scss */
   .navbar-header {
     width: 100%;
     float: none;
     padding-bottom: 0px;
   }
 
-  /* line 246, ../sass/basic_layout.scss */
+  /* line 329, ../sass/basic_layout.scss */
   .navbar-toggle {
     display: block !important;
   }
 
-  /* line 249, ../sass/basic_layout.scss */
+  /* line 332, ../sass/basic_layout.scss */
   .navbar-collapse.collapse {
     display: none !important;
   }
-  /* line 251, ../sass/basic_layout.scss */
+  /* line 334, ../sass/basic_layout.scss */
   .navbar-collapse.collapse.in {
     max-height: calc(70vh - 60px);
     overflow-y: auto !important;
     display: block !important;
   }
-  /* line 256, ../sass/basic_layout.scss */
+  /* line 339, ../sass/basic_layout.scss */
   .navbar-collapse.collapse ul {
     float: none;
   }
-  /* line 258, ../sass/basic_layout.scss */
+  /* line 341, ../sass/basic_layout.scss */
   .navbar-collapse.collapse ul li {
     width: 100%;
     display: block;
   }
-  /* line 261, ../sass/basic_layout.scss */
+  /* line 344, ../sass/basic_layout.scss */
   .navbar-collapse.collapse ul li a {
     padding-top: 8px;
     padding-bottom: 8px;
     border-top: 1px solid #ccc;
   }
 }
-/* line 271, ../sass/basic_layout.scss */
+/* line 354, ../sass/basic_layout.scss */
 .views-exposed-form {
   margin-bottom: 30px;
 }
 
-/* line 275, ../sass/basic_layout.scss */
+/* line 358, ../sass/basic_layout.scss */
 header .notification {
   float: right;
   padding-top: 10px;
   cursor: pointer;
 }
 
-/* line 281, ../sass/basic_layout.scss */
+/* line 364, ../sass/basic_layout.scss */
 .notification-box {
   display: none;
   position: fixed;
@@ -345,43 +427,55 @@ header .notification {
   overflow-x: auto;
 }
 
-/* line 294, ../sass/basic_layout.scss */
+/* line 377, ../sass/basic_layout.scss */
 #navbar-collapse {
   border: 0;
 }
 
-/* line 299, ../sass/basic_layout.scss */
+/* line 382, ../sass/basic_layout.scss */
 .page-user-login .tabs--primary.nav-tabs {
   display: none;
 }
 
-/* line 305, ../sass/basic_layout.scss */
-.page-node-add-check-in .page-container, .page-node-add-check-in .breadcrumb, .page-node-add-goals .page-container, .page-node-add-goals .breadcrumb, .page-register .page-container, .page-register .breadcrumb, .page-user-login .page-container, .page-user-login .breadcrumb, .page-node-add-daily-log .page-container, .page-node-add-daily-log .breadcrumb {
-  background: #111111;
-}
-/* line 309, ../sass/basic_layout.scss */
-.page-node-add-check-in .page-header, .page-node-add-goals .page-header, .page-register .page-header, .page-user-login .page-header, .page-node-add-daily-log .page-header {
+/* line 389, ../sass/basic_layout.scss */
+.page-node-add-check-in .page-header, .page-node-add-goals .page-header, .page-register .page-header, .page-user-login .page-header, .page-node-add-daily-log .page-header, .page-node-add .page-header {
   color: white;
 }
-/* line 313, ../sass/basic_layout.scss */
-.page-node-add-check-in .panel, .page-node-add-goals .panel, .page-register .panel, .page-user-login .panel, .page-node-add-daily-log .panel {
+/* line 393, ../sass/basic_layout.scss */
+.page-node-add-check-in .panel, .page-node-add-goals .panel, .page-register .panel, .page-user-login .panel, .page-node-add-daily-log .panel, .page-node-add .panel {
   border: none;
 }
-/* line 318, ../sass/basic_layout.scss */
-.page-node-add-check-in .breadcrumb a, .page-node-add-check-in .breadcrumb li, .page-node-add-goals .breadcrumb a, .page-node-add-goals .breadcrumb li, .page-register .breadcrumb a, .page-register .breadcrumb li, .page-user-login .breadcrumb a, .page-user-login .breadcrumb li, .page-node-add-daily-log .breadcrumb a, .page-node-add-daily-log .breadcrumb li {
+/* line 398, ../sass/basic_layout.scss */
+.page-node-add-check-in .breadcrumb a, .page-node-add-check-in .breadcrumb li, .page-node-add-goals .breadcrumb a, .page-node-add-goals .breadcrumb li, .page-register .breadcrumb a, .page-register .breadcrumb li, .page-user-login .breadcrumb a, .page-user-login .breadcrumb li, .page-node-add-daily-log .breadcrumb a, .page-node-add-daily-log .breadcrumb li, .page-node-add .breadcrumb a, .page-node-add .breadcrumb li {
   color: white;
   font-weight: bold;
 }
-/* line 325, ../sass/basic_layout.scss */
-.page-node-add-check-in .fieldset-legend, .page-node-add-check-in .panel-heading, .page-node-add-goals .fieldset-legend, .page-node-add-goals .panel-heading, .page-register .fieldset-legend, .page-register .panel-heading, .page-user-login .fieldset-legend, .page-user-login .panel-heading, .page-node-add-daily-log .fieldset-legend, .page-node-add-daily-log .panel-heading {
+/* line 405, ../sass/basic_layout.scss */
+.page-node-add-check-in .fieldset-legend, .page-node-add-check-in .panel-heading, .page-node-add-goals .fieldset-legend, .page-node-add-goals .panel-heading, .page-register .fieldset-legend, .page-register .panel-heading, .page-user-login .fieldset-legend, .page-user-login .panel-heading, .page-node-add-daily-log .fieldset-legend, .page-node-add-daily-log .panel-heading, .page-node-add .fieldset-legend, .page-node-add .panel-heading {
   background: #ed1b24;
   color: white !important;
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 332, ../sass/basic_layout.scss */
-.page-node-add-check-in label.control-label, .page-node-add-goals label.control-label, .page-register label.control-label, .page-user-login label.control-label, .page-node-add-daily-log label.control-label {
+/* line 412, ../sass/basic_layout.scss */
+.page-node-add-check-in label.control-label, .page-node-add-goals label.control-label, .page-register label.control-label, .page-user-login label.control-label, .page-node-add-daily-log label.control-label, .page-node-add label.control-label {
   color: #979797;
   font-size: 18px;
   font-weight: bold;
+}
+
+/* line 419, ../sass/basic_layout.scss */
+body {
+  background: #181818;
+}
+/* line 421, ../sass/basic_layout.scss */
+body .breadcrumb {
+  background: transparent;
+  color: #ccc;
+  padding: 0;
+  margin-top: 0;
+}
+/* line 426, ../sass/basic_layout.scss */
+body .breadcrumb a {
+  color: #fff;
 }

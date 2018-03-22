@@ -69,63 +69,65 @@ a {
 /* line 17, ../sass/page_layout.scss */
 .page-header {
   font-family: Franchise-Bold;
-  color: #111;
-  margin-bottom: 30px;
+  color: #fff;
+  margin-bottom: 10px;
   margin-top: 40px;
   letter-spacing: 2px;
+  border: 0;
 }
 
-/* line 26, ../sass/page_layout.scss */
+/* line 27, ../sass/page_layout.scss */
 form .form-control {
   background: #fff;
   border-radius: 0px;
 }
-/* line 31, ../sass/page_layout.scss */
+/* line 32, ../sass/page_layout.scss */
 form .form-item .btn {
   background: #111;
   border-color: #111;
 }
-/* line 36, ../sass/page_layout.scss */
+/* line 37, ../sass/page_layout.scss */
 form label {
   font-weight: normal;
   font-family: "Gudea", sans-serif, Helvetica;
 }
-/* line 40, ../sass/page_layout.scss */
+/* line 41, ../sass/page_layout.scss */
 form div > .btn {
   margin-top: 30px;
-  background: #111;
+  margin-right: 10px;
+  background: #ed1b24;
   color: #fff;
   text-transform: uppercase;
   padding: 8px 30px;
-  border: 2px solid #111;
+  border: 2px solid #ed1b24;
   border-radius: 0;
   font-weight: bold;
 }
 /* line 49, ../sass/_mixin.scss */
 form div > .btn:hover {
   background: #fff;
-  color: #111;
-  border-color: #111;
+  color: #ed1b24;
+  border-color: #ed1b24;
 }
 
-/* line 49, ../sass/page_layout.scss */
+/* line 51, ../sass/page_layout.scss */
 .highlighted.jumbotron {
   padding: 68px 0 0;
   margin: 0;
   background: transparent;
 }
 
-/* line 56, ../sass/page_layout.scss */
+/* line 58, ../sass/page_layout.scss */
 #block-views-view-banner-block-1 .slick-slider {
   margin-bottom: 0px;
 }
 
-/* line 65, ../sass/page_layout.scss */
+/* line 67, ../sass/page_layout.scss */
 .breadcrumb a {
   color: #111;
 }
 
-/* line 70, ../sass/page_layout.scss */
+/* line 72, ../sass/page_layout.scss */
 img {
   max-width: 100%;
 }
