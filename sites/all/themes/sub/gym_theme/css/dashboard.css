@@ -76,41 +76,44 @@ a {
 }
 /* line 282, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .field-content {
-  display: table;
-  width: 100%;
+  display: flex;
+  align-items: center;
 }
-/* line 285, ../sass/dashboard.scss */
-.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .field-content > div {
-  display: table-cell;
-  vertical-align: middle;
-}
-/* line 290, ../sass/dashboard.scss */
+/* line 286, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .user-info, .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-info {
   padding-right: 5px;
 }
-/* line 293, ../sass/dashboard.scss */
+/* line 289, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-info {
+  width: calc(40% - 20px);
+}
+/* line 292, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .user-info {
+  width: calc(60% - 20px);
+}
+/* line 295, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-title {
   color: #fff;
 }
-/* line 296, ../sass/dashboard.scss */
+/* line 298, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-name {
   color: #b10029;
 }
-/* line 299, ../sass/dashboard.scss */
+/* line 301, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-photo {
   float: left;
   width: 30px;
   margin-right: 5px;
 }
-/* line 303, ../sass/dashboard.scss */
+/* line 305, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-photo img {
   border-radius: 50%;
 }
-/* line 307, ../sass/dashboard.scss */
+/* line 309, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .days-on-plan {
   width: 40px;
 }
-/* line 309, ../sass/dashboard.scss */
+/* line 311, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .days-on-plan .total-on {
   display: inline-block;
   background: #ed1b24;
@@ -120,65 +123,65 @@ a {
   width: 40px;
   padding: 5px 0;
 }
-/* line 319, ../sass/dashboard.scss */
+/* line 321, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .name {
   color: #fff;
   font-size: 1.8rem;
   font-weight: bold;
 }
 @media (max-width: 480px) {
-  /* line 319, ../sass/dashboard.scss */
+  /* line 321, ../sass/dashboard.scss */
   .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .name {
     font-size: 1.5rem;
   }
 }
 
-/* line 333, ../sass/dashboard.scss */
+/* line 335, ../sass/dashboard.scss */
 .page-dashboard {
   background: #181818;
 }
-/* line 337, ../sass/dashboard.scss */
+/* line 339, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row {
   max-width: 600px;
   margin: auto;
 }
-/* line 340, ../sass/dashboard.scss */
+/* line 342, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar {
   display: table;
 }
-/* line 342, ../sass/dashboard.scss */
+/* line 344, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar > div {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 346, ../sass/dashboard.scss */
+/* line 348, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-info {
   line-height: 1.4;
 }
-/* line 348, ../sass/dashboard.scss */
+/* line 350, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-info .client-name {
   color: #b10029;
   font-size: 1.8rem;
   font-weight: bold;
 }
-/* line 354, ../sass/dashboard.scss */
+/* line 356, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-pic {
   width: 70px;
   padding-right: 20px;
 }
-/* line 357, ../sass/dashboard.scss */
+/* line 359, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-pic img {
   border-radius: 50%;
 }
-/* line 362, ../sass/dashboard.scss */
+/* line 364, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .coach span {
   color: #fff;
 }
-/* line 367, ../sass/dashboard.scss */
+/* line 369, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity {
   padding-top: 25px;
 }
-/* line 369, ../sass/dashboard.scss */
+/* line 371, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps {
   color: #fff;
   font-weight: bold;
@@ -187,99 +190,116 @@ a {
   padding: 25px 10px;
   box-shadow: 5px 10px 6px -6px #111;
 }
-/* line 376, ../sass/dashboard.scss */
+/* line 378, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days .value, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps .value {
   font-size: 4rem;
 }
 @media (max-width: 480px) {
-  /* line 376, ../sass/dashboard.scss */
+  /* line 378, ../sass/dashboard.scss */
   .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days .value, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps .value {
     font-size: 3.5rem;
   }
 }
 @media (max-width: 480px) {
-  /* line 382, ../sass/dashboard.scss */
+  /* line 384, ../sass/dashboard.scss */
   .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days .activity-label, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps .activity-label {
     font-size: 1.3rem;
   }
 }
-/* line 388, ../sass/dashboard.scss */
+/* line 390, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days {
   display: flex;
 }
-/* line 390, ../sass/dashboard.scss */
+/* line 392, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days .plan-days {
   width: calc(50% - 10px);
 }
-/* line 393, ../sass/dashboard.scss */
+/* line 395, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days .on-plan {
   margin-right: 10px;
   margin-bottom: 20px;
 }
-/* line 397, ../sass/dashboard.scss */
+/* line 399, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days .off-plan {
   margin-left: 10px;
   margin-bottom: 20px;
 }
 
-/* line 409, ../sass/dashboard.scss */
+/* line 411, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp {
   line-height: 1.4;
 }
-/* line 412, ../sass/dashboard.scss */
+/* line 414, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content {
   display: flex;
   justify-content: center;
 }
-/* line 415, ../sass/dashboard.scss */
+/* line 417, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row {
   padding: 0 20px;
 }
-/* line 418, ../sass/dashboard.scss */
+/* line 420, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client {
   text-align: center;
 }
-/* line 420, ../sass/dashboard.scss */
+/* line 422, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-pic {
   width: 70px;
   margin: 0px auto 15px;
+  position: relative;
 }
-/* line 423, ../sass/dashboard.scss */
+/* line 426, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-pic img {
   border-radius: 50%;
 }
-/* line 428, ../sass/dashboard.scss */
+/* line 429, ../sass/dashboard.scss */
+.page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-pic:after {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  content: "0";
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -10px;
+}
+/* line 446, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-desc .coach {
   font-size: 1.3rem;
 }
-/* line 430, ../sass/dashboard.scss */
+/* line 448, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-desc .coach span {
   color: #fff;
 }
-/* line 434, ../sass/dashboard.scss */
+/* line 452, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-desc .client-name {
   font-size: 1.7rem;
   color: #b10029;
   font-weight: bold;
 }
-/* line 439, ../sass/dashboard.scss */
+/* line 457, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-desc .client-username {
   font-size: 1.3rem;
 }
-/* line 442, ../sass/dashboard.scss */
+/* line 460, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-desc .bodyfat-percent {
   font-size: 1.9rem;
   color: #fff;
   font-weight: bold;
 }
-/* line 453, ../sass/dashboard.scss */
+/* line 480, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-/* line 458, ../sass/dashboard.scss */
+/* line 485, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row {
   vertical-align: top;
   font-size: 1.3rem;
@@ -288,7 +308,7 @@ a {
   padding: 0 5px;
 }
 @media (max-width: 640px) {
-  /* line 458, ../sass/dashboard.scss */
+  /* line 485, ../sass/dashboard.scss */
   .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row {
     margin-bottom: 5px;
     padding: 0;
@@ -296,62 +316,62 @@ a {
   }
 }
 @media (max-width: 480px) {
-  /* line 458, ../sass/dashboard.scss */
+  /* line 485, ../sass/dashboard.scss */
   .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row {
     width: 100%;
   }
 }
-/* line 472, ../sass/dashboard.scss */
+/* line 499, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing {
   background: #181818;
   padding: 15px;
   box-shadow: 0px 1px 1px 0px #020202;
   line-height: 1.4;
 }
-/* line 477, ../sass/dashboard.scss */
+/* line 504, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .field-content {
   display: table;
   width: 100%;
 }
-/* line 480, ../sass/dashboard.scss */
+/* line 507, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .field-content > div {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 485, ../sass/dashboard.scss */
+/* line 512, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-pic {
   width: 70px;
 }
-/* line 487, ../sass/dashboard.scss */
+/* line 514, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-pic img {
   border-radius: 50%;
 }
-/* line 491, ../sass/dashboard.scss */
+/* line 518, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-info {
   padding: 0 10px 0 20px;
 }
-/* line 493, ../sass/dashboard.scss */
+/* line 520, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-info .name {
   font-size: 1.7rem;
   font-weight: bold;
   color: #b10029;
 }
-/* line 498, ../sass/dashboard.scss */
+/* line 525, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-info .user-name {
   padding-bottom: 10px;
 }
-/* line 502, ../sass/dashboard.scss */
+/* line 529, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-info .coach span {
   color: #fff;
 }
-/* line 507, ../sass/dashboard.scss */
+/* line 534, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .body-fat {
   font-size: 1.7rem;
   color: #fff;
   font-weight: bold;
   text-align: right;
 }
-/* line 513, ../sass/dashboard.scss */
+/* line 540, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .rank-box {
   padding-right: 10px;
   text-align: center;
@@ -359,7 +379,7 @@ a {
   font-weight: bold;
   width: 30px;
 }
-/* line 519, ../sass/dashboard.scss */
+/* line 546, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .rank-box .rank {
   width: 20px;
   height: 20px;
@@ -368,47 +388,50 @@ a {
   color: #000;
 }
 
-/* line 536, ../sass/dashboard.scss */
+/* line 563, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .view-header {
   padding-bottom: 30px;
 }
-/* line 540, ../sass/dashboard.scss */
+/* line 567, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .full-name {
   color: white;
   font-size: 20px;
   font-weight: bold;
 }
-/* line 546, ../sass/dashboard.scss */
+/* line 573, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .views-label {
   font-size: 16px;
   color: white;
 }
-/* line 551, ../sass/dashboard.scss */
-.page-dashboard-check-in .view-client-check-in-dashboard .views-field-field-bodyweight, .page-dashboard-check-in .view-client-check-in-dashboard .views-field-php {
-  display: inline-block;
-  width: 50%;
-  padding-bottom: 20px;
+/* line 580, ../sass/dashboard.scss */
+.page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content {
+  display: flex;
+  flex-wrap: wrap;
 }
-@media screen and (max-width: 480px) {
-  /* line 551, ../sass/dashboard.scss */
-  .page-dashboard-check-in .view-client-check-in-dashboard .views-field-field-bodyweight, .page-dashboard-check-in .view-client-check-in-dashboard .views-field-php {
-    width: 100%;
+/* line 583, ../sass/dashboard.scss */
+.page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content .views-field {
+  padding: 0 5px 20px;
+}
+@media screen and (min-width: 481px) {
+  /* line 583, ../sass/dashboard.scss */
+  .page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content .views-field {
+    width: 50%;
   }
 }
-/* line 561, ../sass/dashboard.scss */
-.page-dashboard-check-in .view-client-check-in-dashboard .views-field-field-percent-bodyfat, .page-dashboard-check-in .view-client-check-in-dashboard .views-field-field-avg-daily-activity-level {
-  display: inline-block;
-  vertical-align: top;
-  width: 45%;
-  padding-bottom: 20px;
+/* line 588, ../sass/dashboard.scss */
+.page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content .views-field .progress {
+  margin-bottom: 0;
+  height: 25px;
+  background: #333333;
+  border-radius: 0;
 }
-@media screen and (max-width: 480px) {
-  /* line 561, ../sass/dashboard.scss */
-  .page-dashboard-check-in .view-client-check-in-dashboard .views-field-field-percent-bodyfat, .page-dashboard-check-in .view-client-check-in-dashboard .views-field-field-avg-daily-activity-level {
-    width: 100%;
-  }
+/* line 593, ../sass/dashboard.scss */
+.page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content .views-field .progress .progress-bar {
+  background: #00b053;
+  font-size: 13px;
+  line-height: 25px;
 }
-/* line 572, ../sass/dashboard.scss */
+/* line 604, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .field-content {
   color: #b10029;
   font-size: 16px;
