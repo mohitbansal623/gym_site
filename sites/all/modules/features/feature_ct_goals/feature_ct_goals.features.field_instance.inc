@@ -22,7 +22,7 @@ function feature_ct_goals_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -34,7 +34,7 @@ function feature_ct_goals_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_avg_daily_activity_level',
     'label' => 'Avg Daily Activity Level',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -46,53 +46,7 @@ function feature_ct_goals_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance: 'node-goals-field_bodyfat_kg'.
-  $field_instances['node-goals-field_bodyfat_kg'] = array(
-    'bundle' => 'goals',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 2,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_decimal',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_bodyfat_kg',
-    'label' => 'Bodyfat kg',
-    'required' => 0,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 6,
+      'weight' => 10,
     ),
   );
 
@@ -125,7 +79,7 @@ function feature_ct_goals_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_bodyweight',
     'label' => 'Bodyweight',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -138,7 +92,7 @@ function feature_ct_goals_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 5,
+      'weight' => 7,
     ),
   );
 
@@ -157,7 +111,7 @@ function feature_ct_goals_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -206,7 +160,7 @@ function feature_ct_goals_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_goal',
     'label' => 'Goal',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -225,11 +179,7 @@ function feature_ct_goals_field_default_field_instances() {
   // Exported field_instance: 'node-goals-field_goal_complete'.
   $field_instances['node-goals-field_goal_complete'] = array(
     'bundle' => 'goals',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -238,7 +188,7 @@ function feature_ct_goals_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -250,7 +200,7 @@ function feature_ct_goals_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_goal_complete',
     'label' => 'goal complete',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -262,7 +212,7 @@ function feature_ct_goals_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 11,
     ),
   );
 
@@ -353,7 +303,7 @@ function feature_ct_goals_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_motivation',
     'label' => 'Motivation',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -382,11 +332,11 @@ function feature_ct_goals_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
+          'scale' => 2,
           'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 8,
+        'type' => 'number_decimal',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -411,14 +361,13 @@ function feature_ct_goals_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 11,
+      'weight' => 9,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Avg Daily Activity Level');
-  t('Bodyfat kg');
   t('Bodyweight');
   t('Coach Ref');
   t('Goal');

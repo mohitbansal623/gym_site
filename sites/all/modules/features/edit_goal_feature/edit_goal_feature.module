@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Edit Goal Feature feature.
+ */
+
+include_once 'edit_goal_feature.features.inc';

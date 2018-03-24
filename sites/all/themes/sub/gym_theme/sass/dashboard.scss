@@ -554,3 +554,50 @@
     }
   }
 }
+
+
+.page-dashboard-check-in {
+  .view-client-check-in-dashboard {
+    .view-header {
+      padding-bottom: 30px;
+    }
+
+    .full-name {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .views-label {
+      font-size: 16px;
+      color: white;
+    }
+
+    .views-field-field-bodyweight, .views-field-php {
+      display: inline-block;
+      width: 50%;
+      padding-bottom: 20px;
+
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
+    }
+
+    .views-field-field-percent-bodyfat, .views-field-field-avg-daily-activity-level {
+      display: inline-block;
+      vertical-align: top;
+      width: 45%;
+      padding-bottom: 20px;
+
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
+    }
+
+    .field-content {
+      color: $font-red;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}

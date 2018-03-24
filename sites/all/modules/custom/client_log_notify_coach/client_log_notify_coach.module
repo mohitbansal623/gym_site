@@ -350,7 +350,7 @@ function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
       }
 
       $no_value = isset($form['field_coach_ref']['und']['#options']['_none'])?$form['field_coach_ref']['und']['#options']['_none']: NULL;
-      $form['field_coach_ref']['und']['#options'] = array(0 => $no_value, 1 => $coach);
+      $form['field_coach_ref']['und']['#options'] = array(0 => $coach);
       $form['field_goal']['und'][0]['value']['#default_value'] = $data->title;
     }
   }

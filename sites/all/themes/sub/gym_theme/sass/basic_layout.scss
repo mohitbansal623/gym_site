@@ -378,13 +378,10 @@ header .notification {
   border: 0;
 }
 
-.page-user-login {
-  .tabs--primary.nav-tabs {
-    display: none;
+body, .page-node-add-check-in, .page-node-add-goals, .page-register, .page-user-login, .page-node-add-daily-log, .page-user-register, .page-user {
+  .page-container, .breadcrumb {
+    background: #111111;
   }
-}
-
-.page-node-add-check-in, .page-node-add-goals, .page-register, .page-user-login, .page-node-add-daily-log, .page-node-add {
 
   .page-header {
     color: white;
@@ -409,10 +406,15 @@ header .notification {
     text-transform: uppercase;
   }
 
-  label.control-label {
+  label.control-label, .field-label {
     color: #979797;
     font-size: 18px;
     font-weight: bold;
+  }
+
+  .field-item {
+    color: white;
+    font-size: 16px;
   }
 }
 

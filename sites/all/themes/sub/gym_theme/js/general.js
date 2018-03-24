@@ -88,5 +88,7 @@
     $('.form-item-field-total-cm-und-0-value #edit-field-total-cm-und-0-value').prop("disabled", true);
 
     $('.form-item-field-total-calipers-und-0-value #edit-field-total-calipers-und-0-value').prop("disabled", true);
+
+    $('.form-item-field-goal-und-0-value #edit-field-goal-und-0-value').prop("disabled", true);
   });
 })(jQuery);
