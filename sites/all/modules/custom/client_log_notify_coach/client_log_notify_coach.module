@@ -338,7 +338,8 @@ function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
     if ($form_id == 'check_in_node_form') {
   //     $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
       // $eligible_clients = array(0 => $no_value) + get_related_clients();
-      $data = get_goal_and_coach();
+      global $user;
+      $data = get_goal_and_coach($user->uid);
       $coach = isset($data) ? $data->field_coach_ref_target_id: NULL;
       if (!empty($coach)) {
         $query = db_select('users', 'u')
@@ -357,13 +358,14 @@ function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
 }
 
 
-function get_goal_and_coach() {
+function get_goal_and_coach($uid) {
   $query = db_select('node', 'at')
       -> fields('at', array('title'))
       -> fields('c', array('field_coach_ref_target_id'));
   $query->join('field_data_field_coach_ref', 'c', "c.entity_id = at.nid");
   $query->condition('c.bundle', 'goals');
   $query->condition('at.status', 1);
+  $query->condition('at.uid', $uid);
   $complete = $query->execute()->fetch();
 
   if (!empty($complete)) {
