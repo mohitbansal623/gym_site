@@ -50,52 +50,6 @@ function feature_ct_goals_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-goals-field_bodyweight'.
-  $field_instances['node-goals-field_bodyweight'] = array(
-    'bundle' => 'goals',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 2,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_decimal',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_bodyweight',
-    'label' => 'Bodyweight',
-    'required' => 1,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 7,
-    ),
-  );
-
   // Exported field_instance: 'node-goals-field_coach_ref'.
   $field_instances['node-goals-field_coach_ref'] = array(
     'bundle' => 'goals',
@@ -179,7 +133,11 @@ function feature_ct_goals_field_default_field_instances() {
   // Exported field_instance: 'node-goals-field_goal_complete'.
   $field_instances['node-goals-field_goal_complete'] = array(
     'bundle' => 'goals',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -368,7 +326,6 @@ function feature_ct_goals_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Avg Daily Activity Level');
-  t('Bodyweight');
   t('Coach Ref');
   t('Goal');
   t('Motivation');

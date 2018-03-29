@@ -171,14 +171,33 @@ function client_log_notify_coach_node_presave($node) {
     }
   }
 
-  // elseif ($node->type == 'check_in') {
+  elseif ($node->type == 'check_in') {
   //   $coach_id = $node->uid;
   //   $client_id = isset($node->field_client_ref[$node->language][0]['target_id']) ? $node->field_client_ref[$node->language][0]['target_id']: NULL;
   //   $fid = isset($node->field_progress_picture_front[$node->language][0]['fid'])? $node->field_progress_picture_front[$node->language][0]['fid']: NULL;
 
   //   set_current_progress_pic($coach_id, $client_id, $fid, $node->language);
+  $cm = array();
+  $cm[0] = $node->field_chest_cm['und'][0]['value'];
+  $cm[1] = $node->field_right_arm_cm['und'][0]['value'];
+  $cm[2] = $node->field_left_arm_cm['und'][0]['value'];
+  $cm[3] = $node->field_waist_cm['und'][0]['value'];
+  $cm[4] = $node->field_hips_cm['und'][0]['value'];
+  $cm[5] = $node->field_neck_cm['und'][0]['value'];
+  $cm[6] = $node->field_right_leg_cm['und'][0]['value'];
+  $cm[7] = $node->field_left_leg_cm['und'][0]['value'];
+  $cm[8] = $node->field_right_calf_cm['und'][0]['value'];
+  $cm[8] = $node->field_left_calf_cm['und'][0]['value'];
+  $node->field_total_cm['und'][0]['value'] = array_sum($cm);
 
-  // }
+  $mm = array();
+  $mm[0] = $node->field_subscapular_mm['und'][0]['value'];
+  $mm[1] = $node->field_abdominal_mm['und'][0]['value'];
+  $mm[2] = $node->field_thigh_mm['und'][0]['value'];
+  $mm[3] = $node->field_tricep_mm['und'][0]['value'];
+  $mm[4] = $node->field_suprailiac_mm['und'][0]['value'];
+  $node->field_total_calipers['und'][0]['value'] = array_sum($mm);
+  }
 
   elseif ($node->type == 'goals') {
     $goal_value = isset($node->field_goal['und'][0]['value'])? $node->field_goal['und'][0]['value']: NULL;
@@ -543,18 +562,21 @@ function total_avg_body_fat_loss_under_coach($coach_id) {
 function get_cm_loss($client_id) {
   $query = db_select('node', 'n')
     ->distinct();
-  $query->join('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
   $query->join('field_data_field_total_cm', 'fn', "fn.entity_id = n.nid");
   $query->condition('n.type', 'check_in');
-  $query->condition('client.field_client_ref_target_id', $client_id);
+  $query->condition('n.uid', $client_id);
   $query->fields('n', array('nid'));
   $query->fields('fn', array('field_total_cm_value'));
   $result = $query->execute()->fetchAllKeyed(0);
-  if (!empty($result)) {
+  if (!empty($result) && count($result) > 1) {
     ksort($result);
     $result = array_values($result);
     $length = count($result);
     $cm_loss = $result[0] - $result[$length-1];
+  }
+  elseif (!empty($result) && count($result) == 1) {
+    $result = array_values($result);
+    $cm_loss = $result[0];
   }
   else {
     $cm_loss = 0;
@@ -566,18 +588,21 @@ function get_cm_loss($client_id) {
 function get_mm_loss($client_id) {
   $query = db_select('node', 'n')
     ->distinct();
-  $query->join('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
   $query->join('field_data_field_total_calipers', 'fn', "fn.entity_id = n.nid");
   $query->condition('n.type', 'check_in');
-  $query->condition('client.field_client_ref_target_id', $client_id);
+  $query->condition('n.uid', $client_id);
   $query->fields('n', array('nid'));
   $query->fields('fn', array('field_total_calipers_value'));
   $result = $query->execute()->fetchAllKeyed(0);
-  if (!empty($result)) {
+  if (!empty($result) && count($result) > 1) {
     ksort($result);
     $result = array_values($result);
     $length = count($result);
     $mm_loss = $result[0] - $result[$length-1];
+  }
+  elseif (!empty($result) && count($result) == 1) {
+    $result = array_values($result);
+    $mm_loss = $result[0];
   }
   else {
     $mm_loss = 0;
@@ -600,10 +625,10 @@ function get_diet_adherence($client_id) {
   $result = $query->execute()->rowCount();
 
   if ($total_days_logged != 0) {
-    $diet_adherence = (($result / $total_days_logged)* 100) . "%";
+    $diet_adherence = (($result / $total_days_logged)* 100);
   }
   else {
-    $diet_adherence = "0%";
+    $diet_adherence = "0";
   }
 
   return $diet_adherence;
@@ -845,4 +870,95 @@ function get_recent_body_fat_percentage($client_id) {
     $body_fat = 0;
   }
   return $body_fat;
+}
+
+function get_percent_body_fat_goal_vs_check_in($client_id) {
+  $query = db_select('node', 'n')
+    ->distinct();
+  $query->join('field_data_field_percent_bodyfat', 'fn', "fn.entity_id = n.nid");
+  $query->condition('n.uid', $client_id);
+  $query->condition('n.type', 'goals');
+  $query->condition('n.status', 1);
+  $query->fields('fn', array('field_percent_bodyfat_value'));
+  $result = $query->execute()->fetchCol();
+  if (!empty($result)) {
+    $orginal_body_fat = $result[0];
+  }
+  else {
+    $orginal_body_fat = 0;
+  }
+
+
+
+  $query = db_select('node', 'n')
+    ->distinct();
+  $query->join('field_data_field_percent_bodyfat', 'fn', "fn.entity_id = n.nid");
+  $query->condition('n.uid', $client_id);
+  $query->condition('n.type', 'check_in');
+  $query->condition('n.status', 1);
+  $query->orderBy('n.created','DESC');
+  $query->range(0,1);
+  $query->fields('fn', array('field_percent_bodyfat_value'));
+  $result = $query->execute()->fetchCol();
+
+  if (!empty($result)) {
+    $recent_body_fat = $result[0];
+  }
+  else {
+    $recent_body_fat = 0;
+  }
+
+  if ($orginal_body_fat >= $recent_body_fat) {
+    $rem_achieve = $orginal_body_fat - $recent_body_fat;
+  }
+  else {
+    $rem_achieve = $recent_body_fat - $orginal_body_fat;
+  }
+
+  return $rem_achieve;
+}
+
+
+function get_avg_daily_activity_level_goal_vs_dailylog($client_id) {
+  $query = db_select('node', 'n')
+    ->fields('daily', array('field_avg_daily_activity_level_value'));
+  $query->join('field_data_field_avg_daily_activity_level', 'daily', "daily.entity_id = n.nid");
+  $query->condition('n.type', 'goals');
+  $query->condition('n.status', 1);
+  $query->condition('n.uid', $client_id);
+  $result = $query->execute()->fetchCol();
+
+  if (!empty($result)) {
+    $goal_set_activity_level = $result[0];
+  }
+  else {
+    $goal_set_activity_level = 1;
+  }
+
+
+  $query = db_select('node', 'n')
+    ->fields('daily', array('field_daily_activity_level_value'));
+  $query->join('field_data_field_daily_activity_level', 'daily', "daily.entity_id = n.nid");
+  $query->condition('n.type', 'daily_log');
+  $query->condition('n.status', 1);
+  $query->orderBy('n.created','DESC');
+  $query->range(0,1);
+  $query->condition('n.uid', $client_id);
+  $result = $query->execute()->fetchCol();
+
+  if (!empty($result)) {
+    $recent_daily_activity_level = $result[0];
+  }
+  else {
+    $recent_daily_activity_level = 0;
+  }
+
+  if ($goal_set_activity_level != 0) {
+    $avg = $recent_daily_activity_level / $goal_set_activity_level;
+  }
+  else {
+    $avg = 0;
+  }
+
+  return $avg;
 }

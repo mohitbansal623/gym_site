@@ -19,7 +19,6 @@ features[field_base][] = field_goal_complete
 features[field_base][] = field_goal_date
 features[field_base][] = field_motivation
 features[field_instance][] = node-goals-field_avg_daily_activity_level
-features[field_instance][] = node-goals-field_bodyweight
 features[field_instance][] = node-goals-field_coach_ref
 features[field_instance][] = node-goals-field_goal
 features[field_instance][] = node-goals-field_goal_complete

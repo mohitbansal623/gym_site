@@ -23,10 +23,10 @@ function feature_check_in_field_group_info() {
     'label' => 'Body Composition',
     'weight' => '3',
     'children' => array(
-      0 => 'field_bodyweight',
-      1 => 'field_percent_bodyfat',
-      2 => 'field_bodyfat_kg',
-      3 => 'field_muscle_mass',
+      0 => 'field_bodyfat_kg',
+      1 => 'field_bodyweight',
+      2 => 'field_muscle_mass',
+      3 => 'field_percent_bodyfat',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -55,15 +55,15 @@ function feature_check_in_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_chest_cm',
-      1 => 'field_right_arm_cm',
+      1 => 'field_hips_cm',
       2 => 'field_left_arm_cm',
-      3 => 'field_waist_cm',
-      4 => 'field_hips_cm',
+      3 => 'field_left_calf_cm',
+      4 => 'field_left_leg_cm',
       5 => 'field_neck_cm',
-      6 => 'field_right_leg_cm',
-      7 => 'field_left_leg_cm',
-      8 => 'field_right_calf_cm',
-      9 => 'field_left_calf_cm',
+      6 => 'field_right_arm_cm',
+      7 => 'field_right_calf_cm',
+      8 => 'field_right_leg_cm',
+      9 => 'field_waist_cm',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -79,7 +79,7 @@ function feature_check_in_field_group_info() {
   $field_groups['group_circumference_measures|node|check_in|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_performance_report|node|check_in|form';
   $field_group->group_name = 'group_performance_report';
@@ -120,8 +120,8 @@ function feature_check_in_field_group_info() {
     'label' => 'Progress Photo',
     'weight' => '6',
     'children' => array(
-      0 => 'field_progress_picture_front',
-      1 => 'field_progress_picture_back',
+      0 => 'field_progress_picture_back',
+      1 => 'field_progress_picture_front',
       2 => 'field_progress_picture_side',
     ),
     'format_type' => 'fieldset',
@@ -151,10 +151,10 @@ function feature_check_in_field_group_info() {
     'weight' => '5',
     'children' => array(
       0 => 'field_abdominal_mm',
-      1 => 'field_thigh_mm',
-      2 => 'field_tricep_mm',
-      3 => 'field_suprailiac_mm',
-      4 => 'field_subscapular_mm',
+      1 => 'field_subscapular_mm',
+      2 => 'field_suprailiac_mm',
+      3 => 'field_thigh_mm',
+      4 => 'field_tricep_mm',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
