@@ -424,14 +424,15 @@ a {
   height: 25px;
   background: #333333;
   border-radius: 0;
+  width: 100%;
 }
-/* line 593, ../sass/dashboard.scss */
+/* line 594, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content .views-field .progress .progress-bar {
   background: #00b053;
   font-size: 13px;
   line-height: 25px;
 }
-/* line 604, ../sass/dashboard.scss */
+/* line 605, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .field-content {
   color: #b10029;
   font-size: 16px;

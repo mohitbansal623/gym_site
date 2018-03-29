@@ -60,98 +60,6 @@ function feature_check_in_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-check_in-field_bodyfat_kg'.
-  $field_instances['node-check_in-field_bodyfat_kg'] = array(
-    'bundle' => 'check_in',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 2,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_decimal',
-        'weight' => 22,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_bodyfat_kg',
-    'label' => 'Bodyfat kg',
-    'required' => 1,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'node-check_in-field_bodyweight'.
-  $field_instances['node-check_in-field_bodyweight'] = array(
-    'bundle' => 'check_in',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 2,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_decimal',
-        'weight' => 20,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_bodyweight',
-    'label' => 'Bodyweight',
-    'required' => 1,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 4,
-    ),
-  );
-
   // Exported field_instance: 'node-check_in-field_check_in_date'.
   $field_instances['node-check_in-field_check_in_date'] = array(
     'bundle' => 'check_in',
@@ -284,8 +192,8 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_coach_ref',
-    'label' => 'Coach Ref',
-    'required' => 0,
+    'label' => 'Coach',
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -322,12 +230,13 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_goal',
     'label' => 'Goal',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'size' => 60,
@@ -537,52 +446,6 @@ function feature_check_in_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-check_in-field_muscle_mass'.
-  $field_instances['node-check_in-field_muscle_mass'] = array(
-    'bundle' => 'check_in',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 2,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_decimal',
-        'weight' => 23,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_muscle_mass',
-    'label' => 'Muscle Mass',
-    'required' => 1,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 7,
-    ),
-  );
-
   // Exported field_instance: 'node-check_in-field_neck_cm'.
   $field_instances['node-check_in-field_neck_cm'] = array(
     'bundle' => 'check_in',
@@ -679,52 +542,6 @@ function feature_check_in_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-check_in-field_personal_records'.
-  $field_instances['node-check_in-field_personal_records'] = array(
-    'bundle' => 'check_in',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 2,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_decimal',
-        'weight' => 40,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_personal_records',
-    'label' => 'Personal Records',
-    'required' => 1,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 7,
-    ),
-  );
-
   // Exported field_instance: 'node-check_in-field_progress_picture_back'.
   $field_instances['node-check_in-field_progress_picture_back'] = array(
     'bundle' => 'check_in',
@@ -736,7 +553,7 @@ function feature_check_in_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 43,
@@ -751,7 +568,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_progress_picture_back',
     'label' => 'Back',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -786,7 +603,7 @@ function feature_check_in_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 42,
@@ -801,7 +618,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_progress_picture_front',
     'label' => 'Front',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -836,7 +653,7 @@ function feature_check_in_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 44,
@@ -851,7 +668,7 @@ function feature_check_in_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_progress_picture_side',
     'label' => 'Side',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -1275,52 +1092,6 @@ function feature_check_in_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-check_in-field_training_sessions_complete'.
-  $field_instances['node-check_in-field_training_sessions_complete'] = array(
-    'bundle' => 'check_in',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 2,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_decimal',
-        'weight' => 41,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_training_sessions_complete',
-    'label' => 'Training Sessions Completed',
-    'required' => 1,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 8,
-    ),
-  );
-
   // Exported field_instance: 'node-check_in-field_tricep_mm'.
   $field_instances['node-check_in-field_tricep_mm'] = array(
     'bundle' => 'check_in',
@@ -1425,21 +1196,17 @@ function feature_check_in_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Abdominal MM');
   t('Back');
-  t('Bodyfat kg');
-  t('Bodyweight');
   t('Check In');
   t('Chest CM');
-  t('Coach Ref');
+  t('Coach');
   t('Front');
   t('Goal');
   t('Hips CM');
   t('Left Arm CM');
   t('Left Calf CM');
   t('Left Leg CM');
-  t('Muscle Mass');
   t('Neck CM');
   t('Percent BodyFat');
-  t('Personal Records');
   t('Right Arm CM');
   t('Right Calf CM');
   t('Right Leg CM');
@@ -1449,7 +1216,6 @@ function feature_check_in_field_default_field_instances() {
   t('Thigh MM');
   t('Total CM');
   t('Total Calipers');
-  t('Training Sessions Completed');
   t('Tricep MM');
   t('Waist CM');
 
