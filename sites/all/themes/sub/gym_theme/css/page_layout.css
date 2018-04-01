@@ -131,3 +131,99 @@ form div > .btn:hover {
 img {
   max-width: 100%;
 }
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* line 76, ../sass/page_layout.scss */
+  .view-calendar {
+    /* Hide table headers (but not display: none;, for accessibility) */
+  }
+  /* line 78, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar table,
+  .view-calendar .calendar-calendar tbody,
+  .view-calendar .calendar-calendar th,
+  .view-calendar .calendar-calendar td,
+  .view-calendar .calendar-calendar tr {
+    display: block;
+  }
+  /* line 86, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar thead,
+  .view-calendar .calendar-calendar thead tr,
+  .view-calendar .calendar-calendar tr.date-box {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  /* line 93, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar tr td.no-entry {
+    border-bottom: 1px solid #ccc;
+  }
+  /* line 96, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar td:before {
+    /* Format & Label the day headings */
+    /* Now like a table header */
+    width: 100%;
+    white-space: nowrap;
+    clear: both;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #a1978a;
+    padding: 10px;
+    content: attr(data-label);
+    height: 44px;
+  }
+  /* line 110, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar td.today,
+  .view-calendar .calendar-calendar .month-view .full tr td.single-day.today {
+    border-top: 2px solid #0074ab;
+    -webkit-box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
+  }
+  /* line 116, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar .month-view .full td {
+    padding: 0;
+  }
+  /* line 119, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar td,
+  .view-calendar .calendar-calendar td.calendar-agenda-items {
+    /* Behave  like a "row" */
+    border: none;
+    position: relative;
+    width: 100%;
+  }
+  /* line 126, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar td.past {
+    display: none;
+  }
+  /* line 129, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar td.calendar-agenda-items div.calendar {
+    padding: 0;
+  }
+  /* line 132, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar div.calendar,
+  .view-calendar .calendar-calendar .date-display-single,
+  .view-calendar .calendar-calendar td span.date-display-single {
+    font-size: medium;
+    font-weight: normal;
+  }
+  /* line 138, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar .inner .item {
+    padding: 10px;
+  }
+  /* line 141, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar .month-view .full tr.single-day .no-entry {
+    height: 44px !important;
+    line-height: 24px;
+  }
+  /* line 145, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar .month-view .full tr.single-day .no-entry .inner,
+  .view-calendar .calendar-calendar .no-entry .inner {
+    height: auto !important;
+    line-height: 1px;
+  }
+  /* line 150, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar .inner .views-field-title-field {
+    display: inline-block;
+  }
+}

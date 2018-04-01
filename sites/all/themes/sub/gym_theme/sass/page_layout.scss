@@ -72,3 +72,83 @@ form {
 img {
   max-width: 100%;
 }
+
+.view-calendar {
+  @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+    .calendar-calendar table,
+    .calendar-calendar tbody,
+    .calendar-calendar th,
+    .calendar-calendar td,
+    .calendar-calendar tr  {
+    display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .calendar-calendar thead,
+    .calendar-calendar thead tr,
+    .calendar-calendar tr.date-box {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    }
+    .calendar-calendar tr td.no-entry  {
+    border-bottom: 1px solid #ccc;
+    }
+    .calendar-calendar td:before{   /* Format & Label the day headings */
+    /* Now like a table header */
+    width: 100%;
+    white-space: nowrap;
+    clear: both;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #a1978a;
+    padding: 10px;
+    content: attr(data-label);
+    height: 44px;
+    }
+    .calendar-calendar td.today,
+    .calendar-calendar .month-view .full tr td.single-day.today{
+      border-top: 2px solid #0074ab;
+    -webkit-box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
+    }
+    .calendar-calendar .month-view .full td{
+      padding: 0;
+    }
+    .calendar-calendar td,
+    .calendar-calendar td.calendar-agenda-items  {
+    /* Behave  like a "row" */
+    border: none;
+    position: relative;
+    width: 100%;
+    }
+    .calendar-calendar td.past{
+      display: none;
+    }
+    .calendar-calendar td.calendar-agenda-items div.calendar{
+      padding: 0;
+    }
+    .calendar-calendar div.calendar,
+    .calendar-calendar .date-display-single,
+    .calendar-calendar td span.date-display-single  {
+      font-size: medium;
+    font-weight: normal;
+    }
+    .calendar-calendar .inner .item{
+      padding: 10px;
+    }
+    .calendar-calendar .month-view .full tr.single-day .no-entry{
+      height: 44px !important;
+    line-height: 24px;
+    }
+    .calendar-calendar .month-view .full tr.single-day .no-entry .inner,
+    .calendar-calendar .no-entry .inner{
+      height: auto !important;
+    line-height: 1px;
+    }
+    .calendar-calendar .inner .views-field-title-field{
+      display: inline-block;
+    }
+  }
+}
