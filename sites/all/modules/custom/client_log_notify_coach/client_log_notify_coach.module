@@ -962,3 +962,28 @@ function get_avg_daily_activity_level_goal_vs_dailylog($client_id) {
 
   return $avg;
 }
+
+function get_progress_pic($client_id, $status, $table_name) {
+  $query = db_select('node', 'n')
+    ->fields('daily', array('field_progress_picture_'. $table_name . '_fid'));
+  $query->join('field_data_field_progress_picture_'. $table_name, 'daily', "daily.entity_id = n.nid");
+  $query->condition('n.type', 'daily_log');
+  $query->condition('n.status', 1);
+  if ($status == 'first') {
+    $query->orderBy('n.created','ASC');
+  }
+  else {
+    $query->orderBy('n.created','DESC');
+  }
+  $query->range(0,1);
+  $query->condition('n.uid', $client_id);
+  $result = $query->execute()->fetchCol();
+
+  if (!empty($result)) {
+    $front_fid = $result[0];
+    $file = file_load($front_fid);
+    $src = file_create_url($file->uri);
+
+    return $src;
+  }
+}
