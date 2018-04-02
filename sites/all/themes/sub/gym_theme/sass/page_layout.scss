@@ -123,9 +123,9 @@ img {
     position: relative;
     width: 100%;
     }
-    .calendar-calendar td.past{
-      display: none;
-    }
+    // .calendar-calendar td.past{
+    //   display: none;
+    // }
     .calendar-calendar td.calendar-agenda-items div.calendar{
       padding: 0;
     }
@@ -151,4 +151,78 @@ img {
       display: inline-block;
     }
   }
+  .view-content {
+    .calendar-calendar div.day {
+      width: auto;
+      float: none;
+    }
+    table {
+      .date-box {
+        text-align: center;
+      }
+      tr td .user-log {
+        font-size: 12px;
+        padding-right: 8px;
+        position: relative;
+        &::after {
+          position: absolute;
+          height: 6px;
+          width: 6px;
+          border-radius: 50%;
+          right: 0;
+          bottom: 6px;
+        }
+        &.Yes::after {
+          background: #328763;
+          content: "";
+        }
+        &.No::after {
+          background: #df1a22;
+          content: "";
+        }
+      }
+      div.monthview {
+        background: #111 !important;
+        color: #fff !important;
+      }
+      tr, td, th {
+        background: #111 !important;
+        color: #fff !important;
+        border: none !important;
+      }
+      tr td.empty {
+        color: #333 !important;
+      }
+      tr td.single-day {
+        padding-bottom: 10px;
+      }
+      tr th.days {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+
+
+.view-content {
+  .views-row {
+    display: flex;
+    flex-wrap: wrap;
+    .views-field-name {
+      width: 100%;
+      .field-content {
+        font-weight: bold;
+        font-size: 2rem;
+        color: #fff;
+      }
+    }
+  }
+  .views-row > div.views-field:not(.views-field-name) {
+    display: inline-block;
+    padding: 0px 10px 10px;
+    width: 50%;
+    vertical-align: top;
+  }
+
 }
