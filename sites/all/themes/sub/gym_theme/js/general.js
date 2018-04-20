@@ -90,5 +90,9 @@
     $('.form-item-field-total-calipers-und-0-value #edit-field-total-calipers-und-0-value').prop("disabled", true);
 
     $('.form-item-field-goal-und-0-value #edit-field-goal-und-0-value').prop("disabled", true);
+
+    $(".page-calendar .view-calendar .calendar-calendar .month.day").click(function() {
+      window.location.href = "/node/add/daily-log";
+    });
   });
 })(jQuery);

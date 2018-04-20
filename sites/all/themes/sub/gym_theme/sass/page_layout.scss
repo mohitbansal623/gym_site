@@ -204,25 +204,25 @@ img {
 }
 
 
-
-.view-content {
-  .views-row {
-    display: flex;
-    flex-wrap: wrap;
-    .views-field-name {
-      width: 100%;
-      .field-content {
-        font-weight: bold;
-        font-size: 2rem;
-        color: #fff;
+.view-client-check-in-dashboard {
+  .view-content {
+    .views-row {
+      display: flex;
+      flex-wrap: wrap;
+      .views-field-name {
+        width: 100%;
+        .field-content {
+          font-weight: bold;
+          font-size: 2rem;
+          color: #fff;
+        }
       }
     }
+    .views-row > div.views-field:not(.views-field-name) {
+      display: inline-block;
+      padding: 0px 10px 10px;
+      width: 50%;
+      vertical-align: top;
+    }
   }
-  .views-row > div.views-field:not(.views-field-name) {
-    display: inline-block;
-    padding: 0px 10px 10px;
-    width: 50%;
-    vertical-align: top;
-  }
-
 }

@@ -282,22 +282,22 @@ img {
 }
 
 /* line 209, ../sass/page_layout.scss */
-.view-content .views-row {
+.view-client-check-in-dashboard .view-content .views-row {
   display: flex;
   flex-wrap: wrap;
 }
 /* line 212, ../sass/page_layout.scss */
-.view-content .views-row .views-field-name {
+.view-client-check-in-dashboard .view-content .views-row .views-field-name {
   width: 100%;
 }
 /* line 214, ../sass/page_layout.scss */
-.view-content .views-row .views-field-name .field-content {
+.view-client-check-in-dashboard .view-content .views-row .views-field-name .field-content {
   font-weight: bold;
   font-size: 2rem;
   color: #fff;
 }
 /* line 221, ../sass/page_layout.scss */
-.view-content .views-row > div.views-field:not(.views-field-name) {
+.view-client-check-in-dashboard .view-content .views-row > div.views-field:not(.views-field-name) {
   display: inline-block;
   padding: 0px 10px 10px;
   width: 50%;
