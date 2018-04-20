@@ -211,7 +211,6 @@ body.page-admin-dashboard .view-admin-dashboard tr, body.page-admin-dashboard .v
   color: #666B85;
   font-size: 16px;
   font-weight: normal;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
 }
 /* line 172, ../sass/basic_layout.scss */
 body.page-admin-dashboard .view-admin-dashboard tr:hover td, body.page-admin-dashboard .view-id-client_daily_log tr:hover td, body.page-admin-dashboard .view-display-id-page tr:hover td, body.page-client-daily-log- .view-admin-dashboard tr:hover td, body.page-client-daily-log- .view-id-client_daily_log tr:hover td, body.page-client-daily-log- .view-display-id-page tr:hover td, body.page-edit-goal .view-admin-dashboard tr:hover td, body.page-edit-goal .view-id-client_daily_log tr:hover td, body.page-edit-goal .view-display-id-page tr:hover td {
@@ -482,4 +481,11 @@ body .breadcrumb {
 /* line 428, ../sass/basic_layout.scss */
 body .breadcrumb a {
   color: #fff;
+}
+
+/* line 436, ../sass/basic_layout.scss */
+.page-calendar .view-calendar .calendar-calendar .month.day:hover {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
 }

@@ -192,10 +192,6 @@ img {
     position: relative;
     width: 100%;
   }
-  /* line 126, ../sass/page_layout.scss */
-  .view-calendar .calendar-calendar td.past {
-    display: none;
-  }
   /* line 129, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar td.calendar-agenda-items div.calendar {
     padding: 0;
@@ -226,4 +222,84 @@ img {
   .view-calendar .calendar-calendar .inner .views-field-title-field {
     display: inline-block;
   }
+}
+/* line 155, ../sass/page_layout.scss */
+.view-calendar .view-content .calendar-calendar div.day {
+  width: auto;
+  float: none;
+}
+/* line 160, ../sass/page_layout.scss */
+.view-calendar .view-content table .date-box {
+  text-align: center;
+}
+/* line 163, ../sass/page_layout.scss */
+.view-calendar .view-content table tr td .user-log {
+  font-size: 12px;
+  padding-right: 8px;
+  position: relative;
+}
+/* line 167, ../sass/page_layout.scss */
+.view-calendar .view-content table tr td .user-log::after {
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  right: 0;
+  bottom: 6px;
+}
+/* line 175, ../sass/page_layout.scss */
+.view-calendar .view-content table tr td .user-log.Yes::after {
+  background: #328763;
+  content: "";
+}
+/* line 179, ../sass/page_layout.scss */
+.view-calendar .view-content table tr td .user-log.No::after {
+  background: #df1a22;
+  content: "";
+}
+/* line 184, ../sass/page_layout.scss */
+.view-calendar .view-content table div.monthview {
+  background: #111 !important;
+  color: #fff !important;
+}
+/* line 188, ../sass/page_layout.scss */
+.view-calendar .view-content table tr, .view-calendar .view-content table td, .view-calendar .view-content table th {
+  background: #111 !important;
+  color: #fff !important;
+  border: none !important;
+}
+/* line 193, ../sass/page_layout.scss */
+.view-calendar .view-content table tr td.empty {
+  color: #333 !important;
+}
+/* line 196, ../sass/page_layout.scss */
+.view-calendar .view-content table tr td.single-day {
+  padding-bottom: 10px;
+}
+/* line 199, ../sass/page_layout.scss */
+.view-calendar .view-content table tr th.days {
+  padding-bottom: 20px;
+}
+
+/* line 209, ../sass/page_layout.scss */
+.view-client-check-in-dashboard .view-content .views-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* line 212, ../sass/page_layout.scss */
+.view-client-check-in-dashboard .view-content .views-row .views-field-name {
+  width: 100%;
+}
+/* line 214, ../sass/page_layout.scss */
+.view-client-check-in-dashboard .view-content .views-row .views-field-name .field-content {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #fff;
+}
+/* line 221, ../sass/page_layout.scss */
+.view-client-check-in-dashboard .view-content .views-row > div.views-field:not(.views-field-name) {
+  display: inline-block;
+  padding: 0px 10px 10px;
+  width: 50%;
+  vertical-align: top;
 }

@@ -26,7 +26,6 @@
               <p><strong>CM Loss:</strong> <?php echo $value['cm_loss']; ?></p>
               <p><strong>MM Loss:</strong> <?php echo $value['mm_loss']; ?></p>
               <p><strong>Average Daily Activity:</strong> <?php echo $value['avg_daily_activity']; ?></p>
-              <p><strong>Average Training Sessions:</strong> <?php echo $value['avg_training_sessions']; ?></p>
               <p><a href="<?php echo $value['link']; ?>">Click to see profile.</a></p>
             </div>
           </div>

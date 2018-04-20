@@ -3,6 +3,30 @@
  * Implements hook_user_login().
  */
 function client_log_notify_coach_user_login(&$edit, $account) {
+  $uid = $account->uid;
+  $role_name = strtolower($account->field_role['und'][0]['value']);
+
+  $query = db_select('role', 'r')
+      ->fields('r', array('rid'))
+      ->condition('r.name', $role_name);
+
+   $result = $query->execute()->fetch();
+   $rid = $result->rid;
+
+   $query = db_select('users_roles', 'u')
+          ->fields('u', array())
+          ->condition('u.uid', $uid);
+    $rowCount = $query->execute()->rowCount();
+
+    if ($rowCount == 0) {
+      $nid = db_insert('users_roles')
+    ->fields(array(
+      'rid' => $rid,
+      'uid' => $uid,
+    ))
+    ->execute();
+    }
+
   if (user_has_role(5, $account)) {
     drupal_goto('coach-dashboard/' . $account->uid);
   }
@@ -327,6 +351,26 @@ function get_remaining_days($nid) {
    }
 }
 
+// function client_log_notify_coach_form_user_register_form_alter(&$form, &$form_state, $form_id) {
+//   dpm($form_id);
+//   // To grant access to all users
+//   $form['account']['roles']['#access'] = TRUE;
+//   // Convert checkbox to select list
+//   $form['account']['roles']['#type'] = 'radios';
+//   // Remove administrator from options
+//   foreach ($form['account']['roles']['#options'] as $key => $value) {
+//     if($value == 'administrator' || $value == 'admin') {
+//       unset($form['account']['roles']['#options'][$key]);
+//     }
+//   }
+// }
+
+// function client_log_notify_coach_user_presave(&$edit, $account, $category) {
+//     $edit['roles']  = array($edit['roles']);
+//     $edit['roles'] = array_filter($edit['roles']);
+
+//   // user_multiple_role_edit(array($account), 'add_role', $rid);
+// }
 
 /**
  * Implements hook_form_alter()
@@ -369,8 +413,14 @@ function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
         $coach = $coach->name;
       }
 
+      foreach ($form['field_coach_ref']['und']['#options'] as $key => $value) {
+        if (trim($value) == trim($coach)) {
+          $id = $key;
+          break;
+        }
+      }
       $no_value = isset($form['field_coach_ref']['und']['#options']['_none'])?$form['field_coach_ref']['und']['#options']['_none']: NULL;
-      $form['field_coach_ref']['und']['#options'] = array(0 => $coach);
+      $form['field_coach_ref']['und']['#options'] = array($id => $coach);
       $form['field_goal']['und'][0]['value']['#default_value'] = $data->title;
     }
   }
@@ -471,7 +521,7 @@ function get_all_client_data_for_coach($coach_id) {
     $query->leftjoin('field_data_field_coach_ref', 'coach', "coach.entity_id = n.nid");
     $query->leftjoin('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
     $query->leftjoin('field_data_field_goal', 'goal', "goal.entity_id = n.nid");
-    $query->leftjoin('users', 'at', "client.field_client_ref_target_id = at.uid");
+    $query->leftjoin('users', 'at', "n.uid = at.uid");
     $query->leftjoin('field_data_field_first_name', 'fn', "fn.entity_id = at.uid");
     $query->leftjoin('field_data_field_last_name', 'ln', "ln.entity_id = at.uid");
     $query->leftjoin('users_roles', 'role', "role.uid = at.uid");
@@ -915,6 +965,9 @@ function get_percent_body_fat_goal_vs_check_in($client_id) {
     $rem_achieve = $recent_body_fat - $orginal_body_fat;
   }
 
+  $rem_achieve['original'] = $orginal_body_fat;
+  $rem_achieve['recent'] = $recent_body_fat;
+
   return $rem_achieve;
 }
 
@@ -967,7 +1020,7 @@ function get_progress_pic($client_id, $status, $table_name) {
   $query = db_select('node', 'n')
     ->fields('daily', array('field_progress_picture_'. $table_name . '_fid'));
   $query->join('field_data_field_progress_picture_'. $table_name, 'daily', "daily.entity_id = n.nid");
-  $query->condition('n.type', 'daily_log');
+  $query->condition('n.type', 'check_in');
   $query->condition('n.status', 1);
   if ($status == 'first') {
     $query->orderBy('n.created','ASC');
@@ -986,4 +1039,7 @@ function get_progress_pic($client_id, $status, $table_name) {
 
     return $src;
   }
+  global $base_url;
+  $src = $base_url . "/sites/default/files/iron-barbell.png";
+  return $src;
 }
