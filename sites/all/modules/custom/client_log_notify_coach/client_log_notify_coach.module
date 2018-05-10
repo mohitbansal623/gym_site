@@ -13,7 +13,7 @@ function client_log_notify_coach_user_login(&$edit, $account) {
    $result = $query->execute()->fetch();
    $rid = $result->rid;
 
-   $query = db_select('users_roles', 'u')
+  $query = db_select('users_roles', 'u')
           ->fields('u', array())
           ->condition('u.uid', $uid);
     $rowCount = $query->execute()->rowCount();
@@ -27,11 +27,13 @@ function client_log_notify_coach_user_login(&$edit, $account) {
     ->execute();
     }
 
-  if (user_has_role(5, $account)) {
+
+  if (user_has_role(6, $account)) {
     drupal_goto('coach-dashboard/' . $account->uid);
   }
-  elseif (user_has_role(6, $account)) {
-    drupal_goto('client-dashboard/' . $account->uid);
+  elseif (user_has_role(5, $account)) {
+    //drupal_goto('dashboard/' . $account->uid);
+    drupal_goto('dashboard/check-in');
   }
   elseif (user_has_role(4, $account)) {
     drupal_goto('admin-dashboard');
@@ -85,7 +87,6 @@ function client_log_notify_coach_menu() {
   return $items;
 }
 
-
 function set_unpublish_goal($nid) {
   global $user;
   $num_updated = db_update('node')
@@ -116,15 +117,15 @@ function set_publish_goal($nid) {
 
 function set_complete_goal($nid) {
   $node = node_load($nid);
-
   if (isset($node->field_goal_complete['und'][0]['value'])) {
     $node->field_goal_complete['und'][0]['value'] = 1;
 
     node_save($node);
-
-    drupal_goto('edit-goal/' . $node->uid);
   }
+  drupal_goto('edit-goal/' . $node->uid);
+
 }
+
 
 function _notifications_populate() {
   global $user;
@@ -177,7 +178,7 @@ function client_log_notify_coach_node_presave($node) {
 
     if ($plan_value == 'no') {
       // Get Client Name from users table
-      $client_name = db_query("Select name from drup_users where uid =" . $user->uid . "")->fetchCol();
+      $client_name = db_query("Select name from users where uid =" . $user->uid . "")->fetchCol();
 
       $client_name = !empty($client_name)? $client_name[0]: NULL;
       $message = $client_name . " has replied " . $plan_value . " for " . date("Y-m-d");
@@ -196,11 +197,11 @@ function client_log_notify_coach_node_presave($node) {
   }
 
   elseif ($node->type == 'check_in') {
-  //   $coach_id = $node->uid;
-  //   $client_id = isset($node->field_client_ref[$node->language][0]['target_id']) ? $node->field_client_ref[$node->language][0]['target_id']: NULL;
-  //   $fid = isset($node->field_progress_picture_front[$node->language][0]['fid'])? $node->field_progress_picture_front[$node->language][0]['fid']: NULL;
+  //  $coach_id = $node->uid;
+  //  $client_id = isset($node->field_client_ref['und'][0]['target_id']) ? $node->field_client_ref['und'][0]['target_id']: NULL;
+  //  $fid = isset($node->field_progress_picture_front['und'][0]['fid'])? $node->field_progress_picture_front['und'][0]['fid']: NULL;
 
-  //   set_current_progress_pic($coach_id, $client_id, $fid, $node->language);
+ //   set_current_progress_pic($coach_id, $client_id, $fid);
   $cm = array();
   $cm[0] = $node->field_chest_cm['und'][0]['value'];
   $cm[1] = $node->field_right_arm_cm['und'][0]['value'];
@@ -221,9 +222,9 @@ function client_log_notify_coach_node_presave($node) {
   $mm[3] = $node->field_tricep_mm['und'][0]['value'];
   $mm[4] = $node->field_suprailiac_mm['und'][0]['value'];
   $node->field_total_calipers['und'][0]['value'] = array_sum($mm);
-  }
 
-  elseif ($node->type == 'goals') {
+ }
+ elseif ($node->type == 'goals') {
     $goal_value = isset($node->field_goal['und'][0]['value'])? $node->field_goal['und'][0]['value']: NULL;
 
     $node->title = $node->field_goal['und'][0]['value'];
@@ -269,7 +270,6 @@ function get_completion_value($nid) {
 
   return 0;
 }
-
 
 function get_notifications_for_coach($uid) {
   $query = db_select('notify_coach', 'at')
@@ -351,34 +351,23 @@ function get_remaining_days($nid) {
    }
 }
 
-// function client_log_notify_coach_form_user_register_form_alter(&$form, &$form_state, $form_id) {
-//   dpm($form_id);
-//   // To grant access to all users
-//   $form['account']['roles']['#access'] = TRUE;
-//   // Convert checkbox to select list
-//   $form['account']['roles']['#type'] = 'radios';
-//   // Remove administrator from options
-//   foreach ($form['account']['roles']['#options'] as $key => $value) {
-//     if($value == 'administrator' || $value == 'admin') {
-//       unset($form['account']['roles']['#options'][$key]);
-//     }
-//   }
-// }
-
-// function client_log_notify_coach_user_presave(&$edit, $account, $category) {
-//     $edit['roles']  = array($edit['roles']);
-//     $edit['roles'] = array_filter($edit['roles']);
-
-//   // user_multiple_role_edit(array($account), 'add_role', $rid);
-// }
 
 /**
  * Implements hook_form_alter()
  */
 function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
   global $user;
+  $user_data = user_load($user->uid);
   $form['title']['#access'] = FALSE;
   $alias = drupal_get_path_alias();
+
+  if ($form_id == 'food_table_node_form') {
+    $form['title']['#access'] = TRUE;
+  }
+  elseif($form_id == 'food_node_form' || $form_id == 'views_exposed_form') {
+    $form['title']['#access'] = TRUE;
+  }
+
   if ($alias == 'node/add/goals') {
     if ($form_id == 'goals_node_form') {
       $form['field_goal_complete']['#access'] = FALSE;
@@ -390,21 +379,44 @@ function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
       // $form['field_coach_ref']['und']['#options'] = array($user->uid => $user->name);
     }
   }
-  // else if ($alias == 'node/add/path-to-fitness') {
-  //   if ($form_id == 'path_to_fitness_node_form'){
-  //    $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
-  //     $eligible_clients = array(0 => $no_value) + get_related_clients($user->uid);
-  //     $form['field_client_ref']['und']['#options'] = $eligible_clients;
-  //   }
-  // }
+   else if ($alias == 'node/add/daily-log') {
+     if ($form_id == 'daily_log_node_form'){
+       $query = db_select('node', 'at')
+      -> fields('at', array('title'));
+
+      $query->condition('at.status', 1);
+      $query->condition('at.type', 'goals');
+  $query->condition('at.uid', $user->uid);
+  $complete = $query->execute()->rowCount();
+       $form['title']['#default_value'] = 'Daily-log-' . $user_data->name;
+      if (!empty($complete)) {
+
+       }
+      else {
+        drupal_set_message(t('First create a goal, then only you can make a Daily Log'), 'status');
+        drupal_goto('node/add/goals');
+      }
+
+     }
+   }
   else if ($alias == 'node/add/check-in') {
     if ($form_id == 'check_in_node_form') {
   //     $no_value = isset($form['field_client_ref']['und']['#options']['_none'])?$form['field_client_ref']['und']['#options']['_none']: NULL;
       // $eligible_clients = array(0 => $no_value) + get_related_clients();
       global $user;
       $data = get_goal_and_coach($user->uid);
+      $form['title']['#default_value'] = 'Check-in-' . $user_data->name;
+      $query = db_select('node', 'at')
+      -> fields('at', array('title'));
+
+      $query->condition('at.status', 1);
+      $query->condition('at.type', 'goals');
+  $query->condition('at.uid', $user->uid);
+  $complete = $query->execute()->rowCount();
+      if (!empty($complete)) {
       $coach = isset($data) ? $data->field_coach_ref_target_id: NULL;
-      if (!empty($coach)) {
+
+      if (!empty($complete)) {
         $query = db_select('users', 'u')
           ->fields('u', array('name'))
           ->condition('u.uid', $coach);
@@ -413,7 +425,7 @@ function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
         $coach = $coach->name;
       }
 
-      foreach ($form['field_coach_ref']['und']['#options'] as $key => $value) {
+     foreach ($form['field_coach_ref']['und']['#options'] as $key => $value) {
         if (trim($value) == trim($coach)) {
           $id = $key;
           break;
@@ -421,8 +433,16 @@ function client_log_notify_coach_form_alter(&$form, &$form_state, $form_id) {
       }
       $no_value = isset($form['field_coach_ref']['und']['#options']['_none'])?$form['field_coach_ref']['und']['#options']['_none']: NULL;
       $form['field_coach_ref']['und']['#options'] = array($id => $coach);
+
       $form['field_goal']['und'][0]['value']['#default_value'] = $data->title;
     }
+
+    else {
+        drupal_set_message(t('First create a goal, then only you can make a checkIn'), 'status');
+        drupal_goto('node/add/goals');
+      }
+    }
+
   }
 }
 
@@ -519,12 +539,12 @@ function get_all_client_data_for_coach($coach_id) {
     $query = db_select('node', 'n')
       ->distinct();
     $query->leftjoin('field_data_field_coach_ref', 'coach', "coach.entity_id = n.nid");
-    $query->leftjoin('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
+   // $query->leftjoin('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
     $query->leftjoin('field_data_field_goal', 'goal', "goal.entity_id = n.nid");
     $query->leftjoin('users', 'at', "n.uid = at.uid");
-    $query->leftjoin('field_data_field_first_name', 'fn', "fn.entity_id = at.uid");
-    $query->leftjoin('field_data_field_last_name', 'ln', "ln.entity_id = at.uid");
-    $query->leftjoin('users_roles', 'role', "role.uid = at.uid");
+    $query->leftjoin('field_data_field_first_name', 'fn', "fn.entity_id = n.uid");
+    $query->leftjoin('field_data_field_last_name', 'ln', "ln.entity_id = n.uid");
+    $query->leftjoin('users_roles', 'role', "role.uid = n.uid");
     $query->condition('role.rid', $rid);
     $query->condition('n.type', 'goals');
     $query->condition('coach.field_coach_ref_target_id', $coach_id);
@@ -532,7 +552,7 @@ function get_all_client_data_for_coach($coach_id) {
     $query->fields('ln', array('field_last_name_value'));
     $query->fields('goal', array('field_goal_value'));
     $query->fields('n', array('nid'));
-    $query->fields('at', array('uid'));
+    $query->fields('n', array('uid'));
     $query->condition('at.status', 1);
     $client_id = $query->execute()->fetchAll();
     if (!empty($client_id)) {
@@ -541,12 +561,13 @@ function get_all_client_data_for_coach($coach_id) {
         $client_data[$key]['full_name'] = $full_name;
         $client_data[$key]['goal'] = $value->field_goal_value;
         $client_data[$key]['remaining_days'] = get_remaining_days($value->nid);
-        $client_data[$key]['bodyfat_lost'] = get_recent_body_fat_percentage($value->uid);
+        $client_body_fat = get_percent_body_fat_goal_vs_check_in($value->uid);
+        $client_data[$key]['bodyfat_lost'] = $client_body_fat['rem'];
         $client_data[$key]['diet_adherence'] = get_diet_adherence($value->uid);
         $client_data[$key]['cm_loss'] = get_cm_loss($value->uid);
         $client_data[$key]['mm_loss'] = get_mm_loss($value->uid);
-        $client_data[$key]['avg_daily_activity'] = get_avg_daily_activity($value->uid);
-        $client_data[$key]['avg_training_sessions'] = get_avg_training_sessions($value->uid);
+        $client_data[$key]['avg_daily_activity'] = get_avg_daily_activity_level_goal_vs_dailylog($value->uid);
+       // $client_data[$key]['avg_training_sessions'] = get_avg_training_sessions($value->uid);
         $client_data[$key]['link'] =  "/client-daily-log/" . $value->uid;
       }
     }
@@ -567,31 +588,33 @@ function get_all_client_data_for_coach($coach_id) {
   return FALSE;
 }
 
-// /*
-// **  Body fat loss under of a client
-// */
+/*
+**  Body fat loss under of a client
+*/
 
-// function get_recent_body_fat_percentage($client_id) {
-//   $query = db_select('node', 'n')
-//     ->distinct();
-//   $query->join('field_data_field_client_ref', 'client', "client.entity_id = n.nid");
-//   $query->join('field_data_field_percent_bodyfat', 'fn', "fn.entity_id = n.nid");
-//   $query->condition('n.type', 'check_in');
-//   $query->condition('client.field_client_ref_target_id', $client_id);
-//   $query->fields('n', array('nid'));
-//   $query->fields('fn', array('field_percent_bodyfat_value'));
-//   $result = $query->execute()->fetchAllKeyed(0);
-//   if (!empty($result)) {
-//     ksort($result);
-//     $result = array_values($result);
-//     $length = count($result);
-//     $body_fat = $result[0] - $result[$length-1];
-//   }
-//   else {
-//     $body_fat = 0;
-//   }
-//   return $body_fat;
-// }
+
+function get_recent_body_weight_percentage($client_id) {
+  $query = db_select('node', 'n')
+    ->distinct();
+  $query->join('field_data_field_bodyweight', 'fn', "fn.entity_id = n.nid");
+  $query->condition('n.type', 'check_in');
+  $query->condition('n.uid', $client_id);
+  $query->condition('n.status',1);
+  $query->fields('n', array('nid'));
+  $query->fields('fn', array('field_bodyweight_value'));
+  $result = $query->execute()->fetchAllKeyed(0);
+  if (!empty($result)) {
+    ksort($result);
+    $result = array_values($result);
+    $length = count($result);
+    $body_fat = $result[0] - $result[$length-1];
+  }
+  else {
+    $body_fat = 0;
+  }
+  return $body_fat;
+}
+
 
 
 /*
@@ -678,7 +701,7 @@ function get_diet_adherence($client_id) {
     $diet_adherence = (($result / $total_days_logged)* 100);
   }
   else {
-    $diet_adherence = "0";
+    $diet_adherence = 0;
   }
 
   return $diet_adherence;
@@ -811,7 +834,7 @@ function get_coach_id_for_notification ($client_id) {
 }
 
 
-function set_current_progress_pic($coach_id, $client_id, $fid, $language) {
+function set_current_progress_pic($coach_id, $client_id, $fid) {
   $query = db_select('node', 'n')
       ->distinct();
   $query->leftjoin('field_data_field_coach_ref', 'coach', "coach.entity_id = n.nid");
@@ -825,7 +848,7 @@ function set_current_progress_pic($coach_id, $client_id, $fid, $language) {
   $nid = $query->execute()->fetch();
 
   $node = node_load($nid->nid);
-  $node->field_current_progress_pic[$language][0]['fid'] = $fid;
+  $node->field_current_progress_pic['und'][0]['fid'] = $fid;
   node_save($node);
 }
 
@@ -922,6 +945,7 @@ function get_recent_body_fat_percentage($client_id) {
   return $body_fat;
 }
 
+
 function get_percent_body_fat_goal_vs_check_in($client_id) {
   $query = db_select('node', 'n')
     ->distinct();
@@ -959,18 +983,18 @@ function get_percent_body_fat_goal_vs_check_in($client_id) {
   }
 
   if ($orginal_body_fat >= $recent_body_fat) {
-    $rem_achieve = $orginal_body_fat - $recent_body_fat;
+    $rem = $orginal_body_fat - $recent_body_fat;
   }
   else {
-    $rem_achieve = $recent_body_fat - $orginal_body_fat;
+    $rem = $recent_body_fat - $orginal_body_fat;
   }
 
-  $rem_achieve['original'] = $orginal_body_fat;
-  $rem_achieve['recent'] = $recent_body_fat;
+   $rem_achieve['original'] =  $orginal_body_fat;
+   $rem_achieve['recent'] =  $recent_body_fat;
+   $rem_achieve['rem'] = $orginal_body_fat - $recent_body_fat;
 
   return $rem_achieve;
 }
-
 
 function get_avg_daily_activity_level_goal_vs_dailylog($client_id) {
   $query = db_select('node', 'n')
@@ -1016,6 +1040,7 @@ function get_avg_daily_activity_level_goal_vs_dailylog($client_id) {
   return $avg;
 }
 
+
 function get_progress_pic($client_id, $status, $table_name) {
   $query = db_select('node', 'n')
     ->fields('daily', array('field_progress_picture_'. $table_name . '_fid'));
@@ -1043,3 +1068,6 @@ function get_progress_pic($client_id, $status, $table_name) {
   $src = $base_url . "/sites/default/files/iron-barbell.png";
   return $src;
 }
+
+
+
