@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'Franchise-Bold';
+  src: url("../fonts/Franchise-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 3, ../sass/_mixin.scss */
+body {
+  color: #777;
+  font: 400 15px/1.8 "Lato", sans-serif;
+}
+
+/* line 8, ../sass/_mixin.scss */
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+/* line 4, ../sass/category_lp.scss */
+.view-iron-fitness .views-widget-filter-title {
+  margin-top: 30px;
+  text-align: center;
+}
+/* line 7, ../sass/category_lp.scss */
+.view-iron-fitness .views-widget-filter-title .form-item-title {
+  width: 200px;
+  margin: auto;
+}
+/* line 10, ../sass/category_lp.scss */
+.view-iron-fitness .views-widget-filter-title .form-item-title input {
+  border-radius: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  height: auto;
+  background: #e6e6e6;
+}
+/* line 19, ../sass/category_lp.scss */
+.view-iron-fitness .views-exposed-form .views-exposed-widget {
+  float: none;
+  padding: 0;
+}
+/* line 23, ../sass/category_lp.scss */
+.view-iron-fitness .views-exposed-form .views-exposed-widget .form-item-field-select-category-value .bef-select-as-links > .form-item {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+/* line 27, ../sass/category_lp.scss */
+.view-iron-fitness .views-exposed-form .views-exposed-widget .form-item-field-select-category-value .bef-select-as-links > .form-item .form-item {
+  flex-grow: 1;
+  width: 25%;
+}
+/* line 30, ../sass/category_lp.scss */
+.view-iron-fitness .views-exposed-form .views-exposed-widget .form-item-field-select-category-value .bef-select-as-links > .form-item .form-item a {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  text-transform: uppercase;
+  background: transparent;
+  display: inline-block;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px 5px;
+}
+/* line 41, ../sass/category_lp.scss */
+.view-iron-fitness .views-exposed-form .views-exposed-widget .form-item-field-select-category-value .bef-select-as-links > .form-item .form-item a.active {
+  background: #f12236;
+}
