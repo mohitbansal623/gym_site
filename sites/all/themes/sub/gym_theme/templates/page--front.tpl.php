@@ -72,19 +72,9 @@
  *
  * @ingroup templates
  */
-global $user;
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
-    <?php// if ($user->uid != 0): ?>
-     <!--  <div class="notification"><i class="fa fa-bell-o" aria-hidden="true"></i></div>
-      <div class="notification-box">
-        <div class="heading"><h2>NOTIFICATIONS</h2><a class="close" href="#" >&times;</a></div>
-        <div class="content">
-
-        </div>
-      </div> -->
-    <?php //endif; ?>
     <div class="navbar-header">
       <?php if ($logo): ?>
         <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
@@ -123,97 +113,39 @@ global $user;
     <?php endif; ?>
   </div>
 </header>
-
-<div id="homepage">
-  <div class="section intro-section">
-    <div class="description">
-      <p>REDEFINE</p>
-      <p>YOURSELF</p>
-    </div>
+<div id="home-page-banner-block">
+  <div class="home-page-banner-block-box">
+    <?php print variable_get('home_page_banner', ''); ?>
   </div>
-  <div class="section about-section text-section">
-    <div class="section-heading">
-      <h3>ABOUT US</h3>
+</div>
+<div id="main-categories-box">
+  <div class="main-categories-container container">
+    <div class="category-heading">
+      <h1>FOLLOW YOUR PATH</h1>
+      <span>SELECT YOUR CATEGORY BELOW</span>
     </div>
-    <div class="description">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam odio augue, consectetur sed tortor sed, auctor pellentesque felis. Morbi blandit nisl in vehicula malesuada. Nam quis ornare dolor, id convallis eros. Curabitur dignissim porttitor massa, nec venenatis dolor aliquam eu. Morbi sapien turpis, tincidunt vitae rutrum feugiat, efficitur id sapien. Pellentesque sollicitudin nibh ut posuere lobortis. Vivamus ligula erat, volutpat posuere nunc id, condimentum tristique purus. Integer elementum magna a mi sodales, a lobortis sem lacinia.</p>
-      <div class="read-more"><a class="read-more-btn" href="/about-us">KNOW MORE</a></div>
-    </div>
-  </div>
-<!--   <div class="section services-section">
-    <div class="section-heading">
-      <h3>WE PROVIDE</h3>
-    </div>
-    <div class="services-container">
-      <div class="service service1 wow fadeInLeftBig" data-wow-delay="0.15s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
+    <div class="main-category-inner">
+      <div class="main-category main-category-fitness">
+        <a href="/iron-fitness">
+          <img src="/sites/all/themes/sub/gym_theme/images/Iron_Fitness_Logo.png">
+        </a>
       </div>
-      <div class="service service2 wow fadeInUpBig" data-wow-delay="0.3s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
+      <div class="main-category main-category-fitness">
+        <a href="/iron-bodies">
+          <img src="/sites/all/themes/sub/gym_theme/images/Iron_Bodies_Logo.png">
+        </a>
       </div>
-      <div class="service service3 wow fadeInDownBig" data-wow-delay="0.45s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
+      <div class="main-category main-category-fitness">
+        <a href="/iron-academy">
+          <img src="/sites/all/themes/sub/gym_theme/images/Iron_Academy_Logo.png">
+        </a>
       </div>
-      <div class="service service4 wow fadeInRightBig" data-wow-delay="0.6s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
-      </div>
-      <div class="service service5 wow fadeInLeftBig" data-wow-delay="0.75s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
-      </div>
-      <div class="service service6 wow fadeInDownBig" data-wow-delay="0.9s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
-      </div>
-      <div class="service service7 wow fadeInUpBig" data-wow-delay="1.05s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
-      </div>
-      <div class="service service8 wow fadeInRightBig" data-wow-delay="1.2s">
-          <a href="">
-            <div class="overlay"></div>
-            <div class="square">
-              <div class="service-name">SERVICE NAME</div>
-            </div>
-          </a>
+      <div class="main-category main-category-fitness">
+        <a href="/iron-fitness-youth">
+          <img src="/sites/all/themes/sub/gym_theme/images/Iron_Fitness_Youth_Logo.png">
+        </a>
       </div>
     </div>
-  </div> -->
-
-  <div class="section text-section excellence-section">
-    <p>Join us on the pursuit of self-excellence.</p>
   </div>
 </div>
 
@@ -225,31 +157,3 @@ global $user;
   </div>
 <?php endif; ?>
 
-<!-- <div class="footer-inner row">
-  <div class="location col-sm-4 col-xs-6">
-    <div class="footer-title">LOCATION</div>
-    <div class="footer-block">
-      <p>12, Lorium Ipsum</p>
-      <p>Lorium Ipsum</p>
-      <p>Lorium Ipsum</p>
-    </div>
-  </div>
-  <div class="social  col-sm-4 col-xs-6">
-    <div class="footer-title">STAY CONNECTED</div>
-    <div class="footer-block">
-      <div class="social-icons">
-        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-      </div>
-      <div class="email">Email: xyz@gmail.com</div>
-      <div class="phone">Phone: 9876543210</div>
-    </div>
-  </div>
-  <div class="timings  col-sm-4 col-xs-6">
-    <div class="footer-title">HOURS</div>
-    <div class="footer-block">
-      <p>Lorium Ipsum</p>
-      <p>Lorium Ipsum</p>
-      <p>Lorium Ipsum</p>
-    </div>
-  </div>
-</div> -->

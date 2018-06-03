@@ -1,0 +1,49 @@
+@import "includes";
+
+.view-iron-fitness {
+  .views-widget-filter-title {
+    margin-top: 30px;
+    text-align: center;
+    .form-item-title {
+      width: 200px;
+      margin: auto;
+      input {
+        border-radius: 16px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        height: auto;
+        background: #e6e6e6;
+      }
+    }
+  }
+  .views-exposed-form .views-exposed-widget {
+    float: none;
+    padding: 0;
+    .form-item-field-select-category-value {
+      .bef-select-as-links > .form-item {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        .form-item {
+          flex-grow: 1;
+          width: 25%;
+          a {
+            color: #fff;
+            text-decoration: none;
+            outline: none;
+            text-align: center;
+            text-transform: uppercase;
+            background: transparent;
+            display: inline-block;
+            font-weight: bold;
+            width: 100%;
+            padding: 10px 5px;
+            &.active {
+              background: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
