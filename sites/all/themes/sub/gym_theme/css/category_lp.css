@@ -19,14 +19,15 @@ a {
 /* line 4, ../sass/category_lp.scss */
 .view-iron-fitness .views-widget-filter-title {
   margin-top: 30px;
+  margin-bottom: 20px;
   text-align: center;
 }
-/* line 7, ../sass/category_lp.scss */
+/* line 8, ../sass/category_lp.scss */
 .view-iron-fitness .views-widget-filter-title .form-item-title {
-  width: 200px;
+  width: 220px;
   margin: auto;
 }
-/* line 10, ../sass/category_lp.scss */
+/* line 11, ../sass/category_lp.scss */
 .view-iron-fitness .views-widget-filter-title .form-item-title input {
   border-radius: 16px;
   padding-top: 4px;
@@ -34,36 +35,124 @@ a {
   height: auto;
   background: #e6e6e6;
 }
-/* line 19, ../sass/category_lp.scss */
+/* line 20, ../sass/category_lp.scss */
 .view-iron-fitness .views-exposed-form .views-exposed-widget {
   float: none;
   padding: 0;
 }
-/* line 23, ../sass/category_lp.scss */
+/* line 24, ../sass/category_lp.scss */
 .view-iron-fitness .views-exposed-form .views-exposed-widget .form-item-field-select-category-value .bef-select-as-links > .form-item {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  max-width: 790px;
+  margin: auto;
 }
-/* line 27, ../sass/category_lp.scss */
+/* line 30, ../sass/category_lp.scss */
 .view-iron-fitness .views-exposed-form .views-exposed-widget .form-item-field-select-category-value .bef-select-as-links > .form-item .form-item {
   flex-grow: 1;
   width: 25%;
 }
-/* line 30, ../sass/category_lp.scss */
+/* line 33, ../sass/category_lp.scss */
 .view-iron-fitness .views-exposed-form .views-exposed-widget .form-item-field-select-category-value .bef-select-as-links > .form-item .form-item a {
   color: #fff;
   text-decoration: none;
   outline: none;
   text-align: center;
   text-transform: uppercase;
-  background: transparent;
+  background: #b01f2d;
   display: inline-block;
   font-weight: bold;
   width: 100%;
   padding: 10px 5px;
 }
-/* line 41, ../sass/category_lp.scss */
+/* line 44, ../sass/category_lp.scss */
 .view-iron-fitness .views-exposed-form .views-exposed-widget .form-item-field-select-category-value .bef-select-as-links > .form-item .form-item a.active {
   background: #f12236;
+}
+/* line 52, ../sass/category_lp.scss */
+.view-iron-fitness .view-empty {
+  max-width: 790px;
+  margin: auto;
+}
+/* line 56, ../sass/category_lp.scss */
+.view-iron-fitness .view-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* line 60, ../sass/category_lp.scss */
+.view-iron-fitness .view-content .views-row {
+  width: 270px;
+  height: 270px;
+  padding: 10px;
+  position: relative;
+}
+/* line 65, ../sass/category_lp.scss */
+.view-iron-fitness .view-content .views-row .views-field-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  top: auto;
+  text-align: center;
+  padding: 5px 0px;
+  cursor: pointer;
+}
+/* line 75, ../sass/category_lp.scss */
+.view-iron-fitness .view-content .views-row .views-field-title a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+}
+/* line 81, ../sass/category_lp.scss */
+.view-iron-fitness .view-content .views-row .views-field-title * {
+  display: inline-block;
+  width: 100%;
+}
+/* line 86, ../sass/category_lp.scss */
+.view-iron-fitness .view-content .views-row .image {
+  height: 250px;
+}
+/* line 88, ../sass/category_lp.scss */
+.view-iron-fitness .view-content .views-row .image a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+/* line 92, ../sass/category_lp.scss */
+.view-iron-fitness .view-content .views-row .image a img {
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
+}
+
+/* line 105, ../sass/category_lp.scss */
+.page-iron-bodies #navbar .navbar-header .navbar-item.navbar-user-menu-block li a {
+  background: #25a9e0;
+}
+/* line 113, ../sass/category_lp.scss */
+.page-iron-bodies .view-iron-fitness .views-exposed-form .views-exposed-widget .form-item-field-select-category-value .bef-select-as-links > .form-item .form-item a {
+  background: #217da4;
+}
+/* line 115, ../sass/category_lp.scss */
+.page-iron-bodies .view-iron-fitness .views-exposed-form .views-exposed-widget .form-item-field-select-category-value .bef-select-as-links > .form-item .form-item a.active {
+  background: #25a9e0;
+}
+
+/* line 128, ../sass/category_lp.scss */
+.page-iron-academy #navbar .navbar-header .navbar-item.navbar-user-menu-block li a {
+  background: #ffdd15;
+  color: #000;
+}
+/* line 137, ../sass/category_lp.scss */
+.page-iron-academy .view-iron-fitness .views-exposed-form .views-exposed-widget .form-item-field-select-category-value .bef-select-as-links > .form-item .form-item a {
+  background: #b9a216;
+  color: #000;
+}
+/* line 140, ../sass/category_lp.scss */
+.page-iron-academy .view-iron-fitness .views-exposed-form .views-exposed-widget .form-item-field-select-category-value .bef-select-as-links > .form-item .form-item a.active {
+  background: #ffdd15;
 }

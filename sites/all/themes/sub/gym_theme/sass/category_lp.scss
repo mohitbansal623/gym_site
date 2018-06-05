@@ -3,9 +3,10 @@
 .view-iron-fitness {
   .views-widget-filter-title {
     margin-top: 30px;
+    margin-bottom: 20px;
     text-align: center;
     .form-item-title {
-      width: 200px;
+      width: 220px;
       margin: auto;
       input {
         border-radius: 16px;
@@ -24,6 +25,8 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
+        max-width: 790px;
+        margin: auto;
         .form-item {
           flex-grow: 1;
           width: 25%;
@@ -33,13 +36,110 @@
             outline: none;
             text-align: center;
             text-transform: uppercase;
-            background: transparent;
+            background: $dark-red;
             display: inline-block;
             font-weight: bold;
             width: 100%;
             padding: 10px 5px;
             &.active {
               background: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+  .view-empty {
+    max-width: 790px;
+    margin: auto;
+  }
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .views-row {
+      width: 270px;
+      height: 270px;
+      padding: 10px;
+      position: relative;
+      .views-field-title {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.7);
+        top: auto;
+        text-align: center;
+        padding: 5px 0px;
+        cursor: pointer;
+        a {
+          color: #fff;
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: bold;
+        }
+        * {
+          display: inline-block;
+          width: 100%;
+        }
+      }
+      .image {
+        height: 250px;
+        a {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          img {
+            object-fit: cover;
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Iron body
+.page-iron-bodies {
+  #navbar .navbar-header .navbar-item.navbar-user-menu-block li a {
+    background: $blue;
+  }
+  .view-iron-fitness {
+    .views-exposed-form .views-exposed-widget {
+      .form-item-field-select-category-value {
+        .bef-select-as-links > .form-item {
+          .form-item {
+            a {
+              background: $dark-blue;
+              &.active {
+                background: $blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// iron fitness academy
+.page-iron-academy {
+  #navbar .navbar-header .navbar-item.navbar-user-menu-block li a {
+    background: $yellow;
+    color: #000;
+  }
+  .view-iron-fitness {
+    .views-exposed-form .views-exposed-widget {
+      .form-item-field-select-category-value {
+        .bef-select-as-links > .form-item {
+          .form-item {
+            a {
+              background: $dark-yellow;
+              color: #000;
+              &.active {
+                background: $yellow;
+              }
             }
           }
         }

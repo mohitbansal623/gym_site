@@ -16,254 +16,116 @@ a {
   outline: none;
 }
 
-/* line 13, ../sass/_mixin.scss */
-#homepage .section .read-more .read-more-btn {
-  border-radius: 300px;
-  border: 2px solid #272727;
-  background-color: transparent;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  font-weight: 600;
-  font-style: normal;
-  padding: 17px 34px;
-  -webkit-transition: 0.1s background-color linear, 0.1s color linear;
-  -moz-transition: 0.1s background-color linear, 0.1s color linear;
-  -o-transition: 0.1s background-color linear, 0.1s color linear;
-  transition: 0.1s background-color linear, 0.1s color linear;
-  color: #272727;
-  display: inline-block;
-  text-decoration: none;
-  outline: none;
-}
-/* line 35, ../sass/_mixin.scss */
-#homepage .section .read-more .read-more-btn:hover {
-  background-color: #272727;
-  color: #fff;
-}
-
-/* line 3, ../sass/home.scss */
-#homepage {
-  padding-top: 68px;
-}
-/* line 5, ../sass/home.scss */
-#homepage .section {
-  text-align: center;
-}
-/* line 7, ../sass/home.scss */
-#homepage .section .read-more {
-  text-align: center;
-  margin-top: 40px;
-  padding-bottom: 50px;
-  border-bottom: 1px solid #ccc;
-}
-/* line 17, ../sass/home.scss */
-#homepage .section .section-heading h3 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font-size: 3rem;
-  font-family: Franchise-Bold;
-  color: #111;
-  margin: 0 0 20px;
-  text-align: center;
-}
-/* line 28, ../sass/home.scss */
-#homepage .text-section {
-  padding: 50px 80px;
-}
-@media (max-width: 767px) {
-  /* line 28, ../sass/home.scss */
-  #homepage .text-section {
-    padding: 50px 20px;
-  }
-}
-/* line 34, ../sass/home.scss */
-#homepage .intro-section {
-  height: calc(100vh - 60px);
-  display: table;
-  background-image: url("../images/home/weights.jpeg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-}
-/* line 43, ../sass/home.scss */
-#homepage .intro-section .description {
-  display: table-cell;
-  vertical-align: middle;
-}
-/* line 46, ../sass/home.scss */
-#homepage .intro-section .description p {
-  font-family: Franchise-Bold;
-  font-size: 10rem;
-  color: #fff;
-  line-height: 1;
-}
-/* line 54, ../sass/home.scss */
-#homepage .about-section {
-  padding-bottom: 0px;
-}
-/* line 56, ../sass/home.scss */
-#homepage .about-section .description {
-  text-align: justify;
-}
-/* line 58, ../sass/home.scss */
-#homepage .about-section .description p {
-  font-size: 2rem;
-}
-@media (max-width: 767px) {
-  /* line 58, ../sass/home.scss */
-  #homepage .about-section .description p {
-    font-size: 1.5rem;
-  }
-}
-/* line 67, ../sass/home.scss */
-#homepage .services-section {
-  padding-top: 50px;
-}
-/* line 69, ../sass/home.scss */
-#homepage .services-section .services-container {
-  font-size: 0;
-}
-/* line 71, ../sass/home.scss */
-#homepage .services-section .services-container .service {
-  font-size: 1.8rem;
-  display: inline-block;
-  vertical-align: top;
-  height: 22vw;
-  width: 25%;
-}
-/* line 77, ../sass/home.scss */
-#homepage .services-section .services-container .service.service1 {
-  background: url(../images/home/fitness.jpg) no-repeat;
-  background-size: cover;
-}
-/* line 81, ../sass/home.scss */
-#homepage .services-section .services-container .service.service2 {
-  background: url(../images/home/index.jpeg) no-repeat;
-  background-size: cover;
-}
-/* line 85, ../sass/home.scss */
-#homepage .services-section .services-container .service.service3 {
-  background: url(../images/home/images.jpeg) no-repeat;
-  background-size: cover;
-}
-/* line 89, ../sass/home.scss */
-#homepage .services-section .services-container .service.service4 {
-  background: url(../images/home/workout.jpg) no-repeat;
-  background-size: cover;
-}
-/* line 93, ../sass/home.scss */
-#homepage .services-section .services-container .service.service5 {
-  background: url(../images/home/home-gym.jpg) no-repeat;
-  background-size: cover;
-}
-/* line 97, ../sass/home.scss */
-#homepage .services-section .services-container .service.service6 {
-  background: url(../images/home/exercises.jpg) no-repeat;
-  background-size: cover;
-}
-/* line 101, ../sass/home.scss */
-#homepage .services-section .services-container .service.service7 {
-  background: url(../images/home/working-out5.jpg) no-repeat;
-  background-size: cover;
-}
-/* line 105, ../sass/home.scss */
-#homepage .services-section .services-container .service.service8 {
-  background: url(../images/home/two.jpeg) no-repeat;
-  background-size: cover;
-}
-/* line 109, ../sass/home.scss */
-#homepage .services-section .services-container .service a {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  overflow: hidden;
-  text-decoration: none;
-  outline: none;
-  position: relative;
-}
-/* line 118, ../sass/home.scss */
-#homepage .services-section .services-container .service a .square {
-  height: 100%;
-  display: table;
-  width: 100%;
-}
-/* line 123, ../sass/home.scss */
-#homepage .services-section .services-container .service a .service-name {
+/* line 198, ../sass/home.scss */
+body.front .page-header, body.front #first-time {
   display: none;
-  vertical-align: middle;
-  color: #fff;
-  z-index: 2;
-  position: relative;
-  font-weight: bold;
-  -webkit-transition: all 1s linear;
-  /* Safari */
-  transition: all 1s linear;
 }
-/* line 133, ../sass/home.scss */
-#homepage .services-section .services-container .service a .overlay {
-  -webkit-transition: all 1s linear;
-  /* Safari */
-  transition: all 1s linear;
-}
-/* line 137, ../sass/home.scss */
-#homepage .services-section .services-container .service a:hover {
-  -webkit-transition: all 1s linear;
-  /* Safari */
-  transition: all 1s linear;
-}
-/* line 140, ../sass/home.scss */
-#homepage .services-section .services-container .service a:hover .overlay {
+/* line 204, ../sass/home.scss */
+body.front #home-page-banner-block .home-page-banner .slide a {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.7);
-  -webkit-transition: all 1s linear;
-  /* Safari */
-  transition: all 1s linear;
+  display: inline-block;
 }
-/* line 149, ../sass/home.scss */
-#homepage .services-section .services-container .service a:hover .service-name {
-  -webkit-transition: all 1s linear;
-  /* Safari */
-  transition: all 1s linear;
-  display: table-cell;
-}
-/* line 160, ../sass/home.scss */
-#homepage .excellence-section p {
+/* line 209, ../sass/home.scss */
+body.front #home-page-banner-block .home-page-banner .slick-slider {
   margin: 0;
-  font-family: Franchise-Bold;
-  font-size: 3rem;
-  color: #111;
 }
-@media (max-width: 767px) {
-  /* line 160, ../sass/home.scss */
-  #homepage .excellence-section p {
-    font-size: 4rem;
+/* line 211, ../sass/home.scss */
+body.front #home-page-banner-block .home-page-banner .slick-slider img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+/* line 216, ../sass/home.scss */
+body.front #home-page-banner-block .home-page-banner .slick-slider .slick-dots {
+  bottom: 0;
+}
+/* line 220, ../sass/home.scss */
+body.front #home-page-banner-block .home-page-banner .slick-slider .slick-dots li button:before {
+  color: #fff;
+  opacity: 1;
+  font-size: 9px;
+}
+/* line 228, ../sass/home.scss */
+body.front #home-page-banner-block .home-page-banner .slick-slider .slick-dots li.slick-active button:before {
+  color: gray;
+}
+/* line 238, ../sass/home.scss */
+body.front #main-categories-box {
+  padding: 50px 0;
+  text-align: center;
+  background: #1a1a1a;
+}
+@media (max-width: 480px) {
+  /* line 238, ../sass/home.scss */
+  body.front #main-categories-box {
+    padding: 30px 0;
   }
 }
-
-/* line 174, ../sass/home.scss */
-.page-notifications .modal-dialog {
-  z-index: 0;
-  width: 50%;
+/* line 245, ../sass/home.scss */
+body.front #main-categories-box .category-heading {
+  margin-bottom: 40px;
 }
-/* line 179, ../sass/home.scss */
-.page-notifications .modal-header {
-  background: lavender;
+@media (max-width: 480px) {
+  /* line 245, ../sass/home.scss */
+  body.front #main-categories-box .category-heading {
+    margin-bottom: 20px;
+  }
 }
-/* line 184, ../sass/home.scss */
-.page-notifications .modal-body .notification-message {
+/* line 250, ../sass/home.scss */
+body.front #main-categories-box .category-heading h1 {
+  color: #fff;
+  font-size: 21px;
+  margin: 0;
+  font-weight: bold;
   display: inline-block;
-  margin-right: 10px;
-  font-weight: bold;
+  border-bottom: 1px solid #696868;
+  padding-bottom: 5px;
+  letter-spacing: 3px;
 }
-/* line 189, ../sass/home.scss */
-.page-notifications .modal-body a {
-  background: lavender;
-  border-radius: 20px;
-  font-weight: bold;
+@media (max-width: 480px) {
+  /* line 250, ../sass/home.scss */
+  body.front #main-categories-box .category-heading h1 {
+    font-size: 16px;
+  }
+}
+/* line 263, ../sass/home.scss */
+body.front #main-categories-box .category-heading span {
+  color: #ccc;
+  font-size: 14px;
+  display: inline-block;
+  width: 100%;
+}
+@media (max-width: 480px) {
+  /* line 263, ../sass/home.scss */
+  body.front #main-categories-box .category-heading span {
+    font-size: 12px;
+  }
+}
+@media (min-width: 481px) {
+  /* line 273, ../sass/home.scss */
+  body.front #main-categories-box .main-category-inner {
+    display: flex;
+    max-width: 790px;
+    margin: auto;
+  }
+}
+/* line 280, ../sass/home.scss */
+body.front #main-categories-box .main-category {
+  vertical-align: top;
+  width: 25%;
+  padding: 0 10px;
+}
+@media (max-width: 480px) {
+  /* line 280, ../sass/home.scss */
+  body.front #main-categories-box .main-category {
+    width: 100%;
+    max-width: 130px;
+    margin: auto;
+    padding: 15px 0px;
+  }
+}
+/* line 290, ../sass/home.scss */
+body.front #main-categories-box .main-category a {
+  display: inline-block;
+  width: auto;
 }
