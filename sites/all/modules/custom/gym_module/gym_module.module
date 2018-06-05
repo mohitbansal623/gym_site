@@ -4,10 +4,33 @@
 /**
  * Implements hook user login
  */
-function gym_module_user_login(&$edit, $account) {
-  watchdog('gym_module', print_r($edit, TRUE));
-  watchdog('gym_module', print_r($account, TRUE));
-  drupal_goto('node/add/goals');
+// function gym_module_user_login(&$edit, $account) {
+//   watchdog('gym_module', print_r($edit, TRUE));
+//   watchdog('gym_module', print_r($account, TRUE));
+//   drupal_goto('node/add/goals');
+// }
+
+/**
+ * Implements hook_menu().
+ */
+function gym_module_menu() {
+  $items['admin/config/site-ui-configuration'] = array(
+    'title' => 'UI Config Settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('gymsite_ui_config_form'),
+    'access callback' => 'user_access',
+    'access arguments' => array('access administration pages'),
+  );
+
+  return $items;
 }
 
+function gymsite_ui_config_form($form, &$form_state) {
+  $form['home_page_banner'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Home Page Banner HTML'),
+    '#default_value' => variable_get('home_page_banner', ''),
+  );
 
+  return system_settings_form($form);
+}

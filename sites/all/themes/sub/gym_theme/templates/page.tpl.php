@@ -72,57 +72,60 @@
  *
  * @ingroup templates
  */
-global $user;
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
-    <?php //if ($user->uid != 0): ?>
-     <!--  <div class="notification"><i class="fa fa-bell-o" aria-hidden="true"></i></div>
-      <div class="notification-box">
-        <div class="heading"><h2>NOTIFICATIONS</h2><a class="close" href="#" >&times;</a></div>
-        <div class="content">
-
-        </div>
-      </div> -->
-    <?php //endif; ?>
     <div class="navbar-header">
-      <?php if ($logo): ?>
-        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
-      <?php endif; ?>
-
-      <?php if (!empty($site_name)): ?>
-        <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-      <?php endif; ?>
-
+    <div class="navbar-item navbar-menu-block">
       <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+        <div class="navbar-collapse collapse" id="navbar-collapse">
+          <nav role="navigation">
+            <?php if (!empty($primary_nav)): ?>
+              <?php print render($primary_nav); ?>
+            <?php endif; ?>
+            <?php if (!empty($secondary_nav)): ?>
+              <?php //print render($secondary_nav); ?>
+            <?php endif; ?>
+            <?php if (!empty($page['navigation'])): ?>
+              <?php print render($page['navigation']); ?>
+            <?php endif; ?>
+          </nav>
+        </div>
       <?php endif; ?>
     </div>
-    <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-      <div class="navbar-collapse collapse" id="navbar-collapse">
-        <nav role="navigation">
-          <?php if (!empty($primary_nav)): ?>
-            <?php print render($primary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($secondary_nav)): ?>
-            <?php print render($secondary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($page['navigation'])): ?>
-            <?php print render($page['navigation']); ?>
-          <?php endif; ?>
-        </nav>
-      </div>
-    <?php endif; ?>
+
+    <div class="navbar-item navbar-logo-block">
+      <?php $alias = drupal_get_path_alias(); ?>
+
+      <?php if ($logo): ?>
+        <?php if ($alias == 'iron-bodies'): ?>
+          <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <img src="/sites/all/themes/sub/gym_theme/images/Iron_Bodies_Logo.png" alt="<?php print t('Home'); ?>" />
+          </a>
+        <?php elseif ($alias == 'iron-academy'): ?>
+          <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <img src="/sites/all/themes/sub/gym_theme/images/Iron_Academy_Logo.png" alt="<?php print t('Home'); ?>" />
+          </a>
+        <?php elseif ($alias == 'iron-fitness-youth'): ?>
+          <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <img src="/sites/all/themes/sub/gym_theme/images/Iron_Fitness_Youth_Logo.png" alt="<?php print t('Home'); ?>" />
+          </a>
+        <?php else: ?>
+          <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <img src="/sites/all/themes/sub/gym_theme/images/Iron_Fitness_Logo.png" alt="<?php print t('Home'); ?>" />
+          </a>
+        <?php endif; ?>
+
+      <?php endif; ?>
+    </div>
+    <div class="navbar-item navbar-user-menu-block">
+      <?php if (!empty($secondary_nav)): ?>
+        <?php print render($secondary_nav); ?>
+      <?php endif; ?>
+    </div>
+    </div>
   </div>
 </header>
-
 <div class="page-container">
   <?php if (!empty($page['highlighted'])): ?>
     <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
