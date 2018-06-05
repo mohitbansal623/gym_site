@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Blogs Homepage CT and Views feature.
+ */
+
+include_once 'blogs_homepage_ct_and_views.features.inc';
