@@ -87,12 +87,7 @@
     <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
-    <?php if ($display_submitted): ?>
-    <span class="submitted">
-      <?php print $user_picture; ?>
-      <?php print $submitted; ?>
-    </span>
-    <?php endif; ?>
+
   </header>
   <?php endif; ?>
   <?php
@@ -100,8 +95,29 @@
     hide($content['comments']);
     hide($content['links']);
     hide($content['field_tags']);
-    print render($content);
+    // kpr($content);
+    // print render($content);
   ?>
+  <div class="node-class">
+    <div class="display-video">
+      <?php print render($content['field_add_video']);?>
+    </div>
+
+    <div class="combine-section">
+      <div class="diplay-author-name">
+      <?php if ($display_submitted): ?>
+        <span class="submitted">
+          <?php //print $user_picture; ?>
+          <?php print $submitted; ?>
+        </span>
+      <?php endif; ?>
+      </div>
+
+      <div class="display-body">
+        <?php print render($content['body']);?>
+      </div>
+    </div>
+  </div>
   <?php
     // Only display the wrapper div if there are tags or links.
     $field_tags = render($content['field_tags']);
@@ -109,8 +125,8 @@
     if ($field_tags || $links):
   ?>
    <footer>
-     <?php print $field_tags; ?>
-     <?php print $links; ?>
+     <?php// print $field_tags; ?>
+     <?php// print $links; ?>
   </footer>
   <?php endif; ?>
   <?php print render($content['comments']); ?>
