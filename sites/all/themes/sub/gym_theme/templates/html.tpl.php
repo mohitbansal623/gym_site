@@ -71,6 +71,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet"> 
 </head>
 <body<?php print $body_attributes; ?>>
   <div id="skip-link">

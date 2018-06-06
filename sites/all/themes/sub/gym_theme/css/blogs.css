@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Franchise-Bold';
+  src: url("../fonts/Franchise-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 3, ../sass/_mixin.scss */
+body {
+  color: #777;
+  font: 400 15px/1.8 "Lato", sans-serif;
+}
+
+/* line 8, ../sass/_mixin.scss */
+a {
+  text-decoration: none;
+  outline: none;
+}

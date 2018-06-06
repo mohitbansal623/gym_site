@@ -36,6 +36,19 @@ function gym_theme_preprocess_page(&$vars, $hook) {
     case 'mass-lost-leaderboard':
       drupal_add_css($theme_path . '/css/dashboard.css');
       break;
+
+    case 'iron-fitness':
+    case 'iron-bodies':
+    case 'iron-academy':
+    case 'iron-fitness-youth':
+      drupal_add_css($theme_path . '/css/category_lp.css');
+      break;
+  }
+  if (isset($vars['node']->type) && $vars['node']->type == 'blogs') {
+    // If the content type's machine name is "my_machine_name" the file
+    // name will be "page--my-machine-name.tpl.php".
+    drupal_add_css($theme_path . '/css/blogs.css');
+    // $vars['theme_hook_suggestions'][] = 'page__blog';
   }
 }
 

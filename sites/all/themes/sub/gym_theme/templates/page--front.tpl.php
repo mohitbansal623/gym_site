@@ -97,7 +97,7 @@
     <div class="navbar-item navbar-logo-block">
       <?php if ($logo): ?>
         <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <img src="/sites/all/themes/sub/gym_theme/images/Iron_Fitness_Logo.png" alt="<?php print t('Home'); ?>" />
+          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
         </a>
       <?php endif; ?>
     </div>
@@ -152,4 +152,3 @@
     </footer>
   </div>
 <?php endif; ?>
-
