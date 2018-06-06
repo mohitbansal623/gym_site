@@ -1,1 +1,43 @@
 @import "includes";
+
+.node-type-blogs.html {
+  background: #f3f3f3;
+  .page-container .container {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  .main-container.container > .row {
+    margin: 0 !important;
+  }
+  .main-container.container > .row > section {
+    padding: 0 !important;
+  }
+  .page-header {
+    display: none;
+  }
+  .video-body {
+    max-width: 650px;
+    margin: auto;
+  }
+  .display-video {
+    background: #30302e;
+    .video-container {
+      max-width: 650px;
+      margin: auto;
+      .media-youtube-video {
+        position: relative;
+        padding-bottom: 56.25%; /*16:9*/
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+        iframe, object, embed {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+    }
+  }
+}
