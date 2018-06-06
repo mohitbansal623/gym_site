@@ -57,6 +57,19 @@ function gym_theme_preprocess_page(&$vars, $hook) {
  */
 function gym_theme_preprocess_node(&$variables) {
   $theme_path = drupal_get_path('theme', 'gym_theme');
+  if (isset($variables['uid'])) {
+    $uid = user_load($variables['uid']);
+    $name = $uid->name;
+    $variables['user_name'] = "By " . $name;
+
+    $creation_date = $variables['created'];
+    $creation_date = date('F j Y', $creation_date);
+    $variables['creation_date'] = $creation_date;
+
+    $variables['comment_total'] = $variables['comment_count'];
+
+  }
+
   // if (drupal_get_path_alias("node/{$vars['#node']->nid}")) {
   //   drupal_add_css(drupal_get_path('theme', 'MYTHEME') . "/css/foo.css");
   // }

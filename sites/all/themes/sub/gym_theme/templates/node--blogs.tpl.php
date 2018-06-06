@@ -106,10 +106,15 @@
     <div class="combine-section">
       <div class="diplay-author-name">
       <?php if ($display_submitted): ?>
-        <span class="submitted">
+        <h3> <?php print $user_name; ?>
+        <h5 class="submitted">
           <?php //print $user_picture; ?>
-          <?php print $submitted; ?>
-        </span>
+          <?php print $creation_date; ?>
+        </h5>
+       <hr>
+       <h5>
+        <?php print "Comments " . $comment_total; ?>
+       </h5>
       <?php endif; ?>
       </div>
 
