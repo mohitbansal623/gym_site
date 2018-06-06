@@ -72,6 +72,7 @@
  *
  * @ingroup templates
  */
+ dpm($page['content']);
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
@@ -95,10 +96,27 @@
     </div>
 
     <div class="navbar-item navbar-logo-block">
+      <?php $alias = drupal_get_path_alias(); ?>
+
       <?php if ($logo): ?>
-        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
+        <?php if ($alias == 'iron-bodies'): ?>
+          <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <img src="/sites/all/themes/sub/gym_theme/images/Iron_Bodies_Logo.png" alt="<?php print t('Home'); ?>" />
+          </a>
+        <?php elseif ($alias == 'iron-academy'): ?>
+          <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <img src="/sites/all/themes/sub/gym_theme/images/Iron_Academy_Logo.png" alt="<?php print t('Home'); ?>" />
+          </a>
+        <?php elseif ($alias == 'iron-fitness-youth'): ?>
+          <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <img src="/sites/all/themes/sub/gym_theme/images/Iron_Fitness_Youth_Logo.png" alt="<?php print t('Home'); ?>" />
+          </a>
+        <?php else: ?>
+          <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <img src="/sites/all/themes/sub/gym_theme/images/Iron_Fitness_Logo.png" alt="<?php print t('Home'); ?>" />
+          </a>
+        <?php endif; ?>
+
       <?php endif; ?>
     </div>
     <div class="navbar-item navbar-user-menu-block">
@@ -109,38 +127,58 @@
     </div>
   </div>
 </header>
-<div id="home-page-banner-block">
-  <div class="home-page-banner-block-box">
-    <?php print variable_get('home_page_banner', ''); ?>
-  </div>
-</div>
-<div id="main-categories-box">
-  <div class="main-categories-container container">
-    <div class="category-heading">
-      <h1>FOLLOW YOUR PATH</h1>
-      <span>SELECT YOUR CATEGORY BELOW</span>
-    </div>
-    <div class="main-category-inner">
-      <div class="main-category main-category-fitness">
-        <a href="/iron-fitness">
-          <img src="/sites/all/themes/sub/gym_theme/images/Iron_Fitness_Logo.png">
-        </a>
-      </div>
-      <div class="main-category main-category-fitness">
-        <a href="/iron-bodies">
-          <img src="/sites/all/themes/sub/gym_theme/images/Iron_Bodies_Logo.png">
-        </a>
-      </div>
-      <div class="main-category main-category-fitness">
-        <a href="/iron-academy">
-          <img src="/sites/all/themes/sub/gym_theme/images/Iron_Academy_Logo.png">
-        </a>
-      </div>
-      <div class="main-category main-category-fitness">
-        <a href="/iron-fitness-youth">
-          <img src="/sites/all/themes/sub/gym_theme/images/Iron_Fitness_Youth_Logo.png">
-        </a>
-      </div>
+<div class="page-container">
+  <?php if (!empty($page['highlighted'])): ?>
+    <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+    <div class="main-container main-container-banner <?php print $container_class; ?>">
+
+  <?php else: ?>
+    <div class="main-container <?php print $container_class; ?>">
+  <?php endif; ?>
+
+    <header role="banner" id="page-header">
+      <?php if (!empty($site_slogan)): ?>
+        <p class="lead"><?php print $site_slogan; ?></p>
+      <?php endif; ?>
+
+      <?php print render($page['header']); ?>
+    </header> <!-- /#page-header -->
+
+    <div class="row">
+
+      <?php if (!empty($page['sidebar_first'])): ?>
+        <aside class="col-sm-3" role="complementary">
+          <?php print render($page['sidebar_first']); ?>
+        </aside>  <!-- /#sidebar-first -->
+      <?php endif; ?>
+
+      <section<?php print $content_column_class; ?>>
+        <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+        <a id="main-content"></a>
+        <?php print render($title_prefix); ?>
+        <?php if (!empty($title)): ?>
+          <h1 class="page-header"><?php print $title; ?></h1>
+        <?php endif; ?>
+        <?php print render($title_suffix); ?>
+        <?php print $messages; ?>
+        <?php if (!empty($tabs)): ?>
+          <?php print render($tabs); ?>
+        <?php endif; ?>
+        <?php if (!empty($page['help'])): ?>
+          <?php print render($page['help']); ?>
+        <?php endif; ?>
+        <?php if (!empty($action_links)): ?>
+          <ul class="action-links"><?php print render($action_links); ?></ul>
+        <?php endif; ?>
+        <?php print render($page['content']); ?>
+      </section>
+
+      <?php if (!empty($page['sidebar_second'])): ?>
+        <aside class="col-sm-3" role="complementary">
+          <?php print render($page['sidebar_second']); ?>
+        </aside>  <!-- /#sidebar-second -->
+      <?php endif; ?>
+
     </div>
   </div>
 </div>

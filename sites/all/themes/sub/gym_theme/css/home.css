@@ -105,7 +105,7 @@ body.front #main-categories-box .category-heading span {
   /* line 273, ../sass/home.scss */
   body.front #main-categories-box .main-category-inner {
     display: flex;
-    max-width: 790px;
+    max-width: 810px;
     margin: auto;
   }
 }
