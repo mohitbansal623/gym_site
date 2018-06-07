@@ -18,7 +18,7 @@ a {
 
 /* line 3, ../sass/blogs.scss */
 .node-type-blogs.html {
-  background: #f3f3f3;
+  background: #fff;
 }
 /* line 5, ../sass/blogs.scss */
 .node-type-blogs.html .page-container .container {
@@ -37,21 +37,16 @@ a {
 .node-type-blogs.html .page-header {
   display: none;
 }
-/* line 18, ../sass/blogs.scss */
-.node-type-blogs.html .video-body {
-  max-width: 650px;
-  margin: auto;
-}
-/* line 22, ../sass/blogs.scss */
+/* line 21, ../sass/blogs.scss */
 .node-type-blogs.html .display-video {
   background: #30302e;
 }
-/* line 24, ../sass/blogs.scss */
+/* line 23, ../sass/blogs.scss */
 .node-type-blogs.html .display-video .video-container {
   max-width: 650px;
   margin: auto;
 }
-/* line 27, ../sass/blogs.scss */
+/* line 26, ../sass/blogs.scss */
 .node-type-blogs.html .display-video .video-container .media-youtube-video {
   position: relative;
   padding-bottom: 56.25%;
@@ -60,11 +55,72 @@ a {
   height: 0;
   overflow: hidden;
 }
-/* line 33, ../sass/blogs.scss */
+/* line 32, ../sass/blogs.scss */
 .node-type-blogs.html .display-video .video-container .media-youtube-video iframe, .node-type-blogs.html .display-video .video-container .media-youtube-video object, .node-type-blogs.html .display-video .video-container .media-youtube-video embed {
   position: absolute;
   top: 0;
   left: 0;
   width: 100% !important;
   height: 100% !important;
+}
+/* line 43, ../sass/blogs.scss */
+.node-type-blogs.html .video-body .comment-section {
+  max-width: 650px;
+  margin: auto;
+}
+/* line 47, ../sass/blogs.scss */
+.node-type-blogs.html .video-body .blog-body {
+  background: #f3f3f3;
+  padding: 40px 0;
+}
+@media (max-width: 767px) {
+  /* line 47, ../sass/blogs.scss */
+  .node-type-blogs.html .video-body .blog-body {
+    padding: 20px;
+  }
+}
+/* line 53, ../sass/blogs.scss */
+.node-type-blogs.html .video-body .blog-body .blog-body-container {
+  max-width: 650px;
+  margin: auto;
+  font-size: 0;
+}
+/* line 58, ../sass/blogs.scss */
+.node-type-blogs.html .video-body .blog-body .author-info, .node-type-blogs.html .video-body .blog-body .display-body {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+}
+/* line 63, ../sass/blogs.scss */
+.node-type-blogs.html .video-body .blog-body .author-info {
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+/* line 66, ../sass/blogs.scss */
+.node-type-blogs.html .video-body .blog-body .author-info .author {
+  color: #333;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+/* line 72, ../sass/blogs.scss */
+.node-type-blogs.html .video-body .blog-body .author-info .submitted {
+  font-style: normal;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #b7b6b6;
+}
+/* line 78, ../sass/blogs.scss */
+.node-type-blogs.html .video-body .blog-body .display-body {
+  color: #333;
+}
+@media (min-width: 768px) {
+  /* line 82, ../sass/blogs.scss */
+  .node-type-blogs.html .video-body .blog-body .author-info {
+    width: 170px;
+  }
+  /* line 85, ../sass/blogs.scss */
+  .node-type-blogs.html .video-body .blog-body .display-body {
+    width: calc(100% - 170px);
+    padding-left: 15px;
+  }
 }
