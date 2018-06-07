@@ -63,14 +63,35 @@ function gym_theme_preprocess_node(&$variables) {
     $variables['user_name'] = "By " . $name;
 
     $creation_date = $variables['created'];
-    $creation_date = date('F j Y', $creation_date);
+    $creation_date = date('F j, Y', $creation_date);
     $variables['creation_date'] = $creation_date;
 
     $variables['comment_total'] = $variables['comment_count'];
+    $comments_data = array();
 
+    if (isset($variables['content']['comments']['comments']) && !empty($variables['content']['comments']['comments'])) {
+      $comments = $variables['content']['comments']['comments'];
+
+      foreach ($comments as $key => $value) {
+        if (is_numeric($key)) {
+          $comments_data[$key]['name'] = $value['comment_body']['#object']->name;
+          $post_date = $value['comment_body']['#object']->created;
+          $post_date = date('F j, Y g:ia', $post_date);
+          $comments_data[$key]['post_date'] = $post_date;
+          $pic_id = !empty($value['comment_body']['#object']->picture) ? $value['comment_body']['#object']->picture: NULL ;
+          $comments_data[$key]['comment'] = $value['comment_body']['#object']->comment_body['und'][0]['value'];
+          if (!empty($pic_id)) {
+            $pic = file_load($pic_id);
+            $profile_pic = image_style_url('thumbnail', $pic->uri);
+            $comments_data[$key]['pic'] = $profile_pic;
+          }
+          else {
+            $comments_data[$key]['pic'] = '';
+          }
+        }
+      }
+    }
   }
 
-  // if (drupal_get_path_alias("node/{$vars['#node']->nid}")) {
-  //   drupal_add_css(drupal_get_path('theme', 'MYTHEME') . "/css/foo.css");
-  // }
+  $variables['comments_data'] = $comments_data;
 }
