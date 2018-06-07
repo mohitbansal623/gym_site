@@ -18,6 +18,7 @@
     text-transform: uppercase;
     max-width: 790px;
     font-size: 28px;
+    border: 0;
   }
   #block-system-main {
     .node-form {
@@ -30,7 +31,7 @@
           background: transparent;
           padding: 0;
           span.panel-title {
-            color: #777;
+            color: #fff;
             text-transform: uppercase;
             font-weight: 700;
           }
@@ -103,6 +104,42 @@
           span {
             display: none;
           }
+        }
+      }
+      .group-body-composition.field-group-fieldset {
+
+      }
+    }
+  }
+  #check-in-node-form {
+    &>div {
+      font-size: 0;
+      * {
+        font-size: 14px;
+      }
+      #edit-field-check-in-date, #edit-field-percent-bodyfat, #edit-field-bodyweight {
+        .panel-heading {
+          margin-bottom: 9px;
+        }
+        .panel-body {
+          width: 100% !important;
+          float: none;
+        }
+        @media (min-width: 768px) {
+          display: inline-block;
+          width: 33.33%;
+          vertical-align: top;
+        }
+      }
+      @media (min-width: 768px) {
+        #edit-field-check-in-date {
+          padding-right: 5px;
+        }
+        #edit-field-percent-bodyfat {
+          padding: 0 5px;
+        }
+        #edit-field-bodyweight {
+          padding-left: 5px;
         }
       }
     }
