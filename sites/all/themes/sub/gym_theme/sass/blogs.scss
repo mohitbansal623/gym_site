@@ -1,7 +1,7 @@
 @import "includes";
 
 .node-type-blogs.html {
-  background: #f3f3f3;
+  background: #fff;
   .page-container .container {
     width: 100% !important;
     padding: 0 !important;
@@ -16,8 +16,7 @@
     display: none;
   }
   .video-body {
-    max-width: 650px;
-    margin: auto;
+
   }
   .display-video {
     background: #30302e;
@@ -36,6 +35,56 @@
           left: 0;
           width: 100% !important;
           height: 100% !important;
+        }
+      }
+    }
+  }
+  .video-body {
+    .comment-section {
+      max-width: 650px;
+      margin: auto;
+    }
+    .blog-body {
+      background: #f3f3f3;
+      padding: 40px 0;
+      @media (max-width: 767px) {
+        padding: 20px;
+      }
+      .blog-body-container {
+        max-width: 650px;
+        margin: auto;
+        font-size: 0;
+      }
+      .author-info, .display-body {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 14px;
+      }
+      .author-info {
+        margin-bottom: 20px;
+        line-height: 1.2;
+        .author {
+          color: #333;
+          font-weight: 700;
+          font-size: 16px;
+          text-transform: uppercase;
+        }
+        .submitted {
+          font-style: normal;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #b7b6b6;
+        }
+      }
+      .display-body {
+        color: #333;
+      }
+      @media (min-width: 768px) {
+        .author-info {
+          width: 170px;
+        }
+        .display-body {
+          width: calc(100% - 170px);
+          padding-left: 15px;
         }
       }
     }

@@ -102,21 +102,22 @@
     <div class="video-body">
 
     <div class="combine-section">
-      <div class="diplay-author-name">
-      <?php if ($display_submitted): ?>
-        <h3> <?php print $user_name; ?> </h3>
-        <h5 class="submitted">
-          <?php //print $user_picture; ?>
-          <?php print $creation_date; ?>
-        </h5>
-       <hr>
-       <h5>
-        <?php print "Comments " . $comment_total; ?>
-       </h5>
-      <?php endif; ?>
-
-        <div class="display-body">
-          <?php print render($content['body']);?>
+      <div class="blog-body">
+        <div class="blog-body-container">
+          <div class="author-info">
+            <?php if ($display_submitted): ?>
+              <p class="author"> <?php print $user_name; ?> </p>
+              <p class="submitted">
+                <?php print $creation_date; ?>
+              </p>
+             <p>
+              <?php print "Comments " . $comment_total; ?>
+            </p>
+            <?php endif; ?>
+          </div>
+          <div class="display-body">
+            <?php print render($content['body']);?>
+          </div>
         </div>
       </div>
       <?php
