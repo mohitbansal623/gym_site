@@ -129,3 +129,8 @@ body.front #main-categories-box .main-category a {
   display: inline-block;
   width: auto;
 }
+/* line 293, ../sass/home.scss */
+body.front #main-categories-box .main-category a img {
+  width: 100%;
+  height: auto;
+}

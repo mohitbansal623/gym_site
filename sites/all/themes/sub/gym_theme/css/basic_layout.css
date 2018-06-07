@@ -62,19 +62,74 @@ a {
 #navbar .navbar-header .navbar-item.navbar-menu-block {
   justify-content: flex-start;
 }
-/* line 480, ../sass/basic_layout.scss */
+/* line 479, ../sass/basic_layout.scss */
+#navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav * {
+  text-transform: uppercase;
+  color: #fff;
+}
+/* line 484, ../sass/basic_layout.scss */
+#navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav li ul.dropdown-menu {
+  background: #666666;
+  padding: 0;
+}
+/* line 488, ../sass/basic_layout.scss */
+#navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav li ul.dropdown-menu > li > a {
+  background: #4d4d4d;
+}
+/* line 490, ../sass/basic_layout.scss */
+#navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav li ul.dropdown-menu > li > a:hover {
+  background: #4d4d4d;
+}
+/* line 493, ../sass/basic_layout.scss */
+#navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav li ul.dropdown-menu > li > a:focus {
+  background: #4d4d4d;
+}
+/* line 498, ../sass/basic_layout.scss */
+#navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav li ul.dropdown-menu > li.active > a {
+  background: #4d4d4d;
+}
+/* line 500, ../sass/basic_layout.scss */
+#navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav li ul.dropdown-menu > li.active > a:hover {
+  background: #4d4d4d;
+}
+/* line 503, ../sass/basic_layout.scss */
+#navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav li ul.dropdown-menu > li.active > a:focus {
+  background: #4d4d4d;
+}
+/* line 515, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > a {
   color: #fff;
 }
-/* line 482, ../sass/basic_layout.scss */
+/* line 517, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > a:hover {
   color: #fff;
+  background: transparent;
 }
-/* line 491, ../sass/basic_layout.scss */
+/* line 521, ../sass/basic_layout.scss */
+#navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > a:focus {
+  color: #fff;
+  background: transparent;
+}
+/* line 528, ../sass/basic_layout.scss */
+#navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li.active > a {
+  color: #fff;
+  background: transparent;
+}
+/* line 531, ../sass/basic_layout.scss */
+#navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li.active > a:hover {
+  color: #fff;
+  background: transparent;
+}
+/* line 535, ../sass/basic_layout.scss */
+#navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li.active > a:focus {
+  color: #fff;
+  background: transparent;
+}
+/* line 545, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-user-menu-block {
   justify-content: flex-end;
 }
-/* line 494, ../sass/basic_layout.scss */
+/* line 548, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-user-menu-block li a {
   color: #fff;
   outline: none;
@@ -84,54 +139,54 @@ a {
   text-transform: uppercase;
   font-size: 14px;
 }
-/* line 502, ../sass/basic_layout.scss */
+/* line 556, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-user-menu-block li a:hover {
   color: #fff;
 }
 
-/* line 512, ../sass/basic_layout.scss */
+/* line 566, ../sass/basic_layout.scss */
 .site-footer {
   background: #000;
 }
-/* line 514, ../sass/basic_layout.scss */
+/* line 568, ../sass/basic_layout.scss */
 .site-footer .footer {
   border: 0;
   margin: auto;
   padding-top: 70px;
   padding-bottom: 70px;
 }
-/* line 519, ../sass/basic_layout.scss */
+/* line 573, ../sass/basic_layout.scss */
 .site-footer .footer .footer-inner {
   max-width: 810px;
   margin: auto;
   padding: 0 10px;
 }
-/* line 524, ../sass/basic_layout.scss */
+/* line 578, ../sass/basic_layout.scss */
 .site-footer .footer .address, .site-footer .footer .social-icons {
   color: #fff;
   display: inline-block;
   vertical-align: top;
 }
-/* line 528, ../sass/basic_layout.scss */
+/* line 582, ../sass/basic_layout.scss */
 .site-footer .footer .address p, .site-footer .footer .social-icons p {
   margin: 0;
   font-size: 14px;
   line-height: 18px;
 }
-/* line 533, ../sass/basic_layout.scss */
+/* line 587, ../sass/basic_layout.scss */
 .site-footer .footer .address a, .site-footer .footer .social-icons a {
   color: #fff;
 }
-/* line 536, ../sass/basic_layout.scss */
+/* line 590, ../sass/basic_layout.scss */
 .site-footer .footer .address .copyright, .site-footer .footer .social-icons .copyright {
   margin-top: 15px;
 }
-/* line 540, ../sass/basic_layout.scss */
+/* line 594, ../sass/basic_layout.scss */
 .site-footer .footer .address {
   width: calc(100% - 50px);
   padding-right: 10px;
 }
-/* line 545, ../sass/basic_layout.scss */
+/* line 599, ../sass/basic_layout.scss */
 .site-footer .footer .social-icons a {
   width: 20px;
   display: inline-block;
@@ -140,11 +195,11 @@ a {
   text-align: center;
   border-radius: 2px;
 }
-/* line 552, ../sass/basic_layout.scss */
+/* line 606, ../sass/basic_layout.scss */
 .site-footer .footer .social-icons a:first-child {
   margin-right: 5px;
 }
-/* line 555, ../sass/basic_layout.scss */
+/* line 609, ../sass/basic_layout.scss */
 .site-footer .footer .social-icons a i {
   color: #000;
   font-size: 12px;
@@ -152,7 +207,7 @@ a {
   margin-top: -8px;
 }
 
-/* line 566, ../sass/basic_layout.scss */
+/* line 620, ../sass/basic_layout.scss */
 body.html {
   background: #1a1a1a;
 }

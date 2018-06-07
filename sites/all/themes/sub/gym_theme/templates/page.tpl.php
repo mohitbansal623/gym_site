@@ -110,9 +110,13 @@
           <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
             <img src="/sites/all/themes/sub/gym_theme/images/Iron_Fitness_Youth_Logo.png" alt="<?php print t('Home'); ?>" />
           </a>
-        <?php else: ?>
+        <?php elseif ($alias == 'iron-fitness'): ?>
           <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
             <img src="/sites/all/themes/sub/gym_theme/images/Iron_Fitness_Logo.png" alt="<?php print t('Home'); ?>" />
+          </a>
+        <?php else: ?>
+          <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
           </a>
         <?php endif; ?>
 
