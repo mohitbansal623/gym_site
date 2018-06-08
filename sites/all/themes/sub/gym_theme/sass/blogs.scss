@@ -40,9 +40,27 @@
     }
   }
   .video-body {
-    .comment-section {
+    .comment-block {
       max-width: 650px;
       margin: auto;
+      padding: 40px 0px;
+      @media (max-width: 767px) {
+        padding: 20px;
+      }
+      .comment-section-form {
+        margin-bottom: 40px;
+        input, textarea {
+          border-radius: 0px;
+        }
+        #edit-preview {
+          display: none;
+        }
+        .form-actions {
+          .form-submit {
+            @extend %red-btn;
+          }
+        }
+      }
     }
     .blog-body {
       background: #f3f3f3;
