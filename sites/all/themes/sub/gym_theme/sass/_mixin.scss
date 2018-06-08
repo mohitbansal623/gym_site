@@ -75,3 +75,16 @@ a {
     }
   }
 }
+
+%red-btn {
+  background: $red;
+  color: #fff;
+  border: 0;
+  padding: 8px 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0px;
+  span {
+    display: none;
+  }
+}

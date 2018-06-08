@@ -131,41 +131,43 @@
          <?php// print $links; ?>
       </footer>
       <?php endif; ?>
-       <?php if (isset($comments_data) && !empty($comments_data)) :?>
-        <div class="comment-section">
-          <?php foreach ($comments_data as $key => $value):?>
-            <div class="comment-data">
-              <div class="profile-image">
-                <img src =<?php print $value['pic']; ?>>
-              </div>
+      <div class="comment-block">
+         <?php if (isset($comments_data) && !empty($comments_data)) :?>
+          <div class="comment-section">
+            <?php foreach ($comments_data as $key => $value):?>
+              <div class="comment-data">
+                <div class="profile-image">
+                  <img src =<?php print $value['pic']; ?>>
+                </div>
 
-              <div class="comment-name">
-                <?php print $value['name']; ?>
-              </div>
+                <div class="comment-name">
+                  <?php print $value['name']; ?>
+                </div>
 
-              <div class="commnent-body">
-                <?php print $value['comment']; ?>
-              </div>
+                <div class="commnent-body">
+                  <?php print $value['comment']; ?>
+                </div>
 
-              <div class="comment-date">
-                <?php print $value['post_date']; ?>
+                <div class="comment-date">
+                  <?php print $value['post_date']; ?>
+                </div>
               </div>
+            <?php endforeach; ?>
             </div>
-          <?php endforeach; ?>
+          <?php endif; ?>
+          <div class="comment-section-form">
+            <?php if (!empty($content['comments']['comment_form'])): ?>
+            <?php print render($content['comments']['comment_form']); ?>
+            <?php else: ?>
+               <ul class="links list-inline">
+                <li class="comment_forbidden first last">
+                  <span>
+                    <a href="/user/login?destination=node/<?php print $nid; ?>%23comment-form">Log in</a> or <a href="/user/register?destination=node/<?php print $nid; ?>%23comment-form">register</a> to post comments
+                  </span>
+                </li>
+              </ul>
+          <?php endif; ?>
           </div>
-        <?php endif; ?>
-        <div class="comment-section-form">
-          <?php if (!empty($content['comments']['comment_form'])): ?>
-          <?php print render($content['comments']['comment_form']); ?>
-          <?php else: ?>
-             <ul class="links list-inline">
-              <li class="comment_forbidden first last">
-                <span>
-                  <a href="/user/login?destination=node/<?php print $nid; ?>%23comment-form">Log in</a> or <a href="/user/register?destination=node/<?php print $nid; ?>%23comment-form">register</a> to post comments
-                </span>
-              </li>
-            </ul>
-        <?php endif; ?>
         </div>
     </div>
   </div>
