@@ -74,7 +74,7 @@ body.front #main-categories-box .category-heading {
 /* line 250, ../sass/home.scss */
 body.front #main-categories-box .category-heading h1 {
   color: #fff;
-  font-size: 21px;
+  font-size: 24px;
   margin: 0;
   font-weight: bold;
   display: inline-block;
@@ -104,19 +104,23 @@ body.front #main-categories-box .category-heading span {
 @media (min-width: 481px) {
   /* line 273, ../sass/home.scss */
   body.front #main-categories-box .main-category-inner {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     max-width: 810px;
     margin: auto;
   }
 }
-/* line 280, ../sass/home.scss */
+/* line 284, ../sass/home.scss */
 body.front #main-categories-box .main-category {
   vertical-align: top;
   width: 25%;
   padding: 0 10px;
 }
 @media (max-width: 480px) {
-  /* line 280, ../sass/home.scss */
+  /* line 284, ../sass/home.scss */
   body.front #main-categories-box .main-category {
     width: 100%;
     max-width: 130px;
@@ -124,12 +128,12 @@ body.front #main-categories-box .main-category {
     padding: 15px 0px;
   }
 }
-/* line 290, ../sass/home.scss */
+/* line 294, ../sass/home.scss */
 body.front #main-categories-box .main-category a {
   display: inline-block;
   width: auto;
 }
-/* line 293, ../sass/home.scss */
+/* line 297, ../sass/home.scss */
 body.front #main-categories-box .main-category a img {
   width: 100%;
   height: auto;

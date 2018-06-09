@@ -249,7 +249,7 @@ body.front {
       }
       h1 {
         color: #fff;
-        font-size: 21px;
+        font-size: 24px;
         margin: 0;
         font-weight: bold;
         display: inline-block;
@@ -272,6 +272,10 @@ body.front {
     }
     .main-category-inner {
       @media (min-width: 481px) {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         max-width: 810px;
         margin: auto;
