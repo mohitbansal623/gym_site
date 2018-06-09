@@ -223,38 +223,51 @@ a {
   padding-top: 70px;
   padding-bottom: 70px;
 }
-/* line 628, ../sass/basic_layout.scss */
+@media (max-width: 767px) {
+  /* line 623, ../sass/basic_layout.scss */
+  .site-footer .footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+/* line 632, ../sass/basic_layout.scss */
 .site-footer .footer .footer-inner {
   max-width: 810px;
   margin: auto;
   padding: 0 10px;
 }
-/* line 633, ../sass/basic_layout.scss */
+/* line 637, ../sass/basic_layout.scss */
 .site-footer .footer .address, .site-footer .footer .social-icons {
   color: #fff;
   display: inline-block;
   vertical-align: top;
 }
-/* line 637, ../sass/basic_layout.scss */
+@media (max-width: 767px) {
+  /* line 641, ../sass/basic_layout.scss */
+  .site-footer .footer .address.social-icons, .site-footer .footer .social-icons.social-icons {
+    vertical-align: bottom;
+  }
+}
+/* line 646, ../sass/basic_layout.scss */
 .site-footer .footer .address p, .site-footer .footer .social-icons p {
   margin: 0;
   font-size: 14px;
   line-height: 18px;
 }
-/* line 642, ../sass/basic_layout.scss */
+/* line 651, ../sass/basic_layout.scss */
 .site-footer .footer .address a, .site-footer .footer .social-icons a {
   color: #fff;
 }
-/* line 645, ../sass/basic_layout.scss */
+/* line 654, ../sass/basic_layout.scss */
 .site-footer .footer .address .copyright, .site-footer .footer .social-icons .copyright {
   margin-top: 15px;
 }
-/* line 649, ../sass/basic_layout.scss */
+/* line 658, ../sass/basic_layout.scss */
 .site-footer .footer .address {
   width: calc(100% - 50px);
   padding-right: 10px;
 }
-/* line 654, ../sass/basic_layout.scss */
+/* line 663, ../sass/basic_layout.scss */
 .site-footer .footer .social-icons a {
   width: 20px;
   display: inline-block;
@@ -262,20 +275,21 @@ a {
   background: #ccc;
   text-align: center;
   border-radius: 2px;
+  line-height: 1;
 }
-/* line 661, ../sass/basic_layout.scss */
+/* line 671, ../sass/basic_layout.scss */
 .site-footer .footer .social-icons a:first-child {
   margin-right: 5px;
 }
-/* line 664, ../sass/basic_layout.scss */
+/* line 674, ../sass/basic_layout.scss */
 .site-footer .footer .social-icons a i {
   color: #000;
   font-size: 12px;
   vertical-align: middle;
-  margin-top: -8px;
+  margin-top: 2px;
 }
 
-/* line 675, ../sass/basic_layout.scss */
+/* line 685, ../sass/basic_layout.scss */
 body.html {
   background: #1a1a1a;
 }

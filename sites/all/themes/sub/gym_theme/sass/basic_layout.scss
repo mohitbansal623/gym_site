@@ -625,6 +625,10 @@
     margin: auto;
     padding-top: 70px;
     padding-bottom: 70px;
+    @media (max-width: 767px) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
     .footer-inner {
       max-width: 810px;
       margin: auto;
@@ -634,6 +638,11 @@
       color: #fff;
       display: inline-block;
       vertical-align: top;
+      &.social-icons {
+        @media (max-width: 767px) {
+          vertical-align: bottom;
+        }
+      }
       p {
         margin: 0;
         font-size: 14px;
@@ -658,6 +667,7 @@
         background: #ccc;
         text-align: center;
         border-radius: 2px;
+        line-height: 1;
         &:first-child {
           margin-right: 5px;
         }
@@ -665,7 +675,7 @@
           color: #000;
           font-size: 12px;
           vertical-align: middle;
-          margin-top: -8px;
+          margin-top: 2px;
         }
       }
     }
