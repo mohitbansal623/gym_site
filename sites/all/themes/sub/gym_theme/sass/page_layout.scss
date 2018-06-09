@@ -19,12 +19,29 @@
     max-width: 790px;
     font-size: 28px;
     border: 0;
+    @media (max-width: 767px) {
+      font-size: 20px;
+      height: 160px;
+      line-height: 160px;
+    }
+    @media (max-width: 480px) {
+      font-size: 18px;
+    }
   }
   #block-system-main {
     .node-form {
       max-width: 790px;
       margin: auto;
       padding-bottom: 50px;
+      .form-managed-file {
+        button {
+          @extend %red-btn;
+        }
+      }
+      label {
+        color: #fff;
+        font-weight: 400;
+      }
       .field-type-datetime {
         .panel-heading {
           border: 0;
@@ -33,7 +50,7 @@
           span.panel-title {
             color: #fff;
             text-transform: uppercase;
-            font-weight: 700;
+            font-weight: 400;
           }
         }
         .panel-body {
@@ -69,10 +86,8 @@
               margin: 0px;
             }
           }
-          @media (min-width: 768px) {
-            .container-inline-date .date-padding {
-              padding: 0;
-            }
+          .container-inline-date .date-padding {
+            padding: 0;
           }
         }
         fieldset {
@@ -88,6 +103,7 @@
       }
       label.control-label {
         text-transform: uppercase;
+        font-weight: 400;
       }
       #edit-preview {
         display: none;
@@ -141,23 +157,37 @@
         }
       }
     }
-    label {
-      color: #fff;
-    }
     fieldset {
       border: 0;
       background: transparent;
       &.group-circumference-measures, &.group-skinfolds, &.group-progress-photo {
-        font-size: 0;
+        margin-bottom: 35px;
+        @media (min-width: 768px) {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          // justify-content: space-between;
+          -webkit-box-align: center;
+          -moz-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        }
         .panel-heading {
-          display: inline-block;
-          vertical-align: top;
-          width: 33.33%;
+          @media (min-width: 768px) {
+            width: 33.33%;
+          }
+          @media (max-width: 767px) {
+            padding-bottom: 20px;
+            text-align: center;
+          }
           font-size: 14px;
           padding: 0;
           background: transparent;
           border: 0;
-          padding-top: 100px;
+          float: none;
           a {
             padding: 0;
             font-size: 18px;
@@ -169,11 +199,17 @@
           }
         }
         .panel-collapse {
-          display: inline-block;
+          // display: inline-block;
           vertical-align: top;
-          width: 66.66%;
           font-size: 14px;
-          border-left: 1px solid #fff;
+          @media (min-width: 768px) {
+            width: 66.66%;
+            border-left: 1px solid #fff;
+          }
+          @media (max-width: 767px) {
+            border-top: 1px solid #fff;
+            padding-top: 20px;
+          }
           .panel-body {
             padding: 0 10px;
             border: 0;
@@ -185,6 +221,9 @@
               padding: 10px;
               display: inline-block;
               vertical-align: top;
+              @media (max-width: 767px) {
+                width: 50%;
+              }
               label {
                 display: inline-block;
                 vertical-align: top;
@@ -195,11 +234,67 @@
                 vertical-align: top;
               }
             }
+            .field-name-field-total-cm, .field-name-field-total-calipers {
+              div .form-item label {
+                font-weight: bold;
+              }
+            }
           }
         }
-        input {
-          width: 34px;
-          padding: 5px;
+        &:not(.group-progress-photo)
+        .panel-body {
+          .form-type-textfield.form-item.form-group {
+            font-size: 0;
+            input {
+              width: 34px;
+              padding: 5px;
+              font-size: 14px;
+            }
+            label {
+              width: calc(100% - 34px);
+              font-size: 14px;
+              text-align: right;
+            }
+          }
+        }
+      }
+      &.group-progress-photo {
+        .panel-collapse .panel-body {
+          &>div {
+            width: 100%;
+            margin-bottom: 10px;
+            input {
+              width: calc(100% - 15px);
+            }
+          }
+        }
+      }
+    }
+  }
+  #daily-log-node-form {
+    .form-managed-file {
+      button {
+        padding: 8px !important;
+        text-indent: -999em;
+        width: 36px;
+        position: relative;
+        height: 34px;
+        &:before {
+          content: "\e027";
+          font-family: 'Glyphicons Halflings';
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-style: normal;
+          font-weight: normal;
+          line-height: 1;
+          width: 100%;
+          height: 100%;
+          text-indent: 0;
+          text-indent: 0;
+          font-size: 20px;
+          top: 50%;
+          margin-top: -10px;
         }
       }
     }
