@@ -161,13 +161,14 @@
       border: 0;
       background: transparent;
       &.group-circumference-measures, &.group-skinfolds, &.group-progress-photo {
-        margin-bottom: 35px;
+        margin-top: 35px;
         font-size: 0;
         .panel-heading {
           @media (min-width: 768px) {
             width: 33.33%;
             display: inline-block;
             vertical-align: top;
+            float: left;
           }
           @media (max-width: 767px) {
             padding-bottom: 20px;
@@ -205,6 +206,9 @@
             border: 0;
             font-size: 0;
             width: 100%;
+            @media (max-width: 767px) {
+              padding: 0;
+            }
             &>div {
               font-size: 14px;
               width: 33.33%;
