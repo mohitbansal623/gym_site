@@ -162,22 +162,12 @@
       background: transparent;
       &.group-circumference-measures, &.group-skinfolds, &.group-progress-photo {
         margin-bottom: 35px;
-        @media (min-width: 768px) {
-          display: -webkit-box;
-          display: -moz-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
-          // justify-content: space-between;
-          -webkit-box-align: center;
-          -moz-box-align: center;
-          -ms-flex-align: center;
-          -webkit-align-items: center;
-          align-items: center;
-        }
+        font-size: 0;
         .panel-heading {
           @media (min-width: 768px) {
             width: 33.33%;
+            display: inline-block;
+            vertical-align: top;
           }
           @media (max-width: 767px) {
             padding-bottom: 20px;
@@ -199,7 +189,7 @@
           }
         }
         .panel-collapse {
-          // display: inline-block;
+          display: inline-block;
           vertical-align: top;
           font-size: 14px;
           @media (min-width: 768px) {
