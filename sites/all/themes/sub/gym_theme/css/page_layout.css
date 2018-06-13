@@ -212,23 +212,9 @@ a {
 /* line 163, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures, .page-node-add #check-in-node-form fieldset.group-skinfolds, .page-node-add #check-in-node-form fieldset.group-progress-photo, .page-node-edit #check-in-node-form fieldset.group-circumference-measures, .page-node-edit #check-in-node-form fieldset.group-skinfolds, .page-node-edit #check-in-node-form fieldset.group-progress-photo {
   margin-bottom: 35px;
+  font-size: 0;
 }
-@media (min-width: 768px) {
-  /* line 163, ../sass/page_layout.scss */
-  .page-node-add #check-in-node-form fieldset.group-circumference-measures, .page-node-add #check-in-node-form fieldset.group-skinfolds, .page-node-add #check-in-node-form fieldset.group-progress-photo, .page-node-edit #check-in-node-form fieldset.group-circumference-measures, .page-node-edit #check-in-node-form fieldset.group-skinfolds, .page-node-edit #check-in-node-form fieldset.group-progress-photo {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-}
-/* line 178, ../sass/page_layout.scss */
+/* line 166, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-heading, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-heading, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-heading, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-heading, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-heading, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-heading {
   font-size: 14px;
   padding: 0;
@@ -237,19 +223,21 @@ a {
   float: none;
 }
 @media (min-width: 768px) {
-  /* line 178, ../sass/page_layout.scss */
+  /* line 166, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-heading, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-heading, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-heading, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-heading, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-heading, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-heading {
     width: 33.33%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 @media (max-width: 767px) {
-  /* line 178, ../sass/page_layout.scss */
+  /* line 166, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-heading, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-heading, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-heading, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-heading, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-heading, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-heading {
     padding-bottom: 20px;
     text-align: center;
   }
 }
-/* line 191, ../sass/page_layout.scss */
+/* line 181, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-heading a, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-heading a, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-heading a, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-heading a, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-heading a, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-heading a {
   padding: 0;
   font-size: 18px;
@@ -259,33 +247,34 @@ a {
   pointer-events: none;
   margin: 0;
 }
-/* line 201, ../sass/page_layout.scss */
+/* line 191, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse {
+  display: inline-block;
   vertical-align: top;
   font-size: 14px;
 }
 @media (min-width: 768px) {
-  /* line 201, ../sass/page_layout.scss */
+  /* line 191, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse {
     width: 66.66%;
     border-left: 1px solid #fff;
   }
 }
 @media (max-width: 767px) {
-  /* line 201, ../sass/page_layout.scss */
+  /* line 191, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse {
     border-top: 1px solid #fff;
     padding-top: 20px;
   }
 }
-/* line 213, ../sass/page_layout.scss */
+/* line 203, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body {
   padding: 0 10px;
   border: 0;
   font-size: 0;
   width: 100%;
 }
-/* line 218, ../sass/page_layout.scss */
+/* line 208, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div {
   font-size: 14px;
   width: 33.33%;
@@ -294,27 +283,27 @@ a {
   vertical-align: top;
 }
 @media (max-width: 767px) {
-  /* line 218, ../sass/page_layout.scss */
+  /* line 208, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div {
     width: 50%;
   }
 }
-/* line 227, ../sass/page_layout.scss */
+/* line 217, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div label, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div label, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div label, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div label, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div label, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div label {
   display: inline-block;
   vertical-align: top;
   padding-right: 5px;
 }
-/* line 232, ../sass/page_layout.scss */
+/* line 222, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div input, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div input, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div input, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div input, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div input, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div input {
   display: inline-block;
   vertical-align: top;
 }
-/* line 238, ../sass/page_layout.scss */
+/* line 228, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label {
   font-weight: bold;
 }
-/* line 246, ../sass/page_layout.scss */
+/* line 236, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures:not(.group-progress-photo)
 .panel-body .form-type-textfield.form-item.form-group, .page-node-add #check-in-node-form fieldset.group-skinfolds:not(.group-progress-photo)
 .panel-body .form-type-textfield.form-item.form-group, .page-node-add #check-in-node-form fieldset.group-progress-photo:not(.group-progress-photo)
@@ -324,7 +313,7 @@ a {
 .panel-body .form-type-textfield.form-item.form-group {
   font-size: 0;
 }
-/* line 248, ../sass/page_layout.scss */
+/* line 238, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures:not(.group-progress-photo)
 .panel-body .form-type-textfield.form-item.form-group input, .page-node-add #check-in-node-form fieldset.group-skinfolds:not(.group-progress-photo)
 .panel-body .form-type-textfield.form-item.form-group input, .page-node-add #check-in-node-form fieldset.group-progress-photo:not(.group-progress-photo)
@@ -336,7 +325,7 @@ a {
   padding: 5px;
   font-size: 14px;
 }
-/* line 253, ../sass/page_layout.scss */
+/* line 243, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures:not(.group-progress-photo)
 .panel-body .form-type-textfield.form-item.form-group label, .page-node-add #check-in-node-form fieldset.group-skinfolds:not(.group-progress-photo)
 .panel-body .form-type-textfield.form-item.form-group label, .page-node-add #check-in-node-form fieldset.group-progress-photo:not(.group-progress-photo)
@@ -348,16 +337,16 @@ a {
   font-size: 14px;
   text-align: right;
 }
-/* line 263, ../sass/page_layout.scss */
+/* line 253, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div {
   width: 100%;
   margin-bottom: 10px;
 }
-/* line 266, ../sass/page_layout.scss */
+/* line 256, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div input, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div input {
   width: calc(100% - 15px);
 }
-/* line 276, ../sass/page_layout.scss */
+/* line 266, ../sass/page_layout.scss */
 .page-node-add #daily-log-node-form .form-managed-file button, .page-node-edit #daily-log-node-form .form-managed-file button {
   padding: 8px !important;
   text-indent: -999em;
@@ -365,7 +354,7 @@ a {
   position: relative;
   height: 34px;
 }
-/* line 282, ../sass/page_layout.scss */
+/* line 272, ../sass/page_layout.scss */
 .page-node-add #daily-log-node-form .form-managed-file button:before, .page-node-edit #daily-log-node-form .form-managed-file button:before {
   content: "\e027";
   font-family: 'Glyphicons Halflings';
