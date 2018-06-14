@@ -504,8 +504,8 @@ a {
 }
 /* line 366, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-body > div, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-body > div, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-body > div {
-  padding-top: 0;
-  margin-bottom: 0;
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 /* line 369, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-body > div label, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-body > div label, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-body > div label, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-body > div label {

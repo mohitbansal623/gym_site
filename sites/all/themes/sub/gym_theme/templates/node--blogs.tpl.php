@@ -139,17 +139,18 @@
                 <div class="profile-image">
                   <img src =<?php print $value['pic']; ?>>
                 </div>
+                <div class="comment-desc">
+                  <div class="comment-name">
+                    <?php print $value['name']; ?>
+                  </div>
 
-                <div class="comment-name">
-                  <?php print $value['name']; ?>
-                </div>
+                  <div class="comment-body">
+                    <?php print $value['comment']; ?>
+                  </div>
 
-                <div class="commnent-body">
-                  <?php print $value['comment']; ?>
-                </div>
-
-                <div class="comment-date">
-                  <?php print $value['post_date']; ?>
+                  <div class="comment-date">
+                    <?php print $value['post_date']; ?>
+                  </div>
                 </div>
               </div>
             <?php endforeach; ?>
