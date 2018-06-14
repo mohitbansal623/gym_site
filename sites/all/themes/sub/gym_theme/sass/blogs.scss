@@ -107,6 +107,25 @@
       }
     }
   }
+  .comment-section-form {
+    ul {
+      li.comment_forbidden {
+        width: 100%;
+        text-align: center;
+        span {
+          display: inline-block;
+          padding: 5px 10px;
+          background: #000;
+          color: #fff;
+          text-transform: uppercase;
+          a {
+            color: #fff;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
   .comment-block {
     .comment-data {
       font-size: 0;
