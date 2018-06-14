@@ -160,6 +160,67 @@
         }
       }
     }
+    .group-small-meal-one, .group-small-meal-two, .group-large-meal {
+      font-size: 0;
+      &>h3 {
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #fff;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+      label, .help-block {
+        display: none;
+      }
+      div {
+        font: $body-font;
+        font-size: 14px;
+      }
+      .field-type-list-text {
+        display: inline-block;
+        width: calc(100% - 36px);
+        vertical-align: top;
+      }
+      .field-type-image {
+        display: inline-block;
+        width: 36px;
+        vertical-align: top;
+        .input-group {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+          display: block;
+        }
+        input {
+          position: absolute;
+          height: 34px;
+          width: 34px;
+          left: 0;
+          top: 0;
+          opacity: 0;
+          z-index: 4;
+        }
+        .form-control.form-file {
+
+        }
+      }
+      @media (min-width: 768px) {
+        display: inline-block;
+        width: 33.33%;
+        vertical-align: top;
+      }
+    }
+    @media (min-width: 768px) {
+      .group-small-meal-one {
+        padding-right: 5px;
+      }
+      .group-small-meal-two {
+        padding: 0 5px;
+      }
+      .group-large-meal {
+        padding-left: 5px;
+      }
+    }
     fieldset {
       border: 0;
       background: transparent;
@@ -184,7 +245,13 @@
           float: none;
           a {
             padding: 0;
-            font-size: 18px;
+            font-size: 22px;
+            padding-right: 5px;
+            line-height: 1.42;
+            @media (max-width: 767px) {
+              font-size: 18px;
+              padding-right: 0px;
+            }
             text-transform: uppercase;
             color: #fff;
             font-weight: bold;
@@ -251,6 +318,22 @@
               width: calc(100% - 34px);
               font-size: 14px;
               text-align: right;
+            }
+          }
+        }
+      }
+      &.group-sup-checklist {
+        .panel-body {
+          &::before {
+            display: none;
+            content: none;
+          }
+          &>div {
+            padding-top: 0;
+            margin-bottom: 0;
+            label {
+              font-size: 16px;
+              font-weight: bold;
             }
           }
         }
