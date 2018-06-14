@@ -208,11 +208,49 @@ a {
     padding-left: 5px;
   }
 }
-/* line 163, ../sass/page_layout.scss */
+/* line 164, ../sass/page_layout.scss */
+.page-node-add #check-in-node-form .group-plan-checklist > div, .page-node-add #daily-log-node-form .group-plan-checklist > div, .page-node-edit #check-in-node-form .group-plan-checklist > div, .page-node-edit #daily-log-node-form .group-plan-checklist > div {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 167, ../sass/page_layout.scss */
+.page-node-add #check-in-node-form .group-plan-checklist > div:first-child, .page-node-add #daily-log-node-form .group-plan-checklist > div:first-child, .page-node-edit #check-in-node-form .group-plan-checklist > div:first-child, .page-node-edit #daily-log-node-form .group-plan-checklist > div:first-child {
+  padding-right: 25px;
+}
+/* line 170, ../sass/page_layout.scss */
+.page-node-add #check-in-node-form .group-plan-checklist > div label, .page-node-add #daily-log-node-form .group-plan-checklist > div label, .page-node-edit #check-in-node-form .group-plan-checklist > div label, .page-node-edit #daily-log-node-form .group-plan-checklist > div label {
+  padding-right: 5px;
+}
+/* line 174, ../sass/page_layout.scss */
+.page-node-add #check-in-node-form .group-plan-checklist > div .form-group .form-checkboxes, .page-node-add #daily-log-node-form .group-plan-checklist > div .form-group .form-checkboxes, .page-node-edit #check-in-node-form .group-plan-checklist > div .form-group .form-checkboxes, .page-node-edit #daily-log-node-form .group-plan-checklist > div .form-group .form-checkboxes {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 177, ../sass/page_layout.scss */
+.page-node-add #check-in-node-form .group-plan-checklist > div .form-group .form-checkboxes label, .page-node-add #daily-log-node-form .group-plan-checklist > div .form-group .form-checkboxes label, .page-node-edit #check-in-node-form .group-plan-checklist > div .form-group .form-checkboxes label, .page-node-edit #daily-log-node-form .group-plan-checklist > div .form-group .form-checkboxes label {
+  padding: 0;
+  font-size: 0;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+}
+/* line 184, ../sass/page_layout.scss */
+.page-node-add #check-in-node-form .group-plan-checklist > div .form-group .form-checkboxes input, .page-node-add #daily-log-node-form .group-plan-checklist > div .form-group .form-checkboxes input, .page-node-edit #check-in-node-form .group-plan-checklist > div .form-group .form-checkboxes input, .page-node-edit #daily-log-node-form .group-plan-checklist > div .form-group .form-checkboxes input {
+  margin: 0;
+  opacity: 0;
+  position: static;
+  width: 25px;
+  height: 25px;
+}
+/* line 192, ../sass/page_layout.scss */
+.page-node-add #check-in-node-form .group-plan-checklist > div .form-group div, .page-node-add #daily-log-node-form .group-plan-checklist > div .form-group div, .page-node-edit #check-in-node-form .group-plan-checklist > div .form-group div, .page-node-edit #daily-log-node-form .group-plan-checklist > div .form-group div {
+  display: inline-block;
+}
+/* line 198, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form .group-small-meal-one, .page-node-add #check-in-node-form .group-small-meal-two, .page-node-add #check-in-node-form .group-large-meal, .page-node-add #daily-log-node-form .group-small-meal-one, .page-node-add #daily-log-node-form .group-small-meal-two, .page-node-add #daily-log-node-form .group-large-meal, .page-node-edit #check-in-node-form .group-small-meal-one, .page-node-edit #check-in-node-form .group-small-meal-two, .page-node-edit #check-in-node-form .group-large-meal, .page-node-edit #daily-log-node-form .group-small-meal-one, .page-node-edit #daily-log-node-form .group-small-meal-two, .page-node-edit #daily-log-node-form .group-large-meal {
   font-size: 0;
 }
-/* line 165, ../sass/page_layout.scss */
+/* line 200, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form .group-small-meal-one > h3, .page-node-add #check-in-node-form .group-small-meal-two > h3, .page-node-add #check-in-node-form .group-large-meal > h3, .page-node-add #daily-log-node-form .group-small-meal-one > h3, .page-node-add #daily-log-node-form .group-small-meal-two > h3, .page-node-add #daily-log-node-form .group-large-meal > h3, .page-node-edit #check-in-node-form .group-small-meal-one > h3, .page-node-edit #check-in-node-form .group-small-meal-two > h3, .page-node-edit #check-in-node-form .group-large-meal > h3, .page-node-edit #daily-log-node-form .group-small-meal-one > h3, .page-node-edit #daily-log-node-form .group-small-meal-two > h3, .page-node-edit #daily-log-node-form .group-large-meal > h3 {
   text-transform: uppercase;
   font-weight: 400;
@@ -220,35 +258,35 @@ a {
   margin-top: 0;
   margin-bottom: 5px;
 }
-/* line 172, ../sass/page_layout.scss */
+/* line 207, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form .group-small-meal-one label, .page-node-add #check-in-node-form .group-small-meal-one .help-block, .page-node-add #check-in-node-form .group-small-meal-two label, .page-node-add #check-in-node-form .group-small-meal-two .help-block, .page-node-add #check-in-node-form .group-large-meal label, .page-node-add #check-in-node-form .group-large-meal .help-block, .page-node-add #daily-log-node-form .group-small-meal-one label, .page-node-add #daily-log-node-form .group-small-meal-one .help-block, .page-node-add #daily-log-node-form .group-small-meal-two label, .page-node-add #daily-log-node-form .group-small-meal-two .help-block, .page-node-add #daily-log-node-form .group-large-meal label, .page-node-add #daily-log-node-form .group-large-meal .help-block, .page-node-edit #check-in-node-form .group-small-meal-one label, .page-node-edit #check-in-node-form .group-small-meal-one .help-block, .page-node-edit #check-in-node-form .group-small-meal-two label, .page-node-edit #check-in-node-form .group-small-meal-two .help-block, .page-node-edit #check-in-node-form .group-large-meal label, .page-node-edit #check-in-node-form .group-large-meal .help-block, .page-node-edit #daily-log-node-form .group-small-meal-one label, .page-node-edit #daily-log-node-form .group-small-meal-one .help-block, .page-node-edit #daily-log-node-form .group-small-meal-two label, .page-node-edit #daily-log-node-form .group-small-meal-two .help-block, .page-node-edit #daily-log-node-form .group-large-meal label, .page-node-edit #daily-log-node-form .group-large-meal .help-block {
   display: none;
 }
-/* line 175, ../sass/page_layout.scss */
+/* line 210, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form .group-small-meal-one div, .page-node-add #check-in-node-form .group-small-meal-two div, .page-node-add #check-in-node-form .group-large-meal div, .page-node-add #daily-log-node-form .group-small-meal-one div, .page-node-add #daily-log-node-form .group-small-meal-two div, .page-node-add #daily-log-node-form .group-large-meal div, .page-node-edit #check-in-node-form .group-small-meal-one div, .page-node-edit #check-in-node-form .group-small-meal-two div, .page-node-edit #check-in-node-form .group-large-meal div, .page-node-edit #daily-log-node-form .group-small-meal-one div, .page-node-edit #daily-log-node-form .group-small-meal-two div, .page-node-edit #daily-log-node-form .group-large-meal div {
   font: 400 15px/1.8 "Lato", sans-serif;
   font-size: 14px;
 }
-/* line 179, ../sass/page_layout.scss */
+/* line 214, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form .group-small-meal-one .field-type-list-text, .page-node-add #check-in-node-form .group-small-meal-two .field-type-list-text, .page-node-add #check-in-node-form .group-large-meal .field-type-list-text, .page-node-add #daily-log-node-form .group-small-meal-one .field-type-list-text, .page-node-add #daily-log-node-form .group-small-meal-two .field-type-list-text, .page-node-add #daily-log-node-form .group-large-meal .field-type-list-text, .page-node-edit #check-in-node-form .group-small-meal-one .field-type-list-text, .page-node-edit #check-in-node-form .group-small-meal-two .field-type-list-text, .page-node-edit #check-in-node-form .group-large-meal .field-type-list-text, .page-node-edit #daily-log-node-form .group-small-meal-one .field-type-list-text, .page-node-edit #daily-log-node-form .group-small-meal-two .field-type-list-text, .page-node-edit #daily-log-node-form .group-large-meal .field-type-list-text {
   display: inline-block;
   width: calc(100% - 36px);
   vertical-align: top;
 }
-/* line 184, ../sass/page_layout.scss */
+/* line 219, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form .group-small-meal-one .field-type-image, .page-node-add #check-in-node-form .group-small-meal-two .field-type-image, .page-node-add #check-in-node-form .group-large-meal .field-type-image, .page-node-add #daily-log-node-form .group-small-meal-one .field-type-image, .page-node-add #daily-log-node-form .group-small-meal-two .field-type-image, .page-node-add #daily-log-node-form .group-large-meal .field-type-image, .page-node-edit #check-in-node-form .group-small-meal-one .field-type-image, .page-node-edit #check-in-node-form .group-small-meal-two .field-type-image, .page-node-edit #check-in-node-form .group-large-meal .field-type-image, .page-node-edit #daily-log-node-form .group-small-meal-one .field-type-image, .page-node-edit #daily-log-node-form .group-small-meal-two .field-type-image, .page-node-edit #daily-log-node-form .group-large-meal .field-type-image {
   display: inline-block;
   width: 36px;
   vertical-align: top;
 }
-/* line 188, ../sass/page_layout.scss */
+/* line 223, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form .group-small-meal-one .field-type-image .input-group, .page-node-add #check-in-node-form .group-small-meal-two .field-type-image .input-group, .page-node-add #check-in-node-form .group-large-meal .field-type-image .input-group, .page-node-add #daily-log-node-form .group-small-meal-one .field-type-image .input-group, .page-node-add #daily-log-node-form .group-small-meal-two .field-type-image .input-group, .page-node-add #daily-log-node-form .group-large-meal .field-type-image .input-group, .page-node-edit #check-in-node-form .group-small-meal-one .field-type-image .input-group, .page-node-edit #check-in-node-form .group-small-meal-two .field-type-image .input-group, .page-node-edit #check-in-node-form .group-large-meal .field-type-image .input-group, .page-node-edit #daily-log-node-form .group-small-meal-one .field-type-image .input-group, .page-node-edit #daily-log-node-form .group-small-meal-two .field-type-image .input-group, .page-node-edit #daily-log-node-form .group-large-meal .field-type-image .input-group {
   position: relative;
   width: 100%;
   overflow: hidden;
   display: block;
 }
-/* line 194, ../sass/page_layout.scss */
+/* line 229, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form .group-small-meal-one .field-type-image input, .page-node-add #check-in-node-form .group-small-meal-two .field-type-image input, .page-node-add #check-in-node-form .group-large-meal .field-type-image input, .page-node-add #daily-log-node-form .group-small-meal-one .field-type-image input, .page-node-add #daily-log-node-form .group-small-meal-two .field-type-image input, .page-node-add #daily-log-node-form .group-large-meal .field-type-image input, .page-node-edit #check-in-node-form .group-small-meal-one .field-type-image input, .page-node-edit #check-in-node-form .group-small-meal-two .field-type-image input, .page-node-edit #check-in-node-form .group-large-meal .field-type-image input, .page-node-edit #daily-log-node-form .group-small-meal-one .field-type-image input, .page-node-edit #daily-log-node-form .group-small-meal-two .field-type-image input, .page-node-edit #daily-log-node-form .group-large-meal .field-type-image input {
   position: absolute;
   height: 34px;
@@ -259,7 +297,7 @@ a {
   z-index: 4;
 }
 @media (min-width: 768px) {
-  /* line 163, ../sass/page_layout.scss */
+  /* line 198, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form .group-small-meal-one, .page-node-add #check-in-node-form .group-small-meal-two, .page-node-add #check-in-node-form .group-large-meal, .page-node-add #daily-log-node-form .group-small-meal-one, .page-node-add #daily-log-node-form .group-small-meal-two, .page-node-add #daily-log-node-form .group-large-meal, .page-node-edit #check-in-node-form .group-small-meal-one, .page-node-edit #check-in-node-form .group-small-meal-two, .page-node-edit #check-in-node-form .group-large-meal, .page-node-edit #daily-log-node-form .group-small-meal-one, .page-node-edit #daily-log-node-form .group-small-meal-two, .page-node-edit #daily-log-node-form .group-large-meal {
     display: inline-block;
     width: 33.33%;
@@ -267,30 +305,30 @@ a {
   }
 }
 @media (min-width: 768px) {
-  /* line 214, ../sass/page_layout.scss */
+  /* line 249, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form .group-small-meal-one, .page-node-add #daily-log-node-form .group-small-meal-one, .page-node-edit #check-in-node-form .group-small-meal-one, .page-node-edit #daily-log-node-form .group-small-meal-one {
     padding-right: 5px;
   }
-  /* line 217, ../sass/page_layout.scss */
+  /* line 252, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form .group-small-meal-two, .page-node-add #daily-log-node-form .group-small-meal-two, .page-node-edit #check-in-node-form .group-small-meal-two, .page-node-edit #daily-log-node-form .group-small-meal-two {
     padding: 0 5px;
   }
-  /* line 220, ../sass/page_layout.scss */
+  /* line 255, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form .group-large-meal, .page-node-add #daily-log-node-form .group-large-meal, .page-node-edit #check-in-node-form .group-large-meal, .page-node-edit #daily-log-node-form .group-large-meal {
     padding-left: 5px;
   }
 }
-/* line 224, ../sass/page_layout.scss */
+/* line 259, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset, .page-node-add #daily-log-node-form fieldset, .page-node-edit #check-in-node-form fieldset, .page-node-edit #daily-log-node-form fieldset {
   border: 0;
   background: transparent;
 }
-/* line 227, ../sass/page_layout.scss */
+/* line 262, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures, .page-node-add #check-in-node-form fieldset.group-skinfolds, .page-node-add #check-in-node-form fieldset.group-progress-photo, .page-node-add #check-in-node-form fieldset.group-sup-checklist, .page-node-add #daily-log-node-form fieldset.group-circumference-measures, .page-node-add #daily-log-node-form fieldset.group-skinfolds, .page-node-add #daily-log-node-form fieldset.group-progress-photo, .page-node-add #daily-log-node-form fieldset.group-sup-checklist, .page-node-edit #check-in-node-form fieldset.group-circumference-measures, .page-node-edit #check-in-node-form fieldset.group-skinfolds, .page-node-edit #check-in-node-form fieldset.group-progress-photo, .page-node-edit #check-in-node-form fieldset.group-sup-checklist, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures, .page-node-edit #daily-log-node-form fieldset.group-skinfolds, .page-node-edit #daily-log-node-form fieldset.group-progress-photo, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist {
   margin-top: 35px;
   font-size: 0;
 }
-/* line 230, ../sass/page_layout.scss */
+/* line 265, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-heading, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-heading, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-heading, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-heading, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-heading, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-heading, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-heading, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-heading, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-heading, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-heading, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-heading, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-heading, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-heading, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-heading, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-heading, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-heading {
   font-size: 14px;
   padding: 0;
@@ -299,7 +337,7 @@ a {
   float: none;
 }
 @media (min-width: 768px) {
-  /* line 230, ../sass/page_layout.scss */
+  /* line 265, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-heading, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-heading, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-heading, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-heading, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-heading, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-heading, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-heading, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-heading, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-heading, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-heading, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-heading, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-heading, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-heading, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-heading, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-heading, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-heading {
     width: 33.33%;
     display: inline-block;
@@ -308,13 +346,13 @@ a {
   }
 }
 @media (max-width: 767px) {
-  /* line 230, ../sass/page_layout.scss */
+  /* line 265, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-heading, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-heading, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-heading, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-heading, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-heading, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-heading, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-heading, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-heading, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-heading, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-heading, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-heading, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-heading, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-heading, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-heading, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-heading, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-heading {
     padding-bottom: 20px;
     text-align: center;
   }
 }
-/* line 246, ../sass/page_layout.scss */
+/* line 281, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-heading a, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-heading a, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-heading a, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-heading a, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-heading a, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-heading a, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-heading a, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-heading a, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-heading a, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-heading a, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-heading a, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-heading a, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-heading a, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-heading a, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-heading a, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-heading a {
   padding: 0;
   font-size: 22px;
@@ -327,33 +365,33 @@ a {
   margin: 0;
 }
 @media (max-width: 767px) {
-  /* line 246, ../sass/page_layout.scss */
+  /* line 281, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-heading a, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-heading a, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-heading a, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-heading a, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-heading a, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-heading a, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-heading a, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-heading a, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-heading a, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-heading a, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-heading a, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-heading a, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-heading a, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-heading a, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-heading a, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-heading a {
     font-size: 18px;
     padding-right: 0px;
   }
 }
-/* line 262, ../sass/page_layout.scss */
+/* line 297, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-collapse, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-collapse, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-collapse, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-collapse, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-collapse, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-collapse, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-collapse {
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
 }
 @media (min-width: 768px) {
-  /* line 262, ../sass/page_layout.scss */
+  /* line 297, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-collapse, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-collapse, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-collapse, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-collapse, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-collapse, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-collapse, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-collapse {
     width: 66.66%;
     border-left: 1px solid #fff;
   }
 }
 @media (max-width: 767px) {
-  /* line 262, ../sass/page_layout.scss */
+  /* line 297, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-collapse, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-collapse, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-collapse, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-collapse, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-collapse, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-collapse, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-collapse, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-collapse {
     border-top: 1px solid #fff;
     padding-top: 20px;
   }
 }
-/* line 274, ../sass/page_layout.scss */
+/* line 309, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body {
   padding: 0 10px;
   border: 0;
@@ -361,12 +399,12 @@ a {
   width: 100%;
 }
 @media (max-width: 767px) {
-  /* line 274, ../sass/page_layout.scss */
+  /* line 309, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body {
     padding: 0;
   }
 }
-/* line 282, ../sass/page_layout.scss */
+/* line 317, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div {
   font-size: 14px;
   width: 33.33%;
@@ -375,27 +413,27 @@ a {
   vertical-align: top;
 }
 @media (max-width: 767px) {
-  /* line 282, ../sass/page_layout.scss */
+  /* line 317, ../sass/page_layout.scss */
   .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div {
     width: 50%;
   }
 }
-/* line 291, ../sass/page_layout.scss */
+/* line 326, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div label, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div label, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div label, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div label, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div label, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div label, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div label, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div label, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div label, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div label, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div label, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div label, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div label, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div label, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div label, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div label {
   display: inline-block;
   vertical-align: top;
   padding-right: 5px;
 }
-/* line 296, ../sass/page_layout.scss */
+/* line 331, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div input, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div input, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div input, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div input, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div input, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div input, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div input, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div input, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div input, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div input, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div input, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div input, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body > div input, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body > div input, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div input, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body > div input {
   display: inline-block;
   vertical-align: top;
 }
-/* line 302, ../sass/page_layout.scss */
+/* line 337, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-add #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-add #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-add #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-add #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-edit #check-in-node-form fieldset.group-circumference-measures .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-edit #check-in-node-form fieldset.group-skinfolds .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-edit #daily-log-node-form fieldset.group-circumference-measures .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-edit #daily-log-node-form fieldset.group-skinfolds .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body .field-name-field-total-cm div .form-item label, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-collapse .panel-body .field-name-field-total-calipers div .form-item label {
   font-weight: bold;
 }
-/* line 310, ../sass/page_layout.scss */
+/* line 345, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures:not(.group-progress-photo)
 .panel-body .form-type-textfield.form-item.form-group, .page-node-add #check-in-node-form fieldset.group-skinfolds:not(.group-progress-photo)
 .panel-body .form-type-textfield.form-item.form-group, .page-node-add #check-in-node-form fieldset.group-progress-photo:not(.group-progress-photo)
@@ -415,7 +453,7 @@ a {
 .panel-body .form-type-textfield.form-item.form-group {
   font-size: 0;
 }
-/* line 312, ../sass/page_layout.scss */
+/* line 347, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures:not(.group-progress-photo)
 .panel-body .form-type-textfield.form-item.form-group input, .page-node-add #check-in-node-form fieldset.group-skinfolds:not(.group-progress-photo)
 .panel-body .form-type-textfield.form-item.form-group input, .page-node-add #check-in-node-form fieldset.group-progress-photo:not(.group-progress-photo)
@@ -437,7 +475,7 @@ a {
   padding: 5px;
   font-size: 14px;
 }
-/* line 317, ../sass/page_layout.scss */
+/* line 352, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-circumference-measures:not(.group-progress-photo)
 .panel-body .form-type-textfield.form-item.form-group label, .page-node-add #check-in-node-form fieldset.group-skinfolds:not(.group-progress-photo)
 .panel-body .form-type-textfield.form-item.form-group label, .page-node-add #check-in-node-form fieldset.group-progress-photo:not(.group-progress-photo)
@@ -459,31 +497,31 @@ a {
   font-size: 14px;
   text-align: right;
 }
-/* line 327, ../sass/page_layout.scss */
+/* line 362, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-body::before, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-body::before, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-body::before, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-body::before {
   display: none;
   content: none;
 }
-/* line 331, ../sass/page_layout.scss */
+/* line 366, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-body > div, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-body > div, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-body > div {
   padding-top: 0;
   margin-bottom: 0;
 }
-/* line 334, ../sass/page_layout.scss */
+/* line 369, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-sup-checklist .panel-body > div label, .page-node-add #daily-log-node-form fieldset.group-sup-checklist .panel-body > div label, .page-node-edit #check-in-node-form fieldset.group-sup-checklist .panel-body > div label, .page-node-edit #daily-log-node-form fieldset.group-sup-checklist .panel-body > div label {
   font-size: 16px;
   font-weight: bold;
 }
-/* line 343, ../sass/page_layout.scss */
+/* line 378, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div {
   width: 100%;
   margin-bottom: 10px;
 }
-/* line 346, ../sass/page_layout.scss */
+/* line 381, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div input, .page-node-add #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div input, .page-node-edit #check-in-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div input, .page-node-edit #daily-log-node-form fieldset.group-progress-photo .panel-collapse .panel-body > div input {
   width: calc(100% - 15px);
 }
-/* line 356, ../sass/page_layout.scss */
+/* line 391, ../sass/page_layout.scss */
 .page-node-add #daily-log-node-form .form-managed-file button, .page-node-edit #daily-log-node-form .form-managed-file button {
   padding: 8px !important;
   text-indent: -999em;
@@ -491,7 +529,7 @@ a {
   position: relative;
   height: 34px;
 }
-/* line 362, ../sass/page_layout.scss */
+/* line 397, ../sass/page_layout.scss */
 .page-node-add #daily-log-node-form .form-managed-file button:before, .page-node-edit #daily-log-node-form .form-managed-file button:before {
   content: "\e027";
   font-family: 'Glyphicons Halflings';
