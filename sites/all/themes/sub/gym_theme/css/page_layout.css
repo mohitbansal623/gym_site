@@ -17,7 +17,7 @@ a {
 }
 
 /* line 79, ../sass/_mixin.scss */
-.page-node-add #block-system-main .node-form .form-managed-file button, .page-node-edit #block-system-main .node-form .form-managed-file button, .page-node-add #block-system-main .node-form .form-actions .form-submit, .page-node-edit #block-system-main .node-form .form-actions .form-submit {
+.page-node-add #block-system-main .node-form .form-managed-file button, .page-node-edit #block-system-main .node-form .form-managed-file button, .page-node-add #block-system-main .node-form .form-actions .form-submit, .page-node-edit #block-system-main .node-form .form-actions .form-submit, .page-user.not-logged-in .page-container .region.region-content form .form-actions .form-submit {
   background: #f12236;
   color: #fff;
   border: 0;
@@ -27,7 +27,7 @@ a {
   border-radius: 0px;
 }
 /* line 87, ../sass/_mixin.scss */
-.page-node-add #block-system-main .node-form .form-managed-file button span, .page-node-edit #block-system-main .node-form .form-managed-file button span, .page-node-add #block-system-main .node-form .form-actions .form-submit span, .page-node-edit #block-system-main .node-form .form-actions .form-submit span {
+.page-node-add #block-system-main .node-form .form-managed-file button span, .page-node-edit #block-system-main .node-form .form-managed-file button span, .page-node-add #block-system-main .node-form .form-actions .form-submit span, .page-node-edit #block-system-main .node-form .form-actions .form-submit span, .page-user.not-logged-in .page-container .region.region-content form .form-actions .form-submit span {
   display: none;
 }
 
@@ -653,4 +653,63 @@ a {
 /* line 500, ../sass/page_layout.scss */
 .page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box table {
   font-size: 14px;
+}
+
+/* line 511, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-header {
+  display: none;
+}
+/* line 514, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container {
+  padding-top: 60px;
+}
+/* line 516, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs {
+  max-width: 550px;
+  margin: auto;
+  background: #fff;
+}
+/* line 520, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li {
+  text-transform: uppercase;
+}
+/* line 522, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li a {
+  color: #000;
+  border: 0;
+}
+/* line 527, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li.active {
+  background: #3ab54a;
+}
+/* line 529, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li.active a {
+  background: #3ab54a;
+  color: #fff;
+}
+/* line 535, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .region.region-content {
+  max-width: 550px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 60px;
+}
+/* line 542, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .region.region-content form label {
+  text-transform: uppercase;
+}
+/* line 545, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .region.region-content form input, .page-user.not-logged-in .page-container .region.region-content form textarea, .page-user.not-logged-in .page-container .region.region-content form select {
+  border-radius: 0;
+}
+/* line 548, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .region.region-content form .form-actions {
+  margin-top: 20px;
+}
+/* line 550, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .region.region-content form .form-actions .form-submit {
+  width: 100%;
+  color: #fff;
+  background: #26a9e1;
 }

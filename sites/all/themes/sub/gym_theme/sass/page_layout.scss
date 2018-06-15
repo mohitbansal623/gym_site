@@ -505,6 +505,60 @@
     }
   }
 }
+
+.page-user {
+  &.not-logged-in {
+    .page-header {
+      display: none;
+    }
+    .page-container {
+      padding-top: 60px;
+      .tabs--primary.nav.nav-tabs {
+        max-width: 550px;
+        margin: auto;
+        background: #fff;
+        li {
+          text-transform: uppercase;
+          a {
+            color: #000;
+            border: 0;
+          }
+        }
+        li.active {
+          background: #3ab54a;
+          a {
+            background: #3ab54a;
+            color: #fff;
+          }
+        }
+      }
+      .region.region-content {
+        max-width: 550px;
+        margin: auto;
+        padding: 20px;
+        background: #fff;
+        margin-bottom: 60px;
+        form {
+          label {
+            text-transform: uppercase;
+          }
+          input, textarea, select {
+            border-radius: 0;
+          }
+          .form-actions {
+            margin-top: 20px;
+            .form-submit {
+              width: 100%;
+              color: #fff;
+              @extend %red-btn;
+              background: #26a9e1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 //
 // .main-container {
 //   padding: 68px 8% 60px;
