@@ -547,3 +547,110 @@ a {
   top: 50%;
   margin-top: -10px;
 }
+
+/* line 420, ../sass/page_layout.scss */
+.page-path-to-fitness .page-header {
+  background: url("../images/Banner_Image.jpg") 0 0 no-repeat;
+  height: 180px;
+  vertical-align: middle;
+  line-height: 180px;
+  text-align: center;
+  text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+  color: #fff;
+  margin: 30px auto 50px;
+  font-family: 'Bevan', cursive;
+  text-transform: uppercase;
+  max-width: 790px;
+  font-size: 28px;
+  border: 0;
+}
+@media (max-width: 767px) {
+  /* line 420, ../sass/page_layout.scss */
+  .page-path-to-fitness .page-header {
+    font-size: 20px;
+    height: 160px;
+    line-height: 160px;
+  }
+}
+@media (max-width: 480px) {
+  /* line 420, ../sass/page_layout.scss */
+  .page-path-to-fitness .page-header {
+    font-size: 18px;
+  }
+}
+/* line 445, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0;
+}
+/* line 449, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness table {
+  font-size: 12px;
+}
+/* line 451, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness table span {
+  display: block;
+}
+/* line 455, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness table tr td:first-child {
+  padding-right: 5px;
+}
+/* line 458, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness table tr td:last-child {
+  width: 99%;
+}
+/* line 461, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness table tr .progress {
+  margin-bottom: 0;
+  height: 25px;
+  background: #333333;
+  border-radius: 0;
+  width: 100%;
+}
+/* line 467, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness table tr .progress .progress-bar {
+  background: #26a9e1;
+  font-size: 0;
+  line-height: 25px;
+}
+/* line 475, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness .path-to-fitness-box {
+  font-size: 14px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  /* line 475, ../sass/page_layout.scss */
+  .page-path-to-fitness #block-system-main .view-content .fitness .path-to-fitness-box {
+    width: 100%;
+  }
+}
+/* line 484, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness .path-to-fitness-box .headings {
+  margin-bottom: 10px;
+}
+/* line 488, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-level-box {
+  font-size: 14px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  /* line 488, ../sass/page_layout.scss */
+  .page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-level-box {
+    width: 100%;
+  }
+}
+/* line 498, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box {
+  font-size: 14px;
+}
+/* line 500, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box table {
+  font-size: 14px;
+}

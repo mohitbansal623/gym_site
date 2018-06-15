@@ -416,6 +416,95 @@
   }
 }
 
+.page-path-to-fitness {
+  .page-header {
+    background: url('../images/Banner_Image.jpg') 0 0 no-repeat;
+    height: 180px;
+    vertical-align: middle;
+    line-height: 180px;
+    text-align: center;
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+    color: #fff;
+    margin: 30px auto 50px;
+    font-family: 'Bevan', cursive;
+    text-transform: uppercase;
+    max-width: 790px;
+    font-size: 28px;
+    border: 0;
+    @media (max-width: 767px) {
+      font-size: 20px;
+      height: 160px;
+      line-height: 160px;
+    }
+    @media (max-width: 480px) {
+      font-size: 18px;
+    }
+  }
+  #block-system-main {
+    .view-content {
+      .fitness {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 0;
+        table {
+          font-size: 12px;
+          span {
+            display: block;
+          }
+          tr {
+            td:first-child {
+              padding-right: 5px;
+            }
+            td:last-child {
+              width: 99%;
+            }
+            .progress {
+              margin-bottom: 0;
+              height: 25px;
+              background: #333333;
+              border-radius: 0;
+              width: 100%;
+              .progress-bar {
+                background: #26a9e1;
+                font-size: 0;
+                line-height: 25px;
+              }
+            }
+          }
+        }
+        .path-to-fitness-box {
+          font-size: 14px;
+          display: inline-block;
+          width: 50%;
+          vertical-align: top;
+          margin-bottom: 20px;
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+          .headings {
+            margin-bottom: 10px;
+          }
+        }
+        .bodyfat-level-box {
+          font-size: 14px;
+          display: inline-block;
+          width: 50%;
+          vertical-align: top;
+          margin-bottom: 20px;
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+        }
+        .bodyfat-comp-box {
+          font-size: 14px;
+          table {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
 //
 // .main-container {
 //   padding: 68px 8% 60px;
