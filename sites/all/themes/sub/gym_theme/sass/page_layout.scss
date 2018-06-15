@@ -450,6 +450,7 @@
           font-size: 12px;
           span {
             display: block;
+            line-height: 1.2;
           }
           tr {
             td:first-child {
@@ -457,6 +458,10 @@
             }
             td:last-child {
               width: 99%;
+            }
+            td {
+              padding-bottom: 20px;
+              vertical-align: middle;
             }
             .progress {
               margin-bottom: 0;
@@ -514,26 +519,31 @@
     .page-container {
       padding-top: 60px;
       .tabs--primary.nav.nav-tabs {
-        max-width: 550px;
+        max-width: 518px;
         margin: auto;
         background: #fff;
         li {
           text-transform: uppercase;
+          border: 2px solid #fff;
+          border-bottom: 2px solid #26a9e1;
           a {
             color: #000;
             border: 0;
           }
         }
         li.active {
-          background: #3ab54a;
+          // background: #3ab54a;
+          background: #fff;
+          border: 2px solid #26a9e1;
+          border-bottom: 2px solid #fff;
           a {
-            background: #3ab54a;
-            color: #fff;
+            background: transparent;
+            color: #26a9e1;
           }
         }
       }
       .region.region-content {
-        max-width: 550px;
+        max-width: 518px;
         margin: auto;
         padding: 20px;
         background: #fff;
