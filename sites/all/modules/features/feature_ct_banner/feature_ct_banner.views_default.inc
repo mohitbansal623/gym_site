@@ -76,6 +76,24 @@ function feature_ct_banner_views_default_views() {
   $handler->display->display_options['fields']['field_banner_image']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_banner_image']['multi_type'] = 'ul';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $translatables['view_banner'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Title'),
+    t('Page banner'),
+  );
   $export['view_banner'] = $view;
 
   return $export;

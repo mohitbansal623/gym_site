@@ -14,7 +14,8 @@ function menu_links_roles_and_permissions_user_default_permissions() {
   $permissions['create goals content'] = array(
     'name' => 'create goals content',
     'roles' => array(
-      'coach' => 'coach',
+      'administrator' => 'administrator',
+      'client' => 'client',
     ),
     'module' => 'node',
   );
@@ -23,7 +24,7 @@ function menu_links_roles_and_permissions_user_default_permissions() {
   $permissions['create path_to_fitness content'] = array(
     'name' => 'create path_to_fitness content',
     'roles' => array(
-      'coach' => 'coach',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -32,7 +33,8 @@ function menu_links_roles_and_permissions_user_default_permissions() {
   $permissions['edit own goals content'] = array(
     'name' => 'edit own goals content',
     'roles' => array(
-      'coach' => 'coach',
+      'administrator' => 'administrator',
+      'client' => 'client',
     ),
     'module' => 'node',
   );
@@ -40,7 +42,9 @@ function menu_links_roles_and_permissions_user_default_permissions() {
   // Exported permission: 'edit own path_to_fitness content'.
   $permissions['edit own path_to_fitness content'] = array(
     'name' => 'edit own path_to_fitness content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 

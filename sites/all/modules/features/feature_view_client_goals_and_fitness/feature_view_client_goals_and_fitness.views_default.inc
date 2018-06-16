@@ -184,7 +184,7 @@ echo get_remaining_days($row->nid);
 ?>';
   $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
-  /* Field: Content: Coach Ref */
+  /* Field: Content: Coach */
   $handler->display->display_options['fields']['field_coach_ref']['id'] = 'field_coach_ref';
   $handler->display->display_options['fields']['field_coach_ref']['table'] = 'field_data_field_coach_ref';
   $handler->display->display_options['fields']['field_coach_ref']['field'] = 'field_coach_ref';
@@ -202,18 +202,13 @@ echo get_remaining_days($row->nid);
   $handler->display->display_options['fields']['field_motivation']['label'] = '';
   $handler->display->display_options['fields']['field_motivation']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_motivation']['element_label_colon'] = FALSE;
-  /* Field: Content: Inspiration */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_inspiration']['id'] = 'field_inspiration';
   $handler->display->display_options['fields']['field_inspiration']['table'] = 'field_data_field_inspiration';
   $handler->display->display_options['fields']['field_inspiration']['field'] = 'field_inspiration';
   $handler->display->display_options['fields']['field_inspiration']['label'] = '';
   $handler->display->display_options['fields']['field_inspiration']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_inspiration']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_inspiration']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_inspiration']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
   /* Field: Content: Client Ref */
   $handler->display->display_options['fields']['field_client_ref']['id'] = 'field_client_ref';
   $handler->display->display_options['fields']['field_client_ref']['table'] = 'field_data_field_client_ref';
@@ -223,16 +218,12 @@ echo get_remaining_days($row->nid);
     'bypass_access' => 0,
     'link' => 0,
   );
-  /* Field: Content: Current Progress Pic */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_current_progress_pic']['id'] = 'field_current_progress_pic';
   $handler->display->display_options['fields']['field_current_progress_pic']['table'] = 'field_data_field_current_progress_pic';
   $handler->display->display_options['fields']['field_current_progress_pic']['field'] = 'field_current_progress_pic';
+  $handler->display->display_options['fields']['field_current_progress_pic']['label'] = 'Current Progress Pic';
   $handler->display->display_options['fields']['field_current_progress_pic']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_current_progress_pic']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_current_progress_pic']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
   /* Field: Content: Author uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'node';

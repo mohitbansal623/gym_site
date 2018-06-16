@@ -24,7 +24,12 @@ function edit_goal_feature_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Client Goal View';
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    4 => '4',
+    3 => '3',
+    5 => '5',
+  );
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -91,10 +96,10 @@ function edit_goal_feature_views_default_views() {
   $handler->display->display_options['empty']['area']['content'] = 'No results.';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
   /* Field: Content: Goal */
-  $handler->display->display_options['fields']['field_goal']['id'] = 'field_goal';
-  $handler->display->display_options['fields']['field_goal']['table'] = 'field_data_field_goal';
-  $handler->display->display_options['fields']['field_goal']['field'] = 'field_goal';
-  /* Field: Content: Coach Ref */
+  $handler->display->display_options['fields']['field_goal_revamp']['id'] = 'field_goal_revamp';
+  $handler->display->display_options['fields']['field_goal_revamp']['table'] = 'field_data_field_goal_revamp';
+  $handler->display->display_options['fields']['field_goal_revamp']['field'] = 'field_goal_revamp';
+  /* Field: Content: Coach */
   $handler->display->display_options['fields']['field_coach_ref']['id'] = 'field_coach_ref';
   $handler->display->display_options['fields']['field_coach_ref']['table'] = 'field_data_field_coach_ref';
   $handler->display->display_options['fields']['field_coach_ref']['field'] = 'field_coach_ref';
@@ -229,6 +234,38 @@ else {
   $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['path'] = 'edit-goal/%';
+  $translatables['client_goal_view'] = array(
+    t('Master'),
+    t('Client Goal View'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('No results.'),
+    t('Goal'),
+    t('Coach'),
+    t('goal date'),
+    t('Motivation'),
+    t('Published'),
+    t('Edit link'),
+    t('Edit Goal'),
+    t('Nid'),
+    t('Edit or View Content'),
+    t('goal complete'),
+    t('Unpublish State'),
+    t('Completion State'),
+    t('Page'),
+    t('All'),
+  );
   $export['client_goal_view'] = $view;
 
   return $export;

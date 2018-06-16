@@ -60,51 +60,9 @@ function feature_ct_banner_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ct_banner-field_path'.
-  $field_instances['node-ct_banner-field_path'] = array(
-    'bundle' => 'ct_banner',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Path on which the banner will appear',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_path',
-    'label' => 'Path',
-    'required' => 1,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => -3,
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('Banner Image');
-  t('Path');
-  t('Path on which the banner will appear');
 
   return $field_instances;
 }
