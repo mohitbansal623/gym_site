@@ -37,28 +37,20 @@ function feature_view_check_in_views_default_views() {
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
-  /* Field: Content: Bodyfat kg */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_bodyfat_kg']['id'] = 'field_bodyfat_kg';
   $handler->display->display_options['fields']['field_bodyfat_kg']['table'] = 'field_data_field_bodyfat_kg';
   $handler->display->display_options['fields']['field_bodyfat_kg']['field'] = 'field_bodyfat_kg';
   $handler->display->display_options['fields']['field_bodyfat_kg']['label'] = '';
   $handler->display->display_options['fields']['field_bodyfat_kg']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_bodyfat_kg']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_bodyfat_kg']['settings'] = array(
-    'thousand_separator' => '',
-    'prefix_suffix' => 1,
-  );
-  /* Field: Content: Muscle Mass */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_muscle_mass']['id'] = 'field_muscle_mass';
   $handler->display->display_options['fields']['field_muscle_mass']['table'] = 'field_data_field_muscle_mass';
   $handler->display->display_options['fields']['field_muscle_mass']['field'] = 'field_muscle_mass';
   $handler->display->display_options['fields']['field_muscle_mass']['label'] = '';
   $handler->display->display_options['fields']['field_muscle_mass']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_muscle_mass']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_muscle_mass']['settings'] = array(
-    'thousand_separator' => '',
-    'prefix_suffix' => 1,
-  );
   /* Field: Content: Percent BodyFat */
   $handler->display->display_options['fields']['field_percent_bodyfat']['id'] = 'field_percent_bodyfat';
   $handler->display->display_options['fields']['field_percent_bodyfat']['table'] = 'field_data_field_percent_bodyfat';
@@ -70,7 +62,7 @@ function feature_view_check_in_views_default_views() {
     'thousand_separator' => '',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: Abdominal MM */
+  /* Field: Content: Abdominal */
   $handler->display->display_options['fields']['field_abdominal_mm']['id'] = 'field_abdominal_mm';
   $handler->display->display_options['fields']['field_abdominal_mm']['table'] = 'field_data_field_abdominal_mm';
   $handler->display->display_options['fields']['field_abdominal_mm']['field'] = 'field_abdominal_mm';
@@ -81,7 +73,7 @@ function feature_view_check_in_views_default_views() {
     'thousand_separator' => '',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: Chest CM */
+  /* Field: Content: Chest */
   $handler->display->display_options['fields']['field_chest_cm']['id'] = 'field_chest_cm';
   $handler->display->display_options['fields']['field_chest_cm']['table'] = 'field_data_field_chest_cm';
   $handler->display->display_options['fields']['field_chest_cm']['field'] = 'field_chest_cm';
@@ -92,7 +84,7 @@ function feature_view_check_in_views_default_views() {
     'thousand_separator' => '',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: Hips CM */
+  /* Field: Content: Hips */
   $handler->display->display_options['fields']['field_hips_cm']['id'] = 'field_hips_cm';
   $handler->display->display_options['fields']['field_hips_cm']['table'] = 'field_data_field_hips_cm';
   $handler->display->display_options['fields']['field_hips_cm']['field'] = 'field_hips_cm';
@@ -103,7 +95,7 @@ function feature_view_check_in_views_default_views() {
     'thousand_separator' => '',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: Left Arm CM */
+  /* Field: Content: Left Arm */
   $handler->display->display_options['fields']['field_left_arm_cm']['id'] = 'field_left_arm_cm';
   $handler->display->display_options['fields']['field_left_arm_cm']['table'] = 'field_data_field_left_arm_cm';
   $handler->display->display_options['fields']['field_left_arm_cm']['field'] = 'field_left_arm_cm';
@@ -114,7 +106,7 @@ function feature_view_check_in_views_default_views() {
     'thousand_separator' => '',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: Left Calf CM */
+  /* Field: Content: Left Calf */
   $handler->display->display_options['fields']['field_left_calf_cm']['id'] = 'field_left_calf_cm';
   $handler->display->display_options['fields']['field_left_calf_cm']['table'] = 'field_data_field_left_calf_cm';
   $handler->display->display_options['fields']['field_left_calf_cm']['field'] = 'field_left_calf_cm';
@@ -125,7 +117,7 @@ function feature_view_check_in_views_default_views() {
     'thousand_separator' => '',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: Left Leg CM */
+  /* Field: Content: Left Leg */
   $handler->display->display_options['fields']['field_left_leg_cm']['id'] = 'field_left_leg_cm';
   $handler->display->display_options['fields']['field_left_leg_cm']['table'] = 'field_data_field_left_leg_cm';
   $handler->display->display_options['fields']['field_left_leg_cm']['field'] = 'field_left_leg_cm';
@@ -136,7 +128,7 @@ function feature_view_check_in_views_default_views() {
     'thousand_separator' => '',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: Neck CM */
+  /* Field: Content: Neck */
   $handler->display->display_options['fields']['field_neck_cm']['id'] = 'field_neck_cm';
   $handler->display->display_options['fields']['field_neck_cm']['table'] = 'field_data_field_neck_cm';
   $handler->display->display_options['fields']['field_neck_cm']['field'] = 'field_neck_cm';
@@ -147,7 +139,7 @@ function feature_view_check_in_views_default_views() {
     'thousand_separator' => '',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: Right Arm CM */
+  /* Field: Content: Right Arm */
   $handler->display->display_options['fields']['field_right_arm_cm']['id'] = 'field_right_arm_cm';
   $handler->display->display_options['fields']['field_right_arm_cm']['table'] = 'field_data_field_right_arm_cm';
   $handler->display->display_options['fields']['field_right_arm_cm']['field'] = 'field_right_arm_cm';
@@ -158,7 +150,7 @@ function feature_view_check_in_views_default_views() {
     'thousand_separator' => '',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: Right Calf CM */
+  /* Field: Content: Right Calf */
   $handler->display->display_options['fields']['field_right_calf_cm']['id'] = 'field_right_calf_cm';
   $handler->display->display_options['fields']['field_right_calf_cm']['table'] = 'field_data_field_right_calf_cm';
   $handler->display->display_options['fields']['field_right_calf_cm']['field'] = 'field_right_calf_cm';
@@ -169,7 +161,7 @@ function feature_view_check_in_views_default_views() {
     'thousand_separator' => '',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: Right Leg CM */
+  /* Field: Content: Right Leg */
   $handler->display->display_options['fields']['field_right_leg_cm']['id'] = 'field_right_leg_cm';
   $handler->display->display_options['fields']['field_right_leg_cm']['table'] = 'field_data_field_right_leg_cm';
   $handler->display->display_options['fields']['field_right_leg_cm']['field'] = 'field_right_leg_cm';
@@ -191,7 +183,7 @@ function feature_view_check_in_views_default_views() {
     'thousand_separator' => '',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: Waist CM */
+  /* Field: Content: Waist */
   $handler->display->display_options['fields']['field_waist_cm']['id'] = 'field_waist_cm';
   $handler->display->display_options['fields']['field_waist_cm']['table'] = 'field_data_field_waist_cm';
   $handler->display->display_options['fields']['field_waist_cm']['field'] = 'field_waist_cm';
@@ -289,28 +281,16 @@ global $user;
 ?>';
   $handler->display->display_options['fields']['php_4']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php_4']['php_click_sortable'] = '';
-  /* Field: Content: Training Sessions Completed */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_training_sessions_complete']['id'] = 'field_training_sessions_complete';
   $handler->display->display_options['fields']['field_training_sessions_complete']['table'] = 'field_data_field_training_sessions_complete';
   $handler->display->display_options['fields']['field_training_sessions_complete']['field'] = 'field_training_sessions_complete';
   $handler->display->display_options['fields']['field_training_sessions_complete']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_training_sessions_complete']['settings'] = array(
-    'thousand_separator' => '',
-    'decimal_separator' => '.',
-    'scale' => '2',
-    'prefix_suffix' => 1,
-  );
-  /* Field: Content: Personal Records */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_personal_records']['id'] = 'field_personal_records';
   $handler->display->display_options['fields']['field_personal_records']['table'] = 'field_data_field_personal_records';
   $handler->display->display_options['fields']['field_personal_records']['field'] = 'field_personal_records';
   $handler->display->display_options['fields']['field_personal_records']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_personal_records']['settings'] = array(
-    'thousand_separator' => '',
-    'decimal_separator' => '.',
-    'scale' => '2',
-    'prefix_suffix' => 1,
-  );
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -407,8 +387,8 @@ global $user;
     t('MM Loss'),
     t('Diet Adherence'),
     t('Average Daily Activity'),
-    t('Training Sessions Completed'),
-    t('Personal Records'),
+    t('Broken handler field_data_field_training_sessions_complete.field_training_sessions_complete'),
+    t('Broken handler field_data_field_personal_records.field_personal_records'),
     t('<div class="current-stats">
   <h2 class="block-title">Current Stats</h2>
   <div class="stats">

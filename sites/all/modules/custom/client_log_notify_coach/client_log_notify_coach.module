@@ -351,6 +351,29 @@ function get_remaining_days($nid) {
    }
 }
 
+/**
+ * get workout completed
+ */
+function get_workout_days($nid) {
+  $node = node_load($nid);
+
+  if (isset($node->field_goal_date['und'][0]['value1']) && !empty($node->field_goal_date['und'][0]['value1'])) {
+    $start_date = explode(' ', $node->field_goal_date['und'][0]['value1']);
+
+    $start_date = date_create($start_date[0]);
+
+    $current_date = date_create(date('Y-m-d'));
+
+    $diff = date_diff($start_date, $current_date);
+
+    $days = 0;
+    if (!empty($diff) && $diff->days > 0) {
+      $days = $diff->days;
+    }
+
+    return $days;
+   }
+}
 
 /**
  * Implements hook_form_alter()

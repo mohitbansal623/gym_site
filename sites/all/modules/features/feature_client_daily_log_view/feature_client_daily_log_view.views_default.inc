@@ -123,7 +123,7 @@ function feature_client_daily_log_view_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'No Daily log for this day.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
-  /* Field: Content: Check In */
+  /* Field: Content: Date */
   $handler->display->display_options['fields']['field_check_in_date']['id'] = 'field_check_in_date';
   $handler->display->display_options['fields']['field_check_in_date']['table'] = 'field_data_field_check_in_date';
   $handler->display->display_options['fields']['field_check_in_date']['field'] = 'field_check_in_date';
@@ -136,7 +136,7 @@ function feature_client_daily_log_view_views_default_views() {
     'multiple_to' => '',
     'show_remaining_days' => 0,
   );
-  /* Field: Content: Meal 1 Diet */
+  /* Field: Content: Small Meal */
   $handler->display->display_options['fields']['field_meal_1_diet']['id'] = 'field_meal_1_diet';
   $handler->display->display_options['fields']['field_meal_1_diet']['table'] = 'field_data_field_meal_1_diet';
   $handler->display->display_options['fields']['field_meal_1_diet']['field'] = 'field_meal_1_diet';
@@ -149,20 +149,15 @@ function feature_client_daily_log_view_views_default_views() {
     'image_style' => 'medium',
     'image_link' => '',
   );
-  /* Field: Content: Meal 2 Diet */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_meal_2_diet']['id'] = 'field_meal_2_diet';
   $handler->display->display_options['fields']['field_meal_2_diet']['table'] = 'field_data_field_meal_2_diet';
   $handler->display->display_options['fields']['field_meal_2_diet']['field'] = 'field_meal_2_diet';
-  /* Field: Content: Meal 2 */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_meal_2']['id'] = 'field_meal_2';
   $handler->display->display_options['fields']['field_meal_2']['table'] = 'field_data_field_meal_2';
   $handler->display->display_options['fields']['field_meal_2']['field'] = 'field_meal_2';
-  $handler->display->display_options['fields']['field_meal_2']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_meal_2']['settings'] = array(
-    'image_style' => 'medium',
-    'image_link' => '',
-  );
-  /* Field: Content: Meal 3 Diet */
+  /* Field: Content: Large Meal */
   $handler->display->display_options['fields']['field_meal_3_diet']['id'] = 'field_meal_3_diet';
   $handler->display->display_options['fields']['field_meal_3_diet']['table'] = 'field_data_field_meal_3_diet';
   $handler->display->display_options['fields']['field_meal_3_diet']['field'] = 'field_meal_3_diet';
@@ -175,19 +170,24 @@ function feature_client_daily_log_view_views_default_views() {
     'image_style' => 'medium',
     'image_link' => '',
   );
-  /* Field: Content: Snacks Diet */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_snacks_diet']['id'] = 'field_snacks_diet';
   $handler->display->display_options['fields']['field_snacks_diet']['table'] = 'field_data_field_snacks_diet';
   $handler->display->display_options['fields']['field_snacks_diet']['field'] = 'field_snacks_diet';
-  /* Field: Content: Snacks */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_snacks']['id'] = 'field_snacks';
   $handler->display->display_options['fields']['field_snacks']['table'] = 'field_data_field_snacks';
   $handler->display->display_options['fields']['field_snacks']['field'] = 'field_snacks';
-  $handler->display->display_options['fields']['field_snacks']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_snacks']['settings'] = array(
-    'image_style' => 'medium',
-    'image_link' => '',
-  );
+  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_how_do_you_feel_today_']['id'] = 'field_how_do_you_feel_today_';
+  $handler->display->display_options['fields']['field_how_do_you_feel_today_']['table'] = 'field_data_field_how_do_you_feel_today_';
+  $handler->display->display_options['fields']['field_how_do_you_feel_today_']['field'] = 'field_how_do_you_feel_today_';
+  $handler->display->display_options['fields']['field_how_do_you_feel_today_']['label'] = 'How do you feel today?';
+  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_daily_serving_suggestions']['id'] = 'field_daily_serving_suggestions';
+  $handler->display->display_options['fields']['field_daily_serving_suggestions']['table'] = 'field_data_field_daily_serving_suggestions';
+  $handler->display->display_options['fields']['field_daily_serving_suggestions']['field'] = 'field_daily_serving_suggestions';
+  $handler->display->display_options['fields']['field_daily_serving_suggestions']['label'] = 'Daily Serving Suggestions';
   /* Field: Content: Was Today on Plan */
   $handler->display->display_options['fields']['field_was_today_on_plan']['id'] = 'field_was_today_on_plan';
   $handler->display->display_options['fields']['field_was_today_on_plan']['table'] = 'field_data_field_was_today_on_plan';
@@ -253,6 +253,94 @@ function feature_client_daily_log_view_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'client-daily-log/%';
+
+  /* Display: Data export PDF */
+  $handler = $view->new_display('views_data_export_pdf', 'Data export PDF', 'views_data_export_pdf_1');
+
+  /* Display: Data export */
+  $handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_doc';
+  $handler->display->display_options['style_options']['provide_file'] = 1;
+  $handler->display->display_options['style_options']['filename'] = 'daily-log-report.doc';
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_check_in_date']['id'] = 'field_check_in_date';
+  $handler->display->display_options['fields']['field_check_in_date']['table'] = 'field_data_field_check_in_date';
+  $handler->display->display_options['fields']['field_check_in_date']['field'] = 'field_check_in_date';
+  $handler->display->display_options['fields']['field_check_in_date']['settings'] = array(
+    'format_type' => 'long',
+    'custom_date_format' => '',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  /* Field: Content: Small Meal */
+  $handler->display->display_options['fields']['field_meal_1_diet']['id'] = 'field_meal_1_diet';
+  $handler->display->display_options['fields']['field_meal_1_diet']['table'] = 'field_data_field_meal_1_diet';
+  $handler->display->display_options['fields']['field_meal_1_diet']['field'] = 'field_meal_1_diet';
+  /* Field: Content: Meal 1 */
+  $handler->display->display_options['fields']['field_meal_1']['id'] = 'field_meal_1';
+  $handler->display->display_options['fields']['field_meal_1']['table'] = 'field_data_field_meal_1';
+  $handler->display->display_options['fields']['field_meal_1']['field'] = 'field_meal_1';
+  $handler->display->display_options['fields']['field_meal_1']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_meal_1']['settings'] = array(
+    'image_style' => 'medium',
+    'image_link' => '',
+  );
+  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_meal_2_diet']['id'] = 'field_meal_2_diet';
+  $handler->display->display_options['fields']['field_meal_2_diet']['table'] = 'field_data_field_meal_2_diet';
+  $handler->display->display_options['fields']['field_meal_2_diet']['field'] = 'field_meal_2_diet';
+  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_meal_2']['id'] = 'field_meal_2';
+  $handler->display->display_options['fields']['field_meal_2']['table'] = 'field_data_field_meal_2';
+  $handler->display->display_options['fields']['field_meal_2']['field'] = 'field_meal_2';
+  /* Field: Content: Large Meal */
+  $handler->display->display_options['fields']['field_meal_3_diet']['id'] = 'field_meal_3_diet';
+  $handler->display->display_options['fields']['field_meal_3_diet']['table'] = 'field_data_field_meal_3_diet';
+  $handler->display->display_options['fields']['field_meal_3_diet']['field'] = 'field_meal_3_diet';
+  /* Field: Content: Meal 3 */
+  $handler->display->display_options['fields']['field_meal_3']['id'] = 'field_meal_3';
+  $handler->display->display_options['fields']['field_meal_3']['table'] = 'field_data_field_meal_3';
+  $handler->display->display_options['fields']['field_meal_3']['field'] = 'field_meal_3';
+  $handler->display->display_options['fields']['field_meal_3']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_meal_3']['settings'] = array(
+    'image_style' => 'medium',
+    'image_link' => '',
+  );
+  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_snacks_diet']['id'] = 'field_snacks_diet';
+  $handler->display->display_options['fields']['field_snacks_diet']['table'] = 'field_data_field_snacks_diet';
+  $handler->display->display_options['fields']['field_snacks_diet']['field'] = 'field_snacks_diet';
+  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_snacks']['id'] = 'field_snacks';
+  $handler->display->display_options['fields']['field_snacks']['table'] = 'field_data_field_snacks';
+  $handler->display->display_options['fields']['field_snacks']['field'] = 'field_snacks';
+  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_how_do_you_feel_today_']['id'] = 'field_how_do_you_feel_today_';
+  $handler->display->display_options['fields']['field_how_do_you_feel_today_']['table'] = 'field_data_field_how_do_you_feel_today_';
+  $handler->display->display_options['fields']['field_how_do_you_feel_today_']['field'] = 'field_how_do_you_feel_today_';
+  $handler->display->display_options['fields']['field_how_do_you_feel_today_']['label'] = 'How do you feel today?';
+  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_daily_serving_suggestions']['id'] = 'field_daily_serving_suggestions';
+  $handler->display->display_options['fields']['field_daily_serving_suggestions']['table'] = 'field_data_field_daily_serving_suggestions';
+  $handler->display->display_options['fields']['field_daily_serving_suggestions']['field'] = 'field_daily_serving_suggestions';
+  $handler->display->display_options['fields']['field_daily_serving_suggestions']['label'] = 'Daily Serving Suggestions';
+  /* Field: Content: Was Today on Plan */
+  $handler->display->display_options['fields']['field_was_today_on_plan']['id'] = 'field_was_today_on_plan';
+  $handler->display->display_options['fields']['field_was_today_on_plan']['table'] = 'field_data_field_was_today_on_plan';
+  $handler->display->display_options['fields']['field_was_today_on_plan']['field'] = 'field_was_today_on_plan';
+  $handler->display->display_options['path'] = 'sites/default/files/daily-log-report.doc';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+  );
+  $handler->display->display_options['segment_size'] = '100';
   $translatables['client_daily_log'] = array(
     t('Master'),
     t('Client Daily Log'),
@@ -270,20 +358,23 @@ function feature_client_daily_log_view_views_default_views() {
     t('next ›'),
     t('last »'),
     t('No Daily log for this day.'),
-    t('Check In'),
-    t('Meal 1 Diet'),
+    t('Date'),
+    t('Small Meal'),
     t('Meal 1'),
-    t('Meal 2 Diet'),
-    t('Meal 2'),
-    t('Meal 3 Diet'),
+    t('Broken handler field_data_field_meal_2_diet.field_meal_2_diet'),
+    t('Broken handler field_data_field_meal_2.field_meal_2'),
+    t('Large Meal'),
     t('Meal 3'),
-    t('Snacks Diet'),
-    t('Snacks'),
+    t('Broken handler field_data_field_snacks_diet.field_snacks_diet'),
+    t('Broken handler field_data_field_snacks.field_snacks'),
+    t('How do you feel today?'),
+    t('Daily Serving Suggestions'),
     t('Was Today on Plan'),
     t('Delete'),
     t('All'),
-    t('Date'),
     t('Page'),
+    t('Data export PDF'),
+    t('Data export'),
   );
   $export['client_daily_log'] = $view;
 

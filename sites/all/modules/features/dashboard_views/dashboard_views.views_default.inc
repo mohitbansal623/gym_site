@@ -42,7 +42,12 @@ function dashboard_views_views_default_views() {
 width:[field_bodyweight]%;
 }
 .views-field-field-percent-bodyfat .progress-bar {
-width:[field_percent_bodyfat]%;
+width: [php_6]%;
+}
+
+.views-field .red {
+  color: red;
+  font-weight : bold;
 }
 
 .views-field-php .progress-bar {
@@ -53,6 +58,14 @@ width:[field_avg_daily_activity_level]%;
 }
 .views-field-php-1 .progress-bar {
 width:[php_1]%;
+}
+
+.views-field-php-8 .progress-bar {
+width:[php_8]%;
+}
+
+.views-field-php-9 .progress-bar {
+width:[php_9]%;
 }
 </style>
 <div class="full-name">
@@ -73,7 +86,7 @@ width:[php_1]%;
   $handler->display->display_options['fields']['name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
-  /* Field: Field: First Name */
+  /* Field: User: First Name */
   $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
   $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
@@ -81,7 +94,7 @@ width:[php_1]%;
   $handler->display->display_options['fields']['field_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
-  /* Field: Field: Last Name */
+  /* Field: User: Last Name */
   $handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
   $handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
   $handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
@@ -147,22 +160,24 @@ echo get_remaining_days($row->nid);
   $handler->display->display_options['fields']['php_2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['php_2']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php_2']['php_output'] = '<?php
-echo get_percent_body_fat_goal_vs_check_in($row->uid);
+$data =  get_percent_body_fat_goal_vs_check_in($row->uid);
+echo $data[\'original\'];
 ?>';
   $handler->display->display_options['fields']['php_2']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php_2']['php_click_sortable'] = '';
   /* Field: Global: PHP */
-  $handler->display->display_options['fields']['php_3']['id'] = 'php_3';
-  $handler->display->display_options['fields']['php_3']['table'] = 'views';
-  $handler->display->display_options['fields']['php_3']['field'] = 'php';
-  $handler->display->display_options['fields']['php_3']['label'] = 'Avg Daily Activity';
-  $handler->display->display_options['fields']['php_3']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['php_3']['use_php_setup'] = 0;
-  $handler->display->display_options['fields']['php_3']['php_output'] = '<?php
-echo get_avg_daily_activity_level_goal_vs_dailylog($row->uid);
+  $handler->display->display_options['fields']['php_6']['id'] = 'php_6';
+  $handler->display->display_options['fields']['php_6']['table'] = 'views';
+  $handler->display->display_options['fields']['php_6']['field'] = 'php';
+  $handler->display->display_options['fields']['php_6']['label'] = 'Recent Body Fat';
+  $handler->display->display_options['fields']['php_6']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php_6']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_6']['php_output'] = '<?php
+$data =  get_percent_body_fat_goal_vs_check_in($row->uid);
+echo $data[\'recent\'];
 ?>';
-  $handler->display->display_options['fields']['php_3']['use_php_click_sortable'] = '0';
-  $handler->display->display_options['fields']['php_3']['php_click_sortable'] = '';
+  $handler->display->display_options['fields']['php_6']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_6']['php_click_sortable'] = '';
   /* Field: Global: PHP */
   $handler->display->display_options['fields']['php_4']['id'] = 'php_4';
   $handler->display->display_options['fields']['php_4']['table'] = 'views';
@@ -187,6 +202,60 @@ echo get_mm_loss($row->uid);
 ?>';
   $handler->display->display_options['fields']['php_5']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php_5']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_7']['id'] = 'php_7';
+  $handler->display->display_options['fields']['php_7']['table'] = 'views';
+  $handler->display->display_options['fields']['php_7']['field'] = 'php';
+  $handler->display->display_options['fields']['php_7']['label'] = 'Remaining';
+  $handler->display->display_options['fields']['php_7']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php_7']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_7']['php_output'] = '<?php
+$data  = get_percent_body_fat_goal_vs_check_in($row->uid);
+if ($data[\'rem\'] < 0) {
+echo abs($data[\'rem\']) . \'% more to loose.\';
+}
+else {
+echo "Goal Achieved.";
+}
+
+?>';
+  $handler->display->display_options['fields']['php_7']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_7']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_8']['id'] = 'php_8';
+  $handler->display->display_options['fields']['php_8']['table'] = 'views';
+  $handler->display->display_options['fields']['php_8']['field'] = 'php';
+  $handler->display->display_options['fields']['php_8']['label'] = '';
+  $handler->display->display_options['fields']['php_8']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php_8']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['php_8']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_8']['php_output'] = '<?php
+$query = db_select("node", \'at\')
+  ->fields(\'at\', array(\'nid\'));
+
+$query->join(\'field_data_field_did_you_do_your_ironfit_tr\', \'t\', "at.nid = t.entity_id");
+$query->condition(\'t.field_did_you_do_your_ironfit_tr_value\',1);
+$query->condition(\'at.status\', 1);
+$query->condition(\'at.uid\', $row->uid);
+$query->condition(\'at.type\', \'daily_log\');
+$results = $query->execute()->rowCount();
+
+echo $results;
+?>';
+  $handler->display->display_options['fields']['php_8']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_8']['php_click_sortable'] = '';
+  /* Field: Global: PHP */
+  $handler->display->display_options['fields']['php_9']['id'] = 'php_9';
+  $handler->display->display_options['fields']['php_9']['table'] = 'views';
+  $handler->display->display_options['fields']['php_9']['field'] = 'php';
+  $handler->display->display_options['fields']['php_9']['label'] = 'Total bodyweight Lost';
+  $handler->display->display_options['fields']['php_9']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['php_9']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php_9']['php_output'] = '<?php
+echo get_recent_body_weight_percentage($row->uid);
+?>';
+  $handler->display->display_options['fields']['php_9']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php_9']['php_click_sortable'] = '';
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -196,10 +265,11 @@ echo get_mm_loss($row->uid);
 <span class="views-label views-label-field-percent-bodyfat">Percent BodyFat: </span>
 <div class="field-content">
   <div class="progress">
-    <div class="progress-bar" role="progressbar" aria-valuenow="[php_2]" aria-valuemin="0" aria-valuemax="100">
-     [php_2]
+    <div class="progress-bar" role="progressbar" aria-valuenow="[php_6]" aria-valuemin="0" aria-valuemax="[php_2]">
+     [php_6]
     </div>
   </div>
+<div class="red"> [php_7]</div>
 </div>
 </div>
 
@@ -244,6 +314,22 @@ echo get_mm_loss($row->uid);
       [php_1]
     </div>
   </div></div>  </div>
+
+<div class="views-field views-field-php-9">    <span class="views-label views-label-php-1">Total bodyweight Lost </span>    <div class="field-content">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="[php_9]" aria-valuemin="0" aria-valuemax="100">
+      [php_9]
+    </div>
+  </div></div>  </div>
+
+<div class="views-field views-field-php-8">    <span class="views-label views-label-php-1">Ironfit Training Sessions Completed </span>    <div class="field-content">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="[php_8]" aria-valuemin="0" aria-valuemax="60">
+      [php_8]/60
+    </div>
+  </div></div>  </div>
+
+
 ';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
@@ -280,6 +366,134 @@ echo get_mm_loss($row->uid);
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'dashboard/check-in';
+  $translatables['client_check_in_dashboard'] = array(
+    t('Master'),
+    t('Check In Dashboard'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('<style type="text/css">
+.views-field-field-bodyweight .progress-bar {
+width:[field_bodyweight]%;
+}
+.views-field-field-percent-bodyfat .progress-bar {
+width: [php_6]%;
+}
+
+.views-field .red {
+  color: red;
+  font-weight : bold;
+}
+
+.views-field-php .progress-bar {
+width:[php]%;
+}
+.views-field-field-avg-daily-activity-level .progress-bar {
+width:[field_avg_daily_activity_level]%;
+}
+.views-field-php-1 .progress-bar {
+width:[php_1]%;
+}
+
+.views-field-php-8 .progress-bar {
+width:[php_8]%;
+}
+
+.views-field-php-9 .progress-bar {
+width:[php_9]%;
+}
+</style>
+<div class="full-name">
+   <div class="name"> [field_first_name] [field_last_name] </div>
+</div>'),
+    t('author'),
+    t('goal date'),
+    t('Uid'),
+    t('Diet Adherence'),
+    t('Nid'),
+    t('Days Remaining'),
+    t('Percent Body Fat'),
+    t('Recent Body Fat'),
+    t('Total CM Lost'),
+    t('Total Callipers Lost'),
+    t('Remaining'),
+    t('Total bodyweight Lost'),
+    t('<div class="views-field views-field-field-percent-bodyfat">
+<span class="views-label views-label-field-percent-bodyfat">Percent BodyFat: </span>
+<div class="field-content">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="[php_6]" aria-valuemin="0" aria-valuemax="[php_2]">
+     [php_6]
+    </div>
+  </div>
+<div class="red"> [php_7]</div>
+</div>
+</div>
+
+<div class="views-field views-field-php-4">    <span class="views-label views-label-php-4">Total CM Lost: </span>    <div class="field-content">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="[php_4]" aria-valuemin="0" aria-valuemax="100">
+      [php_4]
+    </div>
+  </div></div>  </div>
+
+
+<div class="views-field views-field-php-5">    <span class="views-label views-label-php-5">Total Capilers Lost: </span>    <div class="field-content">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="[php_5]" aria-valuemin="0" aria-valuemax="100">
+      [php_5]
+    </div>
+  </div></div>  </div>
+
+
+
+<div class="views-field views-field-php">
+<span class="views-label views-label-php">Diet Adherence: </span>
+<div class="field-content">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="[php]" aria-valuemin="0" aria-valuemax="100">
+      [php]
+    </div>
+  </div></div></div>
+
+<div class="views-field views-field-field-avg-daily-activity-level">
+<span class="views-label views-label-field-avg-daily-activity-level">Avg Daily Activity Level: </span>
+<div class="field-content">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="[php_3]" aria-valuemin="0" aria-valuemax="100">
+      [php_3]
+    </div>
+  </div></div>  </div>
+
+<div class="views-field views-field-php-1">    <span class="views-label views-label-php-1">Days Remaining: </span>    <div class="field-content">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="[php_1]" aria-valuemin="0" aria-valuemax="100">
+      [php_1]
+    </div>
+  </div></div>  </div>
+
+<div class="views-field views-field-php-9">    <span class="views-label views-label-php-1">Total bodyweight Lost </span>    <div class="field-content">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="[php_9]" aria-valuemin="0" aria-valuemax="100">
+      [php_9]
+    </div>
+  </div></div>  </div>
+
+<div class="views-field views-field-php-8">    <span class="views-label views-label-php-1">Ironfit Training Sessions Completed </span>    <div class="field-content">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="[php_8]" aria-valuemin="0" aria-valuemax="60">
+      [php_8]/60
+    </div>
+  </div></div>  </div>
+
+
+'),
+    t('All'),
+    t('Page'),
+  );
   $export['client_check_in_dashboard'] = $view;
 
   $view = new view();
@@ -321,14 +535,14 @@ echo get_mm_loss($row->uid);
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
-  /* Field: Field: First Name */
+  /* Field: User: First Name */
   $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
   $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
-  /* Field: Field: Last Name */
+  /* Field: User: Last Name */
   $handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
   $handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
   $handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
@@ -419,14 +633,14 @@ echo $days_on_plan;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
-  /* Field: Field: First Name */
+  /* Field: User: First Name */
   $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
   $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
-  /* Field: Field: Last Name */
+  /* Field: User: Last Name */
   $handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
   $handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
   $handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
@@ -523,14 +737,14 @@ echo $days_on_plan;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
-  /* Field: Field: First Name */
+  /* Field: User: First Name */
   $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
   $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
-  /* Field: Field: Last Name */
+  /* Field: User: Last Name */
   $handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
   $handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
   $handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
@@ -564,8 +778,8 @@ echo $coach_name[\'first_name\'] . " " . $coach_name[\'last_name\'];
   $handler->display->display_options['fields']['php_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['php_1']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php_1']['php_output'] = '<?php
-$mass_lost = get_recent_body_fat_percentage($row->uid);
-echo $mass_lost;
+$mass_lost = get_percent_body_fat_goal_vs_check_in($row->uid);
+echo $mass_lost[\'recent\'];
 ?>';
   $handler->display->display_options['fields']['php_1']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php_1']['php_click_sortable'] = '';
@@ -607,14 +821,14 @@ echo $mass_lost;
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field: First Name */
+  /* Field: User: First Name */
   $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
   $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
-  /* Field: Field: Last Name */
+  /* Field: User: Last Name */
   $handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
   $handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
   $handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
@@ -743,14 +957,14 @@ echo get_avg_daily_activity_level($row->uid);
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
-  /* Field: Field: First Name */
+  /* Field: User: First Name */
   $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
   $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
-  /* Field: Field: Last Name */
+  /* Field: User: Last Name */
   $handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
   $handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
   $handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
@@ -784,8 +998,8 @@ echo $coach_name[\'first_name\'] . " " . $coach_name[\'last_name\'];
   $handler->display->display_options['fields']['php_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['php_1']['use_php_setup'] = 0;
   $handler->display->display_options['fields']['php_1']['php_output'] = '<?php
-$mass_lost = get_recent_body_fat_percentage($row->uid);
-echo $mass_lost;
+$mass_lost = get_percent_body_fat_goal_vs_check_in($row->uid);
+echo $mass_lost[\'recent\'];
 ?>';
   $handler->display->display_options['fields']['php_1']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php_1']['php_click_sortable'] = '';
@@ -823,6 +1037,104 @@ echo $mass_lost;
     'default' => 0,
     'plan_days_lp' => 0,
     'client_dashboard' => 0,
+  );
+  $translatables['days_on_plan'] = array(
+    t('Master'),
+    t('Days On Plan Leaderboard'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Uid'),
+    t('Coach'),
+    t('  <div class="user-info">
+     <div class="name"> [field_first_name] &nbsp;[field_last_name]</div>
+     <div class="user-name"> [name] </div>
+   </div>
+
+   <div class="coach-info">
+     <div class="coach-title"> Coach: </div>
+     <div class="coach-name">[php]</div>
+   </div>
+
+   <div class="days-on-plan"><div class="total-on">[php_1]</div></div>
+
+  '),
+    t('Days On Plan LP'),
+    t('<img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png" />'),
+    t('  <div class="user-info">
+     <div class="name"> [field_first_name] [field_last_name]</div>
+     <div class="user-name"> [name] </div>
+   </div>
+
+   <div class="coach-info">
+<div class="coach-photo">[picture]
+</div>
+<div class="coach-info-content">
+     <div class="coach-title"> Coach: </div>
+     <div class="coach-name">[php]</div>
+</div>
+
+   </div>
+
+   <div class="days-on-plan"><div class="total-on">[php_1]</div></div>
+
+  '),
+    t('Mass Lost LP'),
+    t('Mass Lost Leaderboard'),
+    t('<div class="rank-box"><div class="rank"></div></div>
+<div class="user-pic">[picture]</div>  
+<div class="user-info">
+     <div class="name"> [field_first_name] &nbsp;[field_last_name]</div>
+     <div class="user-name"> [name] </div>
+<div class="coach">Coach: <span>[php]</span></div>
+   </div>
+
+   <div class="body-fat">[php_1]%</div>
+
+  '),
+    t('Client Dashboard'),
+    t('Total Days On Plan'),
+    t('Total Days Off Plan'),
+    t('Average Steps of Days'),
+    t('<div class="client-info-bar">
+  <div class="client-pic">[picture]</div>
+  <div class="client-info">
+    <div class="client-name">[field_first_name] [field_last_name]</div>
+    <div class="coach">Coach: <span>[php]</span></div>
+  </div>
+</div>
+<div class="client-activity">
+  <div class="activity-days">
+    <div class="on-plan plan-days"><div class="value">[php_1]</div><div class="activity-label">Total Days On Plan</div></div>
+    <div class="off-plan plan-days"><div class="value">[php_2]</div><div class="activity-label">Total Days Off Plan</div></div>
+  </div>
+  <div class="activity-steps"><div class="value">[php_3]</div><div class="activity-label">Average Steps Of Days</div></div>
+</div>'),
+    t('All'),
+    t('Mass Lost Top3'),
+    t('<none>'),
+    t('<div class="top-3-client">
+  <div class="client-pic">
+[picture]
+    <div class="rank"></div>
+  </div>
+  <div class="client-desc">
+    <div class="client-name">[field_first_name] [field_last_name]</div>
+    <div class="client-username">[name]</div>
+    <div class="bodyfat-percent">[php_1]%</div>
+    <div class="coach">Coach: <span>[php]</span></div>
+  </div>
+</div>'),
   );
   $export['days_on_plan'] = $view;
 

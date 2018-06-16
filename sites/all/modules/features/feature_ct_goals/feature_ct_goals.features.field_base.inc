@@ -10,27 +10,6 @@
 function feature_ct_goals_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_avg_daily_activity_level'.
-  $field_bases['field_avg_daily_activity_level'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_avg_daily_activity_level',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
   // Exported field_base: 'field_coach_ref'.
   $field_bases['field_coach_ref'] = array(
     'active' => 1,
@@ -136,6 +115,25 @@ function feature_ct_goals_field_default_field_bases() {
     'type' => 'datetime',
   );
 
+  // Exported field_base: 'field_goal_revamp'.
+  $field_bases['field_goal_revamp'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_goal_revamp',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_motivation'.
   $field_bases['field_motivation'] = array(
     'active' => 1,
@@ -150,11 +148,9 @@ function feature_ct_goals_field_default_field_bases() {
     ),
     'locked' => 0,
     'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
+    'settings' => array(),
     'translatable' => 0,
-    'type' => 'text',
+    'type' => 'text_long',
   );
 
   return $field_bases;
