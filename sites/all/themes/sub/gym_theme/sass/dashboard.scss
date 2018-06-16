@@ -238,7 +238,9 @@
 
 .page-days-on-plan-leaderboard, .page-mass-lost-leaderboard, .page-dashboard {
   background: #0e0e0e;
-
+  .page-container {
+    padding: 40px 0;
+  }
   .page-header {
     color: white;
     border: none;

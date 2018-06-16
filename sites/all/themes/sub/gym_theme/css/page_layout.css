@@ -595,18 +595,20 @@ a {
 }
 /* line 456, ../sass/page_layout.scss */
 .page-path-to-fitness #block-system-main .view-content .fitness table tr td:first-child {
-  padding-right: 5px;
+  padding-right: 10px;
+  border-right: 1px solid #fff;
+  text-align: right;
 }
-/* line 459, ../sass/page_layout.scss */
+/* line 461, ../sass/page_layout.scss */
 .page-path-to-fitness #block-system-main .view-content .fitness table tr td:last-child {
   width: 99%;
+  padding-left: 10px;
 }
-/* line 462, ../sass/page_layout.scss */
+/* line 465, ../sass/page_layout.scss */
 .page-path-to-fitness #block-system-main .view-content .fitness table tr td {
-  padding-bottom: 20px;
   vertical-align: middle;
 }
-/* line 466, ../sass/page_layout.scss */
+/* line 468, ../sass/page_layout.scss */
 .page-path-to-fitness #block-system-main .view-content .fitness table tr .progress {
   margin-bottom: 0;
   height: 25px;
@@ -614,112 +616,448 @@ a {
   border-radius: 0;
   width: 100%;
 }
-/* line 472, ../sass/page_layout.scss */
+/* line 474, ../sass/page_layout.scss */
 .page-path-to-fitness #block-system-main .view-content .fitness table tr .progress .progress-bar {
   background: #26a9e1;
   font-size: 0;
   line-height: 25px;
 }
-/* line 480, ../sass/page_layout.scss */
+/* line 482, ../sass/page_layout.scss */
 .page-path-to-fitness #block-system-main .view-content .fitness .path-to-fitness-box {
   font-size: 14px;
   display: inline-block;
   width: 50%;
   vertical-align: top;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 @media (max-width: 767px) {
-  /* line 480, ../sass/page_layout.scss */
+  /* line 482, ../sass/page_layout.scss */
   .page-path-to-fitness #block-system-main .view-content .fitness .path-to-fitness-box {
     width: 100%;
+    margin-bottom: 20px;
   }
 }
-/* line 489, ../sass/page_layout.scss */
+/* line 492, ../sass/page_layout.scss */
 .page-path-to-fitness #block-system-main .view-content .fitness .path-to-fitness-box .headings {
   margin-bottom: 10px;
 }
-/* line 493, ../sass/page_layout.scss */
+/* line 496, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness .path-to-fitness-box table td {
+  padding-bottom: 20px;
+}
+/* line 500, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness .path-to-fitness-box table tr:last-child td {
+  padding-bottom: 0;
+}
+/* line 506, ../sass/page_layout.scss */
 .page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-level-box {
   font-size: 14px;
   display: inline-block;
   width: 50%;
   vertical-align: top;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 @media (max-width: 767px) {
-  /* line 493, ../sass/page_layout.scss */
+  /* line 506, ../sass/page_layout.scss */
   .page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-level-box {
     width: 100%;
+    margin-bottom: 20px;
   }
 }
-/* line 503, ../sass/page_layout.scss */
+/* line 517, ../sass/page_layout.scss */
 .page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box {
+  font-size: 0px;
+}
+/* line 519, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box .heading {
+  font-size: 22px;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 30px;
+}
+@media (max-width: 767px) {
+  /* line 519, ../sass/page_layout.scss */
+  .page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box .heading {
+    display: block;
+    padding: 0;
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+}
+/* line 530, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box .heading span {
+  display: block;
+  line-height: 1.2;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  /* line 530, ../sass/page_layout.scss */
+  .page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box .heading span {
+    display: inline-block;
+  }
+}
+@media (max-width: 767px) {
+  /* line 537, ../sass/page_layout.scss */
+  .page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box .heading span:last-child {
+    padding-left: 8px;
+  }
+}
+/* line 544, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box .bodyfat-compositions {
+  display: inline-block;
+  vertical-align: top;
+  border-left: 1px solid #fff;
+  padding-left: 30px;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  /* line 544, ../sass/page_layout.scss */
+  .page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box .bodyfat-compositions {
+    display: block;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+  }
+}
+/* line 557, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box .bodyfat-compositions table {
   font-size: 14px;
 }
-/* line 505, ../sass/page_layout.scss */
-.page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box table {
-  font-size: 14px;
+/* line 561, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box .bodyfat-compositions table tbody tr td {
+  padding-bottom: 15px;
+}
+/* line 564, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box .bodyfat-compositions table tbody tr td:first-child {
+  border: 0;
+  text-align: left;
+}
+/* line 568, ../sass/page_layout.scss */
+.page-path-to-fitness #block-system-main .view-content .fitness .bodyfat-comp-box .bodyfat-compositions table tbody tr td:first-child {
+  width: auto;
 }
 
-/* line 516, ../sass/page_layout.scss */
+/* line 583, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-header {
   display: none;
 }
-/* line 519, ../sass/page_layout.scss */
+/* line 586, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container {
   padding-top: 60px;
 }
-/* line 521, ../sass/page_layout.scss */
+/* line 588, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs {
   max-width: 518px;
   margin: auto;
   background: #fff;
-}
-/* line 525, ../sass/page_layout.scss */
-.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li {
-  text-transform: uppercase;
-  border: 2px solid #fff;
-  border-bottom: 2px solid #26a9e1;
-}
-/* line 529, ../sass/page_layout.scss */
-.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li a {
-  color: #000;
+  border-radius: 5px 5px 0 0;
+  padding: 15px 25px;
   border: 0;
+  text-align: center;
 }
-/* line 534, ../sass/page_layout.scss */
+@media (max-width: 480px) {
+  /* line 588, ../sass/page_layout.scss */
+  .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs {
+    padding: 15px;
+  }
+}
+/* line 599, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li {
+  text-transform: capitalize;
+  float: none;
+  display: inline-block;
+}
+/* line 603, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li a {
+  color: #8e95a5;
+  border: 0;
+  padding: 0;
+  font-size: 22px;
+  margin-right: 10px;
+}
+@media (max-width: 480px) {
+  /* line 603, ../sass/page_layout.scss */
+  .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li a {
+    font-size: 16px;
+  }
+}
+/* line 612, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li a:hover {
+  background: transparent;
+  color: #00acc1;
+}
+/* line 618, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:first-child a {
+  font-size: 0;
+}
+/* line 620, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:first-child a::before {
+  content: "Register";
+  font-size: 22px;
+}
+@media (max-width: 480px) {
+  /* line 620, ../sass/page_layout.scss */
+  .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:first-child a::before {
+    font-size: 16px;
+  }
+}
+/* line 630, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:last-child a {
+  font-size: 0;
+  margin-right: 0;
+}
+/* line 633, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:last-child a::before {
+  content: "Forgot Password?";
+  font-size: 22px;
+}
+@media (max-width: 480px) {
+  /* line 633, ../sass/page_layout.scss */
+  .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:last-child a::before {
+    font-size: 16px;
+  }
+}
+/* line 643, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li.active {
   background: #fff;
-  border: 2px solid #26a9e1;
-  border-bottom: 2px solid #fff;
 }
-/* line 539, ../sass/page_layout.scss */
+/* line 645, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li.active a {
   background: transparent;
-  color: #26a9e1;
+  color: #00acc1;
 }
-/* line 545, ../sass/page_layout.scss */
+/* line 648, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li.active a:hover {
+  background: transparent;
+}
+/* line 654, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .region.region-content {
   max-width: 518px;
   margin: auto;
   padding: 20px;
   background: #fff;
   margin-bottom: 60px;
+  border-radius: 0 0 5px 5px;
+  padding: 15px 25px 25px;
 }
-/* line 552, ../sass/page_layout.scss */
+/* line 663, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .region.region-content form label {
   text-transform: uppercase;
+  line-height: 1.2;
+  font-size: 12px;
 }
-/* line 555, ../sass/page_layout.scss */
+/* line 669, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .region.region-content form fieldset legend {
+  padding: 5px 15px;
+}
+/* line 671, ../sass/page_layout.scss */
+.page-user.not-logged-in .page-container .region.region-content form fieldset legend span {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+/* line 677, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .region.region-content form input, .page-user.not-logged-in .page-container .region.region-content form textarea, .page-user.not-logged-in .page-container .region.region-content form select {
   border-radius: 0;
+  background: #f2eded;
+  border: 0;
 }
-/* line 558, ../sass/page_layout.scss */
+@media (min-width: 768px) {
+  /* line 682, ../sass/page_layout.scss */
+  .page-user.not-logged-in .page-container .region.region-content form input, .page-user.not-logged-in .page-container .region.region-content form select {
+    height: 40px;
+  }
+}
+/* line 687, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .region.region-content form .form-actions {
   margin-top: 20px;
 }
-/* line 560, ../sass/page_layout.scss */
+/* line 689, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .region.region-content form .form-actions .form-submit {
   width: 100%;
   color: #fff;
-  background: #26a9e1;
+  background: #009eb2;
+}
+@media (min-width: 768px) {
+  /* line 689, ../sass/page_layout.scss */
+  .page-user.not-logged-in .page-container .region.region-content form .form-actions .form-submit {
+    height: 50px;
+  }
+}
+
+/* line 774, ../sass/page_layout.scss */
+img {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* line 778, ../sass/page_layout.scss */
+  .view-calendar {
+    /* Hide table headers (but not display: none;, for accessibility) */
+  }
+  /* line 780, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar table,
+  .view-calendar .calendar-calendar tbody,
+  .view-calendar .calendar-calendar th,
+  .view-calendar .calendar-calendar td,
+  .view-calendar .calendar-calendar tr {
+    display: block;
+  }
+  /* line 788, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar thead,
+  .view-calendar .calendar-calendar thead tr,
+  .view-calendar .calendar-calendar tr.date-box {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  /* line 795, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar tr td.no-entry {
+    border-bottom: 1px solid #ccc;
+  }
+  /* line 798, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar td:before {
+    /* Format & Label the day headings */
+    /* Now like a table header */
+    width: 100%;
+    white-space: nowrap;
+    clear: both;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #a1978a;
+    padding: 10px;
+    content: attr(data-label);
+    height: 44px;
+  }
+  /* line 812, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar td.today,
+  .view-calendar .calendar-calendar .month-view .full tr td.single-day.today {
+    border-top: 2px solid #0074ab;
+    -webkit-box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
+  }
+  /* line 818, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar .month-view .full td {
+    padding: 0;
+  }
+  /* line 821, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar td,
+  .view-calendar .calendar-calendar td.calendar-agenda-items {
+    /* Behave  like a "row" */
+    border: none;
+    position: relative;
+    width: 100%;
+  }
+  /* line 831, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar td.calendar-agenda-items div.calendar {
+    padding: 0;
+  }
+  /* line 834, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar div.calendar,
+  .view-calendar .calendar-calendar .date-display-single,
+  .view-calendar .calendar-calendar td span.date-display-single {
+    font-size: medium;
+    font-weight: normal;
+  }
+  /* line 840, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar .inner .item {
+    padding: 10px;
+  }
+  /* line 843, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar .month-view .full tr.single-day .no-entry {
+    height: 44px !important;
+    line-height: 24px;
+  }
+  /* line 847, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar .month-view .full tr.single-day .no-entry .inner,
+  .view-calendar .calendar-calendar .no-entry .inner {
+    height: auto !important;
+    line-height: 1px;
+  }
+  /* line 852, ../sass/page_layout.scss */
+  .view-calendar .calendar-calendar .inner .views-field-title-field {
+    display: inline-block;
+  }
+}
+/* line 857, ../sass/page_layout.scss */
+.view-calendar .view-content .calendar-calendar div.day {
+  width: auto;
+  float: none;
+}
+/* line 862, ../sass/page_layout.scss */
+.view-calendar .view-content table .date-box {
+  text-align: center;
+}
+/* line 865, ../sass/page_layout.scss */
+.view-calendar .view-content table tr td .user-log {
+  font-size: 12px;
+  padding-right: 8px;
+  position: relative;
+}
+/* line 869, ../sass/page_layout.scss */
+.view-calendar .view-content table tr td .user-log::after {
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  right: 0;
+  bottom: 6px;
+}
+/* line 877, ../sass/page_layout.scss */
+.view-calendar .view-content table tr td .user-log.Yes::after {
+  background: #328763;
+  content: "";
+}
+/* line 881, ../sass/page_layout.scss */
+.view-calendar .view-content table tr td .user-log.No::after {
+  background: #df1a22;
+  content: "";
+}
+/* line 886, ../sass/page_layout.scss */
+.view-calendar .view-content table div.monthview {
+  background: #111 !important;
+  color: #fff !important;
+}
+/* line 890, ../sass/page_layout.scss */
+.view-calendar .view-content table tr, .view-calendar .view-content table td, .view-calendar .view-content table th {
+  background: #111 !important;
+  color: #fff !important;
+  border: none !important;
+}
+/* line 895, ../sass/page_layout.scss */
+.view-calendar .view-content table tr td.empty {
+  color: #333 !important;
+}
+/* line 898, ../sass/page_layout.scss */
+.view-calendar .view-content table tr td.single-day {
+  padding-bottom: 10px;
+}
+/* line 901, ../sass/page_layout.scss */
+.view-calendar .view-content table tr th.days {
+  padding-bottom: 20px;
+}
+
+/* line 911, ../sass/page_layout.scss */
+.view-client-check-in-dashboard .view-content .views-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* line 914, ../sass/page_layout.scss */
+.view-client-check-in-dashboard .view-content .views-row .views-field-name {
+  width: 100%;
+}
+/* line 916, ../sass/page_layout.scss */
+.view-client-check-in-dashboard .view-content .views-row .views-field-name .field-content {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #fff;
+}
+/* line 923, ../sass/page_layout.scss */
+.view-client-check-in-dashboard .view-content .views-row > div.views-field:not(.views-field-name) {
+  display: inline-block;
+  padding: 0px 10px 10px;
+  width: 50%;
+  vertical-align: top;
 }
