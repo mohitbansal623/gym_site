@@ -20,26 +20,30 @@ a {
 .page-days-on-plan-leaderboard, .page-mass-lost-leaderboard, .page-dashboard {
   background: #0e0e0e;
 }
-/* line 242, ../sass/dashboard.scss */
+/* line 241, ../sass/dashboard.scss */
+.page-days-on-plan-leaderboard .page-container, .page-mass-lost-leaderboard .page-container, .page-dashboard .page-container {
+  padding: 40px 0;
+}
+/* line 244, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .page-header, .page-mass-lost-leaderboard .page-header, .page-dashboard .page-header {
   color: white;
   border: none;
   text-align: center;
 }
 @media (max-width: 767px) {
-  /* line 242, ../sass/dashboard.scss */
+  /* line 244, ../sass/dashboard.scss */
   .page-days-on-plan-leaderboard .page-header, .page-mass-lost-leaderboard .page-header, .page-dashboard .page-header {
     font-size: 2.5rem;
   }
 }
 
-/* line 256, ../sass/dashboard.scss */
+/* line 258, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-/* line 260, ../sass/dashboard.scss */
+/* line 262, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row {
   vertical-align: top;
   font-size: 1.3rem;
@@ -48,7 +52,7 @@ a {
   padding: 0 5px;
 }
 @media (max-width: 640px) {
-  /* line 260, ../sass/dashboard.scss */
+  /* line 262, ../sass/dashboard.scss */
   .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row {
     margin-bottom: 5px;
     padding: 0;
@@ -56,12 +60,12 @@ a {
   }
 }
 @media (max-width: 480px) {
-  /* line 260, ../sass/dashboard.scss */
+  /* line 262, ../sass/dashboard.scss */
   .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row {
     width: 100%;
   }
 }
-/* line 274, ../sass/dashboard.scss */
+/* line 276, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing {
   background: #181818;
   padding: 15px 25px;
@@ -69,119 +73,119 @@ a {
   line-height: 1.4;
 }
 @media (max-width: 480px) {
-  /* line 274, ../sass/dashboard.scss */
+  /* line 276, ../sass/dashboard.scss */
   .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing {
     padding: 15px 10px;
   }
 }
-/* line 282, ../sass/dashboard.scss */
+/* line 284, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .field-content {
   display: flex;
   align-items: center;
 }
-/* line 286, ../sass/dashboard.scss */
+/* line 288, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .user-info, .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-info {
   padding-right: 5px;
 }
-/* line 289, ../sass/dashboard.scss */
+/* line 291, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-info {
   width: calc(40% - 20px);
 }
-/* line 292, ../sass/dashboard.scss */
+/* line 294, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .user-info {
   width: calc(60% - 20px);
 }
-/* line 295, ../sass/dashboard.scss */
+/* line 297, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-title {
   color: #fff;
 }
-/* line 298, ../sass/dashboard.scss */
+/* line 300, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-name {
   color: #b10029;
 }
-/* line 301, ../sass/dashboard.scss */
+/* line 303, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-photo {
   float: left;
   width: 30px;
   margin-right: 5px;
 }
-/* line 305, ../sass/dashboard.scss */
+/* line 307, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .coach-photo img {
   border-radius: 50%;
 }
-/* line 309, ../sass/dashboard.scss */
+/* line 311, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .days-on-plan {
   width: 40px;
 }
-/* line 311, ../sass/dashboard.scss */
+/* line 313, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .days-on-plan .total-on {
   display: inline-block;
-  background: #ed1b24;
+  background: #f12236;
   color: #fff;
   border-radius: 50px;
   text-align: center;
   width: 40px;
   padding: 5px 0;
 }
-/* line 321, ../sass/dashboard.scss */
+/* line 323, ../sass/dashboard.scss */
 .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .name {
   color: #fff;
   font-size: 1.8rem;
   font-weight: bold;
 }
 @media (max-width: 480px) {
-  /* line 321, ../sass/dashboard.scss */
+  /* line 323, ../sass/dashboard.scss */
   .page-days-on-plan-leaderboard .view-display-id-plan_days_lp .view-content .views-row .views-field-nothing .name {
     font-size: 1.5rem;
   }
 }
 
-/* line 335, ../sass/dashboard.scss */
+/* line 337, ../sass/dashboard.scss */
 .page-dashboard {
   background: #181818;
 }
-/* line 339, ../sass/dashboard.scss */
+/* line 341, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row {
   max-width: 600px;
   margin: auto;
 }
-/* line 342, ../sass/dashboard.scss */
+/* line 344, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar {
   display: table;
 }
-/* line 344, ../sass/dashboard.scss */
+/* line 346, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar > div {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 348, ../sass/dashboard.scss */
+/* line 350, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-info {
   line-height: 1.4;
 }
-/* line 350, ../sass/dashboard.scss */
+/* line 352, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-info .client-name {
   color: #b10029;
   font-size: 1.8rem;
   font-weight: bold;
 }
-/* line 356, ../sass/dashboard.scss */
+/* line 358, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-pic {
   width: 70px;
   padding-right: 20px;
 }
-/* line 359, ../sass/dashboard.scss */
+/* line 361, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-pic img {
   border-radius: 50%;
 }
-/* line 364, ../sass/dashboard.scss */
+/* line 366, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .coach span {
   color: #fff;
 }
-/* line 369, ../sass/dashboard.scss */
+/* line 371, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity {
   padding-top: 25px;
 }
-/* line 371, ../sass/dashboard.scss */
+/* line 373, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps {
   color: #fff;
   font-weight: bold;
@@ -190,69 +194,69 @@ a {
   padding: 25px 10px;
   box-shadow: 5px 10px 6px -6px #111;
 }
-/* line 378, ../sass/dashboard.scss */
+/* line 380, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days .value, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps .value {
   font-size: 4rem;
 }
 @media (max-width: 480px) {
-  /* line 378, ../sass/dashboard.scss */
+  /* line 380, ../sass/dashboard.scss */
   .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days .value, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps .value {
     font-size: 3.5rem;
   }
 }
 @media (max-width: 480px) {
-  /* line 384, ../sass/dashboard.scss */
+  /* line 386, ../sass/dashboard.scss */
   .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days .activity-label, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps .activity-label {
     font-size: 1.3rem;
   }
 }
-/* line 390, ../sass/dashboard.scss */
+/* line 392, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days {
   display: flex;
 }
-/* line 392, ../sass/dashboard.scss */
+/* line 394, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days .plan-days {
   width: calc(50% - 10px);
 }
-/* line 395, ../sass/dashboard.scss */
+/* line 397, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days .on-plan {
   margin-right: 10px;
   margin-bottom: 20px;
 }
-/* line 399, ../sass/dashboard.scss */
+/* line 401, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days .off-plan {
   margin-left: 10px;
   margin-bottom: 20px;
 }
 
-/* line 411, ../sass/dashboard.scss */
+/* line 413, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp {
   line-height: 1.4;
 }
-/* line 414, ../sass/dashboard.scss */
+/* line 416, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content {
   display: flex;
   justify-content: center;
 }
-/* line 417, ../sass/dashboard.scss */
+/* line 419, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row {
   padding: 0 20px;
 }
-/* line 420, ../sass/dashboard.scss */
+/* line 422, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client {
   text-align: center;
 }
-/* line 422, ../sass/dashboard.scss */
+/* line 424, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-pic {
   width: 70px;
   margin: 0px auto 15px;
   position: relative;
 }
-/* line 426, ../sass/dashboard.scss */
+/* line 428, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-pic img {
   border-radius: 50%;
 }
-/* line 429, ../sass/dashboard.scss */
+/* line 431, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-pic:after {
   position: absolute;
   width: 20px;
@@ -268,38 +272,38 @@ a {
   left: 50%;
   margin-left: -10px;
 }
-/* line 446, ../sass/dashboard.scss */
+/* line 448, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-desc .coach {
   font-size: 1.3rem;
 }
-/* line 448, ../sass/dashboard.scss */
+/* line 450, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-desc .coach span {
   color: #fff;
 }
-/* line 452, ../sass/dashboard.scss */
+/* line 454, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-desc .client-name {
   font-size: 1.7rem;
   color: #b10029;
   font-weight: bold;
 }
-/* line 457, ../sass/dashboard.scss */
+/* line 459, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-desc .client-username {
   font-size: 1.3rem;
 }
-/* line 460, ../sass/dashboard.scss */
+/* line 462, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-desc .bodyfat-percent {
   font-size: 1.9rem;
   color: #fff;
   font-weight: bold;
 }
-/* line 480, ../sass/dashboard.scss */
+/* line 482, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-/* line 485, ../sass/dashboard.scss */
+/* line 487, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row {
   vertical-align: top;
   font-size: 1.3rem;
@@ -308,7 +312,7 @@ a {
   padding: 0 5px;
 }
 @media (max-width: 640px) {
-  /* line 485, ../sass/dashboard.scss */
+  /* line 487, ../sass/dashboard.scss */
   .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row {
     margin-bottom: 5px;
     padding: 0;
@@ -316,62 +320,62 @@ a {
   }
 }
 @media (max-width: 480px) {
-  /* line 485, ../sass/dashboard.scss */
+  /* line 487, ../sass/dashboard.scss */
   .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row {
     width: 100%;
   }
 }
-/* line 499, ../sass/dashboard.scss */
+/* line 501, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing {
   background: #181818;
   padding: 15px;
   box-shadow: 0px 1px 1px 0px #020202;
   line-height: 1.4;
 }
-/* line 504, ../sass/dashboard.scss */
+/* line 506, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .field-content {
   display: table;
   width: 100%;
 }
-/* line 507, ../sass/dashboard.scss */
+/* line 509, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .field-content > div {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 512, ../sass/dashboard.scss */
+/* line 514, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-pic {
   width: 70px;
 }
-/* line 514, ../sass/dashboard.scss */
+/* line 516, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-pic img {
   border-radius: 50%;
 }
-/* line 518, ../sass/dashboard.scss */
+/* line 520, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-info {
   padding: 0 10px 0 20px;
 }
-/* line 520, ../sass/dashboard.scss */
+/* line 522, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-info .name {
   font-size: 1.7rem;
   font-weight: bold;
   color: #b10029;
 }
-/* line 525, ../sass/dashboard.scss */
+/* line 527, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-info .user-name {
   padding-bottom: 10px;
 }
-/* line 529, ../sass/dashboard.scss */
+/* line 531, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-info .coach span {
   color: #fff;
 }
-/* line 534, ../sass/dashboard.scss */
+/* line 536, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .body-fat {
   font-size: 1.7rem;
   color: #fff;
   font-weight: bold;
   text-align: right;
 }
-/* line 540, ../sass/dashboard.scss */
+/* line 542, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .rank-box {
   padding-right: 10px;
   text-align: center;
@@ -379,7 +383,7 @@ a {
   font-weight: bold;
   width: 30px;
 }
-/* line 546, ../sass/dashboard.scss */
+/* line 548, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .rank-box .rank {
   width: 20px;
   height: 20px;
@@ -388,37 +392,37 @@ a {
   color: #000;
 }
 
-/* line 563, ../sass/dashboard.scss */
+/* line 565, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .view-header {
   padding-bottom: 30px;
 }
-/* line 567, ../sass/dashboard.scss */
+/* line 569, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .full-name {
   color: white;
   font-size: 20px;
   font-weight: bold;
 }
-/* line 573, ../sass/dashboard.scss */
+/* line 575, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .views-label {
   font-size: 16px;
   color: white;
 }
-/* line 580, ../sass/dashboard.scss */
+/* line 582, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content {
   display: flex;
   flex-wrap: wrap;
 }
-/* line 583, ../sass/dashboard.scss */
+/* line 585, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content .views-field {
   padding: 0 5px 20px;
 }
 @media screen and (min-width: 481px) {
-  /* line 583, ../sass/dashboard.scss */
+  /* line 585, ../sass/dashboard.scss */
   .page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content .views-field {
     width: 50%;
   }
 }
-/* line 588, ../sass/dashboard.scss */
+/* line 590, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content .views-field .progress {
   margin-bottom: 0;
   height: 25px;
@@ -426,13 +430,13 @@ a {
   border-radius: 0;
   width: 100%;
 }
-/* line 594, ../sass/dashboard.scss */
+/* line 596, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content .views-field .progress .progress-bar {
   background: #00b053;
   font-size: 13px;
   line-height: 25px;
 }
-/* line 605, ../sass/dashboard.scss */
+/* line 607, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .field-content {
   color: #b10029;
   font-size: 16px;

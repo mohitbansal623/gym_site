@@ -16,6 +16,203 @@ a {
   outline: none;
 }
 
+/* line 130, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard table, body.page-admin-dashboard .view-id-client_daily_log table, body.page-admin-dashboard .view-display-id-page table, body.page-client-daily-log- .view-admin-dashboard table, body.page-client-daily-log- .view-id-client_daily_log table, body.page-client-daily-log- .view-display-id-page table {
+  background: white;
+  border-radius: 3px;
+  border-collapse: collapse;
+  margin: auto;
+  padding: 5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+/* line 140, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard table thead th, body.page-admin-dashboard .view-id-client_daily_log table thead th, body.page-admin-dashboard .view-display-id-page table thead th, body.page-client-daily-log- .view-admin-dashboard table thead th, body.page-client-daily-log- .view-id-client_daily_log table thead th, body.page-client-daily-log- .view-display-id-page table thead th {
+  color: #D5DDE5;
+  background: #1b1e24;
+  border-bottom: 4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size: 1.7rem;
+  font-weight: 100;
+  padding: 10px;
+  text-align: left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align: top;
+}
+/* line 153, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard table thead th:first-child, body.page-admin-dashboard .view-id-client_daily_log table thead th:first-child, body.page-admin-dashboard .view-display-id-page table thead th:first-child, body.page-client-daily-log- .view-admin-dashboard table thead th:first-child, body.page-client-daily-log- .view-id-client_daily_log table thead th:first-child, body.page-client-daily-log- .view-display-id-page table thead th:first-child {
+  border-top-left-radius: 3px;
+}
+/* line 157, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard table thead th:last-child, body.page-admin-dashboard .view-id-client_daily_log table thead th:last-child, body.page-admin-dashboard .view-display-id-page table thead th:last-child, body.page-client-daily-log- .view-admin-dashboard table thead th:last-child, body.page-client-daily-log- .view-id-client_daily_log table thead th:last-child, body.page-client-daily-log- .view-display-id-page table thead th:last-child {
+  border-top-right-radius: 3px;
+  border-right: none;
+}
+/* line 163, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr, body.page-admin-dashboard .view-id-client_daily_log tr, body.page-admin-dashboard .view-display-id-page tr, body.page-client-daily-log- .view-admin-dashboard tr, body.page-client-daily-log- .view-id-client_daily_log tr, body.page-client-daily-log- .view-display-id-page tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color: #666B85;
+  font-size: 16px;
+  font-weight: normal;
+}
+/* line 172, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:hover td, body.page-admin-dashboard .view-id-client_daily_log tr:hover td, body.page-admin-dashboard .view-display-id-page tr:hover td, body.page-client-daily-log- .view-admin-dashboard tr:hover td, body.page-client-daily-log- .view-id-client_daily_log tr:hover td, body.page-client-daily-log- .view-display-id-page tr:hover td {
+  background: #f12236;
+  color: #FFFFFF;
+  border-top: 1px solid #22262e;
+}
+/* line 176, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:hover td a, body.page-admin-dashboard .view-id-client_daily_log tr:hover td a, body.page-admin-dashboard .view-display-id-page tr:hover td a, body.page-client-daily-log- .view-admin-dashboard tr:hover td a, body.page-client-daily-log- .view-id-client_daily_log tr:hover td a, body.page-client-daily-log- .view-display-id-page tr:hover td a {
+  color: #fff;
+  text-decoration: underline;
+}
+/* line 182, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:first-child, body.page-admin-dashboard .view-id-client_daily_log tr:first-child, body.page-admin-dashboard .view-display-id-page tr:first-child, body.page-client-daily-log- .view-admin-dashboard tr:first-child, body.page-client-daily-log- .view-id-client_daily_log tr:first-child, body.page-client-daily-log- .view-display-id-page tr:first-child {
+  border-top: none;
+}
+/* line 186, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:last-child, body.page-admin-dashboard .view-id-client_daily_log tr:last-child, body.page-admin-dashboard .view-display-id-page tr:last-child, body.page-client-daily-log- .view-admin-dashboard tr:last-child, body.page-client-daily-log- .view-id-client_daily_log tr:last-child, body.page-client-daily-log- .view-display-id-page tr:last-child {
+  border-bottom: none;
+}
+/* line 190, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:nth-child(odd) td, body.page-admin-dashboard .view-id-client_daily_log tr:nth-child(odd) td, body.page-admin-dashboard .view-display-id-page tr:nth-child(odd) td, body.page-client-daily-log- .view-admin-dashboard tr:nth-child(odd) td, body.page-client-daily-log- .view-id-client_daily_log tr:nth-child(odd) td, body.page-client-daily-log- .view-display-id-page tr:nth-child(odd) td {
+  background: #EBEBEB;
+}
+/* line 194, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:nth-child(odd):hover td, body.page-admin-dashboard .view-id-client_daily_log tr:nth-child(odd):hover td, body.page-admin-dashboard .view-display-id-page tr:nth-child(odd):hover td, body.page-client-daily-log- .view-admin-dashboard tr:nth-child(odd):hover td, body.page-client-daily-log- .view-id-client_daily_log tr:nth-child(odd):hover td, body.page-client-daily-log- .view-display-id-page tr:nth-child(odd):hover td {
+  background: #f12236;
+}
+/* line 196, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:nth-child(odd):hover td a, body.page-admin-dashboard .view-id-client_daily_log tr:nth-child(odd):hover td a, body.page-admin-dashboard .view-display-id-page tr:nth-child(odd):hover td a, body.page-client-daily-log- .view-admin-dashboard tr:nth-child(odd):hover td a, body.page-client-daily-log- .view-id-client_daily_log tr:nth-child(odd):hover td a, body.page-client-daily-log- .view-display-id-page tr:nth-child(odd):hover td a {
+  color: #fff;
+  text-decoration: underline;
+}
+/* line 202, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:last-child td:first-child, body.page-admin-dashboard .view-id-client_daily_log tr:last-child td:first-child, body.page-admin-dashboard .view-display-id-page tr:last-child td:first-child, body.page-client-daily-log- .view-admin-dashboard tr:last-child td:first-child, body.page-client-daily-log- .view-id-client_daily_log tr:last-child td:first-child, body.page-client-daily-log- .view-display-id-page tr:last-child td:first-child {
+  border-bottom-left-radius: 3px;
+}
+/* line 206, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard tr:last-child td:last-child, body.page-admin-dashboard .view-id-client_daily_log tr:last-child td:last-child, body.page-admin-dashboard .view-display-id-page tr:last-child td:last-child, body.page-client-daily-log- .view-admin-dashboard tr:last-child td:last-child, body.page-client-daily-log- .view-id-client_daily_log tr:last-child td:last-child, body.page-client-daily-log- .view-display-id-page tr:last-child td:last-child {
+  border-bottom-right-radius: 3px;
+}
+/* line 210, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard td, body.page-admin-dashboard .view-id-client_daily_log td, body.page-admin-dashboard .view-display-id-page td, body.page-client-daily-log- .view-admin-dashboard td, body.page-client-daily-log- .view-id-client_daily_log td, body.page-client-daily-log- .view-display-id-page td {
+  background: #FFFFFF;
+  padding: 10px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 300;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+/* line 220, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard td:last-child, body.page-admin-dashboard .view-id-client_daily_log td:last-child, body.page-admin-dashboard .view-display-id-page td:last-child, body.page-client-daily-log- .view-admin-dashboard td:last-child, body.page-client-daily-log- .view-id-client_daily_log td:last-child, body.page-client-daily-log- .view-display-id-page td:last-child {
+  border-right: 0px;
+}
+/* line 226, ../sass/basic_layout.scss */
+body.page-admin-dashboard .view-admin-dashboard th, body.page-admin-dashboard .view-id-client_daily_log th, body.page-admin-dashboard .view-display-id-page th, body.page-client-daily-log- .view-admin-dashboard th, body.page-client-daily-log- .view-id-client_daily_log th, body.page-client-daily-log- .view-display-id-page th {
+  vertical-align: top;
+}
+
+/* line 234, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel.panel-default {
+  padding-bottom: 20px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: unset;
+  vertical-align: top;
+  margin: 0;
+}
+/* line 244, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel.panel-default p {
+  line-height: 1.2;
+}
+/* line 248, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+1) .panel-heading {
+  background: #47D7B3;
+}
+/* line 251, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+1) .panel-collapse {
+  border: 2px dashed #47D7B3;
+}
+/* line 256, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+2) .panel-heading {
+  background: #A26CC4;
+}
+/* line 259, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+2) .panel-collapse {
+  border: 2px dashed #A26CC4;
+}
+/* line 264, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+3) .panel-heading {
+  background: #E87352;
+}
+/* line 267, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+3) .panel-collapse {
+  border: 2px dashed #E87352;
+}
+/* line 272, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+4) .panel-heading {
+  background: #377DE2;
+}
+/* line 275, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+4) .panel-collapse {
+  border: 2px dashed #377DE2;
+}
+/* line 280, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+5) .panel-heading {
+  background: #00A638;
+}
+/* line 283, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel.panel-default:nth-child(5n+5) .panel-collapse {
+  border: 2px dashed #00A638;
+}
+/* line 288, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel-heading {
+  padding: 0;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+/* line 292, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel-heading a {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  padding: 10px 22px 10px 8px;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+/* line 302, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel-heading a:after {
+  content: "\f077";
+  position: absolute;
+  right: 6px;
+  top: 11px;
+  font-family: FontAwesome;
+  font-size: 14px;
+}
+/* line 310, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel-heading a.collapsed:after {
+  content: "\f078";
+}
+/* line 315, ../sass/basic_layout.scss */
+body.page-coach-dashboard .coach-accordion .panel-heading .diet-adherence {
+  padding: 10px 22px 10px 8px;
+  color: white;
+}
+
+/* line 436, ../sass/basic_layout.scss */
+.page-calendar .view-calendar .calendar-calendar .month.day:hover {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 /* line 443, ../sass/basic_layout.scss */
 #navbar {
   margin: 0 !important;

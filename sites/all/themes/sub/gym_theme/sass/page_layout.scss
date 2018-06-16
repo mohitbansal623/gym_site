@@ -454,13 +454,15 @@
           }
           tr {
             td:first-child {
-              padding-right: 5px;
+              padding-right: 10px;
+              border-right: 1px solid #fff;
+              text-align: right;
             }
             td:last-child {
               width: 99%;
+              padding-left: 10px;
             }
             td {
-              padding-bottom: 20px;
               vertical-align: middle;
             }
             .progress {
@@ -482,12 +484,23 @@
           display: inline-block;
           width: 50%;
           vertical-align: top;
-          margin-bottom: 20px;
+          margin-bottom: 40px;
           @media (max-width: 767px) {
             width: 100%;
+            margin-bottom: 20px;
           }
           .headings {
             margin-bottom: 10px;
+          }
+          table {
+            td {
+              padding-bottom: 20px;
+            }
+            tr:last-child {
+              td {
+                padding-bottom: 0;
+              }
+            }
           }
         }
         .bodyfat-level-box {
@@ -495,15 +508,69 @@
           display: inline-block;
           width: 50%;
           vertical-align: top;
-          margin-bottom: 20px;
+          margin-bottom: 40px;
           @media (max-width: 767px) {
             width: 100%;
+            margin-bottom: 20px;
           }
         }
         .bodyfat-comp-box {
-          font-size: 14px;
-          table {
-            font-size: 14px;
+          font-size: 0px;
+          .heading {
+            font-size: 22px;
+            display: inline-block;
+            vertical-align: top;
+            padding-right: 30px;
+            @media (max-width: 767px) {
+              display: block;
+              padding: 0;
+              font-size: 16px;
+              padding-bottom: 10px;
+            }
+            span {
+              display: block;
+              line-height: 1.2;
+              font-weight: 700;
+              @media (max-width: 767px) {
+                display: inline-block;
+              }
+              &:last-child {
+                @media (max-width: 767px) {
+                  padding-left: 8px;
+                }
+              }
+            }
+          }
+          .bodyfat-compositions {
+            display: inline-block;
+            vertical-align: top;
+            border-left: 1px solid #fff;
+            padding-left: 30px;
+            margin-bottom: 40px;
+            @media (max-width: 767px) {
+              display: block;
+              padding: 0;
+              border: 0;
+              border-top: 1px solid #fff;
+              padding-top: 10px;
+            }
+            table {
+              font-size: 14px;
+              tbody {
+                tr {
+                  td {
+                    padding-bottom: 15px;
+                  }
+                  td:first-child {
+                    border: 0;
+                    text-align: left;
+                  }
+                  td:first-child {
+                    width: auto;
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -522,23 +589,65 @@
         max-width: 518px;
         margin: auto;
         background: #fff;
+        border-radius: 5px 5px 0 0;
+        padding: 15px 25px;
+        border: 0;
+        text-align: center;
+        @media (max-width: 480px) {
+          padding: 15px;
+        }
         li {
-          text-transform: uppercase;
-          border: 2px solid #fff;
-          border-bottom: 2px solid #26a9e1;
+          text-transform: capitalize;
+          float: none;
+          display: inline-block;
           a {
-            color: #000;
+            color: #8e95a5;
             border: 0;
+            padding: 0;
+            font-size: 22px;
+            margin-right: 10px;
+            @media (max-width: 480px) {
+              font-size: 16px;
+            }
+            &:hover {
+              background: transparent;
+              color: #00acc1;
+            }
+          }
+          &:first-child {
+            a {
+              font-size: 0;
+              &::before {
+                content: "Register";
+                font-size: 22px;
+                @media (max-width: 480px) {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+          &:last-child {
+            a {
+              font-size: 0;
+              margin-right: 0;
+              &::before {
+                content: "Forgot Password?";
+                font-size: 22px;
+                @media (max-width: 480px) {
+                  font-size: 16px;
+                }
+              }
+            }
           }
         }
         li.active {
-          // background: #3ab54a;
           background: #fff;
-          border: 2px solid #26a9e1;
-          border-bottom: 2px solid #fff;
           a {
             background: transparent;
-            color: #26a9e1;
+            color: #00acc1;
+            &:hover {
+              background: transparent;
+            }
           }
         }
       }
@@ -548,12 +657,32 @@
         padding: 20px;
         background: #fff;
         margin-bottom: 60px;
+        border-radius: 0 0 5px 5px;
+        padding: 15px 25px 25px;
         form {
           label {
             text-transform: uppercase;
+            line-height: 1.2;
+            font-size: 12px;
+          }
+          fieldset {
+            legend {
+              padding: 5px 15px;
+              span {
+                font-size: 12px;
+                text-transform: uppercase;
+              }
+            }
           }
           input, textarea, select {
             border-radius: 0;
+            background: #f2eded;
+            border: 0;
+          }
+          input, select {
+            @media (min-width: 768px) {
+              height: 40px;
+            }
           }
           .form-actions {
             margin-top: 20px;
@@ -561,7 +690,10 @@
               width: 100%;
               color: #fff;
               @extend %red-btn;
-              background: #26a9e1;
+              background: #009eb2;
+              @media (min-width: 768px) {
+                height: 50px;
+              }
             }
           }
         }
@@ -639,160 +771,160 @@
 //   }
 // }
 //
-// img {
-//   max-width: 100%;
-// }
-//
-// .view-calendar {
-//   @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
-//     .calendar-calendar table,
-//     .calendar-calendar tbody,
-//     .calendar-calendar th,
-//     .calendar-calendar td,
-//     .calendar-calendar tr  {
-//     display: block;
-//     }
-//     /* Hide table headers (but not display: none;, for accessibility) */
-//     .calendar-calendar thead,
-//     .calendar-calendar thead tr,
-//     .calendar-calendar tr.date-box {
-//     position: absolute;
-//     top: -9999px;
-//     left: -9999px;
-//     }
-//     .calendar-calendar tr td.no-entry  {
-//     border-bottom: 1px solid #ccc;
-//     }
-//     .calendar-calendar td:before{   /* Format & Label the day headings */
-//     /* Now like a table header */
-//     width: 100%;
-//     white-space: nowrap;
-//     clear: both;
-//     text-align: center;
-//     display: block;
-//     box-sizing: border-box;
-//     color: #ffffff;
-//     background-color: #a1978a;
-//     padding: 10px;
-//     content: attr(data-label);
-//     height: 44px;
-//     }
-//     .calendar-calendar td.today,
-//     .calendar-calendar .month-view .full tr td.single-day.today{
-//       border-top: 2px solid #0074ab;
-//     -webkit-box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
-//       box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
-//     }
-//     .calendar-calendar .month-view .full td{
-//       padding: 0;
-//     }
-//     .calendar-calendar td,
-//     .calendar-calendar td.calendar-agenda-items  {
-//     /* Behave  like a "row" */
-//     border: none;
-//     position: relative;
-//     width: 100%;
-//     }
-//     // .calendar-calendar td.past{
-//     //   display: none;
-//     // }
-//     .calendar-calendar td.calendar-agenda-items div.calendar{
-//       padding: 0;
-//     }
-//     .calendar-calendar div.calendar,
-//     .calendar-calendar .date-display-single,
-//     .calendar-calendar td span.date-display-single  {
-//       font-size: medium;
-//     font-weight: normal;
-//     }
-//     .calendar-calendar .inner .item{
-//       padding: 10px;
-//     }
-//     .calendar-calendar .month-view .full tr.single-day .no-entry{
-//       height: 44px !important;
-//     line-height: 24px;
-//     }
-//     .calendar-calendar .month-view .full tr.single-day .no-entry .inner,
-//     .calendar-calendar .no-entry .inner{
-//       height: auto !important;
-//     line-height: 1px;
-//     }
-//     .calendar-calendar .inner .views-field-title-field{
-//       display: inline-block;
-//     }
-//   }
-//   .view-content {
-//     .calendar-calendar div.day {
-//       width: auto;
-//       float: none;
-//     }
-//     table {
-//       .date-box {
-//         text-align: center;
-//       }
-//       tr td .user-log {
-//         font-size: 12px;
-//         padding-right: 8px;
-//         position: relative;
-//         &::after {
-//           position: absolute;
-//           height: 6px;
-//           width: 6px;
-//           border-radius: 50%;
-//           right: 0;
-//           bottom: 6px;
-//         }
-//         &.Yes::after {
-//           background: #328763;
-//           content: "";
-//         }
-//         &.No::after {
-//           background: #df1a22;
-//           content: "";
-//         }
-//       }
-//       div.monthview {
-//         background: #111 !important;
-//         color: #fff !important;
-//       }
-//       tr, td, th {
-//         background: #111 !important;
-//         color: #fff !important;
-//         border: none !important;
-//       }
-//       tr td.empty {
-//         color: #333 !important;
-//       }
-//       tr td.single-day {
-//         padding-bottom: 10px;
-//       }
-//       tr th.days {
-//         padding-bottom: 20px;
-//       }
-//     }
-//   }
-// }
-//
-//
-// .view-client-check-in-dashboard {
-//   .view-content {
-//     .views-row {
-//       display: flex;
-//       flex-wrap: wrap;
-//       .views-field-name {
-//         width: 100%;
-//         .field-content {
-//           font-weight: bold;
-//           font-size: 2rem;
-//           color: #fff;
-//         }
-//       }
-//     }
-//     .views-row > div.views-field:not(.views-field-name) {
-//       display: inline-block;
-//       padding: 0px 10px 10px;
-//       width: 50%;
-//       vertical-align: top;
-//     }
-//   }
-// }
+img {
+  max-width: 100%;
+}
+
+.view-calendar {
+  @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+    .calendar-calendar table,
+    .calendar-calendar tbody,
+    .calendar-calendar th,
+    .calendar-calendar td,
+    .calendar-calendar tr  {
+    display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .calendar-calendar thead,
+    .calendar-calendar thead tr,
+    .calendar-calendar tr.date-box {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    }
+    .calendar-calendar tr td.no-entry  {
+    border-bottom: 1px solid #ccc;
+    }
+    .calendar-calendar td:before{   /* Format & Label the day headings */
+    /* Now like a table header */
+    width: 100%;
+    white-space: nowrap;
+    clear: both;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #a1978a;
+    padding: 10px;
+    content: attr(data-label);
+    height: 44px;
+    }
+    .calendar-calendar td.today,
+    .calendar-calendar .month-view .full tr td.single-day.today{
+      border-top: 2px solid #0074ab;
+    -webkit-box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
+    }
+    .calendar-calendar .month-view .full td{
+      padding: 0;
+    }
+    .calendar-calendar td,
+    .calendar-calendar td.calendar-agenda-items  {
+    /* Behave  like a "row" */
+    border: none;
+    position: relative;
+    width: 100%;
+    }
+    // .calendar-calendar td.past{
+    //   display: none;
+    // }
+    .calendar-calendar td.calendar-agenda-items div.calendar{
+      padding: 0;
+    }
+    .calendar-calendar div.calendar,
+    .calendar-calendar .date-display-single,
+    .calendar-calendar td span.date-display-single  {
+      font-size: medium;
+    font-weight: normal;
+    }
+    .calendar-calendar .inner .item{
+      padding: 10px;
+    }
+    .calendar-calendar .month-view .full tr.single-day .no-entry{
+      height: 44px !important;
+    line-height: 24px;
+    }
+    .calendar-calendar .month-view .full tr.single-day .no-entry .inner,
+    .calendar-calendar .no-entry .inner{
+      height: auto !important;
+    line-height: 1px;
+    }
+    .calendar-calendar .inner .views-field-title-field{
+      display: inline-block;
+    }
+  }
+  .view-content {
+    .calendar-calendar div.day {
+      width: auto;
+      float: none;
+    }
+    table {
+      .date-box {
+        text-align: center;
+      }
+      tr td .user-log {
+        font-size: 12px;
+        padding-right: 8px;
+        position: relative;
+        &::after {
+          position: absolute;
+          height: 6px;
+          width: 6px;
+          border-radius: 50%;
+          right: 0;
+          bottom: 6px;
+        }
+        &.Yes::after {
+          background: #328763;
+          content: "";
+        }
+        &.No::after {
+          background: #df1a22;
+          content: "";
+        }
+      }
+      div.monthview {
+        background: #111 !important;
+        color: #fff !important;
+      }
+      tr, td, th {
+        background: #111 !important;
+        color: #fff !important;
+        border: none !important;
+      }
+      tr td.empty {
+        color: #333 !important;
+      }
+      tr td.single-day {
+        padding-bottom: 10px;
+      }
+      tr th.days {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+
+.view-client-check-in-dashboard {
+  .view-content {
+    .views-row {
+      display: flex;
+      flex-wrap: wrap;
+      .views-field-name {
+        width: 100%;
+        .field-content {
+          font-weight: bold;
+          font-size: 2rem;
+          color: #fff;
+        }
+      }
+    }
+    .views-row > div.views-field:not(.views-field-name) {
+      display: inline-block;
+      padding: 0px 10px 10px;
+      width: 50%;
+      vertical-align: top;
+    }
+  }
+}
