@@ -336,6 +336,9 @@
 
 .page-dashboard {
   background: #181818;
+  .page-container {
+    padding: 40px 0;
+  }
   .view-display-id-client_dashboard {
     .view-content {
       .views-row {
@@ -561,6 +564,9 @@
 
 
 .page-dashboard-check-in {
+  .page-container {
+    padding: 40px 0;
+  }
   .view-client-check-in-dashboard {
     .view-header {
       padding-bottom: 30px;

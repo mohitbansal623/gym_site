@@ -144,48 +144,52 @@ a {
 .page-dashboard {
   background: #181818;
 }
-/* line 341, ../sass/dashboard.scss */
+/* line 339, ../sass/dashboard.scss */
+.page-dashboard .page-container {
+  padding: 40px 0;
+}
+/* line 344, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row {
   max-width: 600px;
   margin: auto;
 }
-/* line 344, ../sass/dashboard.scss */
+/* line 347, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar {
   display: table;
 }
-/* line 346, ../sass/dashboard.scss */
+/* line 349, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar > div {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 350, ../sass/dashboard.scss */
+/* line 353, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-info {
   line-height: 1.4;
 }
-/* line 352, ../sass/dashboard.scss */
+/* line 355, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-info .client-name {
   color: #b10029;
   font-size: 1.8rem;
   font-weight: bold;
 }
-/* line 358, ../sass/dashboard.scss */
+/* line 361, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-pic {
   width: 70px;
   padding-right: 20px;
 }
-/* line 361, ../sass/dashboard.scss */
+/* line 364, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .client-pic img {
   border-radius: 50%;
 }
-/* line 366, ../sass/dashboard.scss */
+/* line 369, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-info-bar .coach span {
   color: #fff;
 }
-/* line 371, ../sass/dashboard.scss */
+/* line 374, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity {
   padding-top: 25px;
 }
-/* line 373, ../sass/dashboard.scss */
+/* line 376, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps {
   color: #fff;
   font-weight: bold;
@@ -194,69 +198,69 @@ a {
   padding: 25px 10px;
   box-shadow: 5px 10px 6px -6px #111;
 }
-/* line 380, ../sass/dashboard.scss */
+/* line 383, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days .value, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps .value {
   font-size: 4rem;
 }
 @media (max-width: 480px) {
-  /* line 380, ../sass/dashboard.scss */
+  /* line 383, ../sass/dashboard.scss */
   .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days .value, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps .value {
     font-size: 3.5rem;
   }
 }
 @media (max-width: 480px) {
-  /* line 386, ../sass/dashboard.scss */
+  /* line 389, ../sass/dashboard.scss */
   .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .plan-days .activity-label, .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-steps .activity-label {
     font-size: 1.3rem;
   }
 }
-/* line 392, ../sass/dashboard.scss */
+/* line 395, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days {
   display: flex;
 }
-/* line 394, ../sass/dashboard.scss */
+/* line 397, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days .plan-days {
   width: calc(50% - 10px);
 }
-/* line 397, ../sass/dashboard.scss */
+/* line 400, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days .on-plan {
   margin-right: 10px;
   margin-bottom: 20px;
 }
-/* line 401, ../sass/dashboard.scss */
+/* line 404, ../sass/dashboard.scss */
 .page-dashboard .view-display-id-client_dashboard .view-content .views-row .client-activity .activity-days .off-plan {
   margin-left: 10px;
   margin-bottom: 20px;
 }
 
-/* line 413, ../sass/dashboard.scss */
+/* line 416, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp {
   line-height: 1.4;
 }
-/* line 416, ../sass/dashboard.scss */
+/* line 419, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content {
   display: flex;
   justify-content: center;
 }
-/* line 419, ../sass/dashboard.scss */
+/* line 422, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row {
   padding: 0 20px;
 }
-/* line 422, ../sass/dashboard.scss */
+/* line 425, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client {
   text-align: center;
 }
-/* line 424, ../sass/dashboard.scss */
+/* line 427, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-pic {
   width: 70px;
   margin: 0px auto 15px;
   position: relative;
 }
-/* line 428, ../sass/dashboard.scss */
+/* line 431, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-pic img {
   border-radius: 50%;
 }
-/* line 431, ../sass/dashboard.scss */
+/* line 434, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-pic:after {
   position: absolute;
   width: 20px;
@@ -272,38 +276,38 @@ a {
   left: 50%;
   margin-left: -10px;
 }
-/* line 448, ../sass/dashboard.scss */
+/* line 451, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-desc .coach {
   font-size: 1.3rem;
 }
-/* line 450, ../sass/dashboard.scss */
+/* line 453, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-desc .coach span {
   color: #fff;
 }
-/* line 454, ../sass/dashboard.scss */
+/* line 457, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-desc .client-name {
   font-size: 1.7rem;
   color: #b10029;
   font-weight: bold;
 }
-/* line 459, ../sass/dashboard.scss */
+/* line 462, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-desc .client-username {
   font-size: 1.3rem;
 }
-/* line 462, ../sass/dashboard.scss */
+/* line 465, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp .view-display-id-mass_lost_attach .view-content .views-row .views-field-nothing .top-3-client .client-desc .bodyfat-percent {
   font-size: 1.9rem;
   color: #fff;
   font-weight: bold;
 }
-/* line 482, ../sass/dashboard.scss */
+/* line 485, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-/* line 487, ../sass/dashboard.scss */
+/* line 490, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row {
   vertical-align: top;
   font-size: 1.3rem;
@@ -312,7 +316,7 @@ a {
   padding: 0 5px;
 }
 @media (max-width: 640px) {
-  /* line 487, ../sass/dashboard.scss */
+  /* line 490, ../sass/dashboard.scss */
   .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row {
     margin-bottom: 5px;
     padding: 0;
@@ -320,62 +324,62 @@ a {
   }
 }
 @media (max-width: 480px) {
-  /* line 487, ../sass/dashboard.scss */
+  /* line 490, ../sass/dashboard.scss */
   .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row {
     width: 100%;
   }
 }
-/* line 501, ../sass/dashboard.scss */
+/* line 504, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing {
   background: #181818;
   padding: 15px;
   box-shadow: 0px 1px 1px 0px #020202;
   line-height: 1.4;
 }
-/* line 506, ../sass/dashboard.scss */
+/* line 509, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .field-content {
   display: table;
   width: 100%;
 }
-/* line 509, ../sass/dashboard.scss */
+/* line 512, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .field-content > div {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 514, ../sass/dashboard.scss */
+/* line 517, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-pic {
   width: 70px;
 }
-/* line 516, ../sass/dashboard.scss */
+/* line 519, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-pic img {
   border-radius: 50%;
 }
-/* line 520, ../sass/dashboard.scss */
+/* line 523, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-info {
   padding: 0 10px 0 20px;
 }
-/* line 522, ../sass/dashboard.scss */
+/* line 525, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-info .name {
   font-size: 1.7rem;
   font-weight: bold;
   color: #b10029;
 }
-/* line 527, ../sass/dashboard.scss */
+/* line 530, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-info .user-name {
   padding-bottom: 10px;
 }
-/* line 531, ../sass/dashboard.scss */
+/* line 534, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .user-info .coach span {
   color: #fff;
 }
-/* line 536, ../sass/dashboard.scss */
+/* line 539, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .body-fat {
   font-size: 1.7rem;
   color: #fff;
   font-weight: bold;
   text-align: right;
 }
-/* line 542, ../sass/dashboard.scss */
+/* line 545, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .rank-box {
   padding-right: 10px;
   text-align: center;
@@ -383,7 +387,7 @@ a {
   font-weight: bold;
   width: 30px;
 }
-/* line 548, ../sass/dashboard.scss */
+/* line 551, ../sass/dashboard.scss */
 .page-mass-lost-leaderboard .view-display-id-mass_lost_lp > .view-content .views-row .views-field-nothing .rank-box .rank {
   width: 20px;
   height: 20px;
@@ -392,37 +396,41 @@ a {
   color: #000;
 }
 
-/* line 565, ../sass/dashboard.scss */
+/* line 567, ../sass/dashboard.scss */
+.page-dashboard-check-in .page-container {
+  padding: 40px 0;
+}
+/* line 571, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .view-header {
   padding-bottom: 30px;
 }
-/* line 569, ../sass/dashboard.scss */
+/* line 575, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .full-name {
   color: white;
   font-size: 20px;
   font-weight: bold;
 }
-/* line 575, ../sass/dashboard.scss */
+/* line 581, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .views-label {
   font-size: 16px;
   color: white;
 }
-/* line 582, ../sass/dashboard.scss */
+/* line 588, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content {
   display: flex;
   flex-wrap: wrap;
 }
-/* line 585, ../sass/dashboard.scss */
+/* line 591, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content .views-field {
   padding: 0 5px 20px;
 }
 @media screen and (min-width: 481px) {
-  /* line 585, ../sass/dashboard.scss */
+  /* line 591, ../sass/dashboard.scss */
   .page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content .views-field {
     width: 50%;
   }
 }
-/* line 590, ../sass/dashboard.scss */
+/* line 596, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content .views-field .progress {
   margin-bottom: 0;
   height: 25px;
@@ -430,13 +438,13 @@ a {
   border-radius: 0;
   width: 100%;
 }
-/* line 596, ../sass/dashboard.scss */
+/* line 602, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .view-content .views-field-nothing .field-content .views-field .progress .progress-bar {
   background: #00b053;
   font-size: 13px;
   line-height: 25px;
 }
-/* line 607, ../sass/dashboard.scss */
+/* line 613, ../sass/dashboard.scss */
 .page-dashboard-check-in .view-client-check-in-dashboard .field-content {
   color: #b10029;
   font-size: 16px;

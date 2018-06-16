@@ -619,6 +619,11 @@
 }
 
 .page-user {
+  &.logged-in {
+    .page-container {
+      padding-top: 40px 0;
+    }
+  }
   &.not-logged-in {
     .page-header {
       display: none;
@@ -966,5 +971,11 @@ img {
       width: 50%;
       vertical-align: top;
     }
+  }
+}
+
+.page-admin-dashboard {
+  .page-container {
+    padding: 40px 0;
   }
 }
