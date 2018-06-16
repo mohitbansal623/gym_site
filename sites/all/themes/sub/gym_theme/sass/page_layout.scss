@@ -171,13 +171,6 @@
           padding-right: 5px;
         }
         .form-group {
-          &.checked-checkbox {
-            .form-checkboxes {
-              label {
-                background: $green;
-              }
-            }
-          }
           .form-checkboxes {
             display: inline-block;
             vertical-align: middle;
@@ -195,6 +188,13 @@
               position: static;
               width: 25px;
               height: 25px;
+            }
+          }
+          &.checked-checkbox {
+            .form-checkboxes {
+              label {
+                background: $green;
+              }
             }
           }
           div {
