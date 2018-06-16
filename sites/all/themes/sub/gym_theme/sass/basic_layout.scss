@@ -515,67 +515,142 @@ body.page-coach-dashboard {
         -ms-flex-pack: flex-start;
         -webkit-justify-content: flex-start;
         justify-content: flex-start;
+        #navbar-collapse {
+          a, span {
+            line-height: 1.2;
+          }
+          @media (max-width: 767px) {
+            position: absolute;
+            overflow: hidden;
+            top: 45px;
+            left: 0px;
+            z-index: 19;
+            background: #666666;
+            border: 0;
+            box-shadow: none;
+            width: 150px;
+            padding: 0;
+            .navbar-nav {
+              margin: 0;
+              width: 100%;
+              display: inline-block;
+              &>li {
+                &>span, &>a {
+                  display: inline-block;
+                  width: 100%;
+                  padding: 5px 15px;
+                  background: #363636;
+                  position: relative;
+                  &::after {
+                    position: absolute;
+                    content: ">";
+                    bottom: 3px;
+                    right: 5px;
+                    transform: rotate(90deg);
+                  }
+                }
+              }
+            }
+          }
+        }
         .navbar-nav {
           * {
             text-transform: uppercase;
             color: #fff;
+            font-size: 12px;
           }
-          @media (min-width: 768px) {
-            li {
-              ul.dropdown-menu {
-                background: #666666;
-                padding: 0;
-                &>li {
-                  &>a {
-                    background: #4d4d4d;
-                    &:hover {
-                      background: #4d4d4d;
-                    }
-                    &:focus {
-                      background: #4d4d4d;
-                    }
-                  }
-                  &.active {
-                    &>a {
-                      background: #4d4d4d;
-                      &:hover {
-                        background: #4d4d4d;
-                      }
-                      &:focus {
-                        background: #4d4d4d;
-                      }
-                    }
-                  }
-                }
-                li.active {
-
+          a {
+            text-decoration: none;
+          }
+          li {
+            * {
+              cursor: pointer;
+            }
+            position: relative;
+            ul {
+              span, a {
+                display: inline-block;
+                width: 100%;
+                padding: 5px 15px;
+                background: #4d4d4d;
+              }
+            }
+            &:hover {
+              &>ul {
+                display: block;
+              }
+            }
+          }
+          a {
+            padding: 0;
+          }
+          ul {
+            list-style-type: none;
+            padding: 0;
+          }
+          &>li {
+            &:not(.last) {
+              @media (min-width: 768px) {
+                border-right: 1px solid #fff;
+              }
+              &>span {
+                @media (min-width: 768px) {
+                  margin-right: 10px;
                 }
               }
             }
-            &>li {
-              &>a {
-                color: #fff;
-                &:hover {
-                  color: #fff;
-                  background: transparent;
-                }
-                &:focus {
-                  color: #fff;
-                  background: transparent;
+            &.last {
+              @media (min-width: 768px) {
+                margin-left: 10px;
+              }
+            }
+            &>ul {
+              width: 150px;
+              z-index: 20;
+              background: #666666;
+              @media (min-width: 768px) {
+                display: none;
+                position: absolute;
+              }
+              &>li {
+                &>a, &>span {
+                  position: relative;
+                  @media (max-width: 767px) {
+                    padding-left: 20px;
+                    &::before {
+                      content: "-";
+                      position: absolute;
+                      top: 6px;
+                      left: 10px;
+                    }
+                  }
+                  &::after {
+                    position: absolute;
+                    content: ">";
+                    bottom: 3px;
+                    right: 5px;
+                    transform: rotate(90deg);
+                  }
                 }
               }
-              // #4d4d4d
-              // #666666
-              &.active > a {
-                color: #fff;
-                background: transparent;
-                &:hover {
-                  color: #fff;
-                  background: transparent;
-                }
-                &:focus {
-                  color: #fff;
-                  background: transparent;
+              ul {
+                background: #666666;
+                a, span {
+                  padding-left: 20px;
+                  @media (max-width: 767px) {
+                    padding-left: 30px;
+                  }
+                  background: #666666;
+                  position: relative;
+                  line-height: 1.2;
+                  border-bottom: 1px solid #4d4d4d;
+                  text-decoration: none;
+                  &::before {
+                    content: "-";
+                    position: absolute;
+                    top: 6px;
+                    left: 20px;
+                  }
                 }
               }
             }
@@ -684,4 +759,13 @@ body.page-coach-dashboard {
 
 body.html {
   background: #1a1a1a;
+}
+
+#toolbar, #admin-menu {
+  display: none;
+}
+
+body.toolbar-drawer.html {
+  padding: 0 !important;
+  margin: 0 !important;
 }
