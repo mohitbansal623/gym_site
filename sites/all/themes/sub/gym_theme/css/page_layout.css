@@ -780,14 +780,18 @@ a {
 }
 
 /* line 623, ../sass/page_layout.scss */
+.page-user.logged-in .page-container {
+  padding-top: 40px 0;
+}
+/* line 628, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-header {
   display: none;
 }
-/* line 626, ../sass/page_layout.scss */
+/* line 631, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container {
   padding-top: 60px;
 }
-/* line 628, ../sass/page_layout.scss */
+/* line 633, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs {
   max-width: 518px;
   margin: auto;
@@ -798,18 +802,18 @@ a {
   text-align: center;
 }
 @media (max-width: 480px) {
-  /* line 628, ../sass/page_layout.scss */
+  /* line 633, ../sass/page_layout.scss */
   .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs {
     padding: 15px;
   }
 }
-/* line 639, ../sass/page_layout.scss */
+/* line 644, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li {
   text-transform: capitalize;
   float: none;
   display: inline-block;
 }
-/* line 643, ../sass/page_layout.scss */
+/* line 648, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li a {
   color: #8e95a5;
   border: 0;
@@ -818,61 +822,61 @@ a {
   margin-right: 10px;
 }
 @media (max-width: 480px) {
-  /* line 643, ../sass/page_layout.scss */
+  /* line 648, ../sass/page_layout.scss */
   .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li a {
     font-size: 16px;
   }
 }
-/* line 652, ../sass/page_layout.scss */
+/* line 657, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li a:hover {
   background: transparent;
   color: #00acc1;
 }
-/* line 658, ../sass/page_layout.scss */
+/* line 663, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:first-child a {
   font-size: 0;
 }
-/* line 660, ../sass/page_layout.scss */
+/* line 665, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:first-child a::before {
   content: "Register";
   font-size: 22px;
 }
 @media (max-width: 480px) {
-  /* line 660, ../sass/page_layout.scss */
+  /* line 665, ../sass/page_layout.scss */
   .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:first-child a::before {
     font-size: 16px;
   }
 }
-/* line 670, ../sass/page_layout.scss */
+/* line 675, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:last-child a {
   font-size: 0;
   margin-right: 0;
 }
-/* line 673, ../sass/page_layout.scss */
+/* line 678, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:last-child a::before {
   content: "Forgot Password?";
   font-size: 22px;
 }
 @media (max-width: 480px) {
-  /* line 673, ../sass/page_layout.scss */
+  /* line 678, ../sass/page_layout.scss */
   .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:last-child a::before {
     font-size: 16px;
   }
 }
-/* line 683, ../sass/page_layout.scss */
+/* line 688, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li.active {
   background: #fff;
 }
-/* line 685, ../sass/page_layout.scss */
+/* line 690, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li.active a {
   background: transparent;
   color: #00acc1;
 }
-/* line 688, ../sass/page_layout.scss */
+/* line 693, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li.active a:hover {
   background: transparent;
 }
-/* line 694, ../sass/page_layout.scss */
+/* line 699, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .region.region-content {
   max-width: 518px;
   margin: auto;
@@ -882,61 +886,61 @@ a {
   border-radius: 0 0 5px 5px;
   padding: 15px 25px 25px;
 }
-/* line 703, ../sass/page_layout.scss */
+/* line 708, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .region.region-content form label {
   text-transform: uppercase;
   line-height: 1.2;
   font-size: 12px;
 }
-/* line 709, ../sass/page_layout.scss */
+/* line 714, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .region.region-content form fieldset legend {
   padding: 5px 15px;
 }
-/* line 711, ../sass/page_layout.scss */
+/* line 716, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .region.region-content form fieldset legend span {
   font-size: 12px;
   text-transform: uppercase;
 }
-/* line 717, ../sass/page_layout.scss */
+/* line 722, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .region.region-content form input, .page-user.not-logged-in .page-container .region.region-content form textarea, .page-user.not-logged-in .page-container .region.region-content form select {
   border-radius: 0;
   background: #f2eded;
   border: 0;
 }
 @media (min-width: 768px) {
-  /* line 722, ../sass/page_layout.scss */
+  /* line 727, ../sass/page_layout.scss */
   .page-user.not-logged-in .page-container .region.region-content form input, .page-user.not-logged-in .page-container .region.region-content form select {
     height: 40px;
   }
 }
-/* line 727, ../sass/page_layout.scss */
+/* line 732, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .region.region-content form .form-actions {
   margin-top: 20px;
 }
-/* line 729, ../sass/page_layout.scss */
+/* line 734, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .region.region-content form .form-actions .form-submit {
   width: 100%;
   color: #fff;
   background: #009eb2;
 }
 @media (min-width: 768px) {
-  /* line 729, ../sass/page_layout.scss */
+  /* line 734, ../sass/page_layout.scss */
   .page-user.not-logged-in .page-container .region.region-content form .form-actions .form-submit {
     height: 50px;
   }
 }
 
-/* line 814, ../sass/page_layout.scss */
+/* line 819, ../sass/page_layout.scss */
 img {
   max-width: 100%;
 }
 
 @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 818, ../sass/page_layout.scss */
+  /* line 823, ../sass/page_layout.scss */
   .view-calendar {
     /* Hide table headers (but not display: none;, for accessibility) */
   }
-  /* line 820, ../sass/page_layout.scss */
+  /* line 825, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar table,
   .view-calendar .calendar-calendar tbody,
   .view-calendar .calendar-calendar th,
@@ -944,7 +948,7 @@ img {
   .view-calendar .calendar-calendar tr {
     display: block;
   }
-  /* line 828, ../sass/page_layout.scss */
+  /* line 833, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar thead,
   .view-calendar .calendar-calendar thead tr,
   .view-calendar .calendar-calendar tr.date-box {
@@ -952,11 +956,11 @@ img {
     top: -9999px;
     left: -9999px;
   }
-  /* line 835, ../sass/page_layout.scss */
+  /* line 840, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar tr td.no-entry {
     border-bottom: 1px solid #ccc;
   }
-  /* line 838, ../sass/page_layout.scss */
+  /* line 843, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar td:before {
     /* Format & Label the day headings */
     /* Now like a table header */
@@ -972,18 +976,18 @@ img {
     content: attr(data-label);
     height: 44px;
   }
-  /* line 852, ../sass/page_layout.scss */
+  /* line 857, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar td.today,
   .view-calendar .calendar-calendar .month-view .full tr td.single-day.today {
     border-top: 2px solid #0074ab;
     -webkit-box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
   }
-  /* line 858, ../sass/page_layout.scss */
+  /* line 863, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar .month-view .full td {
     padding: 0;
   }
-  /* line 861, ../sass/page_layout.scss */
+  /* line 866, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar td,
   .view-calendar .calendar-calendar td.calendar-agenda-items {
     /* Behave  like a "row" */
@@ -991,53 +995,53 @@ img {
     position: relative;
     width: 100%;
   }
-  /* line 871, ../sass/page_layout.scss */
+  /* line 876, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar td.calendar-agenda-items div.calendar {
     padding: 0;
   }
-  /* line 874, ../sass/page_layout.scss */
+  /* line 879, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar div.calendar,
   .view-calendar .calendar-calendar .date-display-single,
   .view-calendar .calendar-calendar td span.date-display-single {
     font-size: medium;
     font-weight: normal;
   }
-  /* line 880, ../sass/page_layout.scss */
+  /* line 885, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar .inner .item {
     padding: 10px;
   }
-  /* line 883, ../sass/page_layout.scss */
+  /* line 888, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar .month-view .full tr.single-day .no-entry {
     height: 44px !important;
     line-height: 24px;
   }
-  /* line 887, ../sass/page_layout.scss */
+  /* line 892, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar .month-view .full tr.single-day .no-entry .inner,
   .view-calendar .calendar-calendar .no-entry .inner {
     height: auto !important;
     line-height: 1px;
   }
-  /* line 892, ../sass/page_layout.scss */
+  /* line 897, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar .inner .views-field-title-field {
     display: inline-block;
   }
 }
-/* line 897, ../sass/page_layout.scss */
+/* line 902, ../sass/page_layout.scss */
 .view-calendar .view-content .calendar-calendar div.day {
   width: auto;
   float: none;
 }
-/* line 902, ../sass/page_layout.scss */
+/* line 907, ../sass/page_layout.scss */
 .view-calendar .view-content table .date-box {
   text-align: center;
 }
-/* line 905, ../sass/page_layout.scss */
+/* line 910, ../sass/page_layout.scss */
 .view-calendar .view-content table tr td .user-log {
   font-size: 12px;
   padding-right: 8px;
   position: relative;
 }
-/* line 909, ../sass/page_layout.scss */
+/* line 914, ../sass/page_layout.scss */
 .view-calendar .view-content table tr td .user-log::after {
   position: absolute;
   height: 6px;
@@ -1046,59 +1050,64 @@ img {
   right: 0;
   bottom: 6px;
 }
-/* line 917, ../sass/page_layout.scss */
+/* line 922, ../sass/page_layout.scss */
 .view-calendar .view-content table tr td .user-log.Yes::after {
   background: #328763;
   content: "";
 }
-/* line 921, ../sass/page_layout.scss */
+/* line 926, ../sass/page_layout.scss */
 .view-calendar .view-content table tr td .user-log.No::after {
   background: #df1a22;
   content: "";
 }
-/* line 926, ../sass/page_layout.scss */
+/* line 931, ../sass/page_layout.scss */
 .view-calendar .view-content table div.monthview {
   background: #111 !important;
   color: #fff !important;
 }
-/* line 930, ../sass/page_layout.scss */
+/* line 935, ../sass/page_layout.scss */
 .view-calendar .view-content table tr, .view-calendar .view-content table td, .view-calendar .view-content table th {
   background: #111 !important;
   color: #fff !important;
   border: none !important;
 }
-/* line 935, ../sass/page_layout.scss */
+/* line 940, ../sass/page_layout.scss */
 .view-calendar .view-content table tr td.empty {
   color: #333 !important;
 }
-/* line 938, ../sass/page_layout.scss */
+/* line 943, ../sass/page_layout.scss */
 .view-calendar .view-content table tr td.single-day {
   padding-bottom: 10px;
 }
-/* line 941, ../sass/page_layout.scss */
+/* line 946, ../sass/page_layout.scss */
 .view-calendar .view-content table tr th.days {
   padding-bottom: 20px;
 }
 
-/* line 951, ../sass/page_layout.scss */
+/* line 956, ../sass/page_layout.scss */
 .view-client-check-in-dashboard .view-content .views-row {
   display: flex;
   flex-wrap: wrap;
 }
-/* line 954, ../sass/page_layout.scss */
+/* line 959, ../sass/page_layout.scss */
 .view-client-check-in-dashboard .view-content .views-row .views-field-name {
   width: 100%;
 }
-/* line 956, ../sass/page_layout.scss */
+/* line 961, ../sass/page_layout.scss */
 .view-client-check-in-dashboard .view-content .views-row .views-field-name .field-content {
   font-weight: bold;
   font-size: 2rem;
   color: #fff;
 }
-/* line 963, ../sass/page_layout.scss */
+/* line 968, ../sass/page_layout.scss */
 .view-client-check-in-dashboard .view-content .views-row > div.views-field:not(.views-field-name) {
   display: inline-block;
   padding: 0px 10px 10px;
   width: 50%;
   vertical-align: top;
+}
+
+/* line 978, ../sass/page_layout.scss */
+.page-admin-dashboard .page-container {
+  padding: 40px 0;
 }
