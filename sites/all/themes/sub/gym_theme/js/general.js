@@ -1,5 +1,33 @@
 (function($) {
   $(document).ready(function(){
+
+    if ($("#daily-log-node-form .field-name-field-was-today-on-plan").length) {
+      if ($("#daily-log-node-form .field-name-field-was-today-on-plan input").is(":checked")) {
+        $("#daily-log-node-form .field-name-field-was-today-on-plan").addClass("checked-checkbox");
+      }
+      $("#daily-log-node-form .field-name-field-was-today-on-plan input").change(function(){
+        if ($(this).is(":checked")) {
+          $("#daily-log-node-form .field-name-field-was-today-on-plan").addClass("checked-checkbox");
+        }
+        else {
+          $("#daily-log-node-form .field-name-field-was-today-on-plan").removeClass("checked-checkbox");
+        }
+      });
+    }
+    if ($("#daily-log-node-form .field-name-field-did-you-train-today").length) {
+      if ($("#daily-log-node-form .field-name-field-did-you-train-today input").is(":checked")) {
+        $("#daily-log-node-form .field-name-field-did-you-train-today").addClass("checked-checkbox");
+      }
+      $("#daily-log-node-form .field-name-field-did-you-train-today input").change(function(){
+        if ($(this).is(":checked")) {
+          $("#daily-log-node-form .field-name-field-did-you-train-today").addClass("checked-checkbox");
+        }
+        else {
+          $("#daily-log-node-form .field-name-field-did-you-train-today").removeClass("checked-checkbox");
+        }
+      });
+    }
+
     $('#block-views-view-banner-block-1 .view-content').slick({
       arrows: false,
       slidesToShow:1,

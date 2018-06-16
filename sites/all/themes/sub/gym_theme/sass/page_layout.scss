@@ -171,6 +171,13 @@
           padding-right: 5px;
         }
         .form-group {
+          &.checked-checkbox {
+            .form-checkboxes {
+              label {
+                background: $green;
+              }
+            }
+          }
           .form-checkboxes {
             display: inline-block;
             vertical-align: middle;
@@ -180,6 +187,7 @@
               width: 25px;
               height: 25px;
               background: #fff;
+              border: 1px solid #fff;
             }
             input {
               margin: 0;
@@ -440,6 +448,10 @@
       font-size: 18px;
     }
   }
+  .region.region-content {
+    max-width: 790px;
+    margin: auto;
+  }
   #block-system-main {
     .view-content {
       .fitness {
@@ -484,17 +496,23 @@
           display: inline-block;
           width: 50%;
           vertical-align: top;
-          margin-bottom: 40px;
+          margin-bottom: 60px;
+          padding-right: 15px;
           @media (max-width: 767px) {
             width: 100%;
             margin-bottom: 20px;
+            padding-right: 0px;
           }
           .headings {
             margin-bottom: 10px;
+            font-weight: bold;
           }
           table {
             td {
-              padding-bottom: 20px;
+              padding-bottom: 40px;
+              @media (max-width: 767px) {
+                padding-bottom: 20px;
+              }
             }
             tr:last-child {
               td {
@@ -508,10 +526,32 @@
           display: inline-block;
           width: 50%;
           vertical-align: top;
-          margin-bottom: 40px;
+          margin-bottom: 60px;
+          padding-left: 15px;
+          .headings {
+            margin-bottom: 10px;
+            font-weight: bold;
+            .current-level {
+              float: right;
+              font-weight: normal;
+              font-size: 12px;
+              margin-top: 2px;
+            }
+          }
           @media (max-width: 767px) {
+            padding-left: 0px;
             width: 100%;
             margin-bottom: 20px;
+          }
+          table {
+            td {
+              padding-bottom: 10px;
+            }
+            tr:last-child {
+              td {
+                padding-bottom: 0;
+              }
+            }
           }
         }
         .bodyfat-comp-box {
@@ -565,7 +605,7 @@
                     border: 0;
                     text-align: left;
                   }
-                  td:first-child {
+                  td:last-child {
                     width: auto;
                   }
                 }
