@@ -528,7 +528,7 @@ body.page-coach-dashboard {
             background: #666666;
             border: 0;
             box-shadow: none;
-            width: 150px;
+            width: 190px;
             padding: 0;
             .navbar-nav {
               margin: 0;
@@ -540,6 +540,9 @@ body.page-coach-dashboard {
                   width: 100%;
                   padding: 5px 15px;
                   background: #363636;
+                  border-bottom: 1px solid #666666;
+                }
+                &>ul ~ span, &>ul ~ a {
                   position: relative;
                   &::after {
                     position: absolute;
@@ -589,7 +592,7 @@ body.page-coach-dashboard {
             padding: 0;
           }
           &>li {
-            &:not(.last) {
+            &:first-child {
               @media (min-width: 768px) {
                 border-right: 1px solid #fff;
               }
@@ -599,13 +602,13 @@ body.page-coach-dashboard {
                 }
               }
             }
-            &.last {
+            &:last-child {
               @media (min-width: 768px) {
                 margin-left: 10px;
               }
             }
             &>ul {
-              width: 150px;
+              width: 190px;
               z-index: 20;
               background: #666666;
               @media (min-width: 768px) {
@@ -615,6 +618,7 @@ body.page-coach-dashboard {
               &>li {
                 &>a, &>span {
                   position: relative;
+                  border-bottom: 1px solid #666666;
                   @media (max-width: 767px) {
                     padding-left: 20px;
                     &::before {
@@ -624,6 +628,9 @@ body.page-coach-dashboard {
                       left: 10px;
                     }
                   }
+                }
+                &>ul ~ span, &>ul ~ a {
+                  position: relative;
                   &::after {
                     position: absolute;
                     content: ">";
@@ -649,7 +656,10 @@ body.page-coach-dashboard {
                     content: "-";
                     position: absolute;
                     top: 6px;
-                    left: 20px;
+                    left: 10px;
+                    @media (max-width: 767px) {
+                      left: 20px;
+                    }
                   }
                 }
               }
