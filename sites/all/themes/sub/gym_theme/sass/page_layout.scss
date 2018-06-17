@@ -751,6 +751,7 @@
             .form-type-radio {
               display: inline-block;
               vertical-align: top;
+              margin-top: 0;
               &:not(:last-child) {
                 margin-right: 25px;
               }
