@@ -323,7 +323,7 @@ body.page-coach-dashboard .coach-accordion .panel-heading .diet-adherence {
     background: #666666;
     border: 0;
     box-shadow: none;
-    width: 150px;
+    width: 190px;
     padding: 0;
   }
   /* line 533, ../sass/basic_layout.scss */
@@ -338,10 +338,14 @@ body.page-coach-dashboard .coach-accordion .panel-heading .diet-adherence {
     width: 100%;
     padding: 5px 15px;
     background: #363636;
+    border-bottom: 1px solid #666666;
+  }
+  /* line 545, ../sass/basic_layout.scss */
+  #navbar .navbar-header .navbar-item.navbar-menu-block #navbar-collapse .navbar-nav > li > ul ~ span, #navbar .navbar-header .navbar-item.navbar-menu-block #navbar-collapse .navbar-nav > li > ul ~ a {
     position: relative;
   }
-  /* line 544, ../sass/basic_layout.scss */
-  #navbar .navbar-header .navbar-item.navbar-menu-block #navbar-collapse .navbar-nav > li > span::after, #navbar .navbar-header .navbar-item.navbar-menu-block #navbar-collapse .navbar-nav > li > a::after {
+  /* line 547, ../sass/basic_layout.scss */
+  #navbar .navbar-header .navbar-item.navbar-menu-block #navbar-collapse .navbar-nav > li > ul ~ span::after, #navbar .navbar-header .navbar-item.navbar-menu-block #navbar-collapse .navbar-nav > li > ul ~ a::after {
     position: absolute;
     content: ">";
     bottom: 3px;
@@ -349,85 +353,86 @@ body.page-coach-dashboard .coach-accordion .panel-heading .diet-adherence {
     transform: rotate(90deg);
   }
 }
-/* line 557, ../sass/basic_layout.scss */
+/* line 560, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav * {
   text-transform: uppercase;
   color: #fff;
   font-size: 12px;
 }
-/* line 562, ../sass/basic_layout.scss */
+/* line 565, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav a {
   text-decoration: none;
 }
-/* line 565, ../sass/basic_layout.scss */
+/* line 568, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav li {
   position: relative;
 }
-/* line 566, ../sass/basic_layout.scss */
+/* line 569, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav li * {
   cursor: pointer;
 }
-/* line 571, ../sass/basic_layout.scss */
+/* line 574, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav li ul span, #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav li ul a {
   display: inline-block;
   width: 100%;
   padding: 5px 15px;
   background: #4d4d4d;
 }
-/* line 579, ../sass/basic_layout.scss */
+/* line 582, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav li:hover > ul {
   display: block;
 }
-/* line 584, ../sass/basic_layout.scss */
+/* line 587, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav a {
   padding: 0;
 }
-/* line 587, ../sass/basic_layout.scss */
+/* line 590, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav ul {
   list-style-type: none;
   padding: 0;
 }
 @media (min-width: 768px) {
-  /* line 592, ../sass/basic_layout.scss */
-  #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li:not(.last) {
+  /* line 595, ../sass/basic_layout.scss */
+  #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li:first-child {
     border-right: 1px solid #fff;
   }
 }
 @media (min-width: 768px) {
-  /* line 596, ../sass/basic_layout.scss */
-  #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li:not(.last) > span {
+  /* line 599, ../sass/basic_layout.scss */
+  #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li:first-child > span {
     margin-right: 10px;
   }
 }
 @media (min-width: 768px) {
-  /* line 602, ../sass/basic_layout.scss */
-  #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li.last {
+  /* line 605, ../sass/basic_layout.scss */
+  #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li:last-child {
     margin-left: 10px;
   }
 }
-/* line 607, ../sass/basic_layout.scss */
+/* line 610, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul {
-  width: 150px;
+  width: 190px;
   z-index: 20;
   background: #666666;
 }
 @media (min-width: 768px) {
-  /* line 607, ../sass/basic_layout.scss */
+  /* line 610, ../sass/basic_layout.scss */
   #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul {
     display: none;
     position: absolute;
   }
 }
-/* line 616, ../sass/basic_layout.scss */
+/* line 619, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul > li > a, #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul > li > span {
   position: relative;
+  border-bottom: 1px solid #666666;
 }
 @media (max-width: 767px) {
-  /* line 616, ../sass/basic_layout.scss */
+  /* line 619, ../sass/basic_layout.scss */
   #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul > li > a, #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul > li > span {
     padding-left: 20px;
   }
-  /* line 620, ../sass/basic_layout.scss */
+  /* line 624, ../sass/basic_layout.scss */
   #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul > li > a::before, #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul > li > span::before {
     content: "-";
     position: absolute;
@@ -435,19 +440,23 @@ body.page-coach-dashboard .coach-accordion .panel-heading .diet-adherence {
     left: 10px;
   }
 }
-/* line 627, ../sass/basic_layout.scss */
-#navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul > li > a::after, #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul > li > span::after {
+/* line 632, ../sass/basic_layout.scss */
+#navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul > li > ul ~ span, #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul > li > ul ~ a {
+  position: relative;
+}
+/* line 634, ../sass/basic_layout.scss */
+#navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul > li > ul ~ span::after, #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul > li > ul ~ a::after {
   position: absolute;
   content: ">";
   bottom: 3px;
   right: 5px;
   transform: rotate(90deg);
 }
-/* line 636, ../sass/basic_layout.scss */
+/* line 643, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul ul {
   background: #666666;
 }
-/* line 638, ../sass/basic_layout.scss */
+/* line 645, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul ul a, #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul ul span {
   padding-left: 20px;
   background: #666666;
@@ -457,25 +466,31 @@ body.page-coach-dashboard .coach-accordion .panel-heading .diet-adherence {
   text-decoration: none;
 }
 @media (max-width: 767px) {
-  /* line 638, ../sass/basic_layout.scss */
+  /* line 645, ../sass/basic_layout.scss */
   #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul ul a, #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul ul span {
     padding-left: 30px;
   }
 }
-/* line 648, ../sass/basic_layout.scss */
+/* line 655, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul ul a::before, #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul ul span::before {
   content: "-";
   position: absolute;
   top: 6px;
-  left: 20px;
+  left: 10px;
 }
 @media (max-width: 767px) {
-  /* line 660, ../sass/basic_layout.scss */
+  /* line 655, ../sass/basic_layout.scss */
+  #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul ul a::before, #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li > ul ul span::before {
+    left: 20px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 670, ../sass/basic_layout.scss */
   #navbar .navbar-header .navbar-item.navbar-menu-block #navbar-collapse {
     position: absolute;
   }
 }
-/* line 667, ../sass/basic_layout.scss */
+/* line 677, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-user-menu-block {
   -webkit-box-pack: flex-end;
   -moz-box-pack: flex-end;
@@ -483,7 +498,7 @@ body.page-coach-dashboard .coach-accordion .panel-heading .diet-adherence {
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
 }
-/* line 674, ../sass/basic_layout.scss */
+/* line 684, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-user-menu-block li a {
   color: #fff;
   outline: none;
@@ -494,22 +509,22 @@ body.page-coach-dashboard .coach-accordion .panel-heading .diet-adherence {
   font-size: 14px;
 }
 @media (max-width: 767px) {
-  /* line 674, ../sass/basic_layout.scss */
+  /* line 684, ../sass/basic_layout.scss */
   #navbar .navbar-header .navbar-item.navbar-user-menu-block li a {
     font-size: 12px;
     padding: 3px 4px;
   }
 }
-/* line 686, ../sass/basic_layout.scss */
+/* line 696, ../sass/basic_layout.scss */
 #navbar .navbar-header .navbar-item.navbar-user-menu-block li a:hover {
   color: #fff;
 }
 
-/* line 696, ../sass/basic_layout.scss */
+/* line 706, ../sass/basic_layout.scss */
 .site-footer {
   background: #000;
 }
-/* line 698, ../sass/basic_layout.scss */
+/* line 708, ../sass/basic_layout.scss */
 .site-footer .footer {
   border: 0;
   margin: auto;
@@ -517,50 +532,50 @@ body.page-coach-dashboard .coach-accordion .panel-heading .diet-adherence {
   padding-bottom: 70px;
 }
 @media (max-width: 767px) {
-  /* line 698, ../sass/basic_layout.scss */
+  /* line 708, ../sass/basic_layout.scss */
   .site-footer .footer {
     padding-top: 25px;
     padding-bottom: 25px;
   }
 }
-/* line 707, ../sass/basic_layout.scss */
+/* line 717, ../sass/basic_layout.scss */
 .site-footer .footer .footer-inner {
   max-width: 810px;
   margin: auto;
   padding: 0 10px;
 }
-/* line 712, ../sass/basic_layout.scss */
+/* line 722, ../sass/basic_layout.scss */
 .site-footer .footer .address, .site-footer .footer .social-icons {
   color: #fff;
   display: inline-block;
   vertical-align: top;
 }
 @media (max-width: 767px) {
-  /* line 716, ../sass/basic_layout.scss */
+  /* line 726, ../sass/basic_layout.scss */
   .site-footer .footer .address.social-icons, .site-footer .footer .social-icons.social-icons {
     vertical-align: bottom;
   }
 }
-/* line 721, ../sass/basic_layout.scss */
+/* line 731, ../sass/basic_layout.scss */
 .site-footer .footer .address p, .site-footer .footer .social-icons p {
   margin: 0;
   font-size: 14px;
   line-height: 18px;
 }
-/* line 726, ../sass/basic_layout.scss */
+/* line 736, ../sass/basic_layout.scss */
 .site-footer .footer .address a, .site-footer .footer .social-icons a {
   color: #fff;
 }
-/* line 729, ../sass/basic_layout.scss */
+/* line 739, ../sass/basic_layout.scss */
 .site-footer .footer .address .copyright, .site-footer .footer .social-icons .copyright {
   margin-top: 15px;
 }
-/* line 733, ../sass/basic_layout.scss */
+/* line 743, ../sass/basic_layout.scss */
 .site-footer .footer .address {
   width: calc(100% - 50px);
   padding-right: 10px;
 }
-/* line 738, ../sass/basic_layout.scss */
+/* line 748, ../sass/basic_layout.scss */
 .site-footer .footer .social-icons a {
   width: 20px;
   display: inline-block;
@@ -570,11 +585,11 @@ body.page-coach-dashboard .coach-accordion .panel-heading .diet-adherence {
   border-radius: 2px;
   line-height: 1;
 }
-/* line 746, ../sass/basic_layout.scss */
+/* line 756, ../sass/basic_layout.scss */
 .site-footer .footer .social-icons a:first-child {
   margin-right: 5px;
 }
-/* line 749, ../sass/basic_layout.scss */
+/* line 759, ../sass/basic_layout.scss */
 .site-footer .footer .social-icons a i {
   color: #000;
   font-size: 12px;
@@ -582,17 +597,17 @@ body.page-coach-dashboard .coach-accordion .panel-heading .diet-adherence {
   margin-top: 2px;
 }
 
-/* line 760, ../sass/basic_layout.scss */
+/* line 770, ../sass/basic_layout.scss */
 body.html {
   background: #1a1a1a;
 }
 
-/* line 764, ../sass/basic_layout.scss */
+/* line 774, ../sass/basic_layout.scss */
 #toolbar, #admin-menu {
   display: none;
 }
 
-/* line 768, ../sass/basic_layout.scss */
+/* line 778, ../sass/basic_layout.scss */
 body.toolbar-drawer.html {
   padding: 0 !important;
   margin: 0 !important;
