@@ -399,7 +399,7 @@ body.page-coach-dashboard .coach-accordion .panel-heading .diet-adherence {
 }
 @media (min-width: 768px) {
   /* line 599, ../sass/basic_layout.scss */
-  #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li:first-child > span {
+  #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li:first-child > span, #navbar .navbar-header .navbar-item.navbar-menu-block .navbar-nav > li:first-child > a {
     margin-right: 10px;
   }
 }

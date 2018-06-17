@@ -596,7 +596,7 @@ body.page-coach-dashboard {
               @media (min-width: 768px) {
                 border-right: 1px solid #fff;
               }
-              &>span {
+              &>span, &>a {
                 @media (min-width: 768px) {
                   margin-right: 10px;
                 }

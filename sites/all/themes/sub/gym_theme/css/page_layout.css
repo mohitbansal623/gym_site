@@ -938,23 +938,24 @@ a {
 .page-user.not-logged-in .page-container .region.region-content form .form-type-radios .form-type-radio {
   display: inline-block;
   vertical-align: top;
+  margin-top: 0;
 }
-/* line 754, ../sass/page_layout.scss */
+/* line 755, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .region.region-content form .form-type-radios .form-type-radio:not(:last-child) {
   margin-right: 25px;
 }
 
-/* line 834, ../sass/page_layout.scss */
+/* line 835, ../sass/page_layout.scss */
 img {
   max-width: 100%;
 }
 
 @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 838, ../sass/page_layout.scss */
+  /* line 839, ../sass/page_layout.scss */
   .view-calendar {
     /* Hide table headers (but not display: none;, for accessibility) */
   }
-  /* line 840, ../sass/page_layout.scss */
+  /* line 841, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar table,
   .view-calendar .calendar-calendar tbody,
   .view-calendar .calendar-calendar th,
@@ -962,7 +963,7 @@ img {
   .view-calendar .calendar-calendar tr {
     display: block;
   }
-  /* line 848, ../sass/page_layout.scss */
+  /* line 849, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar thead,
   .view-calendar .calendar-calendar thead tr,
   .view-calendar .calendar-calendar tr.date-box {
@@ -970,11 +971,11 @@ img {
     top: -9999px;
     left: -9999px;
   }
-  /* line 855, ../sass/page_layout.scss */
+  /* line 856, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar tr td.no-entry {
     border-bottom: 1px solid #ccc;
   }
-  /* line 858, ../sass/page_layout.scss */
+  /* line 859, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar td:before {
     /* Format & Label the day headings */
     /* Now like a table header */
@@ -990,18 +991,18 @@ img {
     content: attr(data-label);
     height: 44px;
   }
-  /* line 872, ../sass/page_layout.scss */
+  /* line 873, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar td.today,
   .view-calendar .calendar-calendar .month-view .full tr td.single-day.today {
     border-top: 2px solid #0074ab;
     -webkit-box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
   }
-  /* line 878, ../sass/page_layout.scss */
+  /* line 879, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar .month-view .full td {
     padding: 0;
   }
-  /* line 881, ../sass/page_layout.scss */
+  /* line 882, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar td,
   .view-calendar .calendar-calendar td.calendar-agenda-items {
     /* Behave  like a "row" */
@@ -1009,53 +1010,53 @@ img {
     position: relative;
     width: 100%;
   }
-  /* line 891, ../sass/page_layout.scss */
+  /* line 892, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar td.calendar-agenda-items div.calendar {
     padding: 0;
   }
-  /* line 894, ../sass/page_layout.scss */
+  /* line 895, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar div.calendar,
   .view-calendar .calendar-calendar .date-display-single,
   .view-calendar .calendar-calendar td span.date-display-single {
     font-size: medium;
     font-weight: normal;
   }
-  /* line 900, ../sass/page_layout.scss */
+  /* line 901, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar .inner .item {
     padding: 10px;
   }
-  /* line 903, ../sass/page_layout.scss */
+  /* line 904, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar .month-view .full tr.single-day .no-entry {
     height: 44px !important;
     line-height: 24px;
   }
-  /* line 907, ../sass/page_layout.scss */
+  /* line 908, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar .month-view .full tr.single-day .no-entry .inner,
   .view-calendar .calendar-calendar .no-entry .inner {
     height: auto !important;
     line-height: 1px;
   }
-  /* line 912, ../sass/page_layout.scss */
+  /* line 913, ../sass/page_layout.scss */
   .view-calendar .calendar-calendar .inner .views-field-title-field {
     display: inline-block;
   }
 }
-/* line 917, ../sass/page_layout.scss */
+/* line 918, ../sass/page_layout.scss */
 .view-calendar .view-content .calendar-calendar div.day {
   width: auto;
   float: none;
 }
-/* line 922, ../sass/page_layout.scss */
+/* line 923, ../sass/page_layout.scss */
 .view-calendar .view-content table .date-box {
   text-align: center;
 }
-/* line 925, ../sass/page_layout.scss */
+/* line 926, ../sass/page_layout.scss */
 .view-calendar .view-content table tr td .user-log {
   font-size: 12px;
   padding-right: 8px;
   position: relative;
 }
-/* line 929, ../sass/page_layout.scss */
+/* line 930, ../sass/page_layout.scss */
 .view-calendar .view-content table tr td .user-log::after {
   position: absolute;
   height: 6px;
@@ -1064,56 +1065,56 @@ img {
   right: 0;
   bottom: 6px;
 }
-/* line 937, ../sass/page_layout.scss */
+/* line 938, ../sass/page_layout.scss */
 .view-calendar .view-content table tr td .user-log.Yes::after {
   background: #328763;
   content: "";
 }
-/* line 941, ../sass/page_layout.scss */
+/* line 942, ../sass/page_layout.scss */
 .view-calendar .view-content table tr td .user-log.No::after {
   background: #df1a22;
   content: "";
 }
-/* line 946, ../sass/page_layout.scss */
+/* line 947, ../sass/page_layout.scss */
 .view-calendar .view-content table div.monthview {
   background: #111 !important;
   color: #fff !important;
 }
-/* line 950, ../sass/page_layout.scss */
+/* line 951, ../sass/page_layout.scss */
 .view-calendar .view-content table tr, .view-calendar .view-content table td, .view-calendar .view-content table th {
   background: #111 !important;
   color: #fff !important;
   border: none !important;
 }
-/* line 955, ../sass/page_layout.scss */
+/* line 956, ../sass/page_layout.scss */
 .view-calendar .view-content table tr td.empty {
   color: #333 !important;
 }
-/* line 958, ../sass/page_layout.scss */
+/* line 959, ../sass/page_layout.scss */
 .view-calendar .view-content table tr td.single-day {
   padding-bottom: 10px;
 }
-/* line 961, ../sass/page_layout.scss */
+/* line 962, ../sass/page_layout.scss */
 .view-calendar .view-content table tr th.days {
   padding-bottom: 20px;
 }
 
-/* line 971, ../sass/page_layout.scss */
+/* line 972, ../sass/page_layout.scss */
 .view-client-check-in-dashboard .view-content .views-row {
   display: flex;
   flex-wrap: wrap;
 }
-/* line 974, ../sass/page_layout.scss */
+/* line 975, ../sass/page_layout.scss */
 .view-client-check-in-dashboard .view-content .views-row .views-field-name {
   width: 100%;
 }
-/* line 976, ../sass/page_layout.scss */
+/* line 977, ../sass/page_layout.scss */
 .view-client-check-in-dashboard .view-content .views-row .views-field-name .field-content {
   font-weight: bold;
   font-size: 2rem;
   color: #fff;
 }
-/* line 983, ../sass/page_layout.scss */
+/* line 984, ../sass/page_layout.scss */
 .view-client-check-in-dashboard .view-content .views-row > div.views-field:not(.views-field-name) {
   display: inline-block;
   padding: 0px 10px 10px;
@@ -1121,7 +1122,7 @@ img {
   vertical-align: top;
 }
 
-/* line 993, ../sass/page_layout.scss */
+/* line 994, ../sass/page_layout.scss */
 .page-admin-dashboard .page-container {
   padding: 40px 0;
 }
