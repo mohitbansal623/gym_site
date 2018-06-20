@@ -542,12 +542,13 @@ body.page-coach-dashboard {
                   background: #363636;
                   border-bottom: 1px solid #666666;
                 }
-                &>ul ~ span, &>ul ~ a {
+                &>ul {
                   position: relative;
                   &::after {
                     position: absolute;
                     content: ">";
-                    bottom: 3px;
+                    top: -25px;
+                    font-size: 14px;
                     right: 5px;
                     transform: rotate(90deg);
                   }
@@ -592,6 +593,10 @@ body.page-coach-dashboard {
             padding: 0;
           }
           &>li {
+            &>a, &>span {
+              display: inline-block;
+              width: 100%;
+            }
             &:first-child {
               @media (min-width: 768px) {
                 border-right: 1px solid #fff;
@@ -629,12 +634,13 @@ body.page-coach-dashboard {
                     }
                   }
                 }
-                &>ul ~ span, &>ul ~ a {
+                &>ul {
                   position: relative;
                   &::after {
                     position: absolute;
                     content: ">";
-                    bottom: 3px;
+                    top: -25px;
+                    font-size: 14px;
                     right: 5px;
                     transform: rotate(90deg);
                   }
