@@ -228,6 +228,13 @@ function client_log_notify_coach_node_presave($node) {
     $goal_value = isset($node->field_goal['und'][0]['value'])? $node->field_goal['und'][0]['value']: NULL;
 
     $node->title = $node->field_goal['und'][0]['value'];
+    $start_date = $node->field_goal_date['und'][0]['value'];
+    $start_date = explode(' ', $start_date);
+    $start_date = $start_date[0];
+    $timestamp = strtotime($start_date);
+    $end_date = strtotime('+90 day', $timestamp);
+    $end_date = date('Y-m-d g:i:s', $end_date);
+    $node->field_goal_date['und'][0]['value2'] = $end_date;
 
     update_published_value_goals($node->uid, $node->nid);
   }
