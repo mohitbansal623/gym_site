@@ -243,13 +243,13 @@ a {
   width: 25px;
   height: 25px;
 }
-/* line 195, ../sass/page_layout.scss */
-.page-node-add #check-in-node-form .group-plan-checklist > div .form-group.checked-checkbox .form-checkboxes label, .page-node-add #daily-log-node-form .group-plan-checklist > div .form-group.checked-checkbox .form-checkboxes label, .page-node-edit #check-in-node-form .group-plan-checklist > div .form-group.checked-checkbox .form-checkboxes label, .page-node-edit #daily-log-node-form .group-plan-checklist > div .form-group.checked-checkbox .form-checkboxes label {
-  background: #3ab54a;
-}
-/* line 200, ../sass/page_layout.scss */
+/* line 193, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form .group-plan-checklist > div .form-group div, .page-node-add #daily-log-node-form .group-plan-checklist > div .form-group div, .page-node-edit #check-in-node-form .group-plan-checklist > div .form-group div, .page-node-edit #daily-log-node-form .group-plan-checklist > div .form-group div {
   display: inline-block;
+}
+/* line 199, ../sass/page_layout.scss */
+.page-node-add #check-in-node-form .group-plan-checklist > div .form-group.checked-checkbox .form-checkboxes label, .page-node-add #daily-log-node-form .group-plan-checklist > div .form-group.checked-checkbox .form-checkboxes label, .page-node-edit #check-in-node-form .group-plan-checklist > div .form-group.checked-checkbox .form-checkboxes label, .page-node-edit #daily-log-node-form .group-plan-checklist > div .form-group.checked-checkbox .form-checkboxes label {
+  background: #3ab54a;
 }
 /* line 206, ../sass/page_layout.scss */
 .page-node-add #check-in-node-form .group-small-meal-one, .page-node-add #check-in-node-form .group-small-meal-two, .page-node-add #check-in-node-form .group-large-meal, .page-node-add #daily-log-node-form .group-small-meal-one, .page-node-add #daily-log-node-form .group-small-meal-two, .page-node-add #daily-log-node-form .group-large-meal, .page-node-edit #check-in-node-form .group-small-meal-one, .page-node-edit #check-in-node-form .group-small-meal-two, .page-node-edit #check-in-node-form .group-large-meal, .page-node-edit #daily-log-node-form .group-small-meal-one, .page-node-edit #daily-log-node-form .group-small-meal-two, .page-node-edit #daily-log-node-form .group-large-meal {
