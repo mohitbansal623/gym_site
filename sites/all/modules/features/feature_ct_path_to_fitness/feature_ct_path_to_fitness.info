@@ -17,7 +17,6 @@ features[field_base][] = field_speciality_sessions
 features[field_base][] = field_total_training_sessions
 features[field_instance][] = node-path_to_fitness-field_check_in_sessions
 features[field_instance][] = node-path_to_fitness-field_client_ref
-features[field_instance][] = node-path_to_fitness-field_coach_ref
 features[field_instance][] = node-path_to_fitness-field_daily_activity
 features[field_instance][] = node-path_to_fitness-field_nutrition_protocol
 features[field_instance][] = node-path_to_fitness-field_re_feeds

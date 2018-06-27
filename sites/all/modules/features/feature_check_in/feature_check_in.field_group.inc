@@ -11,7 +11,7 @@ function feature_check_in_field_group_info() {
   $field_groups = array();
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_body_composition|node|check_in|form';
   $field_group->group_name = 'group_body_composition';
@@ -23,10 +23,10 @@ function feature_check_in_field_group_info() {
     'label' => 'Body Composition',
     'weight' => '3',
     'children' => array(
-      0 => 'field_bodyfat_kg',
-      1 => 'field_bodyweight',
-      2 => 'field_muscle_mass',
-      3 => 'field_percent_bodyfat',
+      0 => 'field_bodyweight',
+      1 => 'field_percent_bodyfat',
+      2 => 'field_bodyfat_kg',
+      3 => 'field_muscle_mass',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -52,7 +52,7 @@ function feature_check_in_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Circumference Measures',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_chest_cm',
       1 => 'field_hips_cm',
@@ -63,7 +63,8 @@ function feature_check_in_field_group_info() {
       6 => 'field_right_arm_cm',
       7 => 'field_right_calf_cm',
       8 => 'field_right_leg_cm',
-      9 => 'field_waist_cm',
+      9 => 'field_total_cm',
+      10 => 'field_waist_cm',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -118,7 +119,7 @@ function feature_check_in_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Progress Photo',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_progress_picture_back',
       1 => 'field_progress_picture_front',
@@ -148,13 +149,14 @@ function feature_check_in_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Skinfolds',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_abdominal_mm',
       1 => 'field_subscapular_mm',
       2 => 'field_suprailiac_mm',
       3 => 'field_thigh_mm',
-      4 => 'field_tricep_mm',
+      4 => 'field_total_calipers',
+      5 => 'field_tricep_mm',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

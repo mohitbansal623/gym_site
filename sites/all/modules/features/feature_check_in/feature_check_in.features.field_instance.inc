@@ -42,7 +42,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_abdominal_mm',
-    'label' => 'Abdominal MM',
+    'label' => 'Abdominal',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -56,7 +56,53 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 6,
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-check_in-field_bodyweight'.
+  $field_instances['node-check_in-field_bodyweight'] = array(
+    'bundle' => 'check_in',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 48,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_bodyweight',
+    'label' => 'Bodyweight',
+    'required' => 1,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 3,
     ),
   );
 
@@ -89,7 +135,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_check_in_date',
-    'label' => 'Check In',
+    'label' => 'Date',
     'required' => 1,
     'settings' => array(
       'default_value' => 'now',
@@ -148,7 +194,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_chest_cm',
-    'label' => 'Chest CM',
+    'label' => 'Chest',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -162,7 +208,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 5,
+      'weight' => 12,
     ),
   );
 
@@ -202,7 +248,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 32,
+      'weight' => 11,
     ),
   );
 
@@ -242,7 +288,7 @@ function feature_check_in_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 34,
+      'weight' => 12,
     ),
   );
 
@@ -278,7 +324,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_hips_cm',
-    'label' => 'Hips CM',
+    'label' => 'Hips',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -292,7 +338,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 9,
+      'weight' => 17,
     ),
   );
 
@@ -328,7 +374,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_left_arm_cm',
-    'label' => 'Left Arm CM',
+    'label' => 'Left Arm',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -342,7 +388,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 7,
+      'weight' => 14,
     ),
   );
 
@@ -378,7 +424,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_left_calf_cm',
-    'label' => 'Left Calf CM',
+    'label' => 'Left Calf',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -392,7 +438,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 14,
+      'weight' => 22,
     ),
   );
 
@@ -428,7 +474,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_left_leg_cm',
-    'label' => 'Left Leg CM',
+    'label' => 'Left Leg',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -442,7 +488,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 12,
+      'weight' => 20,
     ),
   );
 
@@ -478,7 +524,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_neck_cm',
-    'label' => 'Neck CM',
+    'label' => 'Neck',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -492,7 +538,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 10,
+      'weight' => 18,
     ),
   );
 
@@ -538,7 +584,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 5,
+      'weight' => 2,
     ),
   );
 
@@ -588,7 +634,7 @@ function feature_check_in_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 11,
+      'weight' => 16,
     ),
   );
 
@@ -638,7 +684,7 @@ function feature_check_in_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 10,
+      'weight' => 15,
     ),
   );
 
@@ -688,7 +734,7 @@ function feature_check_in_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 12,
+      'weight' => 17,
     ),
   );
 
@@ -724,7 +770,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_right_arm_cm',
-    'label' => 'Right Arm CM',
+    'label' => 'Right Arm',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -738,7 +784,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 6,
+      'weight' => 13,
     ),
   );
 
@@ -774,7 +820,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_right_calf_cm',
-    'label' => 'Right Calf CM',
+    'label' => 'Right Calf',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -788,7 +834,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 13,
+      'weight' => 21,
     ),
   );
 
@@ -824,7 +870,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_right_leg_cm',
-    'label' => 'Right Leg CM',
+    'label' => 'Right Leg',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -838,7 +884,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 11,
+      'weight' => 19,
     ),
   );
 
@@ -874,7 +920,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_subscapular_mm',
-    'label' => 'Subscapular MM',
+    'label' => 'Subscapular',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -888,7 +934,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 10,
+      'weight' => 14,
     ),
   );
 
@@ -924,7 +970,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_suprailiac_mm',
-    'label' => 'Suprailiac MM',
+    'label' => 'Suprailiac',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -938,7 +984,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 9,
+      'weight' => 13,
     ),
   );
 
@@ -974,7 +1020,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_thigh_mm',
-    'label' => 'Thigh MM',
+    'label' => 'Thigh',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -988,7 +1034,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 7,
+      'weight' => 11,
     ),
   );
 
@@ -1038,7 +1084,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 9,
+      'weight' => 15,
     ),
   );
 
@@ -1088,7 +1134,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 8,
+      'weight' => 23,
     ),
   );
 
@@ -1124,7 +1170,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_tricep_mm',
-    'label' => 'Tricep MM',
+    'label' => 'Tricep',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -1138,7 +1184,7 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 8,
+      'weight' => 12,
     ),
   );
 
@@ -1174,7 +1220,7 @@ function feature_check_in_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_waist_cm',
-    'label' => 'Waist CM',
+    'label' => 'Waist',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -1188,36 +1234,37 @@ function feature_check_in_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 8,
+      'weight' => 16,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Abdominal MM');
+  t('Abdominal');
   t('Back');
-  t('Check In');
-  t('Chest CM');
+  t('Bodyweight');
+  t('Chest');
   t('Coach');
+  t('Date');
   t('Front');
   t('Goal');
-  t('Hips CM');
-  t('Left Arm CM');
-  t('Left Calf CM');
-  t('Left Leg CM');
-  t('Neck CM');
+  t('Hips');
+  t('Left Arm');
+  t('Left Calf');
+  t('Left Leg');
+  t('Neck');
   t('Percent BodyFat');
-  t('Right Arm CM');
-  t('Right Calf CM');
-  t('Right Leg CM');
+  t('Right Arm');
+  t('Right Calf');
+  t('Right Leg');
   t('Side');
-  t('Subscapular MM');
-  t('Suprailiac MM');
-  t('Thigh MM');
+  t('Subscapular');
+  t('Suprailiac');
+  t('Thigh');
   t('Total CM');
   t('Total Calipers');
-  t('Tricep MM');
-  t('Waist CM');
+  t('Tricep');
+  t('Waist');
 
   return $field_instances;
 }
