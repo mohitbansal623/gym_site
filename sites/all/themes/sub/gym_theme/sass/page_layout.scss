@@ -195,11 +195,11 @@
             display: inline-block;
           }
         }
-        .form-group.checked-checkbox {
-          .form-checkboxes {
-            label {
-              background: $green;
-            }
+      }
+      .form-group.checked-checkbox {
+        .form-checkboxes {
+          label {
+            background: $green !important;
           }
         }
       }
