@@ -1127,3 +1127,40 @@ img {
 .page-admin-dashboard .page-container {
   padding: 40px 0;
 }
+
+/* line 1001, ../sass/page_layout.scss */
+body.html .node-page-banner {
+  max-width: 790px;
+  display: none;
+}
+/* line 1006, ../sass/page_layout.scss */
+body.html.page-node-add-goals .node-page-banner, body.html.page-node-edit-goals .node-page-banner, body.html.page-node-add-check-in .node-page-banner, body.html.page-node-edit-check-in .node-page-banner, body.html.page-node-add-daily-log .node-page-banner, body.html.page-node-edit-daily-log .node-page-banner, body.html.page-path-to-fitness .node-page-banner {
+  display: block;
+  margin: 30px auto 50px;
+}
+/* line 1009, ../sass/page_layout.scss */
+body.html.page-node-add-goals .node-page-banner img, body.html.page-node-edit-goals .node-page-banner img, body.html.page-node-add-check-in .node-page-banner img, body.html.page-node-edit-check-in .node-page-banner img, body.html.page-node-add-daily-log .node-page-banner img, body.html.page-node-edit-daily-log .node-page-banner img, body.html.page-path-to-fitness .node-page-banner img {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+/* line 1015, ../sass/page_layout.scss */
+body.html.page-node-add-goals .page-header, body.html.page-node-edit-goals .page-header, body.html.page-node-add-check-in .page-header, body.html.page-node-edit-check-in .page-header, body.html.page-node-add-daily-log .page-header, body.html.page-node-edit-daily-log .page-header, body.html.page-path-to-fitness .page-header {
+  display: none;
+}
+/* line 1020, ../sass/page_layout.scss */
+body.html.page-node-add-goals.page-node-add-goals .node-page-banner img.your-path-to-fitness, body.html.page-node-add-goals.page-node-edit-goals .node-page-banner img.your-path-to-fitness, body.html.page-node-edit-goals.page-node-add-goals .node-page-banner img.your-path-to-fitness, body.html.page-node-edit-goals.page-node-edit-goals .node-page-banner img.your-path-to-fitness, body.html.page-node-add-check-in.page-node-add-goals .node-page-banner img.your-path-to-fitness, body.html.page-node-add-check-in.page-node-edit-goals .node-page-banner img.your-path-to-fitness, body.html.page-node-edit-check-in.page-node-add-goals .node-page-banner img.your-path-to-fitness, body.html.page-node-edit-check-in.page-node-edit-goals .node-page-banner img.your-path-to-fitness, body.html.page-node-add-daily-log.page-node-add-goals .node-page-banner img.your-path-to-fitness, body.html.page-node-add-daily-log.page-node-edit-goals .node-page-banner img.your-path-to-fitness, body.html.page-node-edit-daily-log.page-node-add-goals .node-page-banner img.your-path-to-fitness, body.html.page-node-edit-daily-log.page-node-edit-goals .node-page-banner img.your-path-to-fitness, body.html.page-path-to-fitness.page-node-add-goals .node-page-banner img.your-path-to-fitness, body.html.page-path-to-fitness.page-node-edit-goals .node-page-banner img.your-path-to-fitness {
+  display: block;
+}
+/* line 1027, ../sass/page_layout.scss */
+body.html.page-node-add-goals.page-node-add-check-in .node-page-banner img.check-in, body.html.page-node-add-goals.page-node-edit-check-in .node-page-banner img.check-in, body.html.page-node-edit-goals.page-node-add-check-in .node-page-banner img.check-in, body.html.page-node-edit-goals.page-node-edit-check-in .node-page-banner img.check-in, body.html.page-node-add-check-in.page-node-add-check-in .node-page-banner img.check-in, body.html.page-node-add-check-in.page-node-edit-check-in .node-page-banner img.check-in, body.html.page-node-edit-check-in.page-node-add-check-in .node-page-banner img.check-in, body.html.page-node-edit-check-in.page-node-edit-check-in .node-page-banner img.check-in, body.html.page-node-add-daily-log.page-node-add-check-in .node-page-banner img.check-in, body.html.page-node-add-daily-log.page-node-edit-check-in .node-page-banner img.check-in, body.html.page-node-edit-daily-log.page-node-add-check-in .node-page-banner img.check-in, body.html.page-node-edit-daily-log.page-node-edit-check-in .node-page-banner img.check-in, body.html.page-path-to-fitness.page-node-add-check-in .node-page-banner img.check-in, body.html.page-path-to-fitness.page-node-edit-check-in .node-page-banner img.check-in {
+  display: block;
+}
+/* line 1034, ../sass/page_layout.scss */
+body.html.page-node-add-goals.page-node-add-daily-log .node-page-banner img.daily-log, body.html.page-node-add-goals.page-node-edit-daily-log .node-page-banner img.daily-log, body.html.page-node-edit-goals.page-node-add-daily-log .node-page-banner img.daily-log, body.html.page-node-edit-goals.page-node-edit-daily-log .node-page-banner img.daily-log, body.html.page-node-add-check-in.page-node-add-daily-log .node-page-banner img.daily-log, body.html.page-node-add-check-in.page-node-edit-daily-log .node-page-banner img.daily-log, body.html.page-node-edit-check-in.page-node-add-daily-log .node-page-banner img.daily-log, body.html.page-node-edit-check-in.page-node-edit-daily-log .node-page-banner img.daily-log, body.html.page-node-add-daily-log.page-node-add-daily-log .node-page-banner img.daily-log, body.html.page-node-add-daily-log.page-node-edit-daily-log .node-page-banner img.daily-log, body.html.page-node-edit-daily-log.page-node-add-daily-log .node-page-banner img.daily-log, body.html.page-node-edit-daily-log.page-node-edit-daily-log .node-page-banner img.daily-log, body.html.page-path-to-fitness.page-node-add-daily-log .node-page-banner img.daily-log, body.html.page-path-to-fitness.page-node-edit-daily-log .node-page-banner img.daily-log {
+  display: block;
+}
+/* line 1041, ../sass/page_layout.scss */
+body.html.page-node-add-goals.page-path-to-fitness .node-page-banner img.path-to-fitness, body.html.page-node-edit-goals.page-path-to-fitness .node-page-banner img.path-to-fitness, body.html.page-node-add-check-in.page-path-to-fitness .node-page-banner img.path-to-fitness, body.html.page-node-edit-check-in.page-path-to-fitness .node-page-banner img.path-to-fitness, body.html.page-node-add-daily-log.page-path-to-fitness .node-page-banner img.path-to-fitness, body.html.page-node-edit-daily-log.page-path-to-fitness .node-page-banner img.path-to-fitness, body.html.page-path-to-fitness.page-path-to-fitness .node-page-banner img.path-to-fitness {
+  display: block;
+}
