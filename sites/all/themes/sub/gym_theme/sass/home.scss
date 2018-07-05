@@ -213,6 +213,17 @@ body.front {
           width: 100%;
           height: auto;
         }
+        img.mobile {
+          display: none;
+        }
+        @media (max-width: 767px) {
+          img.desktop {
+            display: none;
+          }
+          img.mobile {
+            display: inline-block;
+          }
+        }
         .slick-dots {
           bottom: 0;
           li {
