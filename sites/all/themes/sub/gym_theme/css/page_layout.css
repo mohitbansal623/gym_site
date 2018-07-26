@@ -840,8 +840,9 @@ a {
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:nth-child(2) {
   order: -1;
   width: 100%;
+  margin-bottom: 10px;
 }
-/* line 670, ../sass/page_layout.scss */
+/* line 671, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:nth-child(2) a {
   margin-right: 0;
   background-color: #3B5998 !important;
@@ -850,7 +851,7 @@ a {
   font-size: 16px;
   padding: 10px 0;
 }
-/* line 677, ../sass/page_layout.scss */
+/* line 678, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:nth-child(2) a::before {
   content: "\f09a";
   font: normal normal normal 14px/1 FontAwesome;
@@ -862,40 +863,36 @@ a {
   font-size: 20px;
   border-right: 1px solid #2f4779;
 }
-/* line 691, ../sass/page_layout.scss */
+/* line 692, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:first-child a {
   font-size: 0;
 }
-/* line 693, ../sass/page_layout.scss */
+/* line 694, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:first-child a::before {
   content: "Register";
   font-size: 20px;
 }
 @media (max-width: 480px) {
-  /* line 693, ../sass/page_layout.scss */
+  /* line 694, ../sass/page_layout.scss */
   .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:first-child a::before {
     font-size: 16px;
   }
 }
-/* line 703, ../sass/page_layout.scss */
+/* line 704, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:last-child a {
   font-size: 0;
   margin-right: 0;
 }
-/* line 706, ../sass/page_layout.scss */
+/* line 707, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:last-child a::before {
   content: "Forgot Password?";
   font-size: 20px;
 }
 @media (max-width: 480px) {
-  /* line 706, ../sass/page_layout.scss */
+  /* line 707, ../sass/page_layout.scss */
   .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li:last-child a::before {
     font-size: 16px;
   }
-}
-/* line 716, ../sass/page_layout.scss */
-.page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li.active {
-  background: #fff;
 }
 /* line 718, ../sass/page_layout.scss */
 .page-user.not-logged-in .page-container .tabs--primary.nav.nav-tabs li.active a {
