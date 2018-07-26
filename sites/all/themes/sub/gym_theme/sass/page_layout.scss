@@ -667,6 +667,7 @@
           &:nth-child(2) {
             order: -1;
             width: 100%;
+            margin-bottom: 10px;
             a {
               margin-right: 0;
               background-color: #3B5998 !important;
@@ -714,7 +715,6 @@
           }
         }
         li.active {
-          background: #fff;
           a {
             background: transparent;
             color: #00acc1;
